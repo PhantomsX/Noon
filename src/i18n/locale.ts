@@ -1,6 +1,5 @@
 "use server";
 
-import { AppConfig } from "next-intl";
 import { cookies } from "next/headers";
 
 // In this example the locale is read from a cookie. You could alternatively
@@ -11,6 +10,6 @@ export async function getUserLocale() {
   return (await cookies()).get(COOKIE_NAME)?.value || "en";
 }
 
-export async function setUserLocale(locale: AppConfig["Locale"]) {
+export async function setUserLocale(locale: "en" | "ar") {
   (await cookies()).set(COOKIE_NAME, locale);
 }

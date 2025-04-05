@@ -1,1 +1,10 @@
-{}
+{
+  "home": {
+    "about": "About n&n",
+    "calculate": "you can calculate",
+    "contact": "contact of us",
+    "find": "find more",
+    "portfolio": "Portfolio of work",
+    "services": "our best of services"
+  }
+}
