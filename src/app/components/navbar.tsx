@@ -2,9 +2,10 @@
 import React, { startTransition } from "react";
 import logo from "@/public/icons/navbar-logo.svg";
 import Link from "next/link";
-import { Menu, NightMode, Search, Translate } from "./icons";
+import { NightMode, Search, Translate } from "./icons";
 import { setUserLocale } from "@/src/i18n/locale";
 import { useLocale } from "next-intl";
+import NavbarDropdown from "./NavbarDropdown";
 type Props = {};
 
 const Navbar = (props: Props) => {
@@ -31,9 +32,7 @@ const Navbar = (props: Props) => {
         <button className="btn btn-square btn-ghost">
           <Search />
         </button>
-        <button className="btn btn-square btn-ghost">
-          <Menu />
-        </button>
+        <NavbarDropdown />
       </div>
     </div>
   );

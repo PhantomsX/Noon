@@ -1,10 +1,9 @@
 {
-  "home": {
-    "about": "About n&n",
-    "calculate": "you can calculate",
-    "contact": "contact of us",
-    "find": "find more",
-    "portfolio": "Portfolio of work",
-    "services": "our best of services"
-  }
+  "about": "About n&n",
+  "calculate": "you can calculate",
+  "clients": "clients",
+  "contact": "contact of us",
+  "find": "find more",
+  "portfolio": "Portfolio of work",
+  "services": "our best of services"
 }
