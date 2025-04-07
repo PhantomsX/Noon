@@ -12,3 +12,12 @@
   background-clip: text;
   color: transparent;
 }
+
+@utility main-bg-gradient {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(190, 123, 44, 0.15) 100%
+    ),
+    linear-gradient(0deg, var(--black, #000000), var(--black, #000000));
+}
