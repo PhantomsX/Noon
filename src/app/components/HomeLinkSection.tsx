@@ -5,31 +5,34 @@ import Link from "next/link";
 import Image from "next/image";
 import secBackground from "@/public/sec-bg.png";
 import { useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 
 type Props = { title: string; href: string };
 
 const HomeLinkSection = (props: Props) => {
-  const t = useTranslations("home");
+  const t = useTranslations();
+  const router = useRouter();
   return (
-    <div className="flex-1 relative px-10 pb-8 flex items-end bg-black/10 backdrop-blur-[2px]">
+    <button
+      onClick={() => router.push(props.href)}
+      className="flex-1 cursor-pointer relative px-10 pb-8 flex items-end group bg-black/10 backdrop-blur-[2px]"
+    >
       <Image
         src={secBackground}
         alt="section background"
         fill
-        className="opacity-10 z-[-1] select-none"
+        draggable={false}
+        className="opacity-10 z-[-2] select-none"
       />
       <div className="flex flex-col gap-2">
-        <p className="capitalize text-3xl font-medium lg:text-4xl">
+        <p className="capitalize text-start font-medium text-4xl group-hover:text-bg">
           {props.title}
         </p>
-        <Link
-          href={props.href}
-          className="uppercase text-sm flex gap-2 items-center"
-        >
-          {t("find")} <Arrow />
-        </Link>
+        <span className="uppercase flex gap-2 items-center group-hover:text-lg transition-[font-size]">
+          <span>{t("find")}</span> <Arrow />
+        </span>
       </div>
-    </div>
+    </button>
   );
 };
 

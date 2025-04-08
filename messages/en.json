@@ -7,7 +7,7 @@
     "portfolio": "Portfolio of work",
     "services": "our best of services"
   },
-  "services": {
+  "servicess": {
     "title-1": "Our Best",
     "title-2": "  Of Services",
     "breif": "An Delivery By Seasoned Professionals With Extensive Industry\n            Expertise, Each Specializing in Financial Financial Areas. Committed\n            To Delivering High-Quality Services That Understand Our Users Needs,\n            Conflicts To The Sustainable And Innovative Success Of Their\n            Projects.",
@@ -25,5 +25,17 @@
     "service-11": "PROJECT MANAGEMENT",
     "service-12": "AOR ARCHITECT OF RECORD",
     "allServices": " All Services"
-  }
+  },
+  "about": "About n&n",
+  "address1": "Riyadh, Saudi Arabia Olaya St, Al Wurud District",
+  "address2": "Al-Madinah, Saudi Arabia Abdusalam Ibn Hafes St, Al Iskan District",
+  "branchOffice": "Branch Office",
+  "calculate": "you can calculate",
+  "clients": "clients",
+  "contact": "contact of us",
+  "find": "find more",
+  "headquarters": "Headquarters",
+  "portfolio": "Portfolio of work",
+  "rights": "All Right Reserved To N&N CONSULTANTS 2024. ®",
+  "services": "our best of services"
 }
