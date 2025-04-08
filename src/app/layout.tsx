@@ -36,7 +36,7 @@ export default async function RootLayout({
     >
       <body
         suppressHydrationWarning
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
+        className={` antialiased flex flex-col min-h-screen`}
       >
         <NextIntlClientProvider messages={messages}>
           <Navbar />

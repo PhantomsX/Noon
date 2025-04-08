@@ -19,7 +19,9 @@ const HomeLinkSection = (props: Props) => {
         className="opacity-10 z-[-1] select-none"
       />
       <div className="flex flex-col gap-2">
-        <p className="capitalize text-3xl font-medium lg:text-4xl">{props.title}</p>
+        <p className="capitalize text-3xl font-medium lg:text-4xl">
+          {props.title}
+        </p>
         <Link
           href={props.href}
           className="uppercase text-sm flex gap-2 items-center"

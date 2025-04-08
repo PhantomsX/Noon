@@ -6,5 +6,24 @@
     "find": "find more",
     "portfolio": "Portfolio of work",
     "services": "our best of services"
+  },
+  "services": {
+    "title-1": "Our Best",
+    "title-2": "  Of Services",
+    "breif": "An Delivery By Seasoned Professionals With Extensive Industry\n            Expertise, Each Specializing in Financial Financial Areas. Committed\n            To Delivering High-Quality Services That Understand Our Users Needs,\n            Conflicts To The Sustainable And Innovative Success Of Their\n            Projects.",
+    "service-btn": "  SERVICE PROJECTS",
+    "service-1": "ENGINEERING & ARCHITECTURAL DESIGN",
+    "service-5": "CONSTRUCTION SUPERVISION",
+    "service-2": "URBAN DESIGN",
+    "service-3": "MASTER PLANNING",
+    "service-4": "LICENSING",
+    "service-6": "ENGINEERING REPORTS",
+    "service-7": "VALUE ENGINEERING",
+    "service-8": "ENGINEERING STUDIES",
+    "service-9": "LANDSCAPING",
+    "service-10": "NTERIOR DESIGN",
+    "service-11": "PROJECT MANAGEMENT",
+    "service-12": "AOR ARCHITECT OF RECORD",
+    "allServices": " All Services"
   }
 }

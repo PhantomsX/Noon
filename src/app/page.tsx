@@ -13,7 +13,7 @@ export default function Home() {
         priority
         src={mainBackground}
         alt="main-bg"
-        className="object-cover z-[-2]"
+        className="object-fit z-[-2]"
       />
       <Image
         src={logo}
@@ -23,7 +23,7 @@ export default function Home() {
       <div className="grow flex max-md:flex-col text-white divide-y md:divide-x divide-black bg-[linear-gradient(180deg,_rgba(0,_0,_0,_0)_77.36%,_rgba(0,_0,_0,_0.4)_85.02%)]">
         <HomeLinkSection title={t("portfolio")} href={"/portfolio"} />
         <HomeLinkSection title={t("about")} href={"/portfolio"} />
-        <HomeLinkSection title={t("services")} href={"/portfolio"} />
+        <HomeLinkSection title={t("services")} href={"/services"} />
         <HomeLinkSection title={t("calculate")} href={"/portfolio"} />
         <HomeLinkSection title={t("contact")} href={"/portfolio"} />
       </div>
