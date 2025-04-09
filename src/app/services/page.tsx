@@ -3,8 +3,10 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import Footer from "../components/Footer";
+import Link from "next/link";
 function Page() {
-  const t = useTranslations("services");
+  const t = useTranslations("servicess");
   const [selected, setSelected] = useState<any>(null);
   const services = [
     {
@@ -121,7 +123,7 @@ function Page() {
     },
   ];
   return (
-    <main className="min-h-fit h-[89vh]  md:px-[88px]   main-grident-bg ">
+    <main className="min-h-fit  md:px-[88px]   main-grident-bg ">
       <section className="mx-auto px-5 py-16  md:flex gap-x-5">
         {/* Header Section */}
         <aside className="mb-10 w-full md:w-[25%] py-5 mx-auto md:mx-0">
@@ -143,7 +145,7 @@ function Page() {
 
         {/* Services Grid */}
         {selected ? (
-          <aside className="w-full md:w-[70%] h-[100vh] md:h-[78vh] mx-auto relative">
+          <aside className="w-full md:w-[70%] h-fit md:h-[78vh]  mx-auto relative">
                <h3
               className="font-elegance gradient-gold-text mt-[-30px] ms-5 cursor-pointer "
               onClick={() => {
@@ -153,19 +155,18 @@ function Page() {
               {t("allServices")}
              
             </h3>
-            <div className="w-full h-full absolute inset-0 z-1 ">
+            <div className="w-full h-fit  relative">
               <img
                 src={selected.mainImage}
                 alt={selected.mainImage}
-                className="hidden md:block object-fit"
+                className="hidden  md:block   "
               />
               <img
                 src={selected.mobileImage}
                 alt={selected.mobileImage}
-                className=" md:hidden block  object-cover "
+                className=" md:hidden block  object-cover mx-auto "
               />
-            </div>
-            <div className="z-2 absolute flex  flex-col md:flex-row justify-between inset-x-0 mx-auto   bottom-0 gap-x-7">
+               <div className="z-2 absolute flex  max-md:flex-col  p-4 justify-between inset-x-0 mx-auto   bottom-[1%] gap-x-7">
               <p className="text-[24px] md:text-[40px] h-fit md:my-auto text-white md:w-1/2 md:leading-[45px] text-center">
                 {selected.title}
               </p>
@@ -184,15 +185,36 @@ function Page() {
                 })}
               </div>
             </div>
+            </div>
+           
           </aside>
         ) : (
           <aside className="w-full md:w-[70%] grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {services.map((service) => (
-              <div
+                 <div key={service.id}>
+              <Service service={service} setSelected={setSelected} t={t} />
+               </div> 
+
+            ))}
+          </aside>
+        )}
+      </section>
+      <Footer />
+    </main>
+  );
+}
+
+export default Page;
+
+
+
+const Service = ({service ,setSelected,t}: any) => {
+  return (
+    <div
                 key={service.id}
                 className="  text-white flex flex-col justify-center items-center "
               >
-                {/* Image - appears on hover */}
+                
                 <div
                   className="text-center mx-auto"
                   onClick={() => {
@@ -208,25 +230,18 @@ function Page() {
 
                 {/* Content */}
                 <div className="text-center " dir="ltr">
-                  <h3 className="text-[14px] md:text-[18px] mb-2 text-center my-2  h-[40px] md:h-[50px]">
+                  <h3 className="text-[14px] md:text-[18px] mb-2 text-center my-2  h-[40px] md:h-[50px] overflow-hidden">
                     {service.title}
                   </h3>
-                  <p className="text-[10px] md:text-[12px] border-[1px]  mx-auto text-center border-[#BE7B2C] py-1 px-3 w-fit cursor-pointer">
+                  <Link href={"/projects"} className="text-[10px] md:text-[12px] border-[1px]  mx-auto text-center border-[#BE7B2C] py-1 px-3 w-fit cursor-pointer">
                     {t("service-btn")}
                     <img
                       src="/icons/arrow.svg"
                       alt={"arrow"}
                       className=" inline-block mx-1"
                     />
-                  </p>
+                  </Link>
                 </div>
               </div>
-            ))}
-          </aside>
-        )}
-      </section>
-    </main>
-  );
-}
-
-export default Page;
+  )
+} 
