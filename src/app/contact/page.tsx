@@ -13,7 +13,7 @@ const ContactPage = () => {
       <div className="z-10 max-md:mx-auto ">
         <div className="bg-main-bg *:max-w-3xs px-14 py-[76px] md:absolute md:right-[74px] md:top-1/2 md:-translate-y-1/2 flex max-md:flex-col w-fit mt-16 justify-center gap-14">
           <div>
-            <h2 className="text-bg capitalize text-4xl mb-4">
+            <h2 className="text-bg capitalize font-medium text-5xl tracking-tighter max-w-[8ch] mb-4">
               {t("headquarters")}
             </h2>
             <ul className="text-white">
@@ -32,7 +32,7 @@ const ContactPage = () => {
             </ul>
           </div>
           <div>
-            <h2 className="text-bg capitalize text-4xl mb-4">
+            <h2 className="text-bg capitalize font-medium text-5xl tracking-tighter max-w-[6ch] mb-4">
               {t("branchOffice")}
             </h2>
             <ul className="text-white">

@@ -10,7 +10,7 @@ const CalculatePage = () => {
   return (
     <main className="flex-1 main-bg-gradient flex-col flex">
       <div className="flex max-sm:flex-col pt-12 sm:pt-28 sm:ps-[88px] max-sm:gap-16 px-8">
-        <h2 className="text-bg capitalize text-5xl tracking-tighter sm:max-w-[330px] font-bold shrink-0">
+        <h2 className="text-bg capitalize text-5xl tracking-tighter sm:max-w-[330px] font-medium shrink-0">
           {t("calculateTitle")}
         </h2>
         <div className="flex-1 flex max-lg:flex-col md:gap-16 gap-8 justify-center">
