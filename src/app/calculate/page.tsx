@@ -13,7 +13,7 @@ const CalculatePage = () => {
         <h2 className="text-bg capitalize text-5xl tracking-tighter sm:max-w-[330px] font-bold shrink-0">
           {t("calculateTitle")}
         </h2>
-        <div className="flex-1 flex gap-16 justify-center">
+        <div className="flex-1 flex max-lg:flex-col md:gap-16 gap-8 justify-center">
           <div className="max-w-md w-full">
             <h4 className="text-white">{t("Choose Architectural Design")}</h4>
             <div className="mt-5 space-y-5">
@@ -65,7 +65,7 @@ const CalculatePage = () => {
               <div className="bg-linearGradient w-fit p-2.5 mt-5">0000000</div>
             </div>
           </div>
-          <div className="divider after:bg-linearGradient before:bg-linearGradient divider-horizontal" />
+          <div className="divider after:bg-linearGradient before:bg-linearGradient lg:divider-horizontal" />
           <div className="bg-white max-w-2xl w-full  px-5 py-8">
             <div role="grid" className="grid grid-cols-2 gap-x-4 gap-y-14 mb-4">
               <Input label={t("First Name")} type="text" />
