@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
+import Footer from "../components/Footer";
 function Page() {
-  const t = useTranslations("services");
+  const t = useTranslations("servicess");
   const [selected, setSelected] = useState<any>(null);
   const services = [
     {
@@ -121,7 +121,7 @@ function Page() {
     },
   ];
   return (
-    <main className="min-h-fit h-[89vh]  md:px-[88px]   main-grident-bg ">
+    <main className="flex-1 main-bg-gradient flex-col flex md:px-[88px]">
       <section className="mx-auto px-5 py-16  md:flex gap-x-5">
         {/* Header Section */}
         <aside className="mb-10 w-full md:w-[25%] py-5 mx-auto md:mx-0">
@@ -132,26 +132,23 @@ function Page() {
             <h2 className=" text-center  md:w-fit py-2 font-bold  ">
               {t("title-2")}
             </h2>
-            
           </div>
 
           <p className="text-[15px]  mb-4 text-white text-center md:text-start">
             {t("breif")}
           </p>
-      
         </aside>
 
         {/* Services Grid */}
         {selected ? (
           <aside className="w-full md:w-[70%] h-[100vh] md:h-[78vh] mx-auto relative">
-               <h3
+            <h3
               className="font-elegance gradient-gold-text mt-[-30px] ms-5 cursor-pointer "
               onClick={() => {
                 setSelected(null);
               }}
             >
               {t("allServices")}
-             
             </h3>
             <div className="w-full h-full absolute inset-0 z-1 ">
               <img
@@ -170,7 +167,7 @@ function Page() {
                 {selected.title}
               </p>
               <div className="md:w-1/4 w-[80%] mx-auto">
-                {selected?.features.map((item, index) => {
+                {(selected?.features as string[]).map((item, index) => {
                   return (
                     <div key={index}>
                       <p className="text-white my-1  text-center md:text-start">
@@ -225,6 +222,7 @@ function Page() {
           </aside>
         )}
       </section>
+      <Footer />
     </main>
   );
 }

@@ -24,11 +24,27 @@ export default function Home() {
           className="absolute z-[1] select-none pointer-events-none left-1/2 -translate-x-1/2 scale-75 top-28 max-lg:hidden"
         />
         <div className="grow flex max-lg:flex-col text-white divide-y lg:divide-x divide-black bg-[linear-gradient(270deg,_rgba(0,_0,_0,_0)_50%,_rgba(0,_0,_0,_0.4)_75%)] lg:bg-[linear-gradient(180deg,_rgba(0,_0,_0,_0)_65%,_rgba(0,_0,_0,_0.4)_85%)]">
-          <HomeLinkSection title={t("portfolio")} href={"/portfolio"} />
-          <HomeLinkSection title={t("about")} href={"/about"} />
-          <HomeLinkSection title={t("services")} href={"/services"} />
-          <HomeLinkSection title={t("calculate")} href={"/calculate"} />
-          <HomeLinkSection title={t("contact")} href={"/contact"} />
+          <HomeLinkSection
+            title={t("portfolio")}
+            href={"/portfolio"}
+            breakpoint={1}
+          />
+          <HomeLinkSection title={t("about")} href={"/about"} breakpoint={1} />
+          <HomeLinkSection
+            title={t("services")}
+            href={"/services"}
+            breakpoint={2}
+          />
+          <HomeLinkSection
+            title={t("calculate")}
+            href={"/calculate"}
+            breakpoint={2}
+          />
+          <HomeLinkSection
+            title={t("contact")}
+            href={"/contact"}
+            breakpoint={1}
+          />
         </div>
       </main>
       <LogosCarousel />

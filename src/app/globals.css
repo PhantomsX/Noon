@@ -1,22 +1,12 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-@layer base {
-  :root {
-  }
-}
 @font-face {
   font-family: "The New Elegance";
   src: url("/fonts/The New Elegance.ttf");
 }
 
 @layer utilities {
-  /* .font-elegance {
-    font-family: "The New Elegance";
-  } */
-  .main-grident-bg {
-    background-image: linear-gradient(0deg, #000000 0%, #2e1a0b 100%);
-  }
   .gradient-gold-text {
     @apply text-transparent bg-gradient-to-l from-[#BE7B2C] to-[#F9C39D] bg-clip-text;
   }
@@ -27,10 +17,6 @@
 
 @theme inline {
   --color-main-bg: #1d1d1d;
-  --color-main-bg: #1d1d1d;
-  /* --color-gradient-main-bg: linear-gradient(0deg, #000000 0%, #2e1a0b 100%);
-  --color-gold: @apply text-transparent bg-gradient-to-l from-[#BE7B2C]
-    to-[#F9C39D] bg-clip-text; */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-elegance: "The New Elegance";
@@ -40,6 +26,14 @@
   background-image: linear-gradient(270deg, #be7b2c 0%, #f9c39d 100%);
   background-clip: text;
   color: transparent;
+}
+
+@utility border-bg {
+  border-image: linear-gradient(270deg, #be7b2c 0%, #f9c39d 100%) 1;
+}
+
+@utility bg-linearGradient {
+  background: linear-gradient(270deg, #be7b2c 0%, #f9c39d 100%);
 }
 
 @utility main-bg-gradient {
