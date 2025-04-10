@@ -226,7 +226,7 @@ const Page = () => {
           <Link
             className=" gradient-gold-text text-[24px] text-center mx-auto hover:font-semibold"
             onClick={() => { localStorage.setItem("selectedProject", JSON.stringify(selectedProject)) }}
-            href="/project-details" scroll={false}>
+            href="/project-details" scroll={true}>
             Details
           </Link>
 
