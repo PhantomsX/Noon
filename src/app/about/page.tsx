@@ -62,8 +62,8 @@ const AboutPage = () => {
                   d="M52.2999 42.4904C51.916 41.9012 51.5476 41.3011 51.1471 40.7234C47.4372 35.382 43.7126 30.0508 40.0181 24.699C39.409 23.8171 38.3955 23.8653 37.7864 24.5058C36.8962 25.4423 35.9648 26.3403 35.0508 27.2542C34.9687 27.3358 34.8827 27.4128 34.7787 27.511C34.6811 27.4192 34.5964 27.3422 34.5155 27.2613C30.6035 23.3473 26.6927 19.432 22.7781 15.5213C22.6227 15.3659 22.5509 15.2106 22.5534 14.9892C22.5637 14.0174 22.5579 13.045 22.5579 12.0726C22.5579 11.977 22.5579 11.882 22.5579 11.7465C22.7222 11.7376 22.866 11.7228 23.0098 11.7228C26.8448 11.7215 30.6805 11.7215 34.5155 11.7228C34.9077 11.7228 35.2858 11.6715 35.6022 11.4179C35.9315 11.1535 36.0861 10.7947 36.0868 10.3794C36.0906 7.67659 36.0945 4.97377 36.0855 2.27094C36.0829 1.55143 35.5098 1.00329 34.7851 1.00265C30.2768 0.998802 25.7684 0.999444 21.2601 1.00265C20.572 1.00265 20.0663 1.4558 19.9738 2.14001C19.9494 2.31908 19.9398 2.50137 19.9398 2.68237C19.9379 6.80624 19.9366 10.9295 19.9424 15.0533C19.9424 15.3114 19.8801 15.5213 19.7306 15.7337C13.6106 24.4462 7.49631 33.1618 1.3795 41.8762C1.17411 42.1682 0.995033 42.4615 1.00017 42.8396C1.01044 43.5347 1.56371 44.1002 2.26076 44.1105C2.37822 44.1124 2.49567 44.1105 2.61313 44.1105C18.6484 44.1105 34.6837 44.1066 50.719 44.122C51.4738 44.1227 51.9937 43.8826 52.3011 43.1971C52.3011 42.9622 52.3011 42.7273 52.3011 42.4917L52.2999 42.4904ZM21.4174 17.8492C21.5393 17.968 21.6381 18.0611 21.7338 18.1567C25.7158 22.1349 29.6978 26.1137 33.6805 30.0919C33.771 30.1824 33.8609 30.2748 33.9597 30.3557C34.4353 30.742 35.0662 30.7555 35.5585 30.389C35.6689 30.3062 35.7697 30.2087 35.8679 30.1111C36.7152 29.2664 37.5605 28.4198 38.4064 27.5739C38.4867 27.4937 38.5701 27.4173 38.6683 27.3242C41.9584 32.0578 45.2273 36.7613 48.5213 41.5001H4.81274C10.3577 33.6015 15.8763 25.742 21.4174 17.8492ZM22.5874 9.09186V3.60856H33.461V9.09122L22.5874 9.09186Z"
                   fill="url(#paint0_linear_2_588)"
                   stroke="url(#paint1_linear_2_588)"
-                  stroke-width="1.40033"
-                  stroke-linejoin="bevel"
+                  strokeWidth="1.40033"
+                  strokeLinejoin="bevel"
                 />
                 <defs>
                   <linearGradient
@@ -74,8 +74,8 @@ const AboutPage = () => {
                     y2="22.561"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#BE7B2C" />
-                    <stop offset="1" stop-color="#F9C39D" />
+                    <stop stopColor="#BE7B2C" />
+                    <stop offset="1" stopColor="#F9C39D" />
                   </linearGradient>
                   <linearGradient
                     id="paint1_linear_2_588"
@@ -85,8 +85,8 @@ const AboutPage = () => {
                     y2="22.561"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#BE7B2C" />
-                    <stop offset="1" stop-color="#F9C39D" />
+                    <stop stopColor="#BE7B2C" />
+                    <stop offset="1" stopColor="#F9C39D" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -140,8 +140,8 @@ const AboutPage = () => {
                     y2="12.0523"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#BE7B2C" />
-                    <stop offset="1" stop-color="#F9C39D" />
+                    <stop stopColor="#BE7B2C" />
+                    <stop offset="1" stopColor="#F9C39D" />
                   </linearGradient>
                   <linearGradient
                     id="paint1_linear_2_593"
@@ -151,8 +151,8 @@ const AboutPage = () => {
                     y2="7.67795"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#BE7B2C" />
-                    <stop offset="1" stop-color="#F9C39D" />
+                    <stop stopColor="#BE7B2C" />
+                    <stop offset="1" stopColor="#F9C39D" />
                   </linearGradient>
                   <linearGradient
                     id="paint2_linear_2_593"
@@ -162,8 +162,8 @@ const AboutPage = () => {
                     y2="2.98845"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#BE7B2C" />
-                    <stop offset="1" stop-color="#F9C39D" />
+                    <stop stopColor="#BE7B2C" />
+                    <stop offset="1" stopColor="#F9C39D" />
                   </linearGradient>
                   <linearGradient
                     id="paint3_linear_2_593"
@@ -173,8 +173,8 @@ const AboutPage = () => {
                     y2="5.31529"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#BE7B2C" />
-                    <stop offset="1" stop-color="#F9C39D" />
+                    <stop stopColor="#BE7B2C" />
+                    <stop offset="1" stopColor="#F9C39D" />
                   </linearGradient>
                   <linearGradient
                     id="paint4_linear_2_593"
@@ -184,8 +184,8 @@ const AboutPage = () => {
                     y2="10.3429"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#BE7B2C" />
-                    <stop offset="1" stop-color="#F9C39D" />
+                    <stop stopColor="#BE7B2C" />
+                    <stop offset="1" stopColor="#F9C39D" />
                   </linearGradient>
                   <linearGradient
                     id="paint5_linear_2_593"
@@ -195,8 +195,8 @@ const AboutPage = () => {
                     y2="27.3115"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#BE7B2C" />
-                    <stop offset="1" stop-color="#F9C39D" />
+                    <stop stopColor="#BE7B2C" />
+                    <stop offset="1" stopColor="#F9C39D" />
                   </linearGradient>
                   <linearGradient
                     id="paint6_linear_2_593"
@@ -206,8 +206,8 @@ const AboutPage = () => {
                     y2="20.9191"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#BE7B2C" />
-                    <stop offset="1" stop-color="#F9C39D" />
+                    <stop stopColor="#BE7B2C" />
+                    <stop offset="1" stopColor="#F9C39D" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -226,8 +226,8 @@ const AboutPage = () => {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M33.4612 17.8278C35.7014 20.0681 39.3335 20.0681 41.5739 17.8278C43.814 15.5876 43.814 11.9554 41.5739 9.71514C39.3335 7.47488 35.7014 7.47488 33.4612 9.71514C31.2208 11.9554 31.2208 15.5876 33.4612 17.8278ZM35.4894 15.7997C36.6095 16.9198 38.4256 16.9198 39.5457 15.7997C40.6658 14.6795 40.6658 12.8634 39.5457 11.7433C38.4256 10.6232 36.6095 10.6232 35.4894 11.7433C34.3691 12.8634 34.3691 14.6795 35.4894 15.7997Z"
                   fill="url(#paint0_linear_2_605)"
                 />
@@ -236,26 +236,26 @@ const AboutPage = () => {
                   fill="url(#paint1_linear_2_605)"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M37.6929 0.88831C41.5806 0.0206014 45.2425 -0.051335 47.4967 0.0214329C49.5716 0.0884069 51.2007 1.71767 51.2676 3.79252C51.3404 6.04649 51.2684 9.70855 50.4008 13.5962C49.5351 17.4747 47.8518 21.6908 44.6164 24.9262L44.5524 24.9901C41.9374 27.6051 39.8834 29.6591 38.1851 31.1297L38.8669 37.266C38.9633 38.132 38.6607 38.9947 38.0446 39.6108L31.957 45.6982C30.501 47.1544 28.0306 46.6473 27.2656 44.7353L24.4458 37.6857L15.3959 39.1938C13.4547 39.5173 11.7716 37.8345 12.0952 35.893L13.6035 26.843L6.55376 24.0232C4.64189 23.2586 4.13478 20.7881 5.59083 19.3319L11.6782 13.2446C12.2944 12.6284 13.1571 12.3258 14.0232 12.422L20.1592 13.1038C21.6301 11.4055 23.6837 9.35168 26.299 6.73642L26.3627 6.67266C29.5981 3.43725 33.8145 1.75401 37.6929 0.88831ZM38.3176 3.68771C34.7383 4.48664 31.1019 5.98987 28.3909 8.70084C25.3838 11.708 23.2587 13.8354 21.8681 15.525L21.3745 16.1247L13.7064 15.2728L7.61901 21.36L14.6687 24.1801C15.9202 24.6806 16.6543 25.9851 16.4327 27.3146L14.9244 36.3645L23.9743 34.8564C25.304 34.6347 26.6085 35.3687 27.109 36.6204L29.9288 43.67L36.0161 37.5827L35.1643 29.9147L35.764 29.421C37.4537 28.0302 39.5811 25.9051 42.5882 22.898C45.2993 20.1872 46.8025 16.5507 47.6014 12.9713C48.3982 9.40098 48.469 5.99956 48.401 3.88505C48.3827 3.32169 47.9673 2.90639 47.404 2.88821C45.2895 2.81994 41.8881 2.89079 38.3176 3.68771Z"
                   fill="url(#paint2_linear_2_605)"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M14.9183 50.4466C14.3583 49.8868 14.3583 48.9787 14.9183 48.4185L21.0027 42.334C21.5629 41.7742 22.471 41.7742 23.0309 42.334C23.5911 42.8942 23.5911 43.8023 23.0309 44.3622L16.9465 50.4466C16.3864 51.0068 15.4784 51.0068 14.9183 50.4466Z"
                   fill="url(#paint3_linear_2_605)"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M0.72113 36.2497C0.161072 35.6898 0.161072 34.7817 0.72113 34.2216L6.80564 28.1371C7.36573 27.5772 8.27377 27.5772 8.83382 28.1371C9.39388 28.6973 9.39388 29.6054 8.83382 30.1653L2.74931 36.2497C2.18925 36.8099 1.28119 36.8099 0.72113 36.2497Z"
                   fill="url(#paint4_linear_2_605)"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M3.75769 47.3992C3.19763 46.8393 3.19763 45.9312 3.75769 45.371L9.8422 39.2866C10.4023 38.7267 11.3103 38.7267 11.8704 39.2866C12.4304 39.8468 12.4304 40.7548 11.8704 41.3147L5.78587 47.3992C5.22578 47.9594 4.31775 47.9594 3.75769 47.3992Z"
                   fill="url(#paint5_linear_2_605)"
                 />
@@ -268,8 +268,8 @@ const AboutPage = () => {
                     y2="13.7715"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#BE7B2C" />
-                    <stop offset="1" stop-color="#F9C39D" />
+                    <stop stopColor="#BE7B2C" />
+                    <stop offset="1" stopColor="#F9C39D" />
                   </linearGradient>
                   <linearGradient
                     id="paint1_linear_2_605"
@@ -279,8 +279,8 @@ const AboutPage = () => {
                     y2="27.5237"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#BE7B2C" />
-                    <stop offset="1" stop-color="#F9C39D" />
+                    <stop stopColor="#BE7B2C" />
+                    <stop offset="1" stopColor="#F9C39D" />
                   </linearGradient>
                   <linearGradient
                     id="paint2_linear_2_605"
@@ -290,8 +290,8 @@ const AboutPage = () => {
                     y2="23.2696"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#BE7B2C" />
-                    <stop offset="1" stop-color="#F9C39D" />
+                    <stop stopColor="#BE7B2C" />
+                    <stop offset="1" stopColor="#F9C39D" />
                   </linearGradient>
                   <linearGradient
                     id="paint3_linear_2_605"
@@ -301,8 +301,8 @@ const AboutPage = () => {
                     y2="46.3904"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#BE7B2C" />
-                    <stop offset="1" stop-color="#F9C39D" />
+                    <stop stopColor="#BE7B2C" />
+                    <stop offset="1" stopColor="#F9C39D" />
                   </linearGradient>
                   <linearGradient
                     id="paint4_linear_2_605"
@@ -312,8 +312,8 @@ const AboutPage = () => {
                     y2="32.1935"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#BE7B2C" />
-                    <stop offset="1" stop-color="#F9C39D" />
+                    <stop stopColor="#BE7B2C" />
+                    <stop offset="1" stopColor="#F9C39D" />
                   </linearGradient>
                   <linearGradient
                     id="paint5_linear_2_605"
@@ -323,8 +323,8 @@ const AboutPage = () => {
                     y2="43.343"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#BE7B2C" />
-                    <stop offset="1" stop-color="#F9C39D" />
+                    <stop stopColor="#BE7B2C" />
+                    <stop offset="1" stopColor="#F9C39D" />
                   </linearGradient>
                 </defs>
               </svg>

@@ -15,7 +15,7 @@ const HomeLinkSection = (props: Props) => {
   return (
     <button
       onClick={() => router.push(props.href)}
-      className="flex-1 cursor-pointer relative px-10 pb-8 flex items-end group bg-black/10 backdrop-blur-[2px]"
+      className="flex-1 cursor-pointer relative px-10 pb-4 lg:pb-8 flex items-end group lg:bg-black/10 lg:backdrop-blur-[2px]"
     >
       <Image
         src={secBackground}
@@ -24,8 +24,8 @@ const HomeLinkSection = (props: Props) => {
         draggable={false}
         className="opacity-10 z-[-2] select-none"
       />
-      <div className="flex flex-col gap-2 max-md:pt-3">
-        <p className="capitalize text-start font-medium text-5xl group-hover:text-bg tracking-tighter">
+      <div className="flex flex-col gap-2 max-md:pt-3 justify-center">
+        <p className="capitalize text-start font-medium text-3xl lg:text-4xl group-hover:text-bg tracking-tighter">
           {props?.breakpoint && locale === "en" ? (
             <>
               <span>

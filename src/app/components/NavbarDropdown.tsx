@@ -35,6 +35,13 @@ const NavbarDropdown = () => {
               <Link
                 className="text-white capitalize text-2xl"
                 href={`/${item.title}`}
+                onClick={() => {
+                  const popover = document.getElementById(
+                    "popover-1"
+                  ) as HTMLDivElement;
+                  popover?.hidePopover?.(); // hidePopover is part of Popover API
+                }}
+                prefetch
               >
                 {t(item.title)}
               </Link>

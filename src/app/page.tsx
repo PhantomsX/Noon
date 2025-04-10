@@ -15,7 +15,7 @@ export default function Home() {
           priority
           src={mainBackground}
           alt="main-bg"
-          className="object-fit z-[-2]"
+          className="object-cover z-[-2] object-[70%_0%] select-none"
         />
         <Image
           src={logo}
