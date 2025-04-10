@@ -23,15 +23,15 @@ const Navbar = (props: Props) => {
         </Link>
       </div>
       <div className="flex-none space-x-1">
-        <button className="btn btn-square btn-ghost">
+        {/* <button className="btn btn-square btn-ghost">
           <NightMode />
-        </button>
+        </button> */}
         <button onClick={handleChangeLang} className="btn btn-square btn-ghost">
           <Translate />
         </button>
-        <button className="btn btn-square btn-ghost">
+        {/* <button className="btn btn-square btn-ghost">
           <Search />
-        </button>
+        </button> */}
         <NavbarDropdown />
       </div>
     </div>
