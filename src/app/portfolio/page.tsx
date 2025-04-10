@@ -221,7 +221,7 @@ const Page = () => {
             <RowLine name={t('scope')} value={selectedProject.scope} />
             <RowLine name={t('status')} value={selectedProject.status} />
 
-            projects</section>
+            </section>
           <div className=" flex justify-center items-center mt-[80px]">
           <Link
             className=" gradient-gold-text text-[24px] text-center mx-auto hover:font-semibold"
