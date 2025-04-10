@@ -1,7 +1,6 @@
 "use client"
 import { useTranslations } from 'next-intl';
 import React, { useEffect, useState } from 'react';
-import { json } from 'stream/consumers';
 import Footer from '../components/Footer';
 
 const Page = () => {
