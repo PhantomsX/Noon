@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import Footer from "../components/Footer";
 import Link from "next/link";
@@ -134,13 +133,11 @@ function Page() {
             <h2 className=" text-center  md:w-fit py-2 font-bold  ">
               {t("title-2")}
             </h2>
-            
           </div>
 
           <p className="text-[15px]  mb-4 text-white text-center md:text-start">
             {t("breif")}
           </p>
-      
         </aside>
 
         {/* Services Grid */}
@@ -153,7 +150,6 @@ function Page() {
               }}
             >
               {t("allServices")}
-             
             </h3>
             <div className="w-full h-fit  relative">
               <img
@@ -171,7 +167,7 @@ function Page() {
                 {selected.title}
               </p>
               <div className="md:w-1/4 w-[80%] mx-auto">
-                {selected?.features.map((item, index) => {
+                {(selected?.features as string[]).map((item, index) => {
                   return (
                     <div key={index}>
                       <p className="text-white my-1  text-center md:text-start">

@@ -17,7 +17,7 @@ const NavbarDropdown = () => {
         <Menu />
       </button>
       <div
-        className="dropdown dropdown-end select-none top-7 -right-11 sm:max-w-sm w-[calc(100%+44px)] bg-main-bg/90"
+        className="dropdown ltr:dropdown-end select-none top-7 -left-11 ltr:-right-11 sm:max-w-sm w-[calc(100%+44px)] bg-main-bg/90"
         popover="auto"
         id="popover-1"
         style={{ positionAnchor: "--anchor-1" } as React.CSSProperties}

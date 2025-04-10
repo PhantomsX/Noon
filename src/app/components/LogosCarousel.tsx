@@ -17,6 +17,8 @@ import sa from "@/public/logos/sa.svg";
 import binDayel from "@/public/logos/bin-dayel.svg";
 import mAndBeyond from "@/public/logos/m&beyond.svg";
 import Image from "next/image";
+import Marquee from "react-fast-marquee";
+import { useLocale } from "next-intl";
 
 const LogosCarousel = () => {
   const logos = [
@@ -39,14 +41,17 @@ const LogosCarousel = () => {
     binDayel,
     mAndBeyond,
   ];
+  const locale = useLocale();
   return (
-    <div className="carousel gap-8 items-center py-1.5 select-none">
+    <Marquee
+      delay={0}
+      direction={locale === "ar" ? "right" : "left"}
+      className="items-center py-1.5 select-none px-6"
+    >
       {logos.map((logo, index) => (
-        <div className="carousel-item first:ps-6 last:pe-6" key={index}>
-          <Image src={logo} alt="logo" draggable={false} />
-        </div>
+        <Image key={index} src={logo} alt="logo" className="me-9" draggable={false} />
       ))}
-    </div>
+    </Marquee>
   );
 };
 
