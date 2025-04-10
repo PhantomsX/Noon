@@ -4,6 +4,7 @@ import "./globals.css";
 import { getLocale, getMessages } from "next-intl/server";
 import Navbar from "./components/navbar";
 import { NextIntlClientProvider } from "next-intl";
+import Sidebar from "./components/Sidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,12 +32,13 @@ export default async function RootLayout({
     >
       <body
         suppressHydrationWarning
-        className={` antialiased flex flex-col min-h-screen`}
+        className={` antialiased flex flex-col min-h-screen relative`}
         style={geistSans.style}
       >
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           {children}
+          <Sidebar />
         </NextIntlClientProvider>
       </body>
     </html>
