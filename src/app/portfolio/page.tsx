@@ -50,7 +50,7 @@ const projects = [
   {
     id: 4,
     title: "AL DHUHAYAN BLOCK 39",
-    type: "urban",
+    type: "Project Management",
     description: "A large urban planning project.",
     image: projectImg,
     location: "Riyadh, KSA",
@@ -65,7 +65,7 @@ const projects = [
   {
     id: 5,
     title: "AL DHUHAYAN BLOCK 39",
-    type: "urban",
+    type: "landscape",
     description: "A large urban planning project.",
     image: projectImg,
     location: "Riyadh, KSA",
@@ -80,7 +80,7 @@ const projects = [
   {
     id: 6,
     title: "AL DHUHAYAN BLOCK 39",
-    type: "urban",
+    type: "Workshop Drawings",
     description: "A large urban planning project.",
     image: projectImg,
     location: "Riyadh, KSA",
