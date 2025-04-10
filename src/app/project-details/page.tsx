@@ -47,7 +47,7 @@ const Page = () => {
                     </section>
 
                 </aside>
-                <figure className='md:w-[33%] w-full bg-amber-200'>
+                <figure className='md:w-[33%] w-full '>
                     <img src="/images/Rectangle -img.svg" className='w-full' alt="" />
                 </figure>
 
@@ -93,10 +93,10 @@ const RowLine = ({ name, value, name2, value2 }: any) => {
                     </p>
 
                 </div>
-                <div className=" flex justify-between my-[8px] text-[14px] w-[70%]" >
+                <div className=" flex justify-between my-[8px] text-[14px] w-[60%]" >
                     <p className="text-white  md:text-start"> {name2}
                     </p>
-                    <p className=" md:text-start text-[#BE7B2C]">
+                    <p className=" md:text-center text-[#BE7B2C]">
                         {value2}
                     </p>
 

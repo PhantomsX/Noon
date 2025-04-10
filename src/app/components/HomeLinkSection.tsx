@@ -24,7 +24,7 @@ const HomeLinkSection = (props: Props) => {
         draggable={false}
         className="opacity-10 z-[-2] select-none"
       />
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 max-md:pt-3">
         <p className="capitalize text-start font-medium text-5xl group-hover:text-bg tracking-tighter">
           {props?.breakpoint && locale === "en" ? (
             <>

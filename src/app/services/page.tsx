@@ -122,7 +122,7 @@ function Page() {
     },
   ];
   return (
-    <main className="min-h-fit  md:px-[88px]   main-grident-bg ">
+    <main className="min-h-fit  md:px-[88px]   main-bg-gradient ">
       <section className="mx-auto px-5 py-16  md:flex gap-x-5">
         {/* Header Section */}
         <aside className="mb-10 w-full md:w-[25%] py-5 mx-auto md:mx-0">
@@ -143,7 +143,7 @@ function Page() {
         {/* Services Grid */}
         {selected ? (
           <aside className="w-full md:w-[70%] h-fit md:h-[78vh]  mx-auto relative">
-               <h3
+            <h3
               className="font-elegance gradient-gold-text mt-[-30px] ms-5 cursor-pointer "
               onClick={() => {
                 setSelected(null);
@@ -162,34 +162,34 @@ function Page() {
                 alt={selected.mobileImage}
                 className=" md:hidden block  object-cover mx-auto "
               />
-               <div className="z-2 absolute flex  max-md:flex-col  p-4 justify-between inset-x-0 mx-auto   bottom-[1%] gap-x-7">
-              <p className="text-[24px] md:text-[40px] h-fit md:my-auto text-white md:w-1/2 md:leading-[45px] text-center">
-                {selected.title}
-              </p>
-              <div className="md:w-1/4 w-[80%] mx-auto">
-                {(selected?.features as string[]).map((item, index) => {
-                  return (
-                    <div key={index}>
-                      <p className="text-white my-1  text-center md:text-start">
-                        {item}
-                      </p>
-                      {index != selected.features.length - 1 && (
-                        <div className="h-[1px] gradient-gold-line w-full"></div>
-                      )}
-                    </div>
-                  );
-                })}
+              <div className="z-2 absolute flex  max-md:flex-col  p-4 justify-between inset-x-0 mx-auto   bottom-[1%] gap-x-7">
+                <p className="text-[24px] md:text-[40px] h-fit md:my-auto text-white md:w-1/2 md:leading-[45px] text-center">
+                  {selected.title}
+                </p>
+                <div className="md:w-1/4 w-[80%] mx-auto">
+                  {(selected?.features as string[]).map((item, index) => {
+                    return (
+                      <div key={index}>
+                        <p className="text-white my-1  text-center md:text-start">
+                          {item}
+                        </p>
+                        {index != selected.features.length - 1 && (
+                          <div className="h-[1px] gradient-gold-line w-full"></div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
-            </div>
-           
+
           </aside>
         ) : (
           <aside className="w-full md:w-[70%] grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {services.map((service) => (
-                 <div key={service.id}>
-              <Service service={service} setSelected={setSelected} t={t} />
-               </div> 
+              <div key={service.id}>
+                <Service service={service} setSelected={setSelected} t={t} />
+              </div>
 
             ))}
           </aside>
@@ -204,40 +204,40 @@ export default Page;
 
 
 
-const Service = ({service ,setSelected,t}: any) => {
+const Service = ({ service, setSelected, t }: any) => {
   return (
     <div
-                key={service.id}
-                className="  text-white flex flex-col justify-center items-center "
-              >
-                
-                <div
-                  className="text-center mx-auto"
-                  onClick={() => {
-                    setSelected(service);
-                  }}
-                >
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="object-cover h-[145px] w-[145px]"
-                  />
-                </div>
+      key={service.id}
+      className="  text-white flex flex-col justify-center items-center "
+    >
 
-                {/* Content */}
-                <div className="text-center " dir="ltr">
-                  <h3 className="text-[14px] md:text-[18px] mb-2 text-center my-2  h-[40px] md:h-[50px] overflow-hidden">
-                    {service.title}
-                  </h3>
-                  <Link href={"/projects"} className="text-[10px] md:text-[12px] border-[1px]  mx-auto text-center border-[#BE7B2C] py-1 px-3 w-fit cursor-pointer">
-                    {t("service-btn")}
-                    <img
-                      src="/icons/arrow.svg"
-                      alt={"arrow"}
-                      className=" inline-block mx-1"
-                    />
-                  </Link>
-                </div>
-              </div>
+      <div
+        className="text-center mx-auto"
+        onClick={() => {
+          setSelected(service);
+        }}
+      >
+        <img
+          src={service.image}
+          alt={service.title}
+          className="object-cover h-[145px] w-[145px]"
+        />
+      </div>
+
+      {/* Content */}
+      <div className="text-center " dir="ltr">
+        <h3 className="text-[14px] md:text-[18px] mb-2 text-center my-2  h-[40px] md:h-[50px] overflow-hidden">
+          {service.title}
+        </h3>
+        <Link href={"/portfolio"} className="text-[10px] md:text-[12px] border-[1px]  mx-auto text-center border-[#BE7B2C] py-1 px-3 w-fit cursor-pointer">
+          {t("service-btn")}
+          <img
+            src="/icons/arrow.svg"
+            alt={"arrow"}
+            className=" inline-block mx-1"
+          />
+        </Link>
+      </div>
+    </div>
   )
 } 

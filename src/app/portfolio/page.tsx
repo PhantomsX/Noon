@@ -102,7 +102,7 @@ const Page = () => {
   const [selectedType, setSelectedType] = useState("all");
   const [currentIndex, setCurrentIndex] = useState(0);
   const t = useTranslations("projects");
-const carouselRef=useRef<any>(null)
+  const carouselRef = useRef<any>(null)
   const filteredProjects = useMemo(() => {
     return selectedType === "all"
       ? projects
@@ -112,17 +112,17 @@ const carouselRef=useRef<any>(null)
   const selectedProject = filteredProjects[currentIndex];
 
   const handlePrev = () => {
-    
-    if( currentIndex != 0)
+
+    if (currentIndex != 0)
       carouselRef!.current.scrollBy({ left: -100, behavior: 'smooth' });
-    
+
     setCurrentIndex((prev) =>
       prev === 0 ? filteredProjects.length - 1 : prev - 1
     );
 
   };
   const handleNext = () => {
-    if( currentIndex != filteredProjects.length - 1 )
+    if (currentIndex != filteredProjects.length - 1)
       carouselRef!.current.scrollBy({ left: 100, behavior: 'smooth' });
 
     setCurrentIndex((prev) =>
@@ -137,7 +137,7 @@ const carouselRef=useRef<any>(null)
   };
 
   return (
-    <main className=" md:px-[88px]  min-h-[100vh] main-grident-bg  flex flex-col justify-between">
+    <main className=" md:px-[88px]  min-h-[100vh] main-bg-gradient  flex flex-col justify-between">
       <section className="mx-auto px-5 py-16  md:flex gap-x-5 ">
         {/* Header Section */}
         <aside className="mb-10 w-full md:w-[25%] py-5 mx-auto md:mx-0">
@@ -180,35 +180,35 @@ const carouselRef=useRef<any>(null)
                 key={cat}
                 onClick={() => handleTabClick(cat)}
                 className={`text-sm uppercase ${selectedType === cat
-                    ? "text-[#F9C39D] font-semibold"
-                    : "text-white hover:text-[#F9C39D]"
+                  ? "text-[#F9C39D] font-semibold"
+                  : "text-white hover:text-[#F9C39D]"
                   } transition-colors`}
               >
                 {cat}
               </button>
             ))}
           </div>
-         
+
 
 
           <div className="carousel carousel-center   max-w-full space-x-4 p-4" ref={carouselRef}>
             {filteredProjects.map((project, index) => {
               return (
-               <div id={"project"+index} className="carousel-item" key={project.id} >
-                   <img key={index} className={"cursor-pointer w-[250px] object-cover h-[200px] "+ (selectedProject.id==project.id?" border-[1px] border-[#eea95a]":"")} onClick={() => { setCurrentIndex(index) }} src={"/images/projects.svg"} alt="squarprojectses" />
-              
-              </div>
-             )
+                <div id={"project" + index} className="carousel-item" key={project.id} >
+                  <img key={index} className={"cursor-pointer w-[250px] object-cover h-[200px] " + (selectedProject.id == project.id ? " border-[1px] border-[#eea95a]" : "")} onClick={() => { setCurrentIndex(index) }} src={"/images/projects.svg"} alt="squarprojectses" />
+
+                </div>
+              )
 
             })}
-             
-              
+
+
           </div>
 
 
-        
+
         </aside>
-        <aside className=" md:w-[25%] md:border-s-[1px]  border-[#eea95a] text-white  px-5">
+        <aside className=" md:w-[25%] md:border-s-[1px]  border-bg text-white  px-5">
           <p className="font-bold text-[23px] min-h-[80px] ">
             {selectedProject.title}
           </p>
@@ -221,18 +221,20 @@ const carouselRef=useRef<any>(null)
             <RowLine name={t('scope')} value={selectedProject.scope} />
             <RowLine name={t('status')} value={selectedProject.status} />
 
-          </section>
+            projects</section>
+          <div className=" flex justify-center items-center mt-[80px]">
           <Link
-             onClick={()=>{localStorage.setItem("selectedProject",JSON.stringify(selectedProject))}}
+            className=" gradient-gold-text text-[24px] text-center mx-auto hover:font-semibold"
+            onClick={() => { localStorage.setItem("selectedProject", JSON.stringify(selectedProject)) }}
             href="/project-details" scroll={false}>
             Details
-            </Link>
-           
-                    
-<div className="flex justify-between md:mt-[30vh]  mt-[70px]">
-            {currentIndex>0?<Link href={"#project" + (currentIndex - 1) } className=" text-white " onClick={(e) => { e.preventDefault(); handlePrev();   }}> <span className="text-[#eea95a]  me-1">❮</span>  Prev</Link>:<div></div>}
-            {currentIndex!=filteredProjects.length-1? <Link href={"#project"+(currentIndex+1)} className="text-white " onClick={(e)=>{ e.preventDefault();handleNext()}}> Next<span className="text-[#eea95a] ms-1">❯</span></Link>:<div></div>}
-    </div>      
+          </Link>
+
+          </div>
+          <div className="flex justify-between md:mt-[20vh]  mt-[40px]">
+            {currentIndex > 0 ? <Link href={"#project" + (currentIndex - 1)} className=" text-white " onClick={(e) => { e.preventDefault(); handlePrev(); }}> <span className="text-[#eea95a]  me-1">❮</span>  Prev</Link> : <div></div>}
+            {currentIndex != filteredProjects.length - 1 ? <Link href={"#project" + (currentIndex + 1)} className="text-white " onClick={(e) => { e.preventDefault(); handleNext() }}> Next<span className="text-[#eea95a] ms-1">❯</span></Link> : <div></div>}
+          </div>
 
 
         </aside>
