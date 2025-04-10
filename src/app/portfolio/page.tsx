@@ -174,7 +174,7 @@ const Page = () => {
               />
             </div>
           </section>
-          <div className="flex w-full gap-3 md:gap-8 flex-wrap  pb-4 mt-12 justify-center ">
+          <div className="flex w-full gap-3 md:gap-3 flex-wrap  pb-4 mt-12 justify-center ">
             {categories.map((cat) => (
               <button
                 key={cat}
