@@ -17,14 +17,14 @@ export default function Home() {
           priority
           src={mainBackground}
           alt="main-bg"
-          className="md:object hidden md:block -fit z-[-2] object-center select-none"
+          className="object-fit hidden md:block -fit z-[-2] object-center select-none"
         />
            <Image
           fill
           priority
           src={mainBackgroundMobile}
           alt="main-bg"
-          className="object-fit md:hidddn -fit z-[-2] object-center select-none"
+          className="object-fit md:hidden z-[-2] object-center select-none"
         />
         <Image
           src={logo}
