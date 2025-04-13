@@ -8,8 +8,14 @@ const Footer = () => {
   const t = useTranslations("");
   const locale = useLocale();
   return (
-    <footer className="flex max-sm:flex-col-reverse max-sm:gap-2.5 justify-between items-center mt-auto p-8">
-      <span className="text-white sm:text-[#BE7B2C] max-sm:text-[10px]">
+    <footer
+      dir="ltr"
+      className="flex max-sm:flex-col-reverse max-sm:gap-2.5 justify-between items-center mt-auto p-8"
+    >
+      <span
+        dir={locale === "ar" ? "rtl" : "ltr"}
+        className="text-white sm:text-[#BE7B2C] max-sm:text-[10px]"
+      >
         {t("rights")}
       </span>
       <div className="select-none pointer-events-none">

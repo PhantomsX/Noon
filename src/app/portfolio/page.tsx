@@ -108,23 +108,28 @@ const Page = () => {
   const selectedProject = filteredProjects[currentIndex];
 
   const handlePrev = () => {
-    if (currentIndex != 0)
-      carouselRef!.current.scrollBy({ left: -100, behavior: "smooth" });
+    const newIndex =
+      currentIndex === 0 ? filteredProjects.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
 
-    setCurrentIndex((prev) =>
-      prev === 0 ? filteredProjects.length - 1 : prev - 1
-    );
+    const target = document.getElementById("project" + newIndex);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", inline: "center" });
+    }
   };
+
   const handleNext = () => {
-    if (currentIndex != filteredProjects.length - 1)
-      carouselRef!.current.scrollBy({ left: 100, behavior: "smooth" });
+    const newIndex =
+      currentIndex === filteredProjects.length - 1 ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
 
-    setCurrentIndex((prev) =>
-      prev === filteredProjects.length - 1 ? 0 : prev + 1
-    );
+    const target = document.getElementById("project" + newIndex);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", inline: "center" });
+    }
   };
 
-  const handleTabClick = (type) => {
+  const handleTabClick = (type: string) => {
     setSelectedType(type);
     setCurrentIndex(0);
   };
@@ -181,7 +186,7 @@ const Page = () => {
           </div>
 
           <div
-            className="carousel carousel-center   max-w-full space-x-4 p-4"
+            className="carousel carousel-center max-w-full space-x-4 p-4 overflow-x-auto scroll-smooth"
             ref={carouselRef}
           >
             {filteredProjects.map((project, index) => {
@@ -238,7 +243,7 @@ const Page = () => {
               {t("Details")}
             </Link>
           </div>
-          <div className="flex justify-between md:mt-[20vh]  mt-[40px]">
+          <div className="flex justify-between md:mt-[20vh] mt-[40px]">
             {currentIndex > 0 ? (
               <Link
                 href={"#project" + (currentIndex - 1)}
