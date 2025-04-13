@@ -11,9 +11,9 @@ const AboutPage = () => {
   const t = useTranslations();
   return (
     <main className="flex-1 main-bg-gradient flex-col flex">
-      <section className="flex max-lg:flex-col max-lg:items-center max-lg:gap-6 pt-12 sm:pt-28 md:ps-[88px] max-sm:gap-16 px-8">
+      <section className="flex max-lg:flex-col max-lg:items-center max-lg:gap-6 pt-12 sm:pt-28 md:ps-[88px] max-sm:gap-16 px-9">
         <div className="max-w-[340px] w-full text-white space-y-2.5">
-          <h2 className="text-bg capitalize text-5xl tracking-tighter sm:max-w-[5ch] font-medium shrink-0">
+          <h2 className="text-bg capitalize text-5xl tracking-tighter sm:max-w-[5ch] pb-2 font-medium shrink-0">
             {t("about")}
           </h2>
           <p className="text-justify">{t("aboutText1")}</p>
@@ -36,7 +36,7 @@ const AboutPage = () => {
               />
             </div>
             <div className="flex-1 text-white max-md:ps-10 md:ps-[85px] max-md:pb-4">
-              <h3 className="text-bg italic capitalize mb-4 text-4xl tracking-tighter font-medium shrink-0">
+              <h3 className="text-bg italic capitalize mb-4 text-4xl tracking-tighter rtl:ps-1.5 pb-2 font-medium shrink-0">
                 {t("Notes From The CEO")}
               </h3>
               <p className="italic">{t("aboutText4")}</p>

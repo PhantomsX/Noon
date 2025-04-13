@@ -1,12 +1,14 @@
 import React from "react";
 import { Menu } from "./icons";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
-import logo from "@/public/icons/big-logo-en.svg";
+import logoEn from "@/public/icons/big-logo-en.svg";
+import logoAr from "@/public/icons/big-logo-ar.svg";
 
 const NavbarDropdown = () => {
   const t = useTranslations();
+  const locale = useLocale();
   return (
     <>
       <button
@@ -50,7 +52,7 @@ const NavbarDropdown = () => {
         </ul>
         <div className="select-none pointer-events-none">
           <Image
-            src={logo}
+            src={locale === "ar" ? logoAr : logoEn}
             draggable={false}
             alt="logo"
             className="w-44 py-10 mx-auto"

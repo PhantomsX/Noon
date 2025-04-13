@@ -9,7 +9,7 @@ const CalculatePage = () => {
   const t = useTranslations();
   return (
     <main className="flex-1 main-bg-gradient flex-col flex">
-      <div className="flex max-sm:flex-col pt-12 sm:pt-28 sm:ps-[88px] max-sm:gap-16 px-8">
+      <div className="flex max-sm:flex-col pt-12 sm:pt-28 sm:ps-[88px] max-sm:gap-16 px-9">
         <h2 className="text-bg capitalize text-5xl tracking-tighter sm:max-w-[330px] font-medium shrink-0">
           {t("calculateTitle")}
         </h2>

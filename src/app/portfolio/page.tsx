@@ -1,9 +1,10 @@
-"use client"
+"use client";
 import projectImg from "@/public/images/projects.svg";
-import { useTranslations } from "next-intl";
-import React, { useState, useMemo, useEffect, useRef } from "react";
+import { useLocale, useTranslations } from "next-intl";
+import React, { useState, useMemo, useRef } from "react";
 import Footer from "../components/Footer";
-import logo from "@/public/icons/big-logo-en.svg";
+import logoEn from "@/public/icons/big-logo-en.svg";
+import logoAr from "@/public/icons/big-logo-ar.svg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,10 +19,7 @@ const projects = [
     area: "656027 SQM",
     scope: "Urban Planning & Design",
     status: "Approved",
-    related: [
-      { thumb: "/images/thumb1.jpg" },
-      { thumb: "/images/thumb2.jpg" },
-    ],
+    related: [{ thumb: "/images/thumb1.jpg" }, { thumb: "/images/thumb2.jpg" }],
   },
   {
     id: 2,
@@ -57,10 +55,7 @@ const projects = [
     area: "656027 SQM",
     scope: "Urban Planning & Design",
     status: "Approved",
-    related: [
-      { thumb: "/images/thumb1.jpg" },
-      { thumb: "/images/thumb2.jpg" },
-    ],
+    related: [{ thumb: "/images/thumb1.jpg" }, { thumb: "/images/thumb2.jpg" }],
   },
   {
     id: 5,
@@ -72,10 +67,7 @@ const projects = [
     area: "656027 SQM",
     scope: "Urban Planning & Design",
     status: "Approved",
-    related: [
-      { thumb: "/images/thumb1.jpg" },
-      { thumb: "/images/thumb2.jpg" },
-    ],
+    related: [{ thumb: "/images/thumb1.jpg" }, { thumb: "/images/thumb2.jpg" }],
   },
   {
     id: 6,
@@ -87,22 +79,26 @@ const projects = [
     area: "656027 SQM",
     scope: "Urban Planning & Design",
     status: "Approved",
-    related: [
-      { thumb: "/images/thumb1.jpg" },
-      { thumb: "/images/thumb2.jpg" },
-    ],
+    related: [{ thumb: "/images/thumb1.jpg" }, { thumb: "/images/thumb2.jpg" }],
   },
   // Add more projects...
 ];
 
-
-const categories = ["all", "urban", "architecture", "landscape", "Project Management", "Workshop Drawings"];
+const categories = [
+  "all",
+  "urban",
+  "architecture",
+  "landscape",
+  "Project Management",
+  "Workshop Drawings",
+];
 
 const Page = () => {
+  const locale = useLocale();
   const [selectedType, setSelectedType] = useState("all");
   const [currentIndex, setCurrentIndex] = useState(0);
   const t = useTranslations("projects");
-  const carouselRef = useRef<any>(null)
+  const carouselRef = useRef<any>(null);
   const filteredProjects = useMemo(() => {
     return selectedType === "all"
       ? projects
@@ -112,23 +108,20 @@ const Page = () => {
   const selectedProject = filteredProjects[currentIndex];
 
   const handlePrev = () => {
-
     if (currentIndex != 0)
-      carouselRef!.current.scrollBy({ left: -100, behavior: 'smooth' });
+      carouselRef!.current.scrollBy({ left: -100, behavior: "smooth" });
 
     setCurrentIndex((prev) =>
       prev === 0 ? filteredProjects.length - 1 : prev - 1
     );
-
   };
   const handleNext = () => {
     if (currentIndex != filteredProjects.length - 1)
-      carouselRef!.current.scrollBy({ left: 100, behavior: 'smooth' });
+      carouselRef!.current.scrollBy({ left: 100, behavior: "smooth" });
 
     setCurrentIndex((prev) =>
       prev === filteredProjects.length - 1 ? 0 : prev + 1
     );
-
   };
 
   const handleTabClick = (type) => {
@@ -148,26 +141,23 @@ const Page = () => {
             <h2 className=" text-center  md:w-fit py-2 font-bold  ">
               {t("title-2")}
             </h2>
-
           </div>
 
           <p className="text-[15px]  mb-4 text-white text-center md:text-start">
             {t("breif")}
           </p>
-
         </aside>
 
         <aside className="md:w-[50%] flex flex-col ">
           <section className=" bg-white  flex flex-col pt-4 ">
             <figure className="relative w-[95%]  mx-auto h-full">
               <img src={"/images/projects.svg"} alt="squarprojectses" />
-
             </figure>
 
             <div className="flex justify-between items-center p-3">
-              <p className="text-[11px] "> {t('copy rights')} </p>
+              <p className="text-[11px] "> {t("copy rights")} </p>
               <Image
-                src={logo}
+                src={locale === "ar" ? logoAr : logoEn}
                 draggable={false}
                 alt="logo"
                 className="w-44 sm:w-28"
@@ -179,34 +169,46 @@ const Page = () => {
               <button
                 key={cat}
                 onClick={() => handleTabClick(cat)}
-                className={`text-sm uppercase ${selectedType === cat
-                  ? "text-[#F9C39D] font-semibold"
-                  : "text-white hover:text-[#F9C39D]"
-                  } transition-colors`}
+                className={`text-sm uppercase ${
+                  selectedType === cat
+                    ? "text-[#F9C39D] font-semibold"
+                    : "text-white hover:text-[#F9C39D]"
+                } transition-colors`}
               >
-                {cat}
+                {t(cat)}
               </button>
             ))}
           </div>
 
-
-
-          <div className="carousel carousel-center   max-w-full space-x-4 p-4" ref={carouselRef}>
+          <div
+            className="carousel carousel-center   max-w-full space-x-4 p-4"
+            ref={carouselRef}
+          >
             {filteredProjects.map((project, index) => {
               return (
-                <div id={"project" + index} className="carousel-item" key={project.id} >
-                  <img key={index} className={"cursor-pointer w-[250px] object-cover h-[200px] " + (selectedProject.id == project.id ? " border-[1px] border-[#eea95a]" : "")} onClick={() => { setCurrentIndex(index) }} src={"/images/projects.svg"} alt="squarprojectses" />
-
+                <div
+                  id={"project" + index}
+                  className="carousel-item"
+                  key={project.id}
+                >
+                  <img
+                    key={index}
+                    className={
+                      "cursor-pointer w-[250px] object-cover h-[200px] " +
+                      (selectedProject.id == project.id
+                        ? " border-[1px] border-[#eea95a]"
+                        : "")
+                    }
+                    onClick={() => {
+                      setCurrentIndex(index);
+                    }}
+                    src={"/images/projects.svg"}
+                    alt="squarprojectses"
+                  />
                 </div>
-              )
-
+              );
             })}
-
-
           </div>
-
-
-
         </aside>
         <aside className=" md:w-[25%] md:border-s-[1px]  border-bg text-white  px-5">
           <p className="font-bold text-[23px] min-h-[80px] ">
@@ -216,32 +218,60 @@ const Page = () => {
             {selectedProject.description}
           </p>
           <section className="mt-5 ">
-            <RowLine name={t('location')} value={selectedProject.location} />
-            <RowLine name={t('area')} value={selectedProject.area} />
-            <RowLine name={t('scope')} value={selectedProject.scope} />
-            <RowLine name={t('status')} value={selectedProject.status} />
-
-            </section>
+            <RowLine name={t("location")} value={selectedProject.location} />
+            <RowLine name={t("area")} value={selectedProject.area} />
+            <RowLine name={t("scope")} value={selectedProject.scope} />
+            <RowLine name={t("status")} value={selectedProject.status} />
+          </section>
           <div className=" flex justify-center items-center mt-[80px]">
-          <Link
-            className=" gradient-gold-text text-[24px] text-center mx-auto hover:font-semibold"
-            onClick={() => { localStorage.setItem("selectedProject", JSON.stringify(selectedProject)) }}
-            href="/project-details" scroll={true}>
-            Details
-          </Link>
-
+            <Link
+              className=" gradient-gold-text text-[24px] text-center mx-auto hover:font-semibold"
+              onClick={() => {
+                localStorage.setItem(
+                  "selectedProject",
+                  JSON.stringify(selectedProject)
+                );
+              }}
+              href="/project-details"
+              scroll={true}
+            >
+              {t("Details")}
+            </Link>
           </div>
           <div className="flex justify-between md:mt-[20vh]  mt-[40px]">
-            {currentIndex > 0 ? <Link href={"#project" + (currentIndex - 1)} className=" text-white " onClick={(e) => { e.preventDefault(); handlePrev(); }}> <span className="text-[#eea95a]  me-1">❮</span>  Prev</Link> : <div></div>}
-            {currentIndex != filteredProjects.length - 1 ? <Link href={"#project" + (currentIndex + 1)} className="text-white " onClick={(e) => { e.preventDefault(); handleNext() }}> Next<span className="text-[#eea95a] ms-1">❯</span></Link> : <div></div>}
+            {currentIndex > 0 ? (
+              <Link
+                href={"#project" + (currentIndex - 1)}
+                className=" text-white "
+                onClick={(e) => {
+                  e.preventDefault();
+                  handlePrev();
+                }}
+              >
+                {" "}
+                <span className="text-[#eea95a]  me-1">❮</span> {t("Prev")}
+              </Link>
+            ) : (
+              <div></div>
+            )}
+            {currentIndex != filteredProjects.length - 1 ? (
+              <Link
+                href={"#project" + (currentIndex + 1)}
+                className="text-white "
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNext();
+                }}
+              >
+                {" "}
+                {t("Next")}
+                <span className="text-[#eea95a] ms-1">❯</span>
+              </Link>
+            ) : (
+              <div></div>
+            )}
           </div>
-
-
         </aside>
-
-
-
-
       </section>
 
       <Footer />
@@ -249,23 +279,16 @@ const Page = () => {
   );
 };
 
-
-
 export default Page;
 
 const RowLine = ({ name, value }: any) => {
   return (
     <>
       <div className="h-[1px] gradient-gold-line w-full"></div>
-      <div className=" flex justify-between my-[8px] text-[14px]" >
-        <p className="text-white  md:text-start"> {name}
-        </p>
-        <p className="text-white md:text-start">
-          {value}
-        </p>
-
+      <div className=" flex justify-between my-[8px] text-[14px]">
+        <p className="text-white  md:text-start"> {name}</p>
+        <p className="text-white md:text-start">{value}</p>
       </div>
-
     </>
-  )
-}
+  );
+};

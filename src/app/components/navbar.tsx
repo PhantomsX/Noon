@@ -19,7 +19,7 @@ const Navbar = (props: Props) => {
     <div className="navbar z-10 bg-main-bg shadow-sm h-24 px-10">
       <div className="flex-1">
         <Link href={"/"}>
-          <img src={logo.src} alt="Logo" className="w-20 h-14" />
+          <img src={logo.src} alt="Logo" className=" w-16 md:w-20 h-14" />
         </Link>
       </div>
       <div className="flex-none space-x-1">

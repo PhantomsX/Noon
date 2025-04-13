@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 const ClientsPage = () => {
   return (
     <main className="flex-1 main-bg-gradient flex-col flex">
-      <div className="flex max-sm:flex-col max-sm:gap-16 px-8 pt-12 sm:ps-[88px] sm:pt-28">
+      <div className="flex max-sm:flex-col max-sm:gap-16 px-9 pt-12 sm:ps-[88px] sm:pt-28">
         <div className="sm:max-w-[270px] shrink-0  space-y-6">
           <h2 className="text-bg capitalize text-4xl">
             our partners of success

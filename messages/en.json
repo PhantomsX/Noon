@@ -44,6 +44,25 @@
   "m": "m²",
   "portfolio": "Portfolio of work",
   "pricing for all services is in saudi riyals": "pricing for all services is in saudi riyals.",
+  "projects": {
+    "Details": "Details",
+    "Next": "Next",
+    "Prev": "Prev",
+    "Project Management": "Project Management",
+    "Workshop Drawings": "Workshop Drawings",
+    "all": "all",
+    "architecture": "architecture",
+    "area": "AREA",
+    "breif": "For years we have worked with organizations around Saudi Arabia. We are proud of the work we have done, and the unique depth of knowledge it has allowed us to build. Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects.",
+    "copy rights": " all renders is back to noon copyrights.",
+    "landscape": "landscape",
+    "location": "LOCATION",
+    "scope": "SCOPE OF WORK",
+    "status": "STATUS",
+    "title-1": "Portfolio",
+    "title-2": "of work",
+    "urban": "urban"
+  },
   "rights": "All Right Reserved To N&N CONSULTANTS 2024. ®",
   "send inquiry": "send inquiry",
   "services": "our best of services",
@@ -65,17 +84,6 @@
     "service-btn": "  SERVICE PROJECTS",
     "title-1": "Our Best",
     "title-2": "  Of Services"
-  },
-
-  "projects": {
-    "title-1": "Portfolio",
-    "title-2": "of work",
-    "breif": "For years we have worked with organizations around Saudi Arabia. We are proud of the work we have done, and the unique depth of knowledge it has allowed us to build. Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects.",
-    "copy rights": " all renders is back to noon copyrights.",
-    "location": "LOCATION",
-    "area": "AREA",
-    "scope": "SCOPE OF WORK",
-    "status": "STATUS"
   },
   "slide to select the space of the services in m2": "slide to select the space of the services in m²."
 }

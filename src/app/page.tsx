@@ -3,12 +3,14 @@ import Image from "next/image";
 import mainBackground from "@/public/main-bg.png";
 import mainBackgroundMobile from "@/public/main-bg-mobile.png";
 
-import logo from "@/public/icons/big-logo-en.svg";
+import logoEn from "@/public/icons/big-logo-en.svg";
+import logoAr from "@/public/icons/big-logo-ar.svg";
 import HomeLinkSection from "./components/HomeLinkSection";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import LogosCarousel from "./components/LogosCarousel";
 export default function Home() {
   const t = useTranslations();
+  const locale = useLocale();
   return (
     <>
       <main className="relative flex-1 flex flex-col">
@@ -27,7 +29,7 @@ export default function Home() {
           className="object-fit md:hidden z-[-2] object-center select-none"
         />
         <Image
-          src={logo}
+          src={locale === "ar" ? logoAr : logoEn}
           draggable={false}
           alt="logo"
           className="absolute z-[1] select-none pointer-events-none left-1/2 -translate-x-1/2 scale-75 top-28 max-lg:hidden"
