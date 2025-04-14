@@ -27,7 +27,7 @@ const CalculatePage = () => {
                   <option>Velvet</option>
                 </select>
               </div>
-              <div className="grid grid-cols-3 gap-8">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
                 <RadioElement name="radio-1" label={t("Office Use")} />
                 <RadioElement name="radio-1" label={t("Mixed Use")} />
                 <RadioElement name="radio-1" label={t("Residential")} />
@@ -35,12 +35,11 @@ const CalculatePage = () => {
               <div className="border flex justify-center border-bg items-center py-2.5">
                 <p className="text-white uppercase text">{t("building")}</p>
               </div>
-              <div className="grid grid-cols-3 gap-8">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
                 <RadioElement name="radio-2" label={t("Mixed Use")} />
                 <RadioElement name="radio-2" label={t("Residential")} />
                 <RadioElement name="radio-2" label={t("Hospitality")} />
-              </div>{" "}
-              <div className="grid grid-cols-3 gap-8">
+              
                 <RadioElement name="radio-2" label={t("Commercial")} />
                 <RadioElement name="radio-2" label={t("Health Care")} />
                 <RadioElement name="radio-2" label={t("Offices")} />
@@ -48,7 +47,7 @@ const CalculatePage = () => {
               <div className="border flex justify-center border-bg items-center py-2.5">
                 <p className="text-white uppercase text">{t("industrial")}</p>
               </div>
-              <div className="grid grid-cols-3 gap-8">
+              <div className="grid grid-cols-2 md:grid-cols-3gap-8">
                 <RadioElement name="radio-3" label={t("Warehouse")} />
                 <RadioElement name="radio-3" label={t("factory")} />
               </div>

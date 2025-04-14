@@ -11,7 +11,7 @@ export default function PlotAreaSlider() {
   };
 
   return (
-    <div className="text-white w-full">
+    <div dir="ltr" className="text-white w-full">
       {/* Header */}
       <div className="flex items-center justify-between mb-1">
         <label className="text-lg font-medium">{t("Total Plot Area")}</label>

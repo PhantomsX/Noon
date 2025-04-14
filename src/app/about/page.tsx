@@ -25,8 +25,11 @@ const AboutPage = () => {
 
           <p className="text-justify">{t("aboutText3")}</p>
         </div>
-        <div className="border-r ltr:border-l border-bg lg:ms-[100px] flex-1 md:pe-[100px] lg:pe-[240px] ">
+        <div className=" ltr:border-l rtl:border-r border-bg lg:ms-[100px] flex-1 md:pe-[100px] lg:pe-[240px] ">
           <div className="border-b w-full border-bg flex flex-wrap items-center gap-y-6">
+          <h3 className="text-bg italic capitalize mb-4 text-[24px]  ps-[10px]  font-medium shrink-0  md:hidden  ">
+                {t("Notes From The CEO")}
+              </h3>
             <div className="relative max-w-[420px] ms-14">
               <Image
                 src={ceo}
@@ -36,7 +39,7 @@ const AboutPage = () => {
               />
             </div>
             <div className="flex-1 text-white max-md:ps-10 md:ps-[85px] max-md:pb-4">
-              <h3 className="text-bg italic capitalize mb-4 text-4xl tracking-tighter rtl:ps-1.5 pb-2 font-medium shrink-0">
+              <h3 className="text-bg italic capitalize mb-4 text-4xl tracking-tighter rtl:ps-1.5 pb-2 font-medium shrink-0 hidden md:block">
                 {t("Notes From The CEO")}
               </h3>
               <p className="italic">{t("aboutText4")}</p>

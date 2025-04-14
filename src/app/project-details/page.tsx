@@ -67,7 +67,7 @@ const Page = () => {
                 </figure>
 
                 <p className='md:w-[45%] w-full text-white'>
-                    For years we have worked with organizations around Saudi Arabia. We are proud of the work we have done, and the unique depth of knowledge it has allowed us to build. Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects..
+                   {t('description')}
 
                 </p>
 

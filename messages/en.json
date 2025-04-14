@@ -24,9 +24,9 @@
   "Total Plot Area": "Total Plot Area",
   "Warehouse": "Warehouse",
   "about": "About n&n",
-  "aboutText1": "N&N Engineering services is one of the recognized Urban,             Architecture and Interior Design practice in the KSA. founded in             2011. N&N designs, adapt and respond to the context of each project             to create intelligent and enduring Urban Planning & Design.",
-  "aboutText2": "Our success has been principally due to the quality of our people             and their ability to be able to produce high quality design together             with an understanding of what makes the Design successful Socially,             Environmentally and Economically.",
-  "aboutText3": "It is our objective to continually evolve as a Designing practice,             always striving to find new solutions to traditional challenges and             to provide the best possible service to our clients and the             community",
+  "aboutText1": "N&N Engineering services is one of the recognized Urban, Architecture and Interior Design practice in the KSA. founded in 2011. N&N designs, adapt and respond to the context of each project to create intelligent and enduring Urban Planning & Design.",
+  "aboutText2": "Our success has been principally due to the quality of our people and their ability to be able to produce high quality design together with an understanding of what makes the Design successful Socially, Environmentally and Economically.",
+  "aboutText3": "It is our objective to continually evolve as a Designing practice, always striving to find new solutions to traditional challenges and to provide the best possible service to our clients and the community",
   "aboutText4": "“We, as n&n, are a professional engineering services firm that                 engages in urban, architectural design, supervision, interior                 design, project management as well as related research, planning                 and consultancy activities.",
   "aboutText5": "Our firm provides solutions that are both creative and feasible.                 Our goal is to continue to strive as a team of professionals to                 guarantee our unwavering commitment to value and quality that                 satisfies our clients.”",
   "address1": "Riyadh, Saudi Arabia Olaya St, Al Wurud District",
@@ -61,7 +61,8 @@
     "status": "STATUS",
     "title-1": "Portfolio",
     "title-2": "of work",
-    "urban": "urban"
+    "urban": "urban",
+    "description": " For years we have worked with organizations around Saudi Arabia. We are proud of the work we have done, and the unique depth of knowledge it has allowed us to build. Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects.."
   },
   "rights": "All Right Reserved To N&N CONSULTANTS 2024. ®",
   "send inquiry": "send inquiry",
@@ -85,5 +86,7 @@
     "title-1": "Our Best",
     "title-2": "  Of Services"
   },
-  "slide to select the space of the services in m2": "slide to select the space of the services in m²."
+  "slide to select the space of the services in m2": "slide to select the space of the services in m².",
+  "clientsSubtitle": "  Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects.",
+  "clientsTitle": " Our partners of success"
 }
