@@ -25,9 +25,9 @@ const AboutPage = () => {
 
           <p className="text-justify">{t("aboutText3")}</p>
         </div>
-        <div className=" ltr:border-l rtl:border-r border-bg lg:ms-[100px] flex-1 md:pe-[100px] lg:pe-[240px] ">
-          <div className="border-b w-full border-bg flex flex-wrap items-center gap-y-6">
-          <h3 className="text-bg italic capitalize mb-4 text-[24px]  ps-[10px]  font-medium shrink-0  md:hidden  ">
+        <div className=" ltr:border-l rtl:border-r border-bg lg:ms-[100px] flex-1 md:pe-[100px] xl:pe-[80px]  ">
+          <div className="border-b w-full  border-bg flex flex-wrap items-center gap-y-6 ">
+          <h3 className="text-bg italic capitalize mb-4 text-[24px]  ps-[10px]  font-medium shrink-0  lg:hidden  ">
                 {t("Notes From The CEO")}
               </h3>
             <div className="relative max-w-[420px] ms-14">
@@ -38,8 +38,8 @@ const AboutPage = () => {
                 className="object-cover h-full"
               />
             </div>
-            <div className="flex-1 text-white max-md:ps-10 md:ps-[85px] max-md:pb-4">
-              <h3 className="text-bg italic capitalize mb-4 text-4xl tracking-tighter rtl:ps-1.5 pb-2 font-medium shrink-0 hidden md:block">
+            <div className="flex-1 text-white max-md:ps-10  md:ps-[85px] max-md:pb-4 ">
+              <h3 className="text-bg italic capitalize mb-4 text-4xl tracking-tighter rtl:ps-1.5 pb-2 font-medium shrink-0 hidden lg:block">
                 {t("Notes From The CEO")}
               </h3>
               <p className="italic">{t("aboutText4")}</p>
