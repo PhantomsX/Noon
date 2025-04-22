@@ -1,4 +1,5 @@
 {
+  "About US": "About US",
   "CHAIRMAN": "CHAIRMAN& FOUNDER",
   "Choose Architectural Design": "Choose Architectural Design",
   "Commercial": "Commercial",
@@ -23,6 +24,7 @@
   "Total Estimated Cost": "Total Estimated Cost",
   "Total Plot Area": "Total Plot Area",
   "Warehouse": "Warehouse",
+  "What Our Clients Say": "What Our Clients Say",
   "about": "About n&n",
   "aboutText1": "N&N Engineering services is one of the recognized Urban, Architecture and Interior Design practice in the KSA. founded in 2011. N&N designs, adapt and respond to the context of each project to create intelligent and enduring Urban Planning & Design.",
   "aboutText2": "Our success has been principally due to the quality of our people and their ability to be able to produce high quality design together with an understanding of what makes the Design successful Socially, Environmentally and Economically.",
@@ -33,16 +35,21 @@
   "address2": "Al-Madinah, Saudi Arabia Abdusalam Ibn Hafes St, Al Iskan District",
   "branchOffice": "Branch Office",
   "building": "building",
-  "calculate": "you can calculate",
+  "calculate": "calculate",
   "calculateTitle": "Architectural Design Calculator",
+  "clientText1": "The architectural drawings provided by the team were exceptionally detailed and innovative. Their expertise transformed our vision into reality",
   "clients": "clients",
-  "contact": "contact of us",
+  "clientsSubtitle": "  Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects.",
+  "contact": "contact us",
   "factory": "factory",
   "find": "find more",
+  "founded in 2011": "founded in 2011",
   "headquarters": "Head quarters",
+  "home": "home",
   "industrial": "industrial",
   "m": "m²",
-  "portfolio": "Portfolio of work",
+  "partners": "Our partners",
+  "portfolio": "Portfolio",
   "pricing for all services is in saudi riyals": "pricing for all services is in saudi riyals.",
   "projects": {
     "Details": "Details",
@@ -55,18 +62,18 @@
     "area": "AREA",
     "breif": "For years we have worked with organizations around Saudi Arabia. We are proud of the work we have done, and the unique depth of knowledge it has allowed us to build. Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects.",
     "copy rights": " all renders is back to noon copyrights.",
+    "description": " For years we have worked with organizations around Saudi Arabia. We are proud of the work we have done, and the unique depth of knowledge it has allowed us to build. Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects..",
     "landscape": "landscape",
     "location": "LOCATION",
     "scope": "SCOPE OF WORK",
     "status": "STATUS",
     "title-1": "Portfolio",
     "title-2": "of work",
-    "urban": "urban",
-    "description": " For years we have worked with organizations around Saudi Arabia. We are proud of the work we have done, and the unique depth of knowledge it has allowed us to build. Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects.."
+    "urban": "urban"
   },
   "rights": "All Right Reserved To N&N CONSULTANTS 2024. ®",
   "send inquiry": "send inquiry",
-  "services": "our best of services",
+  "services": "Our services",
   "servicess": {
     "allServices": " All Services",
     "breif": "An Delivery By Seasoned Professionals With Extensive Industry\n            Expertise, Each Specializing in Financial Financial Areas. Committed\n            To Delivering High-Quality Services That Understand Our Users Needs,\n            Conflicts To The Sustainable And Innovative Success Of Their\n            Projects.",
@@ -86,7 +93,5 @@
     "title-1": "Our Best",
     "title-2": "  Of Services"
   },
-  "slide to select the space of the services in m2": "slide to select the space of the services in m².",
-  "clientsSubtitle": "  Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects.",
-  "clientsTitle": " Our partners of success"
+  "slide to select the space of the services in m2": "slide to select the space of the services in m²."
 }

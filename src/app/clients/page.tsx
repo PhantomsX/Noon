@@ -11,7 +11,7 @@ const ClientsPage = () => {
       <div className="flex max-sm:flex-col max-sm:gap-16 px-9 pt-12 sm:ps-[88px] sm:pt-28">
         <div className="sm:max-w-[350px] space-y-4">
           <h2 className="text-bg capitalize text-4xl pb-2">
-          {t('clientsTitle')}
+          {t('partners')}
         
            
           </h2>

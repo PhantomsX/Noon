@@ -32,7 +32,7 @@ export default async function RootLayout({
     >
       <body
         suppressHydrationWarning
-        className={` antialiased flex flex-col min-h-screen relative`}
+        className={`antialiased flex flex-col min-h-screen relative`}
         style={geistSans.style}
       >
         <NextIntlClientProvider messages={messages}>

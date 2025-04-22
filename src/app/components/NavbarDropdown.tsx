@@ -14,7 +14,7 @@ const NavbarDropdown = () => {
       <button
         popoverTarget="popover-1"
         style={{ anchorName: "--anchor-1" } as React.CSSProperties}
-        className="btn btn-square btn-ghost"
+        className="btn btn-square btn-ghost md:hidden"
       >
         <Menu />
       </button>
