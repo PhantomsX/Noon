@@ -6,13 +6,15 @@ import mainBackgroundMobile from "@/public/main-bg-mobile.png";
 import building from "@/public/images/building.svg";
 import building2 from "@/public/images/building2.svg";
 import building3 from "@/public/images/building3.svg";
+import building4 from "@/public/images/building4.svg";
 import client from "@/public/images/client.svg";
 import clients from "@/public/images/clients.svg";
 import logoEn from "@/public/icons/big-logo-en.svg";
 import logoAr from "@/public/icons/big-logo-ar.svg";
 import { useLocale, useTranslations } from "next-intl";
 import { Aboreto, Afacad } from "next/font/google";
-import ceo from "@/public/ceoimage.svg";
+import ceo from "@/public/images/ceoimage.svg";
+import ceo2 from "@/public/images/ceo2.svg";
 
 const aboreto = Aboreto({
   subsets: ["latin"],
@@ -32,7 +34,7 @@ export default function Home() {
   const locale = useLocale();
   return (
     <>
-      <main className="relative flex-1 bg-[#493217]">
+      <main className="relative flex-1 main-bg-gradient overflow-hidden">
         <section className="relative min-h-screen flex flex-col">
           <Image
             fill
@@ -48,9 +50,9 @@ export default function Home() {
             alt="main-bg"
             className="object-fit md:hidden object-center select-none"
           />
-          <div className="top-1/2 absolute -translate-y-1/2 right-32 ltr:left-32 bg-black/5 w-fit backdrop-blur-sm rounded-md p-2">
+          <div className="z-10 translate-y-96 md:top-1/2 md:absolute md:-translate-y-1/2 md:right-32 md:ltr:left-32 max-md:ps-9">
             <h1
-              className="text-white uppercase text-[65px]"
+              className="text-white uppercase text-[35px] md:text-[65px]"
               style={aboreto.style}
             >
               {t("founded in 2011")}
@@ -60,23 +62,27 @@ export default function Home() {
               draggable={false}
               priority
               alt="logo"
-              className="select-none pointer-events-none "
+              className="select-none pointer-events-none max-md:w-[300px]"
             />
           </div>
         </section>
 
-        <section className="container mx-auto pt-28 flex justify-between items-center gap-10">
-          <div className="flex items-center">
+        <section className="container px-2 mx-auto pt-28 flex justify-between md:items-center md:gap-10">
+          <div className="flex items-center max-md:-me-10">
             <Image
               src={building}
               alt="building"
               className="object-cover h-full"
             />
-            <Image src={ceo} alt="ceo" className="object-cover h-[420px]" />
+            <Image
+              src={ceo}
+              alt="ceo"
+              className="object-cover max-md:hidden h-[420px]"
+            />
           </div>
-          <div className="max-w-[420px] space-y-10">
+          <div className=" max-w-[278px] md:max-w-[420px] space-y-10 z-[1]">
             <h2
-              className="text-bg w-fit text-[48.18px] relative before:content-[''] before:w-64 before:h-px before:bg-border before:absolute before:top-full before:right-7/12 ltr:before:left-7/12"
+              className="text-bg w-fit text-[38.18px] md:text-[48.18px] relative before:content-[''] before:w-64 before:h-px before:bg-border before:absolute before:top-full md:before:right-7/12 md:ltr:before:left-7/12"
               style={aboreto.style}
             >
               {t("about")}
@@ -105,19 +111,39 @@ export default function Home() {
                 />
               </svg>
             </button>
+            <Image
+              src={ceo2}
+              alt="ceo2"
+              className="object-cover h-[243px] md:hidden"
+            />
           </div>
         </section>
-        <section className="container mx-auto -mt-12 flex gap-4 justify-end items-center">
-          <div className="flex items-center shrink-0">
+        <section className="container px-2 relative mx-auto md:-mt-12 flex md:gap-4 justify-end md:items-center">
+          <div className="flex flex-col max-md:-mt-40 max-md:-space-y-32 items-center relative md:shrink-0 max-md:-me-8">
             <Image
               src={building2}
               alt="building2"
-              className="object-cover h-full relative -top-20"
+              className="object-cover object-right"
+            />
+            <Image
+              src={building2}
+              alt="building2"
+              className="object-cover object-right md:hidden"
+            />
+            <Image
+              src={building2}
+              alt="building2"
+              className="object-cover object-right md:hidden"
+            />
+            <Image
+              src={building2}
+              alt="building2"
+              className="object-cover object-right md:hidden"
             />
           </div>
-          <div className="space-y-10">
+          <div className="space-y-10 max-md:mt-28">
             <h2
-              className="text-bg w-fit mx-auto text-[48.18px] relative before:content-[''] before:w-[278px] before:h-px before:bg-border before:absolute before:top-full before:right-7/12 ltr:before:left-7/12"
+              className="text-bg w-fit mx-auto text-[26px] md:text-[48.18px] relative before:content-[''] before:w-[145px] md:before:w-[278px] before:h-px before:bg-border before:absolute before:top-full md:before:right-7/12 md:ltr:before:left-7/12"
               style={aboreto.style}
             >
               {t("What Our Clients Say")}
@@ -126,18 +152,18 @@ export default function Home() {
               {[1, 2, 3, 4].map((item) => (
                 <div
                   key={item}
-                  className="py-7 px-11 max-w-[400px] flex flex-col gap-5 items-center justify-between border-[1.5px] border-dashed border-[#F5F5F599] rounded-sm"
+                  className="py-7 px-4 md:px-11 max-w-[230px] md:max-w-[400px] flex flex-col gap-5 items-center justify-between border-[1.5px] border-dashed border-[#F5F5F599] rounded-sm"
                 >
                   <Image src={client} alt="client" />
                   <p
-                    className="text-white text-center text-lg"
+                    className="text-white text-center text-sm md:text-lg"
                     style={afacad.style}
                   >
                     {t("clientText1")}
                   </p>
                   <p
                     style={aboreto.style}
-                    className="text-white text-center text-lg"
+                    className="text-white text-center text-sm md:text-lg"
                   >
                     <span>Ahmed Al-Mansouri,</span>
                     <br />
@@ -148,11 +174,17 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="relative min-h-screen overflow-hidden">
-          <Image src={building3} alt="building3" fill />
+        <section className="relative min-h-[562px] mt-10 md:min-h-[829px] overflow-hidden">
+          <Image
+            src={building3}
+            className="max-md:hidden"
+            alt="building3"
+            fill
+          />
+          <Image src={building4} className="md:hidden" alt="building4" fill />
           <div className="w-full absolute bottom-24 left-1/2 -translate-x-1/2">
             <h2
-              className="text-bg w-fit mx-auto text-[48.18px] mb-20 relative before:content-[''] before:w-64 before:h-px before:bg-border before:absolute before:top-full before:right-7/12 ltr:before:left-7/12"
+              className="text-bg w-fit mx-auto text-[31.18px] md:text-[48.18px] mb-14 md:mb-20 relative md:before:content-[''] md:before:w-64 md:before:h-px md:before:bg-border md:before:absolute md:before:top-full md:before:right-7/12 md:ltr:before:left-7/12"
               style={aboreto.style}
             >
               {t("partners")}
@@ -160,7 +192,7 @@ export default function Home() {
             <Image
               src={clients}
               alt="clients"
-              className="object-cover w-full"
+              className="object-cover  max-md:h-[150px] md:w-full md:object-right"
             />
           </div>
         </section>
@@ -172,8 +204,8 @@ export default function Home() {
             alt="logo"
             className="select-none pointer-events-none scale-75 mx-auto mb-20"
           />
-          <div className="flex justify-between">
-            <div className="flex flex-wrap gap-10">
+          <div className="flex max-md:ps-6 md:justify-between flex-wrap max-md:gap-20">
+            <div className="flex flex-wrap sm:gap-10">
               <h2
                 style={aboreto.style}
                 className="text-bg capitalize font-medium text-5xl tracking-tighter max-w-[8ch] pb-1 mb-4"
@@ -195,7 +227,7 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-wrap gap-10">
+            <div className="flex flex-wrap sm:gap-10">
               <h2
                 style={aboreto.style}
                 className="text-bg capitalize font-medium text-5xl tracking-tighter max-w-[8ch] pb-1 mb-4"

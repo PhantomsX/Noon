@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const Sidebar = () => {
   return (
-    <nav className="fixed right-0 top-1/2 px-1.5 py-2.5 [&_img]:size-5 flex flex-col gap-7 -translate-y-1/2 bg-main-bg/70 backdrop-blur-[63%]">
+    <nav className="fixed z-40 backdrop-blur-sm right-0 top-1/2 px-1.5 py-2.5 [&_img]:size-5 flex flex-col gap-7 -translate-y-1/2 bg-main-bg/70">
       <a href="#" target="_blank">
         <Image src={instagram} alt="instagram" />
       </a>

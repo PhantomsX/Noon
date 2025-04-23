@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../components/Footer";
 import { useTranslations } from "next-intl";
-import ceo from "@/public/ceoimage.svg";
+import ceo from "@/public/images/ceoimage.svg";
 import Image from "next/image";
 import { Great_Vibes } from "next/font/google";
 
@@ -27,9 +27,9 @@ const AboutPage = () => {
         </div>
         <div className=" ltr:border-l rtl:border-r border-bg lg:ms-[100px] flex-1 md:pe-[100px] xl:pe-[80px]  ">
           <div className="border-b w-full  border-bg flex flex-wrap items-center gap-y-6 ">
-          <h3 className="text-bg italic capitalize mb-4 text-[24px]  ps-[10px]  font-medium shrink-0  lg:hidden  ">
-                {t("Notes From The CEO")}
-              </h3>
+            <h3 className="text-bg italic capitalize mb-4 text-[24px]  ps-[10px]  font-medium shrink-0  lg:hidden  ">
+              {t("Notes From The CEO")}
+            </h3>
             <div className="relative max-w-[420px] ms-14">
               <Image
                 src={ceo}
