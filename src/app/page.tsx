@@ -41,14 +41,14 @@ export default function Home() {
             priority
             src={mainBackground}
             alt="main-bg"
-            className="object-fit hidden md:block object-center select-none"
+            className="object-fit object-cover hidden md:block object-center select-none"
           />
           <Image
             fill
             priority
             src={mainBackgroundMobile}
             alt="main-bg"
-            className="object-fit md:hidden object-center select-none"
+            className="object-fit object-cover md:hidden object-center select-none"
           />
           <div className="z-10 translate-y-96 md:top-1/2 md:absolute md:-translate-y-1/2 md:right-32 md:ltr:left-32 max-md:ps-9">
             <h1
@@ -205,14 +205,14 @@ export default function Home() {
             className="select-none pointer-events-none scale-75 mx-auto mb-20"
           />
           <div className="flex max-md:ps-6 md:justify-between flex-wrap max-md:gap-20">
-            <div className="flex flex-wrap sm:gap-10">
+            <div className="flex flex-wrap gap-2 sm:gap-10">
               <h2
                 style={aboreto.style}
-                className="text-bg capitalize font-medium text-5xl tracking-tighter max-w-[8ch] pb-1 mb-4"
+                className="text-bg capitalize font-medium text-[26.7px] md:text-5xl tracking-tighter max-w-[8ch] pb-1 mb-4"
               >
                 {t("headquarters")}
               </h2>
-              <ul className="text-white max-w-[220px]">
+              <ul className="text-white max-w-[190px] md:max-w-[220px] max-md:text-[12.85px]">
                 <li>{t("address1")}</li>
                 <li>12253</li>
                 <li>
@@ -227,14 +227,14 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-wrap sm:gap-10">
+            <div className="flex flex-wrap gap-2 sm:gap-10">
               <h2
                 style={aboreto.style}
-                className="text-bg capitalize font-medium text-5xl tracking-tighter max-w-[8ch] pb-1 mb-4"
+                className="text-bg capitalize font-medium text-[26.7px] md:text-5xl tracking-tighter max-w-[8ch] pb-1 mb-4"
               >
                 {t("branchOffice")}
               </h2>
-              <ul className="text-white max-w-[280px]">
+              <ul className="text-white max-w-[230px] md:max-w-[280px] max-md:text-[12.85px]">
                 <li>{t("address2")}</li>
                 <li>42317</li>
                 <li>
