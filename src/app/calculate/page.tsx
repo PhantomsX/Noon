@@ -4,13 +4,33 @@ import RadioElement from "../components/RadioElement";
 import Slider from "../components/Slider";
 import Input from "../components/Input";
 import { useTranslations } from "next-intl";
+import { Aboreto, Afacad } from "next/font/google";
+
+const aboreto = Aboreto({
+  subsets: ["latin"],
+  variable: "--font-aboreto",
+  weight: ["400"],
+  display: "swap",
+});
+const afacad = Afacad({
+  subsets: ["latin"],
+  variable: "--font-afacad",
+  weight: "500",
+  display: "swap",
+});
 
 const CalculatePage = () => {
   const t = useTranslations();
   return (
-    <main className="flex-1 main-bg-gradient flex-col flex">
+    <main
+      style={afacad.style}
+      className="flex-1 main-bg-gradient flex-col flex"
+    >
       <div className="flex max-sm:flex-col pt-12 sm:pt-28 sm:ps-[88px] max-sm:gap-16 px-9">
-        <h2 className="text-bg capitalize text-5xl tracking-tighter sm:max-w-[330px] font-medium shrink-0">
+        <h2
+          style={aboreto.style}
+          className="text-bg capitalize text-4xl !font-bold sm:max-w-[340px] shrink-0"
+        >
           {t("calculateTitle")}
         </h2>
         <div className="flex-1 flex max-lg:flex-col md:gap-16 gap-8 justify-center">
@@ -39,7 +59,7 @@ const CalculatePage = () => {
                 <RadioElement name="radio-2" label={t("Mixed Use")} />
                 <RadioElement name="radio-2" label={t("Residential")} />
                 <RadioElement name="radio-2" label={t("Hospitality")} />
-              
+
                 <RadioElement name="radio-2" label={t("Commercial")} />
                 <RadioElement name="radio-2" label={t("Health Care")} />
                 <RadioElement name="radio-2" label={t("Offices")} />

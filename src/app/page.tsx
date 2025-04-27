@@ -119,7 +119,7 @@ export default function Home() {
           </div>
         </section>
         <section className="container px-2 relative mx-auto md:-mt-12 flex md:gap-4 justify-end md:items-center">
-          <div className="flex flex-col max-md:-mt-40 max-md:-space-y-32 items-center relative md:shrink-0 max-md:-me-8">
+          <div className="flex flex-col max-md:-mt-20 max-md:-space-y-20 items-center relative md:shrink-0 max-md:-me-8">
             <Image
               src={building2}
               alt="building2"
@@ -133,12 +133,22 @@ export default function Home() {
             <Image
               src={building2}
               alt="building2"
-              className="object-cover object-right md:hidden"
+              className="object-cover object-right  md:hidden"
             />
             <Image
               src={building2}
               alt="building2"
-              className="object-cover object-right md:hidden"
+              className="object-cover object-right sm:hidden"
+            />
+            <Image
+              src={building2}
+              alt="building2"
+              className="object-cover object-right min-[510px]:hidden"
+            />
+            <Image
+              src={building2}
+              alt="building2"
+              className="object-cover object-right min-[450px]:hidden"
             />
           </div>
           <div className="space-y-10 max-md:mt-28">
@@ -152,7 +162,7 @@ export default function Home() {
               {[1, 2, 3, 4].map((item) => (
                 <div
                   key={item}
-                  className="py-7 px-4 md:px-11 max-w-[230px] md:max-w-[400px] flex flex-col gap-5 items-center justify-between border-[1.5px] border-dashed border-[#F5F5F599] rounded-sm"
+                  className="py-7 px-4 md:px-11 max-md:min-w-[230px] md:max-w-[400px] flex flex-col gap-5 items-center justify-between border-[1.5px] border-dashed border-[#F5F5F599] rounded-sm"
                 >
                   <Image src={client} alt="client" />
                   <p
@@ -230,7 +240,7 @@ export default function Home() {
             <div className="flex flex-wrap gap-2 sm:gap-10">
               <h2
                 style={aboreto.style}
-                className="text-bg capitalize font-medium text-[26.7px] md:text-5xl tracking-tighter max-w-[8ch] pb-1 mb-4"
+                className="text-bg capitalize text-[26.7px] md:text-5xl tracking-tighter max-w-[8ch] pb-1 mb-4"
               >
                 {t("branchOffice")}
               </h2>

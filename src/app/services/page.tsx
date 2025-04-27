@@ -4,6 +4,20 @@ import React, { useState } from "react";
 import { useTranslations } from "next-intl";
 import Footer from "../components/Footer";
 import Link from "next/link";
+import { Aboreto, Afacad } from "next/font/google";
+
+const aboreto = Aboreto({
+  subsets: ["latin"],
+  variable: "--font-aboreto",
+  weight: "400",
+  display: "swap",
+});
+const afacad = Afacad({
+  subsets: ["latin"],
+  variable: "--font-afacad",
+  weight: "500",
+  display: "swap",
+});
 function Page() {
   const t = useTranslations("servicess");
   const [selected, setSelected] = useState<any>(null);
@@ -122,11 +136,17 @@ function Page() {
     },
   ];
   return (
-    <main className="min-h-fit  md:px-[88px]   main-bg-gradient ">
+    <main
+      style={afacad.style}
+      className="min-h-fit  md:px-[88px]   main-bg-gradient "
+    >
       <section className="mx-auto px-5 py-16  md:flex gap-x-5">
         {/* Header Section */}
         <aside className="mb-10 w-full md:w-[25%] py-5 mx-auto md:mx-0">
-          <div className="mb-5 text-[31px] md:text-5xl font-elegance gradient-gold-text">
+          <div
+            style={aboreto.style}
+            className="mb-5 text-[31px] md:text-5xl  gradient-gold-text"
+          >
             <h1 className=" text-center md:w-fit py-2 font-bold md:mb-3 ">
               {t("title-1")}
             </h1>
@@ -144,7 +164,8 @@ function Page() {
         {selected ? (
           <aside className="w-full md:w-[70%] h-fit md:h-[78vh]  mx-auto relative">
             <h3
-              className="font-elegance gradient-gold-text mt-[-30px] ms-5 cursor-pointer "
+              style={aboreto.style}
+              className=" gradient-gold-text mt-[-30px] ms-5 cursor-pointer "
               onClick={() => {
                 setSelected(null);
               }}
@@ -182,7 +203,6 @@ function Page() {
                 </div>
               </div>
             </div>
-
           </aside>
         ) : (
           <aside className="w-full md:w-[70%] grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -190,7 +210,6 @@ function Page() {
               <div key={service.id}>
                 <Service service={service} setSelected={setSelected} t={t} />
               </div>
-
             ))}
           </aside>
         )}
@@ -202,15 +221,12 @@ function Page() {
 
 export default Page;
 
-
-
 const Service = ({ service, setSelected, t }: any) => {
   return (
     <div
       key={service.id}
       className="  text-white flex flex-col justify-center items-center "
     >
-
       <div
         className="text-center mx-auto"
         onClick={() => {
@@ -229,7 +245,10 @@ const Service = ({ service, setSelected, t }: any) => {
         <h3 className="text-[14px] md:text-[18px] mb-2 text-center my-2  h-[40px] md:h-[50px] overflow-hidden">
           {service.title}
         </h3>
-        <Link href={"/portfolio"} className="text-[10px] md:text-[12px] border-[1px]  mx-auto text-center border-[#BE7B2C] py-1 px-3 w-fit cursor-pointer">
+        <Link
+          href={"/portfolio"}
+          className="text-[10px] md:text-[12px] border-[1px]  mx-auto text-center border-[#BE7B2C] py-1 px-3 w-fit cursor-pointer"
+        >
           {t("service-btn")}
           <img
             src="/icons/arrow.svg"
@@ -239,5 +258,5 @@ const Service = ({ service, setSelected, t }: any) => {
         </Link>
       </div>
     </div>
-  )
-} 
+  );
+};

@@ -1,11 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-@font-face {
-  font-family: "The New Elegance";
-  src: url("/fonts/The New Elegance.ttf");
-}
-
 @layer utilities {
   .gradient-gold-text {
     @apply text-transparent bg-gradient-to-l from-[#BE7B2C] to-[#F9C39D] bg-clip-text;
@@ -20,7 +15,6 @@
   --color-border: #d9d9d9;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-elegance: "The New Elegance";
 }
 
 @utility text-bg {
@@ -38,10 +32,5 @@
 }
 
 @utility main-bg-gradient {
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.15) 0%,
-      rgba(190, 123, 44, 0.15) 100%
-    ),
-    linear-gradient(0deg, var(--black, #000000), var(--black, #000000));
+  background: linear-gradient(180deg, #593a15 0%, #000000 100%);
 }

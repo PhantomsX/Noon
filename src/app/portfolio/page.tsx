@@ -7,6 +7,7 @@ import logoEn from "@/public/icons/big-logo-en.svg";
 import logoAr from "@/public/icons/big-logo-ar.svg";
 import Image from "next/image";
 import Link from "next/link";
+import { Aboreto, Afacad } from "next/font/google";
 
 const projects = [
   {
@@ -93,6 +94,19 @@ const categories = [
   "Workshop Drawings",
 ];
 
+const aboreto = Aboreto({
+  subsets: ["latin"],
+  variable: "--font-aboreto",
+  weight: "400",
+  display: "swap",
+});
+const afacad = Afacad({
+  subsets: ["latin"],
+  variable: "--font-afacad",
+  weight: "500",
+  display: "swap",
+});
+
 const Page = () => {
   const locale = useLocale();
   const [selectedType, setSelectedType] = useState("all");
@@ -135,11 +149,17 @@ const Page = () => {
   };
 
   return (
-    <main className=" md:px-[88px]  min-h-[100vh] main-bg-gradient  flex flex-col justify-between">
+    <main
+      style={afacad.style}
+      className=" md:px-[88px]  min-h-[100vh] main-bg-gradient  flex flex-col justify-between"
+    >
       <section className="mx-auto px-5 py-16  md:flex gap-x-5 ">
         {/* Header Section */}
         <aside className="mb-10 w-full md:w-[25%] py-5 mx-auto md:mx-0">
-          <div className="mb-5 text-[31px] md:text-5xl font-elegance gradient-gold-text">
+          <div
+            style={aboreto.style}
+            className="mb-5 text-[31px] md:text-5xl gradient-gold-text"
+          >
             <h1 className=" text-center md:w-fit py-2 font-bold md:mb-3 ">
               {t("title-1")}
             </h1>

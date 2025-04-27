@@ -3,19 +3,37 @@ import Footer from "../components/Footer";
 import { useTranslations } from "next-intl";
 import ceo from "@/public/images/ceoimage.svg";
 import Image from "next/image";
-import { Great_Vibes } from "next/font/google";
+import { Aboreto, Afacad, Great_Vibes } from "next/font/google";
 
 const greatVibes = Great_Vibes({ weight: "400", subsets: ["latin"] });
+const aboreto = Aboreto({
+  subsets: ["latin"],
+  variable: "--font-aboreto",
+  weight: ["400"],
+  display: "swap",
+});
+const afacad = Afacad({
+  subsets: ["latin"],
+  variable: "--font-afacad",
+  weight: "500",
+  display: "swap",
+});
 
 const AboutPage = () => {
   const t = useTranslations();
   return (
-    <main className="flex-1 main-bg-gradient flex-col flex">
+    <main
+      style={afacad.style}
+      className="flex-1 main-bg-gradient flex-col flex"
+    >
       <section className="flex max-lg:flex-col max-lg:items-center max-lg:gap-6 pt-12 sm:pt-28 md:ps-[88px] max-sm:gap-16 px-9">
         <div className="max-w-[340px] w-full text-white space-y-2.5">
-          <h2 className="text-bg capitalize text-5xl tracking-tighter sm:max-w-[5ch] pb-2 font-medium shrink-0">
+          <h1
+            style={aboreto.style}
+            className="text-bg capitalize text-5xl !font-bold sm:max-w-[6ch] pb-2 shrink-0"
+          >
             {t("about")}
-          </h2>
+          </h1>
           <p className="text-justify">{t("aboutText1")}</p>
           <div className="flex items-center gap-5 before:content-['/01'] before:text-bg before:text-3xl before:font-medium after:w-full after:block after:h-px after:bg-linearGradient after:content-[''] mt-10" />
 
