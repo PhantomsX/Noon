@@ -29,6 +29,7 @@ const afacad = Afacad({
   display: "swap",
 });
 
+
 export default function Home() {
   const t = useTranslations();
   const locale = useLocale();
