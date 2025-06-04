@@ -7,7 +7,7 @@ import suadiarabia from "@/public/suadiarabia.svg";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Aclonica, Afacad } from "next/font/google";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Sidebar from "../components/Sidebar";
 
 const containerVariants = {

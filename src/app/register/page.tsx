@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import {
   Select,
   SelectContent,
@@ -49,9 +49,7 @@ const RegisterPage = () => {
         {/* Name Fields */}
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-1">
-            <label className="text-sm text-white">
-              First Name
-            </label>
+            <label className="text-sm text-white">First Name</label>
             <input
               type="text"
               defaultValue="Ali"
@@ -60,9 +58,7 @@ const RegisterPage = () => {
           </div>
 
           <div className="space-y-1">
-            <label className="text-sm text-white">
-              Last Name
-            </label>
+            <label className="text-sm text-white">Last Name</label>
             <input
               type="text"
               defaultValue="Abozamel"
@@ -73,9 +69,7 @@ const RegisterPage = () => {
 
         {/* Email Field */}
         <div className="space-y-1">
-          <label className="text-sm text-white">
-            Email
-          </label>
+          <label className="text-sm text-white">Email</label>
           <input
             type="email"
             className="w-full h-12 px-4 border border-[#f9c39d]/30 rounded-lg bg-transparent text-white focus:border-[#f9c39d] focus:ring-2 focus:ring-[#f9c39d]/20 transition-all outline-none"
@@ -84,9 +78,7 @@ const RegisterPage = () => {
 
         {/* Job Title Field */}
         <div className="space-y-1">
-          <label className="text-sm text-white">
-            Job Title
-          </label>
+          <label className="text-sm text-white">Job Title</label>
           <div className="relative">
             <Select>
               <SelectTrigger className="w-full !h-12 px-4 border border-[#f9c39d]/30  rounded-lg bg-transparent text-white focus:border-[#f9c39d] focus:ring-2 focus:ring-[#f9c39d]/20 transition-all outline-none">
@@ -104,9 +96,7 @@ const RegisterPage = () => {
 
         {/* Company Field */}
         <div className="space-y-1">
-          <label className="text-sm text-white">
-            Company
-          </label>
+          <label className="text-sm text-white">Company</label>
           <input
             type="text"
             className="w-full h-12 px-4 border border-[#f9c39d]/30 rounded-lg bg-transparent text-white focus:border-[#f9c39d] focus:ring-2 focus:ring-[#f9c39d]/20 transition-all outline-none"
@@ -115,9 +105,7 @@ const RegisterPage = () => {
 
         {/* Employees Field */}
         <div className="space-y-1">
-          <label className="text-sm text-white">
-            Employees
-          </label>
+          <label className="text-sm text-white">Employees</label>
           <Select>
             <SelectTrigger className="w-full !h-12 px-4 border border-[#f9c39d]/30 rounded-lg bg-transparent text-white focus:border-[#f9c39d] focus:ring-2 focus:ring-[#f9c39d]/20 transition-all outline-none">
               <SelectValue placeholder="Select company size" />
@@ -135,9 +123,7 @@ const RegisterPage = () => {
         {/* Mobile and Country Fields */}
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-1">
-            <label className="text-sm text-white">
-              Mobile
-            </label>
+            <label className="text-sm text-white">Mobile</label>
             <input
               type="tel"
               className="w-full h-12 px-4 border border-[#f9c39d]/30 rounded-lg bg-transparent text-white focus:border-[#f9c39d] focus:ring-2 focus:ring-[#f9c39d]/20 transition-all outline-none"
@@ -145,9 +131,7 @@ const RegisterPage = () => {
           </div>
 
           <div className="space-y-1">
-            <label className="text-sm text-white">
-              Country
-            </label>
+            <label className="text-sm text-white">Country</label>
             <Select>
               <SelectTrigger className="w-full !h-12 px-4 border border-[#f9c39d]/30 rounded-lg bg-transparent text-white focus:border-[#f9c39d] focus:ring-2 focus:ring-[#f9c39d]/20 transition-all outline-none">
                 <SelectValue placeholder="Select country" />
@@ -179,10 +163,7 @@ const RegisterPage = () => {
             id="terms"
             className="mt-1 h-4 w-4 rounded border-gray-300 text-[#f9c39d] focus:ring-[#f9c39d]"
           />
-          <label
-            htmlFor="terms"
-            className="text-sm text-white"
-          >
+          <label htmlFor="terms" className="text-sm text-white">
             I agree to the{" "}
             <Link href="#" className="text-[#f9c39d] hover:underline">
               Firm Agreement

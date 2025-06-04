@@ -3,7 +3,7 @@ import { Menu } from "./icons";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import logoEn from "@/public/icons/big-logo-en.svg";
 import logoAr from "@/public/icons/big-logo-ar.svg";
 import { cn } from "@/lib/utils";

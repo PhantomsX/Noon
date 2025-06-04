@@ -2,9 +2,8 @@
 import React from "react";
 import Image from "next/image";
 import { Aclonica, Afacad } from "next/font/google";
-import { Upload } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import UploadBox from "./components/upload-component";
 
 // Enhanced animation variants
@@ -310,13 +309,13 @@ const MedicalInsurance = () => (
     >
       MEDICAL INSURANCE
     </motion.h3>
-    <motion.div
-      variants={cardVariants}
-      whileHover="hover"
-      className="bg-black/20 backdrop-blur-sm flex-1 gap-4 grid grid-cols-4"
-    >
+    <div className="bg-black/20 backdrop-blur-sm flex-1 gap-4 grid grid-cols-4">
       <UploadBox label="INSURANCE TYPE PHOTO" />
-      <div className="space-y-3 col-span-3 border border-[#f9c39d] rounded-2xl p-6 text-white flex-1">
+      <motion.div
+        variants={cardVariants}
+        whileHover="hover"
+        className="space-y-3 col-span-3 border border-[#f9c39d] rounded-2xl p-6 text-white flex-1"
+      >
         <motion.p
           variants={itemVariants}
           custom={0}
@@ -348,8 +347,8 @@ const MedicalInsurance = () => (
         <motion.p variants={itemVariants} custom={4}>
           <span className="text-bg">Insurance NO:</span> 00000000
         </motion.p>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   </div>
 );
 

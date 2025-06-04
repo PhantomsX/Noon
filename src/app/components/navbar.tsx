@@ -1,6 +1,6 @@
 "use client";
 import React, { startTransition, useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import logo from "@/public/icons/navbar-logo.svg";
 import Link from "next/link";
 import { Translate } from "./icons";

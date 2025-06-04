@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { Eye } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const LoginPage = () => {
   return (

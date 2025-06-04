@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Upload, Check, AlertCircle, Loader2 } from "lucide-react";
-import { motion, AnimatePresence, useAnimation } from "framer-motion";
+import { motion, AnimatePresence, useAnimation } from "motion/react";
 
 type UploadBoxProps = {
   label: string;
