@@ -31,6 +31,10 @@ const NavbarDropdown = () => {
     { title: "clients" },
     { title: "calculate" },
     { title: "contact" },
+    { title: "login" },
+    { title: "register" },
+    { title: "team" },
+    { title: "profile" },
   ];
 
   const toggleMenu = () => {
