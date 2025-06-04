@@ -1,88 +1,189 @@
+"use client";
+
+"use client";
+
 import React from "react";
-import Footer from "../components/Footer";
-import squares from "@/public/squares.svg";
 import suadiarabia from "@/public/suadiarabia.svg";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Aboreto, Afacad } from "next/font/google";
+import { Aclonica, Afacad } from "next/font/google";
+import { motion } from "framer-motion";
+import Sidebar from "../components/Sidebar";
 
-const aboreto = Aboreto({
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
+const imageVariants = {
+  hidden: { x: -20, opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      ease: [0.16, 1, 0.3, 1],
+      delay: 0.2,
+    },
+  },
+};
+
+const aclonica = Aclonica({
   subsets: ["latin"],
-  variable: "--font-aboreto",
+  variable: "--font-aclonica",
   weight: "400",
   display: "swap",
 });
 const afacad = Afacad({
   subsets: ["latin"],
   variable: "--font-afacad",
-  weight: "500",
+  weight: "400",
   display: "swap",
 });
 const ContactPage = () => {
   const t = useTranslations();
   return (
-    <main
+    <motion.main
       style={afacad.style}
-      className="flex-1 main-bg-gradient flex-col flex"
+      className="flex-1 relative min-h-screen flex-col flex"
+      initial="hidden"
+      animate="visible"
     >
-      <Image src={squares} alt="squares" fill className="max-md:hidden" />
-      <div className="z-10 max-md:mx-auto ">
-        <div className="bg-main-bg *:max-w-3xs px-14 py-[30px] md:py-[76px] md:absolute md:right-[74px] md:top-1/2 md:-translate-y-1/2 flex max-md:flex-col w-[80%] max-md:mx-auto md:w-fit mt-16 justify-center gap-14">
-          <div>
-            <h2
-              style={aboreto.style}
-              className="text-bg capitalize text-[26.7px] md:text-5xl max-w-[8ch] pb-1 mb-4"
+      <div className="z-10 max-md:mx-auto">
+        <motion.div
+          className="px-14 md:absolute md:top-0 md:end-0 flex flex-col max-md:mx-auto md:w-fit justify-center gap-14"
+          variants={containerVariants}
+        >
+          <motion.div className="flex flex-wrap gap-2" variants={itemVariants}>
+            <motion.h2
+              style={aclonica.style}
+              className="text-bg capitalize font-medium text-2xl md:text-5xl ltr:tracking-tighter max-w-[8ch] pb-1 mb-4"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
               {t("headquarters")}
-            </h2>
-            <ul className="text-white ">
-              <li>{t("address1")}</li>
-              <li>12253</li>
-              <li>
-                <a href="tel:+966565498620" className="link link-hover">
-                  +966565498620
+            </motion.h2>
+            <motion.ul
+              className="text-white max-w-[190px] md:max-w-[220px] max-md:text-[12.85px] space-y-2"
+              variants={containerVariants}
+            >
+              <motion.li variants={itemVariants} whileHover={{ x: 5 }}>
+                {t("address1")}
+              </motion.li>
+              <motion.li variants={itemVariants} whileHover={{ x: 5 }}>
+                12253
+              </motion.li>
+              <motion.li variants={itemVariants} whileHover={{ x: 5 }}>
+                <a
+                  href="tel:00966114110000"
+                  className="hover:text-bg transition-colors"
+                >
+                  +966 11 411 0000
                 </a>
-              </li>
-              <li>
-                <a href="mailto:info@nnc.sa" className="link link-hover">
-                  info@nnc.sa
+              </motion.li>
+              <motion.li variants={itemVariants} whileHover={{ x: 5 }}>
+                <a
+                  href="mailto:info@noon.sa"
+                  className="hover:text-bg transition-colors"
+                >
+                  info@noon.sa
                 </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2
-              style={aboreto.style}
-              className="text-bg capitalize text-[26.7px] md:text-5xl max-w-[8ch] pb-1 mb-4"
+              </motion.li>
+            </motion.ul>
+          </motion.div>
+
+          <motion.div className="flex flex-wrap gap-2" variants={itemVariants}>
+            <motion.h2
+              style={aclonica.style}
+              className="text-bg capitalize text-2xl md:text-5xl ltr:tracking-tighter max-w-[8ch] pb-1 mb-4"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
               {t("branchOffice")}
-            </h2>
-            <ul className="text-white">
-              <li>{t("address2")}</li>
-              <li>42317</li>
-              <li>
-                <a href="tel:+966598959098" className="link link-hover">
-                  +966598959098
+            </motion.h2>
+            <motion.ul
+              className="text-white max-w-[230px] md:max-w-[280px] max-md:text-[12.85px] space-y-2"
+              variants={containerVariants}
+            >
+              <motion.li variants={itemVariants} whileHover={{ x: 5 }}>
+                {t("address2")}
+              </motion.li>
+              <motion.li variants={itemVariants} whileHover={{ x: 5 }}>
+                42317
+              </motion.li>
+              <motion.li variants={itemVariants} whileHover={{ x: 5 }}>
+                <a
+                  href="tel:00966124199999"
+                  className="hover:text-bg transition-colors"
+                >
+                  +966 12 419 9999
                 </a>
-              </li>
-              <li>
-                <a href="mailto:infomadina@nnc.sa" className="link link-hover">
-                  infomadina@nnc.sa
+              </motion.li>
+              <motion.li variants={itemVariants} whileHover={{ x: 5 }}>
+                <a
+                  href="mailto:info@noon.sa"
+                  className="hover:text-bg transition-colors"
+                >
+                  info@noon.sa
                 </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <Image
-        src={suadiarabia}
-        alt="suadiarabia"
-        fill
-        className="max-md:!relative"
-      />
+              </motion.li>
+            </motion.ul>
+          </motion.div>
 
-      <Footer />
-    </main>
+          <motion.div variants={itemVariants}>
+            <motion.h2
+              style={aclonica.style}
+              className="text-bg capitalize text-2xl md:text-5xl ltr:tracking-tighter pb-1 mb-4"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <motion.span variants={itemVariants}>
+                {t("new_branch")}
+              </motion.span>
+              <br />
+              <motion.span variants={itemVariants}>
+                {t("coming_soon")}
+              </motion.span>
+            </motion.h2>
+          </motion.div>
+          <Sidebar orientation="horizontal" />
+        </motion.div>
+      </div>
+
+      <motion.div
+        variants={imageVariants}
+        initial="hidden"
+        animate="visible"
+        className="md:absolute md:top-0 md:start-0 h-full w-full  z-0"
+      >
+        <div className="relative w-full h-full">
+          <Image
+            src={suadiarabia}
+            alt="suadiarabia"
+            fill
+            className="object-contain object-left h-full"
+            priority
+          />
+        </div>
+      </motion.div>
+    </motion.main>
   );
 };
 

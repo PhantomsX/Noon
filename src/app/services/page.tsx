@@ -2,261 +2,337 @@
 "use client";
 import React, { useState } from "react";
 import { useTranslations } from "next-intl";
-import Footer from "../components/Footer";
-import Link from "next/link";
-import { Aboreto, Afacad } from "next/font/google";
+import { Aclonica, Afacad } from "next/font/google";
+import Image from "next/image";
+import { Slash } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { motion, AnimatePresence } from "motion/react";
 
-const aboreto = Aboreto({
+const aclonica = Aclonica({
   subsets: ["latin"],
-  variable: "--font-aboreto",
+  variable: "--font-aclonica",
   weight: "400",
   display: "swap",
 });
 const afacad = Afacad({
   subsets: ["latin"],
   variable: "--font-afacad",
-  weight: "500",
+  weight: ["500", "400"],
   display: "swap",
 });
+
+type Service = {
+  title: string;
+  description: string;
+  image: string;
+  features: string[];
+};
+
 function Page() {
   const t = useTranslations("servicess");
-  const [selected, setSelected] = useState<any>(null);
   const services = [
     {
-      id: 1,
       title: t("service-1"),
-      image: "/images/s.png",
-      mainImage: "/images/urban.svg",
-      mobileImage: "/images/urbanMobile.svg",
+      description: t("service-1-description"),
+      image: "/images/ENGINEERING AND ARCHITECTURAL DESIGN.png",
       features: [
-        "Feasibility Studies",
-        "Site Appraisals",
-        "Asset Appraisals",
-        "Environmental Impact Assessment",
-        "Social Impact Assessment",
+        t("service-1-features.1"),
+        t("service-1-features.2"),
+        t("service-1-features.3"),
+        t("service-1-features.4"),
       ],
     },
     {
-      id: 2,
       title: t("service-2"),
-      image: "/images/s.png",
-      mainImage: "/images/urban.svg",
-      mobileImage: "/images/urbanMobile.svg",
+      description: t("service-2-description"),
+      image: "/images/URBAN DESIGN.png",
       features: [
-        "Feasibility Studies",
-        "Site Appraisals",
-        "Asset Appraisals",
-        "Environmental Impact Assessment",
-        "Social Impact Assessment",
+        t("service-2-features.1"),
+        t("service-2-features.2"),
+        t("service-2-features.3"),
+        t("service-2-features.4"),
+        t("service-2-features.5"),
       ],
     },
     {
-      id: 3,
-      title: t("service-3"),
-      image: "/images/reports.png",
-      mainImage: "/images/urban.svg",
-      mobileImage: "/images/urbanMobile.svg",
-      features: [
-        "Feasibility Studies",
-        "Site Appraisals",
-        "Asset Appraisals",
-        "Environmental Impact Assessment",
-        "Social Impact Assessment",
-      ],
-    },
-    {
-      id: 4,
       title: t("service-4"),
-      image: "/images/s.png",
-      mainImage: "/images/urban.svg",
-      mobileImage: "/images/urbanMobile.svg",
+      description: t("service-4-description"),
+      image: "/images/CONSTRUCTION SUPERVISION.png",
       features: [
-        "Feasibility Studies",
-        "Site Appraisals",
-        "Asset Appraisals",
-        "Environmental Impact Assessment",
-        "Social Impact Assessment",
+        t("service-4-features.1"),
+        t("service-4-features.2"),
+        t("service-4-features.3"),
+        t("service-4-features.4"),
+        t("service-4-features.5"),
       ],
     },
     {
-      id: 5,
-      title: t("service-5"),
-      image: "/images/landScape.png",
-      mainImage: "/images/urban.svg",
-      mobileImage: "/images/urbanMobile.svg",
+      title: t("service-3"),
+      description: t("service-3-description"),
+      image: "/images/MASTER PLANNING.png",
+      features: [
+        t("service-3-features.1"),
+        t("service-3-features.2"),
+        t("service-3-features.3"),
+        t("service-3-features.4"),
+        t("service-3-features.5"),
+      ],
     },
     {
-      id: 6,
       title: t("service-6"),
-      image: "/images/reports.png",
-      mainImage: "/images/urban.svg",
-      mobileImage: "/images/urbanMobile.svg",
+      description: t("service-6-description"),
+      image: "/images/ENGINEERING REPORTS.png",
+      features: [
+        t("service-6-features.1"),
+        t("service-6-features.2"),
+        t("service-6-features.3"),
+        t("service-6-features.4"),
+        t("service-6-features.5"),
+      ],
     },
     {
-      id: 7,
-      title: t("service-7"),
-      image: "/images/s.png",
-      mainImage: "/images/urban.svg",
-      mobileImage: "/images/urbanMobile.svg",
+      title: t("service-5"),
+      description: t("service-5-description"),
+      image: "/images/PERMITS.png",
+      features: [
+        t("service-5-features.1"),
+        t("service-5-features.2"),
+        t("service-5-features.3"),
+        t("service-5-features.4"),
+        t("service-5-features.5"),
+      ],
     },
     {
-      id: 8,
       title: t("service-8"),
-      image: "/images/landScape.png",
-      mainImage: "/images/urban.svg",
-      mobileImage: "/images/urbanMobile.svg",
+      description: t("service-8-description"),
+      image: "/images/ENGINEERING STUDIES.png",
+      features: [
+        t("service-8-features.1"),
+        t("service-8-features.2"),
+        t("service-8-features.3"),
+        t("service-8-features.4"),
+        t("service-8-features.5"),
+      ],
     },
     {
-      id: 9,
+      title: t("service-7"),
+      description: t("service-7-description"),
+      image: "/images/VALUE ENGINEERING.png",
+      features: [
+        t("service-7-features.1"),
+        t("service-7-features.2"),
+        t("service-7-features.3"),
+        t("service-7-features.4"),
+        t("service-7-features.5"),
+      ],
+    },
+    {
       title: t("service-9"),
-      image: "/images/landScape.png",
-      mainImage: "/images/urban.svg",
-      mobileImage: "/images/urbanMobile.svg",
+      description: t("service-9-description"),
+      image: "/images/LANDSCAPING.png",
+      features: [
+        t("service-9-features.1"),
+        t("service-9-features.2"),
+        t("service-9-features.3"),
+        t("service-9-features.4"),
+        t("service-9-features.5"),
+      ],
     },
     {
-      id: 10,
-      title: t("service-10"),
-      image: "/images/reports.png",
-      mainImage: "/images/urban.svg",
-      mobileImage: "/images/urbanMobile.svg",
-    },
-    {
-      id: 11,
       title: t("service-11"),
-      image: "/images/s.png",
-      mainImage: "/images/urban.svg",
-      mobileImage: "/images/urbanMobile.svg",
+      description: t("service-11-description"),
+      image: "/images/PROJECT MANAGEMENT.png",
+      features: [
+        t("service-11-features.1"),
+        t("service-11-features.2"),
+        t("service-11-features.3"),
+        t("service-11-features.4"),
+        t("service-11-features.5"),
+      ],
     },
     {
-      id: 12,
+      title: t("service-10"),
+      description: t("service-10-description"),
+      image: "/images/INTERIOR DESIGN.png",
+      features: [
+        t("service-10-features.1"),
+        t("service-10-features.2"),
+        t("service-10-features.3"),
+        t("service-10-features.4"),
+        t("service-10-features.5"),
+      ],
+    },
+    {
       title: t("service-12"),
-      image: "/images/s.png",
-      mainImage: "/images/urban.svg",
-      mobileImage: "/images/urbanMobile.svg",
+      description: t("service-12-description"),
+      image: "/images/OR ARCHITECT OF RECORD.png",
+      features: [
+        t("service-12-features.1"),
+        t("service-12-features.2"),
+        t("service-12-features.3"),
+        t("service-12-features.4"),
+        t("service-12-features.5"),
+      ],
     },
   ];
   return (
-    <main
-      style={afacad.style}
-      className="min-h-fit  md:px-[88px]   main-bg-gradient "
-    >
-      <section className="mx-auto px-5 py-16  md:flex gap-x-5">
+    <main>
+      <section className="flex max-sm:flex-col gap-16 px-9 pt-12 sm:ps-[80px]">
         {/* Header Section */}
-        <aside className="mb-10 w-full md:w-[25%] py-5 mx-auto md:mx-0">
+        <aside className="sm:max-w-[350px] space-y-4">
           <div
-            style={aboreto.style}
-            className="mb-5 text-[31px] md:text-5xl  gradient-gold-text"
+            style={aclonica.style}
+            className="mb-5 text-3xl md:text-5xl text-bg"
           >
-            <h1 className=" text-center md:w-fit py-2 font-bold md:mb-3 ">
+            <h1 className=" text-center md:w-fit py-2 md:mb-3">
               {t("title-1")}
             </h1>
-            <h2 className=" text-center  md:w-fit py-2 font-bold  ">
-              {t("title-2")}
-            </h2>
+            <h2 className=" text-center md:w-fit py-2">{t("title-2")}</h2>
           </div>
-
-          <p className="text-[15px]  mb-4 text-white text-center md:text-start">
+        </aside>
+        <aside className="flex-1 grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-6">
+          <p
+            style={afacad.style}
+            className="text-xl col-span-full mb-4 text-white text-center md:text-start"
+          >
             {t("breif")}
           </p>
+          {services.map((service, i) => (
+            <Service key={i} id={i} service={service} />
+          ))}
         </aside>
-
-        {/* Services Grid */}
-        {selected ? (
-          <aside className="w-full md:w-[70%] h-fit md:h-[78vh]  mx-auto relative">
-            <h3
-              style={aboreto.style}
-              className=" gradient-gold-text mt-[-30px] ms-5 cursor-pointer "
-              onClick={() => {
-                setSelected(null);
-              }}
-            >
-              {t("allServices")}
-            </h3>
-            <div className="w-full h-fit  relative">
-              <img
-                src={selected.mainImage}
-                alt={selected.mainImage}
-                className="hidden  md:block   "
-              />
-              <img
-                src={selected.mobileImage}
-                alt={selected.mobileImage}
-                className=" md:hidden block  object-cover mx-auto "
-              />
-              <div className="z-2 absolute flex  max-md:flex-col  p-4 justify-between inset-x-0 mx-auto   bottom-[1%] gap-x-7">
-                <p className="text-[24px] md:text-[40px] h-fit md:my-auto text-white md:w-1/2 md:leading-[45px] text-center">
-                  {selected.title}
-                </p>
-                <div className="md:w-1/4 w-[80%] mx-auto">
-                  {(selected?.features as string[]).map((item, index) => {
-                    return (
-                      <div key={index}>
-                        <p className="text-white my-1  text-center md:text-start">
-                          {item}
-                        </p>
-                        {index != selected.features.length - 1 && (
-                          <div className="h-[1px] gradient-gold-line w-full"></div>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          </aside>
-        ) : (
-          <aside className="w-full md:w-[70%] grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {services.map((service) => (
-              <div key={service.id}>
-                <Service service={service} setSelected={setSelected} t={t} />
-              </div>
-            ))}
-          </aside>
-        )}
       </section>
-      <Footer />
     </main>
   );
 }
 
 export default Page;
 
-const Service = ({ service, setSelected, t }: any) => {
+const Service = ({ service, id }: { service: Service; id: number }) => {
+  const t = useTranslations();
+  const router = useRouter();
+  const [isHovered, setIsHovered] = useState(false);
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
+    },
+  };
+
   return (
-    <div
-      key={service.id}
-      className="  text-white flex flex-col justify-center items-center "
+    <motion.div
+      className="text-white flex flex-col group"
+      variants={item}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-50px" }}
     >
-      <div
-        className="text-center mx-auto"
-        onClick={() => {
-          setSelected(service);
-        }}
+      <motion.div
+        className="flex items-center mb-2"
+        whileHover={{ x: 5 }}
+        transition={{ type: "spring", stiffness: 300 }}
       >
-        <img
-          src={service.image}
-          alt={service.title}
-          className="object-cover h-[145px] w-[145px]"
-        />
-      </div>
+        <Slash size={16} className="-rotate-[20deg]" strokeWidth={3} />
+        <span>{(id + 1).toString().padStart(2, "0")}</span>
+      </motion.div>
+
+      <motion.div
+        className="relative text-center mx-auto"
+        onHoverStart={() => setIsHovered(true)}
+        onHoverEnd={() => setIsHovered(false)}
+        whileHover={{ scale: 1.02 }}
+        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+      >
+        <div className="relative overflow-hidden  shadow-lg">
+          <motion.div
+            initial={false}
+            animate={{ scale: isHovered ? 1.05 : 1 }}
+            transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+          >
+            <Image
+              src={service.image}
+              alt={service.title}
+              width={295}
+              height={357}
+              className="object-cover w-[295px] h-[357px]"
+            />
+          </motion.div>
+
+          <AnimatePresence>
+            {isHovered && (
+              <motion.div
+                className="absolute inset-0 bg-black/60 flex items-center justify-center"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <motion.button
+                  className="px-6 py-3 cursor-pointer bg-white text-black rounded-md font-medium shadow-lg"
+                  whileHover={{ scale: 1.05, backgroundColor: "#f8f9fa" }}
+                  whileTap={{ scale: 0.95 }}
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: 20, opacity: 0 }}
+                  transition={{
+                    y: { type: "spring", stiffness: 300, damping: 20 },
+                    opacity: { duration: 0.2 },
+                  }}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    router.push("/portfolio");
+                  }}
+                >
+                  {t("viewProjects")}
+                </motion.button>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      </motion.div>
 
       {/* Content */}
-      <div className="text-center " dir="ltr">
-        <h3 className="text-[14px] md:text-[18px] mb-2 text-center my-2  h-[40px] md:h-[50px] overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ delay: 0.1, duration: 0.5 }}
+      >
+        <h3
+          style={afacad.style}
+          className="text-xl font-medium my-2 border-b border-bg h-16"
+        >
           {service.title}
         </h3>
-        <Link
-          href={"/portfolio"}
-          className="text-[10px] md:text-[12px] border-[1px]  mx-auto text-center border-[#BE7B2C] py-1 px-3 w-fit cursor-pointer"
+        <p
+          style={afacad.style}
+          className="text-xs mb-2 text-white text-justify"
         >
-          {t("service-btn")}
-          <img
-            src="/icons/arrow.svg"
-            alt={"arrow"}
-            className=" inline-block mx-1"
-          />
-        </Link>
-      </div>
-    </div>
+          {service.description}
+        </p>
+        <ul>
+          {service.features.map((feature, i) => (
+            <motion.li
+              key={i}
+              style={afacad.style}
+              className="text-xs mb-px"
+              initial={{ x: -10, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true, margin: "-20px" }}
+              transition={{ delay: 0.1 + i * 0.05 }}
+            >
+              <span className="me-1">•</span>
+              {feature}
+            </motion.li>
+          ))}
+        </ul>
+      </motion.div>
+    </motion.div>
   );
 };

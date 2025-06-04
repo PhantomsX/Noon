@@ -1,213 +1,256 @@
 "use client";
 import Image from "next/image";
-import mainBackground from "@/public/main-bg.png";
-import mainBackgroundMobile from "@/public/main-bg-mobile.png";
-
-import building from "@/public/images/building.svg";
-import building2 from "@/public/images/building2.svg";
-import building3 from "@/public/images/building3.svg";
-import building4 from "@/public/images/building4.svg";
+import mainBackground from "@/public/images/background-home.png";
 import client from "@/public/images/client.svg";
-import clients from "@/public/images/clients.svg";
+import clientsLg from "@/public/logos/clients-lg.svg";
+import clientsSm from "@/public/logos/clients.svg";
 import logoEn from "@/public/icons/big-logo-en.svg";
 import logoAr from "@/public/icons/big-logo-ar.svg";
 import { useLocale, useTranslations } from "next-intl";
-import { Aboreto, Afacad } from "next/font/google";
+import { Aclonica, Afacad, Great_Vibes } from "next/font/google";
 import ceo from "@/public/images/ceoimage.svg";
-import ceo2 from "@/public/images/ceo2.svg";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Slash } from "lucide-react";
+import { useIsClient, useMediaQuery } from "usehooks-ts";
+import { cn } from "@/lib/utils";
+import Sidebar from "./components/Sidebar";
+import { motion, useAnimation, useInView } from "motion/react";
+import { useEffect, useRef } from "react";
 
-const aboreto = Aboreto({
+const aclonica = Aclonica({
   subsets: ["latin"],
-  variable: "--font-aboreto",
+  variable: "--font-aclonica",
   weight: "400",
   display: "swap",
 });
+
 const afacad = Afacad({
   subsets: ["latin"],
   variable: "--font-afacad",
-  weight: "500",
+  weight: ["500", "400"],
   display: "swap",
 });
 
+const greatVibes = Great_Vibes({
+  subsets: ["latin"],
+  variable: "--font-great-vibes",
+  weight: "400",
+  display: "swap",
+});
+
+const AnimatedSection = ({
+  children,
+  delay = 0,
+  className = "",
+}: {
+  children: React.ReactNode;
+  delay?: number;
+  className?: string;
+}) => {
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    }
+  }, [isInView, controls]);
+
+  return (
+    <motion.section
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={{
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 30 },
+      }}
+      transition={{ duration: 0.6, delay, ease: "easeOut" }}
+      className={className}
+    >
+      {children}
+    </motion.section>
+  );
+};
 
 export default function Home() {
   const t = useTranslations();
   const locale = useLocale();
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const isClient = useIsClient();
+  const mainControls = useAnimation();
+  const mainRef = useRef(null);
+  const isMainInView = useInView(mainRef, { once: true, amount: 0.2 });
+
+  useEffect(() => {
+    if (isMainInView) {
+      mainControls.start("visible");
+    }
+  }, [isMainInView, mainControls]);
   return (
     <>
-      <main className="relative flex-1 main-bg-gradient overflow-hidden">
-        <section className="relative min-h-screen flex flex-col">
-          <Image
-            fill
-            priority
-            src={mainBackground}
-            alt="main-bg"
-            className="object-fit object-cover hidden md:block object-center select-none"
-          />
-          <Image
-            fill
-            priority
-            src={mainBackgroundMobile}
-            alt="main-bg"
-            className="object-fit object-cover md:hidden object-center select-none"
-          />
-          <div className="z-10 translate-y-96 md:top-1/2 md:absolute md:-translate-y-1/2 md:right-32 md:ltr:left-32 max-md:ps-9">
-            <h1
-              className="text-white uppercase text-[35px] md:text-[65px]"
-              style={aboreto.style}
-            >
-              {t("founded in 2011")}
-            </h1>
-            <Image
-              src={locale === "ar" ? logoAr : logoEn}
-              draggable={false}
-              priority
-              alt="logo"
-              className="select-none pointer-events-none max-md:w-[300px]"
-            />
-          </div>
-        </section>
+      <motion.main
+        ref={mainRef}
+        initial="hidden"
+        animate={mainControls}
+        variants={{
+          visible: { opacity: 1 },
+          hidden: { opacity: 0 },
+        }}
+        transition={{ duration: 0.8 }}
+        className="relative z-[1] flex-1  overflow-hidden"
+      >
+        <Image
+          src={"/parallel-lines.svg"}
+          width={1920}
+          height={1080}
+          alt="parallel-lines"
+          className="bottom-0 absolute z-[-1]"
+        />
 
-        <section className="container px-2 mx-auto pt-28 flex justify-between md:items-center md:gap-10">
-          <div className="flex items-center max-md:-me-10">
+        <motion.section
+          className="relative min-h-screen flex flex-col"
+          variants={{
+            visible: { opacity: 1, y: 0 },
+            hidden: { opacity: 0, y: 20 },
+          }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <span
+            className="uppercase text-center text-sm text-bg"
+            style={afacad.style}
+          >
+            {t("founded in 2011")}
+          </span>
+          <p
+            style={aclonica.style}
+            className="mt-2.5 text-center text-xl md:text-4xl text-bg ltr:tracking-tighter"
+          >
+            {t("mainText")}
+          </p>
+          <div className="px-10 md:px-20 pt-10">
             <Image
-              src={building}
-              alt="building"
-              className="object-cover h-full"
-            />
-            <Image
-              src={ceo}
-              alt="ceo"
-              className="object-cover max-md:hidden h-[420px]"
+              priority
+              src={mainBackground}
+              alt="main-bg"
+              className="object-fit rounded-2xl object-cover object-center select-none h-[590px] lg:h-[800px]"
             />
           </div>
-          <div className=" max-w-[278px] md:max-w-[420px] space-y-10 z-[1]">
+        </motion.section>
+
+        <AnimatedSection
+          delay={0.3}
+          className="px-2 py-20 flex justify-center flex-wrap md:items-center gap-10"
+        >
+          <div>
+            <Image src={ceo} alt="ceo" className="object-cover" />
+          </div>
+          <div className="space-y-10 z-[1]">
             <h2
-              className="text-bg w-fit text-[38.18px] md:text-[48.18px] relative before:content-[''] before:w-64 before:h-px before:bg-border before:absolute before:top-full md:before:right-7/12 md:ltr:before:left-7/12"
-              style={aboreto.style}
+              className="text-bg capitalize text-xl md:text-[40px] ltr:tracking-tighter"
+              style={aclonica.style}
             >
-              {t("about")}
+              {t("About_noon_consultants")}
             </h2>
             <p
-              className="text-white text-[22px] leading-[1.43] text-justify"
+              className="text-white md:text-lg font-thin max-w-[500px] leading-[1.43] text-justify"
               style={afacad.style}
             >
               {t("aboutText1")}
             </p>
-            <button
-              style={afacad.style}
-              className="uppercase rounded-full flex items-center gap-1 cursor-pointer text-lg text-white border-white border py-1.5 px-7"
-            >
-              {t("About US")}
-              <svg
-                width="13"
-                height="8"
-                viewBox="0 0 13 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12.6217 4.34718C12.8134 4.15544 12.8134 3.84457 12.6217 3.65283L9.49708 0.528252C9.30535 0.336513 8.99447 0.336513 8.80274 0.528252C8.611 0.719992 8.611 1.03086 8.80274 1.2226L11.5801 4L8.80274 6.7774C8.611 6.96914 8.611 7.28001 8.80274 7.47175C8.99447 7.66349 9.30535 7.66349 9.49708 7.47175L12.6217 4.34718ZM-4.29228e-08 4.49098L12.2745 4.49098L12.2745 3.50902L4.29228e-08 3.50902L-4.29228e-08 4.49098Z"
-                  fill="white"
-                />
-              </svg>
-            </button>
-            <Image
-              src={ceo2}
-              alt="ceo2"
-              className="object-cover h-[243px] md:hidden"
-            />
-          </div>
-        </section>
-        <section className="container px-2 relative mx-auto md:-mt-12 flex md:gap-4 justify-end md:items-center">
-          <div className="flex flex-col max-md:-mt-20 max-md:-space-y-20 items-center relative md:shrink-0 max-md:-me-8">
-            <Image
-              src={building2}
-              alt="building2"
-              className="object-cover object-right"
-            />
-            <Image
-              src={building2}
-              alt="building2"
-              className="object-cover object-right md:hidden"
-            />
-            <Image
-              src={building2}
-              alt="building2"
-              className="object-cover object-right  md:hidden"
-            />
-            <Image
-              src={building2}
-              alt="building2"
-              className="object-cover object-right sm:hidden"
-            />
-            <Image
-              src={building2}
-              alt="building2"
-              className="object-cover object-right min-[510px]:hidden"
-            />
-            <Image
-              src={building2}
-              alt="building2"
-              className="object-cover object-right min-[450px]:hidden"
-            />
-          </div>
-          <div className="space-y-10 max-md:mt-28">
-            <h2
-              className="text-bg w-fit mx-auto text-[26px] md:text-[48.18px] relative before:content-[''] before:w-[145px] md:before:w-[278px] before:h-px before:bg-border before:absolute before:top-full md:before:right-7/12 md:ltr:before:left-7/12"
-              style={aboreto.style}
-            >
-              {t("What Our Clients Say")}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              {[1, 2, 3, 4].map((item) => (
-                <div
-                  key={item}
-                  className="py-7 px-4 md:px-11 max-md:min-w-[230px] md:max-w-[400px] flex flex-col gap-5 items-center justify-between border-[1.5px] border-dashed border-[#F5F5F599] rounded-sm"
-                >
-                  <Image src={client} alt="client" />
-                  <p
-                    className="text-white text-center text-sm md:text-lg"
-                    style={afacad.style}
-                  >
-                    {t("clientText1")}
-                  </p>
-                  <p
-                    style={aboreto.style}
-                    className="text-white text-center text-sm md:text-lg"
-                  >
-                    <span>Ahmed Al-Mansouri,</span>
-                    <br />
-                    <span>CEO of Skyline Developers</span>
-                  </p>
-                </div>
-              ))}
+            <div className="mt-4">
+              <p style={greatVibes.style} className="text-2xl">
+                Dr.nizar el sayed
+              </p>
+              <p className="uppercase">{t("CHAIRMAN")}</p>
             </div>
           </div>
-        </section>
-        <section className="relative min-h-[562px] mt-10 md:min-h-[829px] overflow-hidden">
-          <Image
-            src={building3}
-            className="max-md:hidden"
-            alt="building3"
-            fill
-          />
-          <Image src={building4} className="md:hidden" alt="building4" fill />
-          <div className="w-full absolute bottom-24 left-1/2 -translate-x-1/2">
+        </AnimatedSection>
+        <AnimatedSection
+          delay={0.4}
+          className="container px-2 relative mx-auto"
+        >
+          <div className="space-y-10 max-md:mt-28">
             <h2
-              className="text-bg w-fit mx-auto text-[31.18px] md:text-[48.18px] mb-14 md:mb-20 relative md:before:content-[''] md:before:w-64 md:before:h-px md:before:bg-border md:before:absolute md:before:top-full md:before:right-7/12 md:ltr:before:left-7/12"
-              style={aboreto.style}
+              className="text-bg capitalize text-xl md:text-[40px] ltr:tracking-tighter text-center"
+              style={aclonica.style}
             >
-              {t("partners")}
+              {t("partners_words_about_noon")}
+            </h2>
+            <Carousel
+              opts={{
+                loop: true,
+                active: true,
+                align: "start",
+              }}
+              orientation={isClient && isMobile ? "vertical" : "horizontal"}
+            >
+              <CarouselContent
+                className={cn({ "max-h-[700px]": isClient && isMobile })}
+              >
+                {[1, 2, 3, 4, 5].map((item) => (
+                  <CarouselItem className="basis-1/3" key={item}>
+                    <div className="py-10 px-4 flex flex-col gap-3 sm:gap-10 relative before:absolute before:content-[''] before:w-1/3 before:h-px before:border before:border-bg before:top-0 before:left-4 before:right-4 before:z-10">
+                      <p
+                        className="text-white text-sm md:text-lg"
+                        style={afacad.style}
+                      >
+                        {t("clientText1")}
+                      </p>
+                      <div
+                        style={afacad.style}
+                        className="flex items-center gap-4"
+                      >
+                        <Image className="size-12" src={client} alt="client" />
+                        <div className="flex flex-col gap-1">
+                          <span className="text-white text-base">
+                            Ahmed Al-Mansouri
+                          </span>
+                          <span className="text-bg text-sm">
+                            CEO of Skyline Developers
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="flex justify-end items-center gap-1 my-5">
+                <CarouselPrevious />
+                <Slash
+                  className="text-white rotate-[-90deg]"
+                  size={30}
+                  strokeWidth={1}
+                />
+                <CarouselNext />
+              </div>
+            </Carousel>
+          </div>
+        </AnimatedSection>
+        <AnimatedSection delay={0.5} className="relative mt-10">
+          <div className="">
+            <h2
+              className="capitalize text-[40px] text-bg ltr:tracking-tighter text-center mb-14 md:mb-20"
+              style={aclonica.style}
+            >
+              {t("partners_of_success")}
             </h2>
             <Image
-              src={clients}
+              src={isClient && isMobile ? clientsSm : clientsLg}
               alt="clients"
-              className="object-cover  max-md:h-[150px] md:w-full md:object-right"
+              className="w-[1200px] mx-auto p-2"
             />
           </div>
-        </section>
-        <section className="container mx-auto py-28">
+        </AnimatedSection>
+
+        <AnimatedSection delay={0.6} className="container mx-auto py-20">
           <Image
             src={locale === "ar" ? logoAr : logoEn}
             draggable={false}
@@ -218,8 +261,8 @@ export default function Home() {
           <div className="flex max-md:ps-6 md:justify-between flex-wrap max-md:gap-20">
             <div className="flex flex-wrap gap-2 sm:gap-10">
               <h2
-                style={aboreto.style}
-                className="text-bg capitalize font-medium text-[26.7px] md:text-5xl tracking-tighter max-w-[8ch] pb-1 mb-4"
+                style={aclonica.style}
+                className="text-bg capitalize font-medium text-2xl md:text-5xl ltr:tracking-tighter max-w-[8ch] pb-1 mb-4"
               >
                 {t("headquarters")}
               </h2>
@@ -240,8 +283,8 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap gap-2 sm:gap-10">
               <h2
-                style={aboreto.style}
-                className="text-bg capitalize text-[26.7px] md:text-5xl tracking-tighter max-w-[8ch] pb-1 mb-4"
+                style={aclonica.style}
+                className="text-bg capitalize text-2xl md:text-5xl ltr:tracking-tighter max-w-[8ch] pb-1 mb-4"
               >
                 {t("branchOffice")}
               </h2>
@@ -263,9 +306,10 @@ export default function Home() {
                 </li>
               </ul>
             </div>
+            <Sidebar />
           </div>
-        </section>
-      </main>
+        </AnimatedSection>
+      </motion.main>
     </>
   );
 }

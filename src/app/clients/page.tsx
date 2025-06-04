@@ -1,13 +1,13 @@
 import Image from "next/image";
 import React from "react";
-import clientsImage from "@/public/clients.svg";
-import Footer from "../components/Footer";
+import clientsImageLg from "@/public/logos/clients-lg.svg";
+import clientsImageSm from "@/public/logos/clients.svg";
 import { useTranslations } from "next-intl";
-import { Aboreto, Afacad } from "next/font/google";
+import { Aclonica, Afacad } from "next/font/google";
 
-const aboreto = Aboreto({
+const aclonica = Aclonica({
   subsets: ["latin"],
-  variable: "--font-aboreto",
+  variable: "--font-aclonica",
   weight: "400",
   display: "swap",
 });
@@ -20,11 +20,11 @@ const afacad = Afacad({
 const ClientsPage = () => {
   const t = useTranslations();
   return (
-    <main className="flex-1 main-bg-gradient flex-col flex">
+    <main className="flex-1 flex-col flex">
       <div className="flex max-sm:flex-col max-sm:gap-16 px-9 pt-12 sm:ps-[88px] sm:pt-28">
         <div className="sm:max-w-[350px] space-y-4">
           <h2
-            style={aboreto.style}
+            style={aclonica.style}
             className="text-bg capitalize text-3xl pb-2"
           >
             {t("partners")}
@@ -34,10 +34,9 @@ const ClientsPage = () => {
           </p>
         </div>
         <div className="flex-1 flex justify-center items-center px-3">
-          <Image src={clientsImage} alt="clients" />
-        </div>{" "}
+          <Image src={clientsImageLg} alt="clients" />
+        </div>
       </div>
-      <Footer />
     </main>
   );
 };

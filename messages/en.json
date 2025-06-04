@@ -24,7 +24,7 @@
   "Total Estimated Cost": "Total Estimated Cost",
   "Total Plot Area": "Total Plot Area",
   "Warehouse": "Warehouse",
-  "What Our Clients Say": "What Our Clients Say",
+  "What Our Clients Say": "partners words about noon",
   "about": "About n&n",
   "aboutText1": "N&N Engineering services is one of the recognized Urban, Architecture and Interior Design practice in the KSA. founded in 2011. N&N designs, adapt and respond to the context of each project to create intelligent and enduring Urban Planning & Design.",
   "aboutText2": "Our success has been principally due to the quality of our people and their ability to be able to produce high quality design together with an understanding of what makes the Design successful Socially, Environmentally and Economically.",
@@ -78,20 +78,122 @@
     "allServices": " All Services",
     "breif": "An Delivery By Seasoned Professionals With Extensive Industry\n            Expertise, Each Specializing in Financial Financial Areas. Committed\n            To Delivering High-Quality Services That Understand Our Users Needs,\n            Conflicts To The Sustainable And Innovative Success Of Their\n            Projects.",
     "service-1": "ENGINEERING & ARCHITECTURAL DESIGN",
-    "service-10": "NTERIOR DESIGN",
+    "service-10": "INTERIOR DESIGN",
     "service-11": "PROJECT MANAGEMENT",
-    "service-12": "AOR ARCHITECT OF RECORD",
+    "service-12": "OR | ARCHITECT OF RECORD",
     "service-2": "URBAN DESIGN",
     "service-3": "MASTER PLANNING",
-    "service-4": "LICENSING",
-    "service-5": "CONSTRUCTION SUPERVISION",
+    "service-4": "CONSTRUCTION SUPERVISION",
+    "service-5": "PERMITS",
     "service-6": "ENGINEERING REPORTS",
     "service-7": "VALUE ENGINEERING",
     "service-8": "ENGINEERING STUDIES",
     "service-9": "LANDSCAPING",
     "service-btn": "  SERVICE PROJECTS",
     "title-1": "Our Best",
-    "title-2": "  Of Services"
+    "title-2": "  Of Services",
+    "service-1-description": "The art and science of creating buildings and ther physical structures. It involves the careful consideration of aesthetics, functionality, and the environment.",
+    "service-2-description": "Urban design is the process of shaping the physical setting for life in cities, towns, and villages. It involves the arrangement, appearance, and functionality of urban spaces, including the design of buildings, streets, parks, and other public spaces.",
+    "service-3-description": "Is a comprehensive, long-term planning process that provides a blueprint for the physical, economic, and social development of a particular area, such as a city, neighborhood, or large-scale development project.",
+    "service-4-description": "the process of overseeing the construction phase of a project to ensure that it is completed on time, within budget, and according to the specified standards and plans. It involves managing various aspects of the construction process.",
+    "service-6-description": "Detailed documents that present technical information, findings, analysis, and recommendations related to engineering projects. These reports are essential for communicating complex information clearly and effectively.",
+    "service-5-description": "The process of obtaining official permission or certification to practice as a professional in these fields. It ensures that individuals meet specific educational, professional, ethical standards to safeguard public health, safety, and welfare.",
+    "service-7-description": "To improve the value of a project by analyzing its functions. The goal is to enhance the project’s performance, quality, and reliability while minimizing costs. It involves identifying and eliminating unnecessary expenditures,",
+    "service-8-description": "Comprehensive analyses conducted to evaluate various aspects of engineering projects. These studies aim to provide detailed insights, inform decision-making, and ensure the feasibility, safety, and efficiency of a project.",
+    "service-9-description": "Refers to the art and practice of designing and arranging outdoor spaces, including gardens, parks, and other natural environments, to enhance their aesthetic appeal, functionality, and environmental value. plants, hardscapes, and structures to create pleasing and functional outdoor areas.",
+    "service-11-description": "The discipline of planning, organizing, and overseeing the completion of a project to achieve specific goals and meet specific success criteria. It involves managing resources, time, and scope to deliver the project on time, within budget, required quality standards.",
+    "service-10-description": "The art and science of enhancing the interior of a space to create a more aesthetically pleasing and functional environment. It involves designing the layout, selecting furnishings and finishes, coordinating color schemes ,lighting",
+    "service-12-description": "The licensed architect responsible for the legal and professional aspects of a project. This role involves overseeing the design and documentation to ensure that the project complies with local building codes, regulations, and standards.",
+    "service-1-features": {
+      "1": "Concept and Preliminary Design",
+      "2": "Interior Design",
+      "3": "Construction Documents & Workshop Drawings",
+      "4": "Value Engineering and Bill of Materials"
+    },
+    "service-2-features": {
+      "1": "Feasibility Studies",
+      "2": "Site Appraisals",
+      "3": "Asset Appraisals",
+      "4": "Environmental Impact Assessment",
+      "5": "Social Impact Assessment"
+    },
+    "service-3-features": {
+      "1": "Site Analysis and Feasibility Studies",
+      "2": "Land Use and Zoning Planning",
+      "3": "Infrastructure and Transportation Planning",
+      "4": "Environmental and Sustainability Planning",
+      "5": "Community Engagement and Stakeholder Consultation"
+    },
+    "service-4-features": {
+      "1": "On-Site Monitoring and Inspection",
+      "2": "Quality Control and Assurance",
+      "3": "Safety Compliance",
+      "4": "Progress Reporting and Documentation",
+      "5": "Coordination with Contractors and Stakeholders"
+    },
+    "service-5-features": {
+      "1": "Regulatory Compliance",
+      "2": "Application Preparation and Submission",
+      "3": "Review and Approval by Authorities",
+      "4": "Issuance of Permits and Licenses",
+      "5": "Ongoing Compliance and Renewals"
+    },
+    "service-6-features": {
+      "1": "Data Collection and Analysis",
+      "2": "Problem Identification and Assessment",
+      "3": "Design Solutions and Recommendations",
+      "4": "Technical Specifications and Calculations",
+      "5": "Conclusion and Future Considerations"
+    },
+    "service-7-features": {
+      "1": "Function Analysis",
+      "2": "Cost Reduction",
+      "3": "Alternative Solutions",
+      "4": "Efficiency Optimization",
+      "5": "Quality Maintenance"
+    },
+    "service-8-features": {
+      "1": "Gather & review all necessary engineering documents",
+      "2": "Site survey",
+      "3": "Check the performance of building and equipment",
+      "4": "Inspection, casting, and risk assessment",
+      "5": "Rectify identified issues"
+    },
+    "service-9-features": {
+      "1": "Site Analysis and Design",
+      "2": "Plant Selection and Placement",
+      "3": "Hardscape Installation (e.g., pathways, walls)",
+      "4": "Irrigation Systems Design",
+      "5": "Maintenance and Seasonal Care"
+    },
+    "service-10-features": {
+      "1": "Space Planning",
+      "2": "Aesthetic and Functional Design",
+      "3": "Material and Finish Selection",
+      "4": "Lighting and Color Schemes",
+      "5": "Furniture and Fixture Arrangement"
+    },
+    "service-11-features": {
+      "1": "Planning and Scheduling",
+      "2": "Resource Allocation",
+      "3": "Risk Management",
+      "4": "Team Coordination",
+      "5": "Progress Tracking and Reporting"
+    },
+    "service-12-features": {
+      "1": "Project Oversight",
+      "2": "Compliance with Codes and Standards",
+      "3": "Coordination with Design Team",
+      "4": "Documentation and Certification",
+      "5": "Client Liaison and Communication"
+    }
   },
-  "slide to select the space of the services in m2": "slide to select the space of the services in m²."
+  "slide to select the space of the services in m2": "slide to select the space of the services in m².",
+  "partners_words_about_noon": "partners words about noon",
+  "About_noon_consultants": "About noon consultants",
+  "mainText": "Noon Consultants is one of the recognized Architecture in the KSA.",
+  "partners_of_success": "partners of success",
+  "new_branch": "New Branch",
+  "coming_soon": "coming soon Hail",
+  "viewProjects": "explore projects"
 }

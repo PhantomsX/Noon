@@ -5,6 +5,7 @@ import { getLocale, getMessages } from "next-intl/server";
 import Navbar from "./components/navbar";
 import { NextIntlClientProvider } from "next-intl";
 import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,13 +33,17 @@ export default async function RootLayout({
     >
       <body
         suppressHydrationWarning
-        className={`antialiased flex flex-col min-h-screen relative`}
+        className={`antialiased flex flex-col min-h-screen relative main-bg-gradient text-white`}
         style={geistSans.style}
       >
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-20 -left-20 w-80 h-80 bg-gradient-to-br from-[#f9c39d]/20 to-transparent rounded-full blur-3xl" />
+          <div className="absolute bottom-20 -right-20 w-80 h-80 bg-gradient-to-tl from-[#f9c39d]/20 to-transparent rounded-full blur-3xl" />
+        </div>
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           {children}
-          <Sidebar />
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

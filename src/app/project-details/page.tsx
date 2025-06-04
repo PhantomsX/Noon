@@ -1,8 +1,9 @@
 "use client";
 import { useTranslations } from "next-intl";
 import React, { useEffect, useState } from "react";
-import Footer from "../components/Footer";
 import { Afacad } from "next/font/google";
+import { motion } from "motion/react";
+import Image from "next/image";
 
 const afacad = Afacad({
   subsets: ["latin"],
@@ -17,99 +18,211 @@ const Page = () => {
   const t = useTranslations("projects");
   useEffect(() => {
     const pro = localStorage.getItem("selectedProject");
-    console.log(pro);
     if (pro) {
       setProject(JSON.parse(pro));
     }
   }, []);
+
   return (
-    <main style={afacad.style} className="bg-black min-h-[100vh]">
-      <figure className="w-full max-sm:h-[50vh]">
-        <img
-          className="object-cover h-[50vh]"
-          src="/images/rectangelImage.svg"
-          alt=""
+    <main style={afacad.style} className="text-white pt-20">
+      <motion.figure
+        className="h-[400px] sm:h-[600px] relative mx-10 rounded-2xl overflow-hidden"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
+        <Image
+          className="object-cover"
+          src={"/images/rectangelImage.svg"}
+          alt={project?.title || "Project image"}
+          fill
         />
-      </figure>
-      <section className="flex  flex-wrap my-5 justify-between items-center gap-y-10">
-        <aside className=" md:w-[30%] w-full text-white px-5 md:ps-10 ">
-          <p className="font-bold text-[23px]  ">{project?.title}</p>
-          <p className="font-normal text-[14px]  mb-3 ">
+      </motion.figure>
+      <motion.section
+        className="flex flex-col md:flex-row my-10 px-5 md:px-10 justify-between items-start md:items-center gap-10"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+      >
+        <aside className="">
+          <h1 className="text-[23px] md:text-[32px] mb-2 ">{project?.title}</h1>
+          <p className="font-normal text-[14px] md:text-[16px] mb-3 ">
             {project?.description}
           </p>
-          <div className="hidden md:block">
-            <RowLine
-              name={t("location")}
-              value={project?.location}
-              name2={t("scope")}
-              value2={project?.scope}
-            />
-            <RowLine
-              name={t("area")}
-              value={project?.area}
-              name2={t("status")}
-              value2={project?.status}
-            />
-          </div>
-
-          <section className="mt-5 block  md:hidden ">
-            <RowLine2 name={t("location")} value={project?.location} />
-            <RowLine2 name={t("area")} value={project?.area} />
-            <RowLine2 name={t("scope")} value={project?.scope} />
-            <RowLine2 name={t("status")} value={project?.status} />
-          </section>
         </aside>
-        <figure className="md:w-[33%] w-full ">
-          <img src="/images/Rectangle -img.svg" className="w-full" alt="" />
-        </figure>
-
-        <figure className="md:w-[33%] w-full">
-          <img src="/images/Rectangle -img.svg" className="w-full" alt="" />
-        </figure>
-      </section>
-      <section className="flex flex-wrap px-5 md:px-10 my-5 justify-between items-center gap-y-10">
-        <figure className="md:w-[25%] w-full">
-          <img src="/images/square-img.svg" className="w-full" alt="" />
-        </figure>
-
-        <figure className="md:w-[25%] w-full">
-          <img src="/images/square-img.svg" className="w-full" alt="" />
-        </figure>
-
-        <p className="md:w-[45%] w-full text-white">{t("description")}</p>
-      </section>
-      <Footer />
+        <div>
+          <RowLine name={t("location")} value={project?.location} />
+          <RowLine name={t("area")} value={project?.area} />
+          <RowLine name={t("scope")} value={project?.scope} />
+          <RowLine name={t("status")} value={project?.status} />
+        </div>
+      </motion.section>
+      {project?.image && (
+        <motion.section
+          className="grid grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))] gap-5 px-5 md:px-10 my-10"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            visible: { transition: { staggerChildren: 0.08 } },
+          }}
+        >
+          <motion.figure
+            className="w-full aspect-video overflow-hidden rounded-md"
+            variants={{
+              hidden: { opacity: 0, scale: 0.9 },
+              visible: { opacity: 1, scale: 1 },
+            }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <Image
+              src={project?.image}
+              alt={`Project related image`}
+              width={500}
+              height={300}
+              className="w-full h-full object-cover"
+            />
+          </motion.figure>
+          <motion.figure
+            className="w-full aspect-video overflow-hidden rounded-md"
+            variants={{
+              hidden: { opacity: 0, scale: 0.9 },
+              visible: { opacity: 1, scale: 1 },
+            }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <Image
+              src={project?.image}
+              alt={`Project related image`}
+              width={500}
+              height={300}
+              className="w-full h-full object-cover"
+            />
+          </motion.figure>
+          <motion.figure
+            className="w-full aspect-video overflow-hidden rounded-md"
+            variants={{
+              hidden: { opacity: 0, scale: 0.9 },
+              visible: { opacity: 1, scale: 1 },
+            }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <Image
+              src={project?.image}
+              alt={`Project related image`}
+              width={500}
+              height={300}
+              className="w-full h-full object-cover"
+            />
+          </motion.figure>{" "}
+          <motion.figure
+            className="w-full aspect-video overflow-hidden rounded-md"
+            variants={{
+              hidden: { opacity: 0, scale: 0.9 },
+              visible: { opacity: 1, scale: 1 },
+            }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <Image
+              src={project?.image}
+              alt={`Project related image`}
+              width={500}
+              height={300}
+              className="w-full h-full object-cover"
+            />
+          </motion.figure>{" "}
+          <motion.figure
+            className="w-full aspect-video overflow-hidden rounded-md"
+            variants={{
+              hidden: { opacity: 0, scale: 0.9 },
+              visible: { opacity: 1, scale: 1 },
+            }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <Image
+              src={project?.image}
+              alt={`Project related image`}
+              width={500}
+              height={300}
+              className="w-full h-full object-cover"
+            />
+          </motion.figure>{" "}
+          <motion.figure
+            className="w-full aspect-video overflow-hidden rounded-md"
+            variants={{
+              hidden: { opacity: 0, scale: 0.9 },
+              visible: { opacity: 1, scale: 1 },
+            }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <Image
+              src={project?.image}
+              alt={`Project related image`}
+              width={500}
+              height={300}
+              className="w-full h-full object-cover"
+            />
+          </motion.figure>{" "}
+          <motion.figure
+            className="w-full aspect-video overflow-hidden rounded-md"
+            variants={{
+              hidden: { opacity: 0, scale: 0.9 },
+              visible: { opacity: 1, scale: 1 },
+            }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <Image
+              src={project?.image}
+              alt={`Project related image`}
+              width={500}
+              height={300}
+              className="w-full h-full object-cover"
+            />
+          </motion.figure>{" "}
+          <motion.figure
+            className="w-full aspect-video overflow-hidden rounded-md"
+            variants={{
+              hidden: { opacity: 0, scale: 0.9 },
+              visible: { opacity: 1, scale: 1 },
+            }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <Image
+              src={project?.image}
+              alt={`Project related image`}
+              width={500}
+              height={300}
+              className="w-full h-full object-cover"
+            />
+          </motion.figure>{" "}
+          <motion.figure
+            className="w-full aspect-video overflow-hidden rounded-md"
+            variants={{
+              hidden: { opacity: 0, scale: 0.9 },
+              visible: { opacity: 1, scale: 1 },
+            }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <Image
+              src={project?.image}
+              alt={`Project related image`}
+              width={500}
+              height={300}
+              className="w-full h-full object-cover"
+            />
+          </motion.figure>
+        </motion.section>
+      )}
     </main>
   );
 };
 
 export default Page;
-const RowLine = ({ name, value, name2, value2 }: any) => {
-  return (
-    <>
-      <main className="w-full flex gap-x-5">
-        <div className=" flex justify-between my-[8px] text-[14px] w-[40%]">
-          <p className="text-white  md:text-start"> {name}</p>
-          <p className=" md:text-start text-[#BE7B2C]">{value}</p>
-        </div>
-        <div className=" flex justify-between my-[8px] text-[14px] w-[60%]">
-          <p className="text-white  md:text-start"> {name2}</p>
-          <p className=" md:text-center text-[#BE7B2C]">{value2}</p>
-        </div>
-      </main>
-      <div className="h-[1px] gradient-gold-line w-full"></div>
-    </>
-  );
-};
 
-const RowLine2 = ({ name, value }: any) => {
+const RowLine = ({ name, value }: { name: string; value: string }) => {
   return (
-    <>
-      <div className="h-[1px] gradient-gold-line w-full"></div>
-      <div className=" flex justify-between my-[8px] text-[14px]">
-        <p className="text-white  md:text-start"> {name}</p>
-        <p className="text-white md:text-start">{value}</p>
-      </div>
-    </>
+    <div className="flex justify-between items-center gap-20 flex-wrap">
+      <p className="text-white"> {name}</p>
+      <p className="text-bg p-0">{value}</p>
+    </div>
   );
 };

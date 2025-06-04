@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
 import { Arrow } from "./icons";
-import Image from "next/image";
-import secBackground from "@/public/sec-bg.png";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 
@@ -25,7 +23,7 @@ const HomeLinkSection = (props: Props) => {
         className="opacity-10 z-[-2] select-none"
       /> */}
       <div className="flex flex-col gap-2 max-md:pt-3 justify-center">
-        <p className="capitalize text-start font-medium text-3xl lg:text-4xl group-hover:text-bg tracking-tighter">
+        <p className="capitalize text-start font-medium text-3xl lg:text-4xl group-hover:text-bg ltr:tracking-tighter">
           {props?.breakpoint && locale === "en" ? (
             <>
               <span>

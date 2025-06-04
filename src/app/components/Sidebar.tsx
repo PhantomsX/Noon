@@ -6,10 +6,22 @@ import phone from "@/public/phone.svg";
 import calc from "@/public/calculator.svg";
 import Image from "next/image";
 import Link from "next/link";
+import { useMediaQuery } from "usehooks-ts";
+import { cn } from "@/lib/utils";
 
-const Sidebar = () => {
+const Sidebar = ({
+  orientation = "vertical",
+}: {
+  orientation?: "vertical" | "horizontal";
+}) => {
+  const isMobile = useMediaQuery("(max-width: 768px)");
   return (
-    <nav className="fixed z-40 backdrop-blur-sm right-0 top-1/2 px-1.5 py-2.5 [&_img]:size-5 flex flex-col gap-7 -translate-y-1/2 bg-main-bg/70">
+    <nav
+      className={cn(`px-1.5 py-2.5 [&_img]:size-5 flex gap-7`, {
+        "flex-row sm:flex-col": orientation === "vertical",
+        "flex-row": orientation === "horizontal",
+      })}
+    >
       <a href="#" target="_blank">
         <Image src={instagram} alt="instagram" />
       </a>
