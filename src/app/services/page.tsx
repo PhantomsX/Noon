@@ -7,6 +7,7 @@ import Image from "next/image";
 import { Slash } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
+import PageTitle from "../components/PageTitle";
 
 const aclonica = Aclonica({
   subsets: ["latin"],
@@ -180,15 +181,11 @@ function Page() {
       <section className="flex max-sm:flex-col gap-16 px-9 pt-12 sm:ps-[80px]">
         {/* Header Section */}
         <aside className="sm:max-w-[350px] space-y-4">
-          <div
-            style={aclonica.style}
-            className="mb-5 text-3xl md:text-5xl text-bg"
-          >
-            <h1 className=" text-center md:w-fit py-2 md:mb-3">
-              {t("title-1")}
-            </h1>
-            <h2 className=" text-center md:w-fit py-2">{t("title-2")}</h2>
-          </div>
+          <PageTitle>
+            {t("title-1")}
+            <br />
+            {t("title-2")}
+          </PageTitle>
         </aside>
         <aside className="flex-1 grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-6">
           <p

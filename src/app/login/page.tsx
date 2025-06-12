@@ -92,6 +92,7 @@ const LoginPage = () => {
               viewBox="0 0 48 48"
               width="24px"
               height="24px"
+              className="shrink-0"
             >
               <path
                 fill="#FFC107"
@@ -123,6 +124,7 @@ const LoginPage = () => {
               viewBox="0 0 48 48"
               width="24px"
               height="24px"
+              className="shrink-0"
             >
               <linearGradient
                 id="Ld6sqrtcxMyckEl6xeDdMa"

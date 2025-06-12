@@ -4,6 +4,7 @@ import clientsImageLg from "@/public/logos/clients-lg.svg";
 import clientsImageSm from "@/public/logos/clients.svg";
 import { useTranslations } from "next-intl";
 import { Aclonica, Afacad } from "next/font/google";
+import PageTitle from "../components/PageTitle";
 
 const aclonica = Aclonica({
   subsets: ["latin"],
@@ -23,12 +24,7 @@ const ClientsPage = () => {
     <main className="flex-1 flex-col flex">
       <div className="flex max-sm:flex-col max-sm:gap-16 px-9 pt-12 sm:ps-[88px] sm:pt-28">
         <div className="sm:max-w-[350px] space-y-4">
-          <h2
-            style={aclonica.style}
-            className="text-bg capitalize text-3xl pb-2"
-          >
-            {t("partners")}
-          </h2>
+          <PageTitle>{t("partners")}</PageTitle>
           <p style={afacad.style} className=" text-white">
             {t("clientsSubtitle")}
           </p>

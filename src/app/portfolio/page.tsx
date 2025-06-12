@@ -9,6 +9,7 @@ import { Aclonica, Afacad } from "next/font/google";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useIsClient, useMediaQuery } from "usehooks-ts";
 import { useRouter } from "next/navigation";
+import PageTitle from "../components/PageTitle";
 
 const projects = [
   {
@@ -283,13 +284,11 @@ const Page = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
       >
-        <div
-          style={aclonica.style}
-          className="mb-5 text-[31px] md:text-5xl text-bg"
-        >
-          <h1 className="md:mb-3">{t("title-1")}</h1>
-          <h2>{t("title-2")}</h2>
-        </div>
+        <PageTitle>
+          {t("title-1")}
+          <br />
+          {t("title-2")}
+        </PageTitle>
 
         <p className="text-xl mb-4 text-white text-center md:text-start flex-1">
           {t("breif")}

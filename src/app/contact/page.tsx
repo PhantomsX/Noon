@@ -1,7 +1,5 @@
 "use client";
 
-"use client";
-
 import React from "react";
 import suadiarabia from "@/public/suadiarabia.svg";
 import Image from "next/image";
@@ -33,9 +31,9 @@ const itemVariants = {
 };
 
 const imageVariants = {
-  hidden: { x: -20, opacity: 0 },
+  hidden: { y: 50, opacity: 0 },
   visible: {
-    x: 0,
+    y: 0,
     opacity: 1,
     transition: {
       duration: 1,
@@ -43,6 +41,22 @@ const imageVariants = {
       delay: 0.2,
     },
   },
+};
+
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  return isMobile;
 };
 
 const aclonica = Aclonica({
@@ -59,29 +73,31 @@ const afacad = Afacad({
 });
 const ContactPage = () => {
   const t = useTranslations();
+  const isMobile = useIsMobile();
+
   return (
     <motion.main
       style={afacad.style}
-      className="flex-1 relative min-h-screen flex-col flex"
+      className="flex-1 relative min-h-screen flex-col flex overflow-hidden"
       initial="hidden"
       animate="visible"
     >
-      <div className="z-10 max-md:mx-auto">
+      <div className="z-10 flex flex-col flex-1">
         <motion.div
-          className="px-14 md:absolute md:top-0 md:end-0 flex flex-col max-md:mx-auto md:w-fit justify-center gap-14"
+          className="px-6 sm:px-8 md:px-14 md:absolute md:top-0 md:end-0 flex flex-col max-md:mx-auto md:w-fit md:justify-center gap-10 md:gap-14 pb-8"
           variants={containerVariants}
         >
-          <motion.div className="flex flex-wrap gap-2" variants={itemVariants}>
+          <motion.div className="flex flex-wrap gap-4" variants={itemVariants}>
             <motion.h2
               style={aclonica.style}
-              className="text-bg capitalize font-medium text-2xl md:text-5xl ltr:tracking-tighter max-w-[8ch] pb-1 mb-4"
+              className="text-bg capitalize font-medium text-3xl md:text-5xl ltr:tracking-tighter max-w-[8ch] pb-1 mb-4"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
               {t("headquarters")}
             </motion.h2>
             <motion.ul
-              className="text-white max-w-[190px] md:max-w-[220px] max-md:text-[12.85px] space-y-2"
+              className="text-white max-w-[220px] md:max-w-[250px] text-base md:text-lg space-y-3"
               variants={containerVariants}
             >
               <motion.li variants={itemVariants} whileHover={{ x: 5 }}>
@@ -109,17 +125,17 @@ const ContactPage = () => {
             </motion.ul>
           </motion.div>
 
-          <motion.div className="flex flex-wrap gap-2" variants={itemVariants}>
+          <motion.div className="flex flex-wrap gap-4" variants={itemVariants}>
             <motion.h2
               style={aclonica.style}
-              className="text-bg capitalize text-2xl md:text-5xl ltr:tracking-tighter max-w-[8ch] pb-1 mb-4"
+              className="text-bg capitalize text-3xl md:text-5xl ltr:tracking-tighter max-w-[8ch] pb-1 mb-4"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
               {t("branchOffice")}
             </motion.h2>
             <motion.ul
-              className="text-white max-w-[230px] md:max-w-[280px] max-md:text-[12.85px] space-y-2"
+              className="text-white max-w-[250px] md:max-w-[280px] text-base md:text-lg space-y-3"
               variants={containerVariants}
             >
               <motion.li variants={itemVariants} whileHover={{ x: 5 }}>
@@ -150,7 +166,7 @@ const ContactPage = () => {
           <motion.div variants={itemVariants}>
             <motion.h2
               style={aclonica.style}
-              className="text-bg capitalize text-2xl md:text-5xl ltr:tracking-tighter pb-1 mb-4"
+              className="text-bg capitalize text-3xl md:text-5xl ltr:tracking-tighter pb-1 mb-4"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -163,7 +179,9 @@ const ContactPage = () => {
               </motion.span>
             </motion.h2>
           </motion.div>
-          <Sidebar orientation="horizontal" />
+          <div className="max-md:mt-6">
+            <Sidebar orientation="horizontal" />
+          </div>
         </motion.div>
       </div>
 
@@ -171,14 +189,18 @@ const ContactPage = () => {
         variants={imageVariants}
         initial="hidden"
         animate="visible"
-        className="md:absolute md:top-0 md:start-0 h-full w-full  z-0"
+        className="w-full md:h-full md:absolute md:top-0 md:start-0 md:z-0 max-md:relative max-md:mt-6 max-md:h-[350px]"
+        style={{
+          willChange: "opacity, transform",
+        }}
       >
         <div className="relative w-full h-full">
           <Image
             src={suadiarabia}
             alt="suadiarabia"
             fill
-            className="object-contain object-left h-full"
+            sizes="100vw"
+            className="object-contain md:object-left h-full"
             priority
           />
         </div>

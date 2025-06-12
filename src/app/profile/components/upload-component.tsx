@@ -15,20 +15,20 @@ const containerVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.4,
       ease: [0.25, 1, 0.5, 1],
       when: "beforeChildren",
-      staggerChildren: 0.05,
+      staggerChildren: 0.04,
     },
   },
   exit: {
     opacity: 0,
     y: -10,
     transition: {
-      duration: 0.3,
+      duration: 0.25,
       ease: [0.25, 0.1, 0.25, 1],
       when: "afterChildren",
-      staggerChildren: 0.05,
+      staggerChildren: 0.03,
       staggerDirection: -1,
     },
   },
@@ -44,44 +44,47 @@ const iconVariants = {
       type: "spring",
       stiffness: 400,
       damping: 17,
+      duration: 0.3,
     },
   },
   hover: {
-    scale: 1.15,
-    y: -5,
+    scale: 1.1,
+    y: -3,
     transition: {
       type: "spring",
-      stiffness: 500,
+      stiffness: 400,
       damping: 12,
+      duration: 0.2,
     },
   },
   drag: {
-    scale: 1.25,
-    y: -8,
-    rotate: [0, -5, 5, -3, 0],
+    scale: 1.15,
+    y: -5,
+    rotate: [0, -3, 3, -2, 0],
     transition: {
       rotate: {
-        duration: 1,
+        duration: 0.8,
         repeat: Infinity,
         repeatType: "mirror",
       },
       type: "spring",
       stiffness: 300,
       damping: 10,
+      duration: 0.3,
     },
   },
   success: {
-    scale: [1, 1.25, 1],
+    scale: [1, 1.2, 1],
     borderRadius: ["50%", "35%", "50%"],
     transition: {
-      duration: 0.5,
+      duration: 0.4,
       ease: "easeInOut",
     },
   },
   error: {
-    x: [0, -5, 5, -5, 5, 0],
+    x: [0, -3, 3, -3, 3, 0],
     transition: {
-      duration: 0.5,
+      duration: 0.4,
     },
   },
 };
@@ -90,7 +93,7 @@ const iconVariants = {
 const Particle = ({ index }: { index: number }) => {
   return (
     <motion.div
-      className="absolute w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#f9c39d] to-[#f9a56a]"
+      className="absolute w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-gradient-to-r from-[#f9c39d] to-[#f9a56a]"
       initial={{
         opacity: 1,
         scale: 0,
@@ -103,13 +106,13 @@ const Particle = ({ index }: { index: number }) => {
         x: [
           0,
           (index % 2 === 0 ? -1 : 1) *
-            (20 + Math.random() * 30) *
+            (10 + Math.random() * 20) *
             Math.cos(index),
         ],
-        y: [0, -40 - Math.random() * 20],
+        y: [0, -25 - Math.random() * 15],
       }}
       transition={{
-        duration: 1 + Math.random() * 0.5,
+        duration: 0.8 + Math.random() * 0.3,
         ease: "easeOut",
         delay: index * 0.05,
       }}
@@ -117,7 +120,7 @@ const Particle = ({ index }: { index: number }) => {
   );
 };
 
-const UploadBox: React.FC<UploadBoxProps> = ({ label }) => {
+const UploadBox = ({ label }: UploadBoxProps) => {
   const [isDragging, setIsDragging] = useState(false);
   const [file, setFile] = useState<File | null>(null);
   const [uploadStatus, setUploadStatus] = useState<
@@ -166,25 +169,25 @@ const UploadBox: React.FC<UploadBoxProps> = ({ label }) => {
           borderColor: ["#f9c39d", "#22c55e", "#f9c39d"],
           boxShadow: [
             "0 0 0px rgba(249, 195, 157, 0.3)",
-            "0 0 20px rgba(34, 197, 94, 0.5)",
+            "0 0 15px rgba(34, 197, 94, 0.5)",
             "0 0 5px rgba(249, 195, 157, 0.3)",
           ],
-          transition: { duration: 1.5 },
+          transition: { duration: 1 },
         });
         setShowParticles(true);
-        setTimeout(() => setShowParticles(false), 1500);
+        setTimeout(() => setShowParticles(false), 1200);
       } else {
         controls.start({
           borderColor: ["#f9c39d", "#ef4444", "#f9c39d"],
           boxShadow: [
             "0 0 0px rgba(249, 195, 157, 0.3)",
-            "0 0 20px rgba(239, 68, 68, 0.5)",
+            "0 0 15px rgba(239, 68, 68, 0.5)",
             "0 0 5px rgba(249, 195, 157, 0.3)",
           ],
-          transition: { duration: 1.5 },
+          transition: { duration: 1 },
         });
       }
-    }, 2000);
+    }, 1500);
   };
 
   return (
@@ -193,12 +196,12 @@ const UploadBox: React.FC<UploadBoxProps> = ({ label }) => {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
-        duration: 0.5,
+        duration: 0.4,
         ease: [0.34, 1.56, 0.64, 1], // Custom spring-like easing
       }}
     >
       <motion.label
-        className={`w-full h-full border ${
+        className={`w-full h-full min-h-[100px] sm:min-h-[120px] border ${
           isDragging ? "border-[#f9c39d]" : "border-[#f9c39d]/60"
         } rounded-xl flex flex-col items-center justify-center mb-2 cursor-pointer bg-black/30 backdrop-blur-sm overflow-hidden relative`}
         onDragOver={handleDragOver}
@@ -273,10 +276,10 @@ const UploadBox: React.FC<UploadBoxProps> = ({ label }) => {
               initial="initial"
               animate="animate"
               exit="exit"
-              className="flex flex-col items-center justify-center p-4 text-center relative"
+              className="flex flex-col items-center justify-center p-2 sm:p-4 text-center relative"
             >
               <motion.div
-                className={`w-12 h-12 rounded-full flex items-center justify-center mb-3 ${
+                className={`w-8 h-8 sm:w-12 sm:h-12 rounded-full flex items-center justify-center mb-2 sm:mb-3 ${
                   uploadStatus === "success"
                     ? "bg-green-500/20"
                     : uploadStatus === "error"
@@ -304,7 +307,7 @@ const UploadBox: React.FC<UploadBoxProps> = ({ label }) => {
                     }}
                     transition={{ duration: 0.5, delay: 0.1 }}
                   >
-                    <Check className="text-green-500" size={22} />
+                    <Check className="text-green-500" size={18} />
                   </motion.div>
                 ) : uploadStatus === "error" ? (
                   <motion.div
@@ -315,7 +318,7 @@ const UploadBox: React.FC<UploadBoxProps> = ({ label }) => {
                     }}
                     transition={{ duration: 0.5, delay: 0.1 }}
                   >
-                    <AlertCircle className="text-red-500" size={22} />
+                    <AlertCircle className="text-red-500" size={18} />
                   </motion.div>
                 ) : uploadStatus === "uploading" ? (
                   <motion.div
@@ -326,15 +329,15 @@ const UploadBox: React.FC<UploadBoxProps> = ({ label }) => {
                       ease: "linear",
                     }}
                   >
-                    <Loader2 className="text-[#f9c39d]" size={22} />
+                    <Loader2 className="text-[#f9c39d]" size={18} />
                   </motion.div>
                 ) : (
-                  <Upload className="text-[#f9c39d]" size={22} />
+                  <Upload className="text-[#f9c39d]" size={16} />
                 )}
               </motion.div>
 
               <motion.p
-                className="text-sm text-white font-medium truncate w-full"
+                className="text-xs sm:text-sm text-white font-medium truncate w-full max-w-[120px] sm:max-w-full"
                 initial={{ opacity: 0, y: 5 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
@@ -358,12 +361,12 @@ const UploadBox: React.FC<UploadBoxProps> = ({ label }) => {
                   delay: 0.2,
                 }}
               >
-                <p className="text-xs text-gray-400">
+                <p className="text-[10px] sm:text-xs text-gray-400">
                   {Math.round(file.size / 1024)} KB
                 </p>
                 {uploadStatus === "success" && (
                   <motion.span
-                    className="text-xs text-green-500"
+                    className="text-[10px] sm:text-xs text-green-500"
                     initial={{ opacity: 0, x: -5 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2 }}
@@ -373,7 +376,7 @@ const UploadBox: React.FC<UploadBoxProps> = ({ label }) => {
                 )}
                 {uploadStatus === "error" && (
                   <motion.span
-                    className="text-xs text-red-500"
+                    className="text-[10px] sm:text-xs text-red-500"
                     initial={{ opacity: 0, x: -5 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2 }}
@@ -383,7 +386,7 @@ const UploadBox: React.FC<UploadBoxProps> = ({ label }) => {
                 )}
                 {uploadStatus === "uploading" && (
                   <motion.span
-                    className="text-xs text-[#f9c39d]"
+                    className="text-[10px] sm:text-xs text-[#f9c39d]"
                     initial={{ opacity: 0, x: -5 }}
                     animate={{ opacity: [0.5, 1, 0.5], x: 0 }}
                     transition={{
@@ -406,19 +409,19 @@ const UploadBox: React.FC<UploadBoxProps> = ({ label }) => {
               initial="initial"
               animate="animate"
               exit="exit"
-              className="flex flex-col items-center justify-center p-4 text-center"
+              className="flex flex-col items-center justify-center p-2 sm:p-4 text-center"
             >
               <motion.div
-                className="w-12 h-12 bg-[#f9c39d]/20 rounded-full flex items-center justify-center mb-3"
+                className="w-8 h-8 sm:w-12 sm:h-12 bg-[#f9c39d]/20 rounded-full flex items-center justify-center mb-2 sm:mb-3"
                 variants={iconVariants}
                 animate={isDragging ? "drag" : "animate"}
                 whileHover="hover"
               >
-                <Upload className="text-[#f9c39d]" size={22} />
+                <Upload className="text-[#f9c39d]" size={16} />
               </motion.div>
 
               <motion.p
-                className="text-xs text-gray-400"
+                className="text-[10px] sm:text-xs text-gray-400"
                 initial={{ opacity: 0, y: 5 }}
                 animate={{
                   opacity: 1,
@@ -442,7 +445,7 @@ const UploadBox: React.FC<UploadBoxProps> = ({ label }) => {
               </motion.p>
 
               <motion.p
-                className="text-xs text-[#f9c39d]/80 mt-1"
+                className="text-[10px] sm:text-xs text-[#f9c39d]/80 mt-1"
                 initial={{ opacity: 0, y: 5 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
@@ -460,7 +463,7 @@ const UploadBox: React.FC<UploadBoxProps> = ({ label }) => {
       </motion.label>
 
       <motion.p
-        className="text-white text-sm"
+        className="text-white text-xs sm:text-sm text-center"
         initial={{ opacity: 0, y: 5 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{

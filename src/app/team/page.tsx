@@ -10,6 +10,7 @@ import {
   useInView,
 } from "motion/react";
 import { Aclonica, Afacad } from "next/font/google";
+import PageTitle from "../components/PageTitle";
 
 const aclonica = Aclonica({
   subsets: ["latin"],
@@ -158,8 +159,20 @@ const TeamMemberCard = ({ member, index }) => {
   const cardRef = useRef(null);
   const isInView = useInView(cardRef, {
     once: true,
-    margin: "-20% 0px -20% 0px",
+    margin: "-10% 0px -10% 0px",
+    amount: 0.05,
   });
+
+  // Handle touch events for mobile
+  const handleTouchStart = () => {
+    setIsHovered(true);
+  };
+
+  const handleTouchEnd = () => {
+    // We don't immediately remove the hover effect on touch end
+    // to make it feel more interactive on mobile
+    setTimeout(() => setIsHovered(false), 1500);
+  };
 
   return (
     <motion.div
@@ -168,9 +181,13 @@ const TeamMemberCard = ({ member, index }) => {
       variants={cardVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.05 }}
       custom={index}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
       whileHover={{
         scale: 1.03,
         boxShadow: "0 10px 25px -5px rgba(249, 195, 157, 0.3)",
@@ -237,7 +254,7 @@ const AnimatedBackground = () => {
   return (
     <div className="absolute inset-0 z-[-1] overflow-hidden">
       <motion.div
-        className="absolute w-[500px] h-[500px] rounded-full bg-[#f9c39d]/5 blur-[120px] -top-[150px] -right-[150px]"
+        className="absolute w-[300px] sm:w-[400px] md:w-[500px] h-[300px] sm:h-[400px] md:h-[500px] rounded-full bg-[#f9c39d]/5 blur-[80px] sm:blur-[100px] md:blur-[120px] -top-[100px] sm:-top-[120px] md:-top-[150px] -right-[100px] sm:-right-[120px] md:-right-[150px]"
         animate={{
           scale: [1, 1.1, 1],
           opacity: [0.4, 0.6, 0.4],
@@ -249,7 +266,7 @@ const AnimatedBackground = () => {
         }}
       />
       <motion.div
-        className="absolute w-[400px] h-[400px] rounded-full bg-[#f9c39d]/5 blur-[100px] bottom-[10%] -left-[150px]"
+        className="absolute w-[250px] sm:w-[300px] md:w-[400px] h-[250px] sm:h-[300px] md:h-[400px] rounded-full bg-[#f9c39d]/5 blur-[60px] sm:blur-[80px] md:blur-[100px] bottom-[10%] -left-[100px] sm:-left-[120px] md:-left-[150px]"
         animate={{
           scale: [1.1, 1, 1.1],
           opacity: [0.3, 0.5, 0.3],
@@ -268,8 +285,21 @@ const AnimatedBackground = () => {
 const TeamPage = () => {
   const { scrollYProgress } = useScroll();
   const mainRef = useRef(null);
-  const isMainInView = useInView(mainRef, { once: true, amount: 0.2 });
+  const isMainInView = useInView(mainRef, { once: true, amount: 0.05 });
   const controls = useAnimation();
+
+  // Check for mobile viewport
+  const [isMobileView, setIsMobileView] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobileView(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   // Parallax effect for title
   const titleY = useTransform(scrollYProgress, [0, 0.2], [0, -20]);
@@ -280,6 +310,16 @@ const TeamPage = () => {
     }
   }, [isMainInView, controls]);
 
+  // Force animations to visible state on small screens after a delay
+  useEffect(() => {
+    if (isMobileView) {
+      const timer = setTimeout(() => {
+        controls.start("visible");
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [isMobileView, controls]);
+
   return (
     <motion.div
       ref={mainRef}
@@ -287,58 +327,38 @@ const TeamPage = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
       className="pb-20 relative"
-      style={afacad.style}
+      style={{ willChange: "opacity, transform", ...afacad.style }}
     >
       <AnimatedBackground />
 
-      <div className="px-8 md:px-20 pt-20">
-        <div className="flex flex-col md:flex-row gap-10">
+      <div className="px-4 sm:px-6 md:px-8 lg:px-20 pt-10 sm:pt-16 md:pt-20">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-10">
           {/* Aside with title in its own column with parallax effect */}
           <motion.aside
-            className="md:w-1/4"
+            className="md:w-1/3 lg:w-1/4"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.05 }}
             transition={{
               duration: 0.7,
               ease: [0.25, 0.1, 0.25, 1],
             }}
           >
-            <motion.div style={{ y: titleY }}>
-              <motion.h1
-                className="text-4xl md:text-5xl font-bold mb-6 text-[#f9c39d]"
-                style={aclonica.style}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  delay: 0.2,
-                  duration: 0.8,
-                  ease: "easeOut",
-                }}
-              >
-                Our Team &<br />
-                Designers
-              </motion.h1>
-
-              {/* Add a subtle animated line */}
-              <motion.div
-                className="h-[3px] bg-[#f9c39d]/60 rounded-full"
-                initial={{ width: 0 }}
-                animate={{ width: "40%" }}
-                transition={{
-                  delay: 0.8,
-                  duration: 0.8,
-                  ease: [0.25, 0.1, 0.25, 1],
-                }}
-              />
-            </motion.div>
+            <PageTitle>
+              Our Team &<br />
+              Designers
+            </PageTitle>
           </motion.aside>
 
           {/* Main content with enhanced animations */}
           <motion.div
-            className="md:w-3/4"
+            className="md:w-2/3 lg:w-3/4"
             variants={containerVariants}
             initial="hidden"
             animate={controls}
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.05 }}
           >
             <motion.p
               className="text-white text-lg leading-relaxed mb-10"
@@ -354,7 +374,7 @@ const TeamPage = () => {
             </motion.p>
 
             <motion.div
-              className="grid grid-cols-2 sm:grid-cols-3 gap-5 sm:gap-6"
+              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6"
               variants={staggeredGrid}
               initial="hidden"
               animate={controls}

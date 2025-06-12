@@ -7,6 +7,7 @@ import Image from "next/image";
 import { Aclonica, Afacad, Great_Vibes } from "next/font/google";
 import aboutBg from "@/public/images/background-about.png";
 import { motion } from "motion/react";
+import PageTitle from "../components/PageTitle";
 
 const greatVibes = Great_Vibes({ weight: "400", subsets: ["latin"] });
 const aclonica = Aclonica({
@@ -38,15 +39,7 @@ const AboutPage = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-[340px] flex flex-col max-sm:px-4 justify-between w-full text-white"
         >
-          <motion.h1
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            style={aclonica.style}
-            className="text-bg capitalize text-5xl pb-2 shrink-0"
-          >
-            {t("about")}
-          </motion.h1>
+          <PageTitle>{t("about")}</PageTitle>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

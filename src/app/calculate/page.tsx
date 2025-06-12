@@ -6,6 +6,7 @@ import Input from "../components/Input";
 import { useTranslations } from "next-intl";
 import { Aclonica, Afacad } from "next/font/google";
 import { motion } from "motion/react";
+import PageTitle from "../components/PageTitle";
 
 const aclonica = Aclonica({
   subsets: ["latin"],
@@ -49,15 +50,7 @@ const CalculatePage = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
-        <motion.h2
-          style={aclonica.style}
-          className="text-bg capitalize text-4xl !font-bold sm:max-w-[340px] shrink-0"
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
-        >
-          {t("calculateTitle")}
-        </motion.h2>
+        <PageTitle>{t("calculateTitle")}</PageTitle>
         <motion.div
           className="flex-1 flex max-lg:flex-col md:gap-16 gap-8 justify-center"
           initial={{ opacity: 0, y: 40 }}

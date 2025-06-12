@@ -13,30 +13,51 @@ const containerVariants = {
     opacity: 1,
     transition: {
       when: "beforeChildren",
-      staggerChildren: 0.1,
-      duration: 0.5,
+      staggerChildren: 0.05,
+      duration: 0.3,
+      ease: [0.25, 0.1, 0.25, 1],
     },
   },
 };
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { type: "spring", stiffness: 300, damping: 24 },
-  },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
+const titleVariants = {
+  hidden: { opacity: 0, y: 10 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
       type: "spring",
-      stiffness: 200,
-      damping: 20,
+      stiffness: 400,
+      damping: 30,
+      duration: 0.25,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 400,
+      damping: 30,
+      duration: 0.3,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 15 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 25,
+      duration: 0.4,
     },
   },
   hover: {
@@ -44,21 +65,42 @@ const cardVariants = {
     boxShadow:
       "0 10px 15px -3px rgba(249, 195, 157, 0.2), 0 4px 6px -4px rgba(249, 195, 157, 0.1)",
     borderColor: "#f9c39d",
-    transition: { duration: 0.3 },
+    transition: { duration: 0.2 },
   },
 };
 
 const tabItemVariants = {
-  hidden: { opacity: 0, y: 10 },
+  hidden: { opacity: 0, y: 5 },
   visible: (custom: number) => ({
     opacity: 1,
     y: 0,
     transition: {
-      delay: custom * 0.05,
-      duration: 0.4,
+      delay: custom * 0.03,
+      duration: 0.25,
       ease: [0.22, 1, 0.36, 1],
     },
   }),
+};
+
+const tabContentVariants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.25,
+      ease: [0.22, 1, 0.36, 1],
+      when: "beforeChildren",
+      staggerChildren: 0.05,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: -10,
+    transition: {
+      duration: 0.15,
+    },
+  },
 };
 
 const aclonica = Aclonica({
@@ -88,8 +130,8 @@ const tabSections = [
 const PersonalDetails = () => (
   <div className="flex flex-col h-full">
     <motion.h3
-      variants={itemVariants}
-      className="text-2xl font-bold mb-2 text-bg"
+      variants={titleVariants}
+      className="text-xl sm:text-2xl font-bold mb-2 text-bg"
       style={aclonica.style}
     >
       PERSONAL DETAILS
@@ -97,9 +139,9 @@ const PersonalDetails = () => (
     <motion.div
       variants={cardVariants}
       whileHover="hover"
-      className="border border-[#f9c39d] grid grid-cols-2 gap-8 rounded-2xl p-6 bg-black/20 backdrop-blur-sm flex-1"
+      className="border border-[#f9c39d] grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 rounded-2xl p-4 sm:p-6 bg-black/20 backdrop-blur-sm flex-1"
     >
-      <div className="space-y-3 text-white *:border-[#f9c39d] *:border-b *:pb-1">
+      <div className="space-y-3 text-white *:border-[#f9c39d] *:border-b *:pb-1 text-sm md:text-base">
         <motion.p variants={itemVariants} custom={0}>
           <span className="text-bg">Full Name (Arabic):</span> على على عبد
           الحميد ابوزامل
@@ -118,7 +160,7 @@ const PersonalDetails = () => (
           <span className="text-bg">Marital Status:</span> Married
         </motion.p>
       </div>
-      <div className="space-y-3 text-white *:border-[#f9c39d] *:border-b *:pb-1">
+      <div className="space-y-3 text-white *:border-[#f9c39d] *:border-b *:pb-1 text-sm md:text-base">
         <motion.p variants={itemVariants} custom={0}>
           <span className="text-bg">Educational Qualification:</span> Bachelor
         </motion.p>
@@ -139,8 +181,8 @@ const PersonalDetails = () => (
 const JobDescription = () => (
   <div className="flex flex-col h-full">
     <motion.h3
-      variants={itemVariants}
-      className="text-2xl font-bold mb-2 text-bg"
+      variants={titleVariants}
+      className="text-xl sm:text-2xl font-bold mb-2 text-bg"
       style={aclonica.style}
     >
       JOB DESCRIPTION
@@ -148,15 +190,18 @@ const JobDescription = () => (
     <motion.div
       variants={cardVariants}
       whileHover="hover"
-      className="border border-[#f9c39d] rounded-2xl p-6 bg-black/20 backdrop-blur-sm flex-1"
+      className="border border-[#f9c39d] rounded-2xl p-4 sm:p-6 bg-black/20 backdrop-blur-sm flex-1"
     >
       <div className="space-y-4 text-white">
-        <motion.p variants={itemVariants} className="font-semibold text-lg">
+        <motion.p
+          variants={itemVariants}
+          className="font-semibold text-base sm:text-lg"
+        >
           Brand Design & Creative Direction:
         </motion.p>
         <motion.ul
           variants={containerVariants}
-          className="space-y-2 list-disc list-inside ml-4 text-sm"
+          className="space-y-2 list-disc list-inside ml-2 sm:ml-4 text-sm md:text-base"
         >
           {[
             "Develop And Lead Brand Identity Systems, Including Logos, Typography, Color Palettes, And Visual Languages.",
@@ -178,7 +223,7 @@ const JobDescription = () => (
 const EmployeeDocument = () => (
   <div className="flex flex-col h-full">
     <motion.h3
-      variants={itemVariants}
+      variants={titleVariants}
       className="text-xl font-bold mb-2 text-bg"
       style={aclonica.style}
     >
@@ -186,9 +231,9 @@ const EmployeeDocument = () => (
     </motion.h3>
     <motion.div
       variants={cardVariants}
-      className="bg-black/20 backdrop-blur-sm flex-1 rounded-2xl p-2"
+      className="bg-black/20 backdrop-blur-sm flex-1 rounded-2xl p-2 sm:p-4"
     >
-      <div className="grid h-full grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-4">
+      <div className="grid h-full grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4">
         <UploadBox label="ID CARD PHOTO" />
         <UploadBox label="PASSPORT PHOTO" />
         <UploadBox label="RESUME & CV" />
@@ -201,7 +246,7 @@ const EmployeeDocument = () => (
 const SalaryDetails = () => (
   <div className="flex flex-col h-full">
     <motion.h3
-      variants={itemVariants}
+      variants={titleVariants}
       className="text-xl font-bold mb-2 text-bg"
       style={aclonica.style}
     >
@@ -210,9 +255,9 @@ const SalaryDetails = () => (
     <motion.div
       variants={cardVariants}
       whileHover="hover"
-      className="border border-[#f9c39d] rounded-2xl p-6 bg-black/20 backdrop-blur-sm flex-1"
+      className="border border-[#f9c39d] rounded-2xl p-4 sm:p-6 bg-black/20 backdrop-blur-sm flex-1"
     >
-      <div className="space-y-3 text-white">
+      <div className="space-y-3 text-white text-sm md:text-base">
         <motion.p
           variants={itemVariants}
           custom={0}
@@ -252,7 +297,7 @@ const SalaryDetails = () => (
 const BankInformation = () => (
   <div className="flex flex-col h-full">
     <motion.h3
-      variants={itemVariants}
+      variants={titleVariants}
       className="text-xl font-bold mb-2 text-bg"
       style={aclonica.style}
     >
@@ -261,9 +306,9 @@ const BankInformation = () => (
     <motion.div
       variants={cardVariants}
       whileHover="hover"
-      className="border border-[#f9c39d] rounded-2xl p-6 bg-black/20 backdrop-blur-sm flex-1"
+      className="border border-[#f9c39d] rounded-2xl p-4 sm:p-6 bg-black/20 backdrop-blur-sm flex-1"
     >
-      <div className="space-y-3 text-white">
+      <div className="space-y-3 text-white text-sm md:text-base">
         <motion.p
           variants={itemVariants}
           custom={0}
@@ -303,18 +348,18 @@ const BankInformation = () => (
 const MedicalInsurance = () => (
   <div className="flex flex-col h-full">
     <motion.h3
-      variants={itemVariants}
+      variants={titleVariants}
       className="text-xl font-bold mb-2 text-bg"
       style={aclonica.style}
     >
       MEDICAL INSURANCE
     </motion.h3>
-    <div className="bg-black/20 backdrop-blur-sm flex-1 gap-4 grid grid-cols-4">
+    <div className="flex-1 gap-4 grid grid-cols-1 md:grid-cols-4">
       <UploadBox label="INSURANCE TYPE PHOTO" />
       <motion.div
         variants={cardVariants}
         whileHover="hover"
-        className="space-y-3 col-span-3 border border-[#f9c39d] rounded-2xl p-6 text-white flex-1"
+        className="space-y-3 md:col-span-3 border border-[#f9c39d] rounded-2xl p-4 sm:p-6 text-white flex-1 text-sm md:text-base"
       >
         <motion.p
           variants={itemVariants}
@@ -361,12 +406,12 @@ const ProfilePage = () => {
       initial="hidden"
       animate="visible"
       style={afacad.style}
-      className="p-8"
+      className="p-4 sm:p-6 md:p-8"
     >
       {/* Profile Title */}
       <motion.h1
-        variants={itemVariants}
-        className="text-4xl font-bold mb-8 text-bg"
+        variants={titleVariants}
+        className="text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-bg"
         style={aclonica.style}
       >
         Profile
@@ -375,16 +420,16 @@ const ProfilePage = () => {
       {/* Main Profile Container */}
       <motion.div
         variants={cardVariants}
-        className="border border-[#f9c39d] rounded-2xl p-8 mb-12"
+        className="border border-[#f9c39d] rounded-2xl p-4 sm:p-6 md:p-8 mb-8 md:mb-12"
       >
         {/* Profile Header */}
         <motion.section
           variants={containerVariants}
-          className="grid grid-cols-7 gap-4 mb-12"
+          className="grid grid-cols-1 md:grid-cols-7 gap-6 mb-8 md:mb-12"
         >
           <motion.div
             variants={itemVariants}
-            className="relative rounded-2xl overflow-hidden border-2 border-[#f9c39d]"
+            className="relative rounded-2xl overflow-hidden border-2 border-[#f9c39d] h-[250px] md:h-auto"
             whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
           >
             <Image
@@ -394,10 +439,10 @@ const ProfilePage = () => {
               className="object-cover"
             />
           </motion.div>
-          <motion.div variants={itemVariants} className="col-span-4">
-            <div className="flex justify-between items-center">
+          <motion.div variants={itemVariants} className="md:col-span-4">
+            <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
               <motion.h1
-                className="text-4xl font-bold text-bg"
+                className="text-2xl sm:text-3xl md:text-4xl font-bold text-bg"
                 style={aclonica.style}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -406,7 +451,7 @@ const ProfilePage = () => {
                 ALI ALI ABOZAMEL
               </motion.h1>
               <motion.p
-                className="text-lg"
+                className="text-base md:text-lg"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
@@ -417,7 +462,7 @@ const ProfilePage = () => {
 
             <motion.div
               variants={containerVariants}
-              className="grid grid-cols-2 gap-12 mt-6 text-white"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-12 mt-6 text-white"
             >
               {/* Left column */}
               <div className="space-y-2 *:border-[#f9c39d] *:border-b *:pb-1">
@@ -458,16 +503,19 @@ const ProfilePage = () => {
           <motion.div
             variants={cardVariants}
             whileHover="hover"
-            className="col-span-2 border border-[#f9c39d] rounded-2xl p-6 bg-black/20 backdrop-blur-sm flex flex-col justify-between"
+            className="md:col-span-2 border border-[#f9c39d] rounded-2xl p-4 sm:p-6 bg-black/20 backdrop-blur-sm flex flex-col justify-between"
           >
             <motion.h3
-              variants={itemVariants}
-              className="text-2xl font-bold mb-6 text-bg"
+              variants={titleVariants}
+              className="text-xl sm:text-2xl font-bold mb-4 md:mb-6 text-bg"
               style={aclonica.style}
             >
               NOTES TO EMPLOYEES
             </motion.h3>
-            <motion.p variants={itemVariants} className="text-white">
+            <motion.p
+              variants={itemVariants}
+              className="text-white text-sm md:text-base"
+            >
               We're Excited To Have You On Our Employee Platform. Here, We Share
               Updates, Celebrate Wins, And Grow Together As One Team Shaping The
               Future. Thank You For Being Part Of Noon's Journey Toward
@@ -482,16 +530,17 @@ const ProfilePage = () => {
           className="w-full"
           onValueChange={setActiveTab}
         >
-          <TabsList className="mb-8">
+          <TabsList className="mb-6 md:mb-8 flex flex-wrap">
             {tabSections.map((tab, index) => (
               <motion.div
                 key={tab.value}
                 custom={index}
                 variants={tabItemVariants}
+                className="flex-shrink-0"
               >
                 <TabsTrigger
                   value={tab.value}
-                  className="transition-all duration-300 cursor-pointer"
+                  className="transition-all duration-300 cursor-pointer text-xs sm:text-sm md:text-base px-2 sm:px-3"
                 >
                   {tab.label}
                 </TabsTrigger>
@@ -499,72 +548,140 @@ const ProfilePage = () => {
             ))}
           </TabsList>
 
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeTab}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-            >
-              {/* General Information */}
-              <TabsContent value="general" asChild>
-                <motion.section
-                  variants={containerVariants}
-                  className="grid grid-cols-2 gap-8"
+          <div className="w-full overflow-y-auto overflow-x-hidden">
+            <AnimatePresence mode="wait" initial={false}>
+              {activeTab === "general" && (
+                <motion.div
+                  key="general"
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  variants={tabContentVariants}
+                  className="w-full pb-8"
                 >
-                  <PersonalDetails />
-                  <JobDescription />
-                  <EmployeeDocument />
-                  <SalaryDetails />
-                  <BankInformation />
-                  <MedicalInsurance />
-                </motion.section>
-              </TabsContent>
+                  <motion.section
+                    variants={containerVariants}
+                    className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8"
+                  >
+                    <PersonalDetails />
+                    <JobDescription />
+                    <EmployeeDocument />
+                    <SalaryDetails />
+                    <BankInformation />
+                    <MedicalInsurance />
+                  </motion.section>
+                </motion.div>
+              )}
 
-              {/* Individual tabs */}
-              <TabsContent value="job">
-                <JobDescription />
-              </TabsContent>
-              <TabsContent value="document">
-                <EmployeeDocument />
-              </TabsContent>
-              <TabsContent value="salary">
-                <SalaryDetails />
-              </TabsContent>
-              <TabsContent value="cv">
-                <motion.div variants={containerVariants}>
-                  <motion.h3
-                    variants={itemVariants}
-                    className="text-xl font-bold mb-2 text-bg"
-                    style={aclonica.style}
-                  >
-                    PERSONAL CV
-                  </motion.h3>
-                  <motion.div
-                    variants={cardVariants}
-                    whileHover="hover"
-                    className="border border-[#f9c39d] rounded-2xl p-6 bg-black/20 backdrop-blur-sm flex items-center justify-center min-h-[200px]"
-                  >
-                    <motion.span
-                      className="text-bg text-lg"
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 0.3 }}
-                    >
-                      Personal CV Section (Coming Soon)
-                    </motion.span>
+              {activeTab === "job" && (
+                <motion.div
+                  key="job"
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  variants={tabContentVariants}
+                  className="w-full pb-8"
+                >
+                  <motion.div variants={containerVariants}>
+                    <JobDescription />
                   </motion.div>
                 </motion.div>
-              </TabsContent>
-              <TabsContent value="bank">
-                <BankInformation />
-              </TabsContent>
-              <TabsContent value="medical">
-                <MedicalInsurance />
-              </TabsContent>
-            </motion.div>
-          </AnimatePresence>
+              )}
+
+              {activeTab === "document" && (
+                <motion.div
+                  key="document"
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  variants={tabContentVariants}
+                  className="w-full pb-8"
+                >
+                  <motion.div variants={containerVariants}>
+                    <EmployeeDocument />
+                  </motion.div>
+                </motion.div>
+              )}
+
+              {activeTab === "salary" && (
+                <motion.div
+                  key="salary"
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  variants={tabContentVariants}
+                  className="w-full pb-8"
+                >
+                  <motion.div variants={containerVariants}>
+                    <SalaryDetails />
+                  </motion.div>
+                </motion.div>
+              )}
+
+              {activeTab === "cv" && (
+                <motion.div
+                  key="cv"
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  variants={tabContentVariants}
+                  className="w-full pb-8"
+                >
+                  <motion.div variants={containerVariants}>
+                    <motion.h3
+                      variants={titleVariants}
+                      className="text-xl font-bold mb-2 text-bg"
+                      style={aclonica.style}
+                    >
+                      PERSONAL CV
+                    </motion.h3>
+                    <motion.div
+                      variants={cardVariants}
+                      whileHover="hover"
+                      className="border border-[#f9c39d] rounded-2xl p-4 sm:p-6 bg-black/20 backdrop-blur-sm flex items-center justify-center min-h-[200px]"
+                    >
+                      <motion.span
+                        className="text-bg text-base md:text-lg text-center px-4"
+                        variants={itemVariants}
+                      >
+                        Personal CV Section (Coming Soon)
+                      </motion.span>
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
+              )}
+
+              {activeTab === "bank" && (
+                <motion.div
+                  key="bank"
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  variants={tabContentVariants}
+                  className="w-full pb-8"
+                >
+                  <motion.div variants={containerVariants}>
+                    <BankInformation />
+                  </motion.div>
+                </motion.div>
+              )}
+
+              {activeTab === "medical" && (
+                <motion.div
+                  key="medical"
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  variants={tabContentVariants}
+                  className="w-full pb-8"
+                >
+                  <motion.div variants={containerVariants}>
+                    <MedicalInsurance />
+                  </motion.div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </Tabs>
       </motion.div>
     </motion.main>
