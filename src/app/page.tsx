@@ -55,7 +55,10 @@ const AnimatedSection = ({
 }) => {
   const controls = useAnimation();
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.1 });
+  const isInView = useInView(ref, {
+    once: true,
+    amount: 0.05, // Lowered threshold to trigger animations more easily on smaller screens
+  });
 
   useEffect(() => {
     if (isInView) {
@@ -68,6 +71,8 @@ const AnimatedSection = ({
       ref={ref}
       initial="hidden"
       animate={controls}
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.05 }}
       variants={{
         visible: { opacity: 1, y: 0 },
         hidden: { opacity: 0, y: 30 },
@@ -87,13 +92,24 @@ export default function Home() {
   const isClient = useIsClient();
   const mainControls = useAnimation();
   const mainRef = useRef(null);
-  const isMainInView = useInView(mainRef, { once: true, amount: 0.2 });
+  const isMainInView = useInView(mainRef, { once: true, amount: 0.05 });
 
   useEffect(() => {
     if (isMainInView) {
       mainControls.start("visible");
     }
   }, [isMainInView, mainControls]);
+
+  // Force animations to visible state on small screens after a delay
+  useEffect(() => {
+    if (isMobile && isClient) {
+      const timer = setTimeout(() => {
+        mainControls.start("visible");
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [isMobile, isClient, mainControls]);
+
   return (
     <>
       <motion.main
@@ -105,7 +121,8 @@ export default function Home() {
           hidden: { opacity: 0 },
         }}
         transition={{ duration: 0.8 }}
-        className="relative z-[1] flex-1  overflow-hidden"
+        className="relative z-[1] flex-1 overflow-hidden"
+        style={{ willChange: "opacity, transform" }}
       >
         <Image
           src={"/parallel-lines.svg"}
@@ -117,6 +134,9 @@ export default function Home() {
 
         <motion.section
           className="relative min-h-screen flex flex-col"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.05 }}
           variants={{
             visible: { opacity: 1, y: 0 },
             hidden: { opacity: 0, y: 20 },
@@ -245,7 +265,7 @@ export default function Home() {
             <Image
               src={isClient && isMobile ? clientsSm : clientsLg}
               alt="clients"
-              className="w-[1200px] mx-auto p-2"
+              className="w-full max-w-[1200px] mx-auto p-2"
             />
           </div>
         </AnimatedSection>
