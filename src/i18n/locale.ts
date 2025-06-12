@@ -1,5 +1,4 @@
 "use server";
-
 import { cookies } from "next/headers";
 
 // In this example the locale is read from a cookie. You could alternatively
