@@ -503,7 +503,7 @@ const ProfilePage = () => {
             >
               We're Excited To Have You On Our Employee Platform. Here, We Share
               Updates, Celebrate Wins, And Grow Together As One Team Shaping The
-              Future. Thank You For Being Part Of Noon's Journey Toward
+              Future. Thank You For Being Part Of noon's Journey Toward
               Excellence. Together, We Engineer The Difference.
             </motion.p>
           </motion.div>
