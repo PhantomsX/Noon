@@ -1,11 +1,10 @@
 "use client";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import React, { useState, useMemo, useRef } from "react";
 import { motion } from "motion/react";
 
 import Image from "next/image";
-import Link from "next/link";
-import { Aclonica, Afacad } from "next/font/google";
+import { Afacad } from "next/font/google";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useIsClient, useMediaQuery } from "usehooks-ts";
 import { useRouter } from "next/navigation";
@@ -80,12 +79,6 @@ const projects = [
   },
 ];
 
-const aclonica = Aclonica({
-  subsets: ["latin"],
-  variable: "--font-aclonica",
-  weight: "400",
-  display: "swap",
-});
 const afacad = Afacad({
   subsets: ["latin"],
   variable: "--font-afacad",

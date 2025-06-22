@@ -4,7 +4,7 @@ import React from "react";
 import suadiarabia from "@/public/suadiarabia.svg";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Aclonica, Afacad } from "next/font/google";
+import { Afacad } from "next/font/google";
 import { motion } from "motion/react";
 import Sidebar from "../components/Sidebar";
 
@@ -59,12 +59,6 @@ const useIsMobile = () => {
   return isMobile;
 };
 
-const aclonica = Aclonica({
-  subsets: ["latin"],
-  variable: "--font-aclonica",
-  weight: "400",
-  display: "swap",
-});
 const afacad = Afacad({
   subsets: ["latin"],
   variable: "--font-afacad",
@@ -89,8 +83,7 @@ const ContactPage = () => {
         >
           <motion.div className="flex flex-wrap gap-4" variants={itemVariants}>
             <motion.h2
-              style={aclonica.style}
-              className="text-bg capitalize font-medium text-3xl md:text-5xl ltr:tracking-tighter max-w-[8ch] pb-1 mb-4"
+              className="text-bg capitalize font-elegance font-medium text-3xl md:text-5xl max-w-[8ch] pb-1 mb-4"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -127,8 +120,7 @@ const ContactPage = () => {
 
           <motion.div className="flex flex-wrap gap-4" variants={itemVariants}>
             <motion.h2
-              style={aclonica.style}
-              className="text-bg capitalize text-3xl md:text-5xl ltr:tracking-tighter max-w-[8ch] pb-1 mb-4"
+              className="text-bg capitalize font-elegance text-3xl md:text-5xl ltr:tracking-tighter max-w-[8ch] pb-1 mb-4"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -165,8 +157,7 @@ const ContactPage = () => {
 
           <motion.div variants={itemVariants}>
             <motion.h2
-              style={aclonica.style}
-              className="text-bg capitalize text-3xl md:text-5xl ltr:tracking-tighter pb-1 mb-4"
+              className="text-bg capitalize font-elegance text-3xl md:text-5xl ltr:tracking-tighter pb-1 mb-4"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >

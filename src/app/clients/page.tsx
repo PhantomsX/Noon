@@ -3,15 +3,9 @@ import React from "react";
 import clientsImageLg from "@/public/logos/clients-lg.svg";
 import clientsImageSm from "@/public/logos/clients.svg";
 import { useTranslations } from "next-intl";
-import { Aclonica, Afacad } from "next/font/google";
+import { Afacad } from "next/font/google";
 import PageTitle from "../components/PageTitle";
 
-const aclonica = Aclonica({
-  subsets: ["latin"],
-  variable: "--font-aclonica",
-  weight: "400",
-  display: "swap",
-});
 const afacad = Afacad({
   subsets: ["latin"],
   variable: "--font-afacad",

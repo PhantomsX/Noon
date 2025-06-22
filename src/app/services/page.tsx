@@ -2,19 +2,13 @@
 "use client";
 import React, { useState } from "react";
 import { useTranslations } from "next-intl";
-import { Aclonica, Afacad } from "next/font/google";
+import { Afacad } from "next/font/google";
 import Image from "next/image";
 import { Slash } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
 import PageTitle from "../components/PageTitle";
 
-const aclonica = Aclonica({
-  subsets: ["latin"],
-  variable: "--font-aclonica",
-  weight: "400",
-  display: "swap",
-});
 const afacad = Afacad({
   subsets: ["latin"],
   variable: "--font-afacad",

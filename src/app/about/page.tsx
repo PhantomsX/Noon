@@ -4,18 +4,11 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import ceo from "@/public/images/ceoimage.svg";
 import Image from "next/image";
-import { Aclonica, Afacad, Great_Vibes } from "next/font/google";
+import { Afacad } from "next/font/google";
 import aboutBg from "@/public/images/background-about.png";
 import { motion } from "motion/react";
 import PageTitle from "../components/PageTitle";
 
-const greatVibes = Great_Vibes({ weight: "400", subsets: ["latin"] });
-const aclonica = Aclonica({
-  subsets: ["latin"],
-  variable: "--font-aclonica",
-  weight: ["400"],
-  display: "swap",
-});
 const afacad = Afacad({
   subsets: ["latin"],
   variable: "--font-afacad",
@@ -127,7 +120,7 @@ const AboutPage = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 2.0 }}
-              className="text-bg italic capitalize mb-4 text-4xl ltr:tracking-tighter pb-2 font-medium shrink-0 hidden lg:block"
+              className="text-bg capitalize mb-4 text-4xl font-elegance italic pb-2 font-medium shrink-0 hidden lg:block"
             >
               {t("Notes From The CEO")}
             </motion.h3>
@@ -157,8 +150,7 @@ const AboutPage = () => {
                 initial={{ x: -20 }}
                 animate={{ x: 0 }}
                 transition={{ duration: 0.5, delay: 2.4 }}
-                style={greatVibes.style}
-                className="text-2xl"
+                className="text-2xl font-monalisa"
               >
                 Dr.nizar el sayed
               </motion.p>

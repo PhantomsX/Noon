@@ -7,7 +7,7 @@ import clientsSm from "@/public/logos/clients.svg";
 import logoEn from "@/public/icons/big-logo-en.svg";
 import logoAr from "@/public/icons/big-logo-ar.svg";
 import { useLocale, useTranslations } from "next-intl";
-import { Aclonica, Afacad, Great_Vibes } from "next/font/google";
+import { Afacad } from "next/font/google";
 import ceo from "@/public/images/ceoimage.svg";
 import {
   Carousel,
@@ -23,24 +23,10 @@ import Sidebar from "./components/Sidebar";
 import { motion, useAnimation, useInView } from "motion/react";
 import { useEffect, useRef } from "react";
 
-const aclonica = Aclonica({
-  subsets: ["latin"],
-  variable: "--font-aclonica",
-  weight: "400",
-  display: "swap",
-});
-
 const afacad = Afacad({
   subsets: ["latin"],
   variable: "--font-afacad",
   weight: ["500", "400"],
-  display: "swap",
-});
-
-const greatVibes = Great_Vibes({
-  subsets: ["latin"],
-  variable: "--font-great-vibes",
-  weight: "400",
   display: "swap",
 });
 
@@ -143,16 +129,10 @@ export default function Home() {
           }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <span
-            className="uppercase text-center text-sm text-bg"
-            style={afacad.style}
-          >
+          <span className="uppercase text-center text-bg" style={afacad.style}>
             {t("founded in 2011")}
           </span>
-          <p
-            style={aclonica.style}
-            className="mt-2.5 text-center text-xl md:text-4xl text-bg ltr:tracking-tighter"
-          >
+          <p className="mt-2.5 font-elegance text-center text-xl md:text-4xl text-bg">
             {t("mainText")}
           </p>
           <div className="px-10 md:px-20 pt-10">
@@ -173,10 +153,7 @@ export default function Home() {
             <Image src={ceo} alt="ceo" className="object-cover" />
           </div>
           <div className="space-y-10 z-[1]">
-            <h2
-              className="text-bg capitalize text-xl md:text-[40px] ltr:tracking-tighter"
-              style={aclonica.style}
-            >
+            <h2 className="text-bg font-elegance capitalize text-xl md:text-[40px]">
               {t("About_noon_consultants")}
             </h2>
             <p
@@ -186,9 +163,7 @@ export default function Home() {
               {t("aboutText1")}
             </p>
             <div className="mt-4">
-              <p style={greatVibes.style} className="text-2xl">
-                Dr.nizar el sayed
-              </p>
+              <p className="text-2xl font-monalisa">Dr.nizar el sayed</p>
               <p className="uppercase">{t("CHAIRMAN")}</p>
             </div>
           </div>
@@ -199,8 +174,7 @@ export default function Home() {
         >
           <div className="space-y-10 max-md:mt-28">
             <h2
-              className="text-bg capitalize text-xl md:text-[40px] ltr:tracking-tighter text-center"
-              style={aclonica.style}
+              className="text-bg font-elegance capitalize text-xl md:text-[40px] text-center"
             >
               {t("partners_words_about_noon")}
             </h2>
@@ -257,8 +231,7 @@ export default function Home() {
         <AnimatedSection delay={0.5} className="relative mt-10">
           <div className="">
             <h2
-              className="capitalize text-[40px] text-bg ltr:tracking-tighter text-center mb-14 md:mb-20"
-              style={aclonica.style}
+              className="capitalize text-[40px] text-bg font-elegance text-center mb-14 md:mb-20"
             >
               {t("partners_of_success")}
             </h2>
@@ -281,8 +254,7 @@ export default function Home() {
           <div className="flex max-md:ps-6 md:justify-between flex-wrap max-md:gap-20">
             <div className="flex flex-wrap gap-2 sm:gap-10">
               <h2
-                style={aclonica.style}
-                className="text-bg capitalize font-medium text-2xl md:text-5xl ltr:tracking-tighter max-w-[8ch] pb-1 mb-4"
+                className="text-bg capitalize font-elegance font-medium text-2xl md:text-5xl max-w-[8ch] pb-1 mb-4"
               >
                 {t("headquarters")}
               </h2>
@@ -303,8 +275,7 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap gap-2 sm:gap-10">
               <h2
-                style={aclonica.style}
-                className="text-bg capitalize text-2xl md:text-5xl ltr:tracking-tighter max-w-[8ch] pb-1 mb-4"
+                className="text-bg capitalize font-elegance text-2xl md:text-5xl max-w-[8ch] pb-1 mb-4"
               >
                 {t("branchOffice")}
               </h2>

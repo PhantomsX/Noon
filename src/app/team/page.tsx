@@ -9,15 +9,8 @@ import {
   useAnimation,
   useInView,
 } from "motion/react";
-import { Aclonica, Afacad } from "next/font/google";
+import { Afacad } from "next/font/google";
 import PageTitle from "../components/PageTitle";
-
-const aclonica = Aclonica({
-  subsets: ["latin"],
-  variable: "--font-aclonica",
-  weight: ["400"],
-  display: "swap",
-});
 
 const afacad = Afacad({
   subsets: ["latin"],
@@ -223,8 +216,7 @@ const TeamMemberCard = ({ member, index }) => {
         {/* Text content with enhanced animations */}
         <div className="absolute inset-x-0 bottom-0 p-4 flex flex-col items-center">
           <motion.h3
-            className="text-[#f9c39d] font-semibold text-lg text-center"
-            style={aclonica.style}
+            className="text-[#f9c39d] font-elegance font-semibold text-lg text-center"
             animate={{
               scale: isHovered ? 1.08 : 1,
               y: isHovered ? -2 : 0,

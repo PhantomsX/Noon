@@ -4,16 +4,11 @@ import RadioElement from "../components/RadioElement";
 import Slider from "../components/Slider";
 import Input from "../components/Input";
 import { useTranslations } from "next-intl";
-import { Aclonica, Afacad } from "next/font/google";
+import { Afacad } from "next/font/google";
 import { motion } from "motion/react";
 import PageTitle from "../components/PageTitle";
 
-const aclonica = Aclonica({
-  subsets: ["latin"],
-  variable: "--font-aclonica",
-  weight: ["400"],
-  display: "swap",
-});
+
 const afacad = Afacad({
   subsets: ["latin"],
   variable: "--font-afacad",
