@@ -46,114 +46,114 @@
   "branchOffice": "Branch Office",
   "building": "building",
   "calculate": "calculate",
+  "calculateTitle": "Architectural Design Calculator",
   "careers": {
-    "title": "Careers",
-    "subtitle": "Join Our Team",
-    "description": "At Noon Consultants, we believe that great design comes from great people. We're always looking for talented individuals who are passionate about architecture, urban planning, and design to join our dynamic team.",
-    "whyJoinUs": "Why Join Us?",
+    "applicationProcess": "Application Process",
+    "applyNow": "Apply Now",
+    "applyText": "Ready to join our team? Send your application to careers@noonconsultants.com with the position title in the subject line.",
+    "backToPositions": "Back to Positions",
     "benefits": {
-      "growth": {
-        "title": "Professional Growth",
-        "description": "Continuous learning opportunities and career advancement in a supportive environment."
-      },
-      "projects": {
-        "title": "Innovative Projects",
-        "description": "Work on cutting-edge architectural and urban planning projects across Saudi Arabia."
-      },
       "culture": {
-        "title": "Collaborative Culture",
-        "description": "Join a team of creative professionals who value collaboration and innovation."
+        "description": "Join a team of creative professionals who value collaboration and innovation.",
+        "title": "Collaborative Culture"
+      },
+      "growth": {
+        "description": "Continuous learning opportunities and career advancement in a supportive environment.",
+        "title": "Professional Growth"
       },
       "impact": {
-        "title": "Make an Impact",
-        "description": "Contribute to shaping the urban landscape and architectural heritage of the Kingdom."
+        "description": "Contribute to shaping the urban landscape and architectural heritage of the Kingdom.",
+        "title": "Make an Impact"
+      },
+      "projects": {
+        "description": "Work on cutting-edge architectural and urban planning projects across Saudi Arabia.",
+        "title": "Innovative Projects"
       }
     },
+    "description": "At Noon Consultants, we believe that great design comes from great people. We're always looking for talented individuals who are passionate about architecture, urban planning, and design to join our dynamic team.",
+    "howToApply": "How to Apply",
     "openPositions": "Open Positions",
     "positions": {
       "architect": {
-        "title": "Senior Architect",
         "department": "Architecture Department",
-        "type": "Full-time",
-        "location": "Riyadh, Saudi Arabia",
         "description": "We are seeking a talented Senior Architect to lead design projects and mentor junior team members.",
+        "location": "Riyadh, Saudi Arabia",
         "requirements": [
           "Bachelor's or Master's degree in Architecture",
           "5+ years of experience in architectural design",
           "Proficiency in AutoCAD, Revit, and SketchUp",
           "Strong design and visualization skills",
           "Experience with Saudi building codes and regulations"
-        ]
-      },
-      "urbanPlanner": {
-        "title": "Urban Planner",
-        "department": "Urban Planning Department",
-        "type": "Full-time",
-        "location": "Riyadh, Saudi Arabia",
-        "description": "Join our urban planning team to create sustainable and innovative urban development solutions.",
-        "requirements": [
-          "Bachelor's degree in Urban Planning or related field",
-          "3+ years of experience in urban planning",
-          "Knowledge of GIS software and planning tools",
-          "Understanding of sustainable development principles",
-          "Excellent analytical and communication skills"
-        ]
+        ],
+        "title": "Senior Architect",
+        "type": "Full-time"
       },
       "interiorDesigner": {
-        "title": "Interior Designer",
         "department": "Interior Design Department",
-        "type": "Full-time",
-        "location": "Riyadh, Saudi Arabia",
         "description": "Create inspiring interior spaces that blend functionality with aesthetic excellence.",
+        "location": "Riyadh, Saudi Arabia",
         "requirements": [
           "Bachelor's degree in Interior Design",
           "2+ years of experience in interior design",
           "Proficiency in design software (3D Max, Photoshop, etc.)",
           "Strong sense of color, texture, and space",
           "Portfolio showcasing completed projects"
-        ]
+        ],
+        "title": "Interior Designer",
+        "type": "Full-time"
       },
       "projectManager": {
-        "title": "Project Manager",
         "department": "Project Management",
-        "type": "Full-time",
-        "location": "Riyadh, Saudi Arabia",
         "description": "Lead and coordinate architectural and engineering projects from conception to completion.",
+        "location": "Riyadh, Saudi Arabia",
         "requirements": [
           "Bachelor's degree in Engineering or Architecture",
           "PMP certification preferred",
           "5+ years of project management experience",
           "Strong leadership and communication skills",
           "Experience with construction and design projects"
-        ]
+        ],
+        "title": "Project Manager",
+        "type": "Full-time"
+      },
+      "urbanPlanner": {
+        "department": "Urban Planning Department",
+        "description": "Join our urban planning team to create sustainable and innovative urban development solutions.",
+        "location": "Riyadh, Saudi Arabia",
+        "requirements": [
+          "Bachelor's degree in Urban Planning or related field",
+          "3+ years of experience in urban planning",
+          "Knowledge of GIS software and planning tools",
+          "Understanding of sustainable development principles",
+          "Excellent analytical and communication skills"
+        ],
+        "title": "Urban Planner",
+        "type": "Full-time"
       }
     },
-    "applicationProcess": "Application Process",
     "steps": {
       "apply": {
-        "title": "Submit Application",
-        "description": "Send us your resume, portfolio, and cover letter through our online portal."
-      },
-      "review": {
-        "title": "Initial Review",
-        "description": "Our HR team will review your application and contact qualified candidates."
+        "description": "Send us your resume, portfolio, and cover letter through our online portal.",
+        "title": "Submit Application"
       },
       "interview": {
-        "title": "Interview Process",
-        "description": "Participate in technical and cultural fit interviews with our team."
+        "description": "Participate in technical and cultural fit interviews with our team.",
+        "title": "Interview Process"
       },
       "offer": {
-        "title": "Job Offer",
-        "description": "Successful candidates will receive a comprehensive job offer."
+        "description": "Successful candidates will receive a comprehensive job offer.",
+        "title": "Job Offer"
+      },
+      "review": {
+        "description": "Our HR team will review your application and contact qualified candidates.",
+        "title": "Initial Review"
       }
     },
-    "howToApply": "How to Apply",
-    "applyText": "Ready to join our team? Send your application to careers@noonconsultants.com with the position title in the subject line.",
-    "applyNow": "Apply Now",
+    "subtitle": "Join Our Team",
+    "title": "Careers",
     "viewPosition": "View Position",
-    "backToPositions": "Back to Positions"
+    "whyJoinUs": "Why Join Us?"
   },
-  "calculateTitle": "Architectural Design Calculator",
   "clientText1": "The architectural drawings provided by the team were exceptionally detailed and innovative. Their expertise transformed our vision into reality",
   "clients": "clients",
   "clientsSubtitle": "Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects.",
@@ -167,7 +167,7 @@
   "industrial": "industrial",
   "login": "Login",
   "m": "m²",
-  "mainText": "noon Consultants is one of the recognized Architecture in the KSA.",
+  "mainText": "Noon Consultants is one of the leading architectural firms in the Kingdom of Saudi Arabia",
   "new_branch": "New Branch",
   "our_team": "Our Team & Designers",
   "partners": "Our partners",
