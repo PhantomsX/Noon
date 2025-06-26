@@ -145,59 +145,10 @@ export default function Home() {
               alt="logo"
               className="select-none pointer-events-none scale-75 mx-auto -mb-5"
             />
-            <span className="uppercase text-center text-bg ltr:font-neue-montreal rtl:font-noto-kufi-arabic">
+            <span className="uppercase text-center tracking-[.5rem] text-bg ltr:font-neue-montreal rtl:font-noto-kufi-arabic">
               {t("founded in 2011")}
             </span>
           </div>
-
-          {/* <div className="flex max-md:ps-6 md:justify-between flex-wrap max-md:gap-20">
-            <div className="flex flex-wrap gap-2 sm:gap-10">
-              <h2
-                className="text-bg capitalize ltr:font-elegance rtl:font-amirimedium text-2xl md:text-5xl max-w-[8ch] pb-1 mb-4"
-              >
-                {t("headquarters")}
-              </h2>
-              <ul className="text-white max-w-[190px] md:max-w-[220px] max-md:text-[12.85px]">
-                <li>{t("address1")}</li>
-                <li>12253</li>
-                <li>
-                  <a href="tel:+966565498620" className="link link-hover">
-                    +966565498620
-                  </a>
-                </li>
-                <li>
-                  <a href="mailto:info@nnc.sa" className="link link-hover">
-                    info@nnc.sa
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="flex flex-wrap gap-2 sm:gap-10">
-              <h2
-                className="text-bg capitalize ltr:font-elegance rtl:font-amiri text-2xl md:text-5xl max-w-[8ch] pb-1 mb-4"
-              >
-                {t("branchOffice")}
-              </h2>
-              <ul className="text-white max-w-[230px] md:max-w-[280px] max-md:text-[12.85px]">
-                <li>{t("address2")}</li>
-                <li>42317</li>
-                <li>
-                  <a href="tel:+966598959098" className="link link-hover">
-                    +966598959098
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="mailto:infomadina@nnc.sa"
-                    className="link link-hover"
-                  >
-                    infomadina@nnc.sa
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <Sidebar />
-          </div> */}
         </AnimatedSection>
       </motion.main>
     </>
