@@ -109,7 +109,7 @@ export default function Home() {
           }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <p className="mt-2.5 ltr:font-elegance rtl:font-amiri text-xl md:text-4xl text-bg">
+          <p className="mt-2.5 text-center ltr:font-elegance rtl:font-amiri text-xl md:text-4xl text-bg">
             {t("mainText")}
           </p>
           <div className="px-10 md:px-20 pt-10">
