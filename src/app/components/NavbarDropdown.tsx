@@ -29,8 +29,8 @@ const NavbarDropdown = () => {
     { title: "projectsTitle", href: "/projects" },
     { title: "services", href: "/services" },
     { title: "careers.title", href: "/careers" },
-    { title: "login", href: "/login" },
-    { title: "register", href: "/register" },
+    // { title: "login", href: "/login" },
+    // { title: "register", href: "/register" },
     // { title: "profile", href: "/profile" },
   ];
 

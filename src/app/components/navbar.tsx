@@ -54,8 +54,8 @@ const Navbar = () => {
         <NavLink title="projectsTitle" href="/projects" />
         <NavLink title="services" href="/services" />
         <NavLink title="careers.title" href="/careers" />
-        <NavLink title="login" href="/login" />
-        <NavLink title="register" href="/register" />
+        {/* <NavLink title="login" href="/login" />
+        <NavLink title="register" href="/register" /> */}
       </motion.div>
 
       <motion.div
