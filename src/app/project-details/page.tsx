@@ -1,16 +1,8 @@
 "use client";
 import { useTranslations } from "next-intl";
 import React, { useEffect, useState } from "react";
-import { Afacad } from "next/font/google";
 import { motion } from "motion/react";
 import Image from "next/image";
-
-const afacad = Afacad({
-  subsets: ["latin"],
-  variable: "--font-afacad",
-  weight: "500",
-  display: "swap",
-});
 
 const Page = () => {
   const [project, setProject] = useState<any>(null);
@@ -24,7 +16,7 @@ const Page = () => {
   }, []);
 
   return (
-    <main style={afacad.style} className="text-white pt-20">
+    <main className="text-white pt-20 ltr:font-neue-montreal rtl:font-noto-kufi-arabic">
       <motion.figure
         className="h-[400px] sm:h-[600px] relative mx-10 rounded-2xl overflow-hidden"
         initial={{ opacity: 0, y: 40 }}

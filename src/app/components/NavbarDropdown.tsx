@@ -25,16 +25,13 @@ const NavbarDropdown = () => {
   useOnClickOutside(menuRef, closeMenu);
 
   const menuItems = [
-    { title: "about" },
-    { title: "portfolio" },
-    { title: "services" },
-    { title: "clients" },
-    { title: "calculate" },
-    { title: "contact" },
-    { title: "login" },
-    { title: "register" },
-    { title: "team" },
-    { title: "profile" },
+    { title: "about", href: "/about" },
+    { title: "projectsTitle", href: "/projects" },
+    { title: "services", href: "/services" },
+    { title: "careers.title", href: "/careers" },
+    { title: "login", href: "/login" },
+    { title: "register", href: "/register" },
+    // { title: "profile", href: "/profile" },
   ];
 
   const toggleMenu = () => {
@@ -49,7 +46,7 @@ const NavbarDropdown = () => {
   };
 
   return (
-    <div ref={menuRef} className="relative">
+    <div ref={menuRef} className="relative md:hidden">
       <motion.button
         id="menu-button"
         onClick={toggleMenu}
@@ -95,7 +92,7 @@ const NavbarDropdown = () => {
                   className="hover:bg-white/10 transition-colors"
                 >
                   <Link
-                    href={`/${item.title}`}
+                    href={item.href}
                     onClick={closeMenu}
                     className="px-4 py-3 flex items-center text-white/90 hover:text-white text-lg font-medium"
                     prefetch

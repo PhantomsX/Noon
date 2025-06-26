@@ -2,19 +2,11 @@
 "use client";
 import React, { useState } from "react";
 import { useTranslations } from "next-intl";
-import { Afacad } from "next/font/google";
 import Image from "next/image";
 import { Slash } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
 import PageTitle from "../components/PageTitle";
-
-const afacad = Afacad({
-  subsets: ["latin"],
-  variable: "--font-afacad",
-  weight: ["500", "400"],
-  display: "swap",
-});
 
 type Service = {
   title: string;
@@ -175,17 +167,10 @@ function Page() {
       <section className="flex max-sm:flex-col gap-16 px-9 pt-12 sm:ps-[80px]">
         {/* Header Section */}
         <aside className="sm:max-w-[350px] space-y-4">
-          <PageTitle>
-            {t("title-1")}
-            <br />
-            {t("title-2")}
-          </PageTitle>
+          <PageTitle>{t("title-1")}</PageTitle>
         </aside>
         <aside className="flex-1 grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-6">
-          <p
-            style={afacad.style}
-            className="text-xl col-span-full mb-4 text-white text-center md:text-start"
-          >
+          <p className="text-xl col-span-full mb-4 text-white text-center md:text-start ltr:font-neue-montreal rtl:font-noto-kufi-arabic">
             {t("breif")}
           </p>
           {services.map((service, i) => (
@@ -277,7 +262,7 @@ const Service = ({ service, id }: { service: Service; id: number }) => {
                   }}
                   onClick={(e) => {
                     e.stopPropagation();
-                    router.push("/portfolio");
+                    router.push("/projects");
                   }}
                 >
                   {t("viewProjects")}
@@ -295,24 +280,17 @@ const Service = ({ service, id }: { service: Service; id: number }) => {
         viewport={{ once: true, margin: "-50px" }}
         transition={{ delay: 0.1, duration: 0.5 }}
       >
-        <h3
-          style={afacad.style}
-          className="text-xl font-medium my-2 border-b border-bg h-16"
-        >
+        <h3 className="text-xl ltr:font-neue-montreal rtl:font-noto-kufi-arabic font-medium my-2 border-b border-bg h-16">
           {service.title}
         </h3>
-        <p
-          style={afacad.style}
-          className="text-xs mb-2 text-white text-justify"
-        >
+        <p className="text-xs ltr:font-neue-montreal rtl:font-noto-kufi-arabic mb-2 text-white text-justify">
           {service.description}
         </p>
         <ul>
           {service.features.map((feature, i) => (
             <motion.li
               key={i}
-              style={afacad.style}
-              className="text-xs mb-px"
+              className="text-xs ltr:font-neue-montreal rtl:font-noto-kufi-arabic mb-px"
               initial={{ x: -10, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true, margin: "-20px" }}

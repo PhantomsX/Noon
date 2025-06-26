@@ -1,25 +1,141 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import ceo from "@/public/images/ceoimage.svg";
+import suadiarabia from "@/public/suadiarabia.svg";
 import Image from "next/image";
-import { Afacad } from "next/font/google";
 import aboutBg from "@/public/images/background-about.png";
-import { motion } from "motion/react";
+import { motion, useInView } from "motion/react";
 import PageTitle from "../components/PageTitle";
+import Sidebar from "../components/Sidebar";
 
-const afacad = Afacad({
-  subsets: ["latin"],
-  variable: "--font-afacad",
-  weight: "400",
-  display: "swap",
-});
+// Team members data
+const teamMembers = [
+  {
+    id: 1,
+    name: "DR. NIZAR EL SAYED",
+    role: "CHAIRMAN & FOUNDER",
+    image: "/images/ceoimage.svg",
+  },
+  {
+    id: 2,
+    name: "DR. NIZAR EL SAYED",
+    role: "CHAIRMAN & FOUNDER",
+    image: "/images/ceoimage.svg",
+  },
+  {
+    id: 3,
+    name: "DR. NIZAR EL SAYED",
+    role: "CHAIRMAN & FOUNDER",
+    image: "/images/ceoimage.svg",
+  },
+  {
+    id: 4,
+    name: "DR. NIZAR EL SAYED",
+    role: "CHAIRMAN & FOUNDER",
+    image: "/images/ceoimage.svg",
+  },
+  {
+    id: 5,
+    name: "DR. NIZAR EL SAYED",
+    role: "CHAIRMAN & FOUNDER",
+    image: "/images/ceoimage.svg",
+  },
+  {
+    id: 6,
+    name: "DR. NIZAR EL SAYED",
+    role: "CHAIRMAN & FOUNDER",
+    image: "/images/ceoimage.svg",
+  },
+];
+
+// Team member card component
+const TeamMemberCard = ({ member, index }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const cardRef = useRef(null);
+  const isInView = useInView(cardRef, {
+    once: true,
+    margin: "-10% 0px -10% 0px",
+    amount: 0.05,
+  });
+
+  return (
+    <motion.div
+      ref={cardRef}
+      className="relative overflow-hidden rounded-lg"
+      initial={{ opacity: 0, y: 30 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      transition={{
+        duration: 0.7,
+        delay: index * 0.1,
+        ease: [0.25, 0.1, 0.25, 1],
+      }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      whileHover={{
+        scale: 1.03,
+        boxShadow: "0 10px 25px -5px rgba(249, 195, 157, 0.3)",
+        transition: { duration: 0.2, ease: "easeOut" },
+      }}
+    >
+      <div className="relative w-full aspect-square overflow-hidden">
+        <motion.div
+          className="w-full h-full"
+          animate={{
+            scale: isHovered ? 1.05 : 1,
+          }}
+          transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+        >
+          <Image
+            src={member.image}
+            alt={member.name}
+            fill
+            className="object-cover"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+        </motion.div>
+
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"
+          animate={{
+            opacity: isHovered ? 0.9 : 0.7,
+          }}
+          transition={{ duration: 0.3 }}
+        />
+
+        <div className="absolute inset-x-0 bottom-0 p-4 flex flex-col items-center">
+          <motion.h3
+            className="text-[#f9c39d] ltr:font-elegance rtl:font-amiri font-semibold text-lg text-center"
+            animate={{
+              scale: isHovered ? 1.08 : 1,
+              y: isHovered ? -2 : 0,
+            }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
+            {member.name}
+          </motion.h3>
+
+          <motion.p
+            className="text-white/80 text-xs tracking-wider text-center mt-1"
+            animate={{
+              opacity: isHovered ? 1 : 0.8,
+              y: isHovered ? 2 : 0,
+            }}
+            transition={{ duration: 0.3, delay: 0.05 }}
+          >
+            {member.role}
+          </motion.p>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
 
 const AboutPage = () => {
   const t = useTranslations();
   return (
-    <main style={afacad.style} className="container mx-auto">
+    <main className="container mx-auto ltr:font-neue-montreal rtl:font-noto-kufi-arabic">
       <motion.section
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -120,7 +236,7 @@ const AboutPage = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 2.0 }}
-              className="text-bg capitalize mb-4 text-4xl font-elegance italic pb-2 font-medium shrink-0 hidden lg:block"
+              className="text-bg capitalize mb-4 text-4xl ltr:font-elegance rtl:font-amiri italic pb-2 font-medium shrink-0 hidden lg:block"
             >
               {t("Notes From The CEO")}
             </motion.h3>
@@ -520,6 +636,224 @@ const AboutPage = () => {
             </div>
           </motion.div>
         </motion.div>
+      </motion.section>
+
+      {/* Team Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 2.5 }}
+        className="my-16 px-3"
+      >
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 2.7 }}
+          className="flex flex-col items-center mb-10"
+        >
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 2.8 }}
+            className="text-bg ltr:font-elegance rtl:font-amiri text-4xl md:text-5xl font-medium mb-4 text-center"
+          >
+            {t("our_team")}
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 2.9 }}
+            className="text-white text-lg leading-relaxed text-center max-w-4xl"
+          >
+            {t("team_text")}
+          </motion.p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 3.0 }}
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+        >
+          {teamMembers.map((member, index) => (
+            <TeamMemberCard key={member.id} member={member} index={index} />
+          ))}
+        </motion.div>
+      </motion.section>
+
+      {/* Contact Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 3.2 }}
+        className="my-16 relative"
+      >
+        <div className="flex flex-col lg:flex-row gap-10">
+          {/* Contact Information */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 3.4 }}
+            className="lg:w-1/2 px-6 sm:px-8 md:px-14 flex flex-col gap-10 md:gap-14"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 3.5 }}
+              className="flex flex-wrap gap-4"
+            >
+              <motion.h2
+                className="text-bg capitalize ltr:font-elegance rtl:font-amiri font-medium text-3xl md:text-5xl max-w-[8ch] pb-1 mb-4"
+                whileHover={{ scale: 1.02 }}
+              >
+                {t("headquarters")}
+              </motion.h2>
+              <motion.ul
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 3.6 }}
+                className="text-white max-w-[220px] md:max-w-[250px] text-base md:text-lg space-y-3"
+              >
+                <motion.li
+                  initial={{ x: -10 }}
+                  animate={{ x: 0 }}
+                  transition={{ duration: 0.5, delay: 3.7 }}
+                  className="hover:translate-x-1 transition-transform"
+                >
+                  {t("address1")}
+                </motion.li>
+                <motion.li
+                  initial={{ x: -10 }}
+                  animate={{ x: 0 }}
+                  transition={{ duration: 0.5, delay: 3.8 }}
+                  className="hover:translate-x-1 transition-transform"
+                >
+                  12253
+                </motion.li>
+                <motion.li
+                  initial={{ x: -10 }}
+                  animate={{ x: 0 }}
+                  transition={{ duration: 0.5, delay: 3.9 }}
+                  className="hover:translate-x-1 transition-transform"
+                >
+                  <a
+                    href="tel:00966114110000"
+                    className="hover:text-bg transition-colors"
+                  >
+                    +966 11 411 0000
+                  </a>
+                </motion.li>
+                <motion.li
+                  initial={{ x: -10 }}
+                  animate={{ x: 0 }}
+                  transition={{ duration: 0.5, delay: 4.0 }}
+                  className="hover:translate-x-1 transition-transform"
+                >
+                  <a
+                    href="mailto:info@noon.sa"
+                    className="hover:text-bg transition-colors"
+                  >
+                    info@noon.sa
+                  </a>
+                </motion.li>
+              </motion.ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 4.1 }}
+              className="flex flex-wrap gap-4"
+            >
+              <motion.h2
+                className="text-bg capitalize ltr:font-elegance rtl:font-amiri text-3xl md:text-5xl ltr:tracking-tighter max-w-[8ch] pb-1 mb-4"
+                whileHover={{ scale: 1.02 }}
+              >
+                {t("branchOffice")}
+              </motion.h2>
+              <motion.ul
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 4.2 }}
+                className="text-white max-w-[250px] md:max-w-[280px] text-base md:text-lg space-y-3"
+              >
+                <motion.li
+                  initial={{ x: -10 }}
+                  animate={{ x: 0 }}
+                  transition={{ duration: 0.5, delay: 4.3 }}
+                  className="hover:translate-x-1 transition-transform"
+                >
+                  {t("address2")}
+                </motion.li>
+                <motion.li
+                  initial={{ x: -10 }}
+                  animate={{ x: 0 }}
+                  transition={{ duration: 0.5, delay: 4.4 }}
+                  className="hover:translate-x-1 transition-transform"
+                >
+                  42317
+                </motion.li>
+                <motion.li
+                  initial={{ x: -10 }}
+                  animate={{ x: 0 }}
+                  transition={{ duration: 0.5, delay: 4.5 }}
+                  className="hover:translate-x-1 transition-transform"
+                >
+                  <a
+                    href="tel:00966124199999"
+                    className="hover:text-bg transition-colors"
+                  >
+                    +966 12 419 9999
+                  </a>
+                </motion.li>
+                <motion.li
+                  initial={{ x: -10 }}
+                  animate={{ x: 0 }}
+                  transition={{ duration: 0.5, delay: 4.6 }}
+                  className="hover:translate-x-1 transition-transform"
+                >
+                  <a
+                    href="mailto:info@noon.sa"
+                    className="hover:text-bg transition-colors"
+                  >
+                    info@noon.sa
+                  </a>
+                </motion.li>
+              </motion.ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 4.7 }}
+            >
+              <motion.h2
+                className="text-bg capitalize ltr:font-elegance rtl:font-amiri text-3xl md:text-5xl ltr:tracking-tighter pb-1 mb-4"
+                whileHover={{ scale: 1.02 }}
+              >
+                <span>{t("new_branch")}</span>
+                <br />
+                <span>{t("coming_soon")}</span>
+              </motion.h2>
+            </motion.div>
+          </motion.div>
+
+          {/* Saudi Arabia Map */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 3.6 }}
+            className="lg:w-1/2 relative h-[400px] lg:h-[600px]"
+          >
+            <Image
+              src={suadiarabia}
+              alt="Saudi Arabia"
+              fill
+              className="object-contain"
+              priority
+            />
+          </motion.div>
+        </div>
       </motion.section>
     </main>
   );

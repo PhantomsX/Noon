@@ -1,34 +1,14 @@
 "use client";
 import Image from "next/image";
 import mainBackground from "@/public/images/background-home.png";
-import client from "@/public/images/client.svg";
 import clientsLg from "@/public/logos/clients-lg.svg";
 import clientsSm from "@/public/logos/clients.svg";
 import logoEn from "@/public/icons/big-logo-en.svg";
 import logoAr from "@/public/icons/big-logo-ar.svg";
 import { useLocale, useTranslations } from "next-intl";
-import { Afacad } from "next/font/google";
-import ceo from "@/public/images/ceoimage.svg";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Slash } from "lucide-react";
 import { useIsClient, useMediaQuery } from "usehooks-ts";
-import { cn } from "@/lib/utils";
-import Sidebar from "./components/Sidebar";
 import { motion, useAnimation, useInView } from "motion/react";
 import { useEffect, useRef } from "react";
-
-const afacad = Afacad({
-  subsets: ["latin"],
-  variable: "--font-afacad",
-  weight: ["500", "400"],
-  display: "swap",
-});
 
 const AnimatedSection = ({
   children,
@@ -129,10 +109,7 @@ export default function Home() {
           }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <span className="uppercase text-center text-bg" style={afacad.style}>
-            {t("founded in 2011")}
-          </span>
-          <p className="mt-2.5 font-elegance text-center text-xl md:text-4xl text-bg">
+          <p className="mt-2.5 ltr:font-elegance rtl:font-amiri text-xl md:text-4xl text-bg">
             {t("mainText")}
           </p>
           <div className="px-10 md:px-20 pt-10">
@@ -145,96 +122,12 @@ export default function Home() {
           </div>
         </motion.section>
 
-        <AnimatedSection
-          delay={0.3}
-          className="px-2 py-20 flex justify-center flex-wrap md:items-center gap-10"
-        >
-          <div>
-            <Image src={ceo} alt="ceo" className="object-cover" />
-          </div>
-          <div className="space-y-10 z-[1]">
-            <h2 className="text-bg font-elegance capitalize text-xl md:text-[40px]">
-              {t("About_noon_consultants")}
-            </h2>
-            <p
-              className="text-white md:text-lg font-thin max-w-[500px] leading-[1.43] text-justify"
-              style={afacad.style}
-            >
-              {t("aboutText1")}
-            </p>
-            <div className="mt-4">
-              <p className="text-2xl font-monalisa">Dr.nizar el sayed</p>
-              <p className="uppercase">{t("CHAIRMAN")}</p>
-            </div>
-          </div>
-        </AnimatedSection>
-        <AnimatedSection
-          delay={0.4}
-          className="container px-2 relative mx-auto"
-        >
-          <div className="space-y-10 max-md:mt-28">
-            <h2
-              className="text-bg font-elegance capitalize text-xl md:text-[40px] text-center"
-            >
-              {t("partners_words_about_noon")}
-            </h2>
-            <Carousel
-              opts={{
-                loop: true,
-                active: true,
-                align: "start",
-              }}
-              orientation={isClient && isMobile ? "vertical" : "horizontal"}
-            >
-              <CarouselContent
-                className={cn({ "max-h-[700px]": isClient && isMobile })}
-              >
-                {[1, 2, 3, 4, 5].map((item) => (
-                  <CarouselItem className="basis-1/3" key={item}>
-                    <div className="py-10 px-4 flex flex-col gap-3 sm:gap-10 relative before:absolute before:content-[''] before:w-1/3 before:h-px before:border before:border-bg before:top-0 before:left-4 before:right-4 before:z-10">
-                      <p
-                        className="text-white text-sm md:text-lg"
-                        style={afacad.style}
-                      >
-                        {t("clientText1")}
-                      </p>
-                      <div
-                        style={afacad.style}
-                        className="flex items-center gap-4"
-                      >
-                        <Image className="size-12" src={client} alt="client" />
-                        <div className="flex flex-col gap-1">
-                          <span className="text-white text-base">
-                            Ahmed Al-Mansouri
-                          </span>
-                          <span className="text-bg text-sm">
-                            CEO of Skyline Developers
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <div className="flex justify-end items-center gap-1 my-5">
-                <CarouselPrevious />
-                <Slash
-                  className="text-white rotate-[-90deg]"
-                  size={30}
-                  strokeWidth={1}
-                />
-                <CarouselNext />
-              </div>
-            </Carousel>
-          </div>
-        </AnimatedSection>
         <AnimatedSection delay={0.5} className="relative mt-10">
           <div className="">
-            <h2
-              className="capitalize text-[40px] text-bg font-elegance text-center mb-14 md:mb-20"
-            >
+            <h2 className="capitalize text-[40px] text-bg ltr:font-elegance rtl:font-amiri text-center">
               {t("partners_of_success")}
             </h2>
+
             <Image
               src={isClient && isMobile ? clientsSm : clientsLg}
               alt="clients"
@@ -244,17 +137,23 @@ export default function Home() {
         </AnimatedSection>
 
         <AnimatedSection delay={0.6} className="container mx-auto py-20">
-          <Image
-            src={locale === "ar" ? logoAr : logoEn}
-            draggable={false}
-            priority
-            alt="logo"
-            className="select-none pointer-events-none scale-75 mx-auto mb-20"
-          />
-          <div className="flex max-md:ps-6 md:justify-between flex-wrap max-md:gap-20">
+          <div className="flex flex-col items-center">
+            <Image
+              src={locale === "ar" ? logoAr : logoEn}
+              draggable={false}
+              priority
+              alt="logo"
+              className="select-none pointer-events-none scale-75 mx-auto -mb-5"
+            />
+            <span className="uppercase text-center text-bg ltr:font-neue-montreal rtl:font-noto-kufi-arabic">
+              {t("founded in 2011")}
+            </span>
+          </div>
+
+          {/* <div className="flex max-md:ps-6 md:justify-between flex-wrap max-md:gap-20">
             <div className="flex flex-wrap gap-2 sm:gap-10">
               <h2
-                className="text-bg capitalize font-elegance font-medium text-2xl md:text-5xl max-w-[8ch] pb-1 mb-4"
+                className="text-bg capitalize ltr:font-elegance rtl:font-amirimedium text-2xl md:text-5xl max-w-[8ch] pb-1 mb-4"
               >
                 {t("headquarters")}
               </h2>
@@ -275,7 +174,7 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap gap-2 sm:gap-10">
               <h2
-                className="text-bg capitalize font-elegance text-2xl md:text-5xl max-w-[8ch] pb-1 mb-4"
+                className="text-bg capitalize ltr:font-elegance rtl:font-amiri text-2xl md:text-5xl max-w-[8ch] pb-1 mb-4"
               >
                 {t("branchOffice")}
               </h2>
@@ -298,7 +197,7 @@ export default function Home() {
               </ul>
             </div>
             <Sidebar />
-          </div>
+          </div> */}
         </AnimatedSection>
       </motion.main>
     </>

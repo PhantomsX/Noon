@@ -4,7 +4,6 @@ import React, { useState, useMemo, useRef } from "react";
 import { motion } from "motion/react";
 
 import Image from "next/image";
-import { Afacad } from "next/font/google";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useIsClient, useMediaQuery } from "usehooks-ts";
 import { useRouter } from "next/navigation";
@@ -35,61 +34,53 @@ const projects = [
   },
   {
     id: 3,
-    title: "LANDSCAPE HAVEN",
-    type: "landscape",
-    description: "Natural landscaping for city parks.",
+    title: "INTERIOR DESIGN HAVEN",
+    type: "interior design",
+    description: "Modern interior design for residential spaces.",
     image: "/images/portfolio-bg.png",
     location: "Dammam, KSA",
-    area: "150000 SQM",
-    scope: "Landscape Design",
+    area: "15000 SQM",
+    scope: "Interior Design",
     status: "Completed",
   },
   {
     id: 4,
-    title: "AL DHUHAYAN BLOCK 39",
-    type: "Project Management",
-    description: "A large urban planning project.",
+    title: "RIYADH URBAN DEVELOPMENT",
+    type: "urban",
+    description: "Comprehensive urban planning for sustainable growth.",
     image: "/images/portfolio-bg.png",
     location: "Riyadh, KSA",
-    area: "656027 SQM",
+    area: "450000 SQM",
     scope: "Urban Planning & Design",
-    status: "Approved",
+    status: "In Progress",
   },
   {
     id: 5,
-    title: "AL DHUHAYAN BLOCK 39",
-    type: "landscape",
-    description: "A large urban planning project.",
+    title: "JEDDAH ARCHITECTURAL GEM",
+    type: "architecture",
+    description: "Innovative architectural solutions for commercial buildings.",
     image: "/images/portfolio-bg.png",
-    location: "Riyadh, KSA",
-    area: "656027 SQM",
-    scope: "Urban Planning & Design",
-    status: "Approved",
+    location: "Jeddah, KSA",
+    area: "85000 SQM",
+    scope: "Architecture Design",
+    status: "Under Construction",
   },
   {
     id: 6,
-    title: "AL DHUHAYAN BLOCK 39",
-    type: "Workshop Drawings",
-    description: "A large urban planning project.",
+    title: "LUXURY INTERIOR SPACES",
+    type: "interior design",
+    description: "High-end interior design for luxury developments.",
     image: "/images/portfolio-bg.png",
     location: "Riyadh, KSA",
-    area: "656027 SQM",
-    scope: "Urban Planning & Design",
+    area: "25000 SQM",
+    scope: "Interior Design",
     status: "Approved",
   },
 ];
 
-const afacad = Afacad({
-  subsets: ["latin"],
-  variable: "--font-afacad",
-  weight: ["500", "400"],
-  display: "swap",
-});
-
 const Page = () => {
   const [selectedType, setSelectedType] = useState("all");
-  const t = useTranslations("projects");
-  const tServices = useTranslations("servicess");
+  const t = useTranslations();
   const isClient = useIsClient();
   const isMobile = useMediaQuery("(max-width: 768px)");
   const router = useRouter();
@@ -97,161 +88,45 @@ const Page = () => {
   const services = [
     {
       type: "architecture",
-      title: tServices("service-1"),
-      description: tServices("service-1-description"),
+      title: t("servicess.service-1"),
+      description: t("servicess.service-1-description"),
       image: "/images/ENGINEERING AND ARCHITECTURAL DESIGN.png",
       features: [
-        tServices("service-1-features.1"),
-        tServices("service-1-features.2"),
-        tServices("service-1-features.3"),
-        tServices("service-1-features.4"),
+        t("servicess.service-1-features.1"),
+        t("servicess.service-1-features.2"),
+        t("servicess.service-1-features.3"),
+        t("servicess.service-1-features.4"),
       ],
     },
     {
       type: "urban",
-      title: tServices("service-2"),
-      description: tServices("service-2-description"),
+      title: t("servicess.service-2"),
+      description: t("servicess.service-2-description"),
       image: "/images/URBAN DESIGN.png",
       features: [
-        tServices("service-2-features.1"),
-        tServices("service-2-features.2"),
-        tServices("service-2-features.3"),
-        tServices("service-2-features.4"),
-        tServices("service-2-features.5"),
+        t("servicess.service-2-features.1"),
+        t("servicess.service-2-features.2"),
+        t("servicess.service-2-features.3"),
+        t("servicess.service-2-features.4"),
+        t("servicess.service-2-features.5"),
       ],
     },
     {
-      title: tServices("service-4"),
-      description: tServices("service-4-description"),
-      image: "/images/CONSTRUCTION SUPERVISION.png",
-      features: [
-        tServices("service-4-features.1"),
-        tServices("service-4-features.2"),
-        tServices("service-4-features.3"),
-        tServices("service-4-features.4"),
-        tServices("service-4-features.5"),
-      ],
-    },
-    {
-      title: tServices("service-3"),
-      description: tServices("service-3-description"),
-      image: "/images/MASTER PLANNING.png",
-      features: [
-        tServices("service-3-features.1"),
-        tServices("service-3-features.2"),
-        tServices("service-3-features.3"),
-        tServices("service-3-features.4"),
-        tServices("service-3-features.5"),
-      ],
-    },
-    {
-      title: tServices("service-6"),
-      description: tServices("service-6-description"),
-      image: "/images/ENGINEERING REPORTS.png",
-      features: [
-        tServices("service-6-features.1"),
-        tServices("service-6-features.2"),
-        tServices("service-6-features.3"),
-        tServices("service-6-features.4"),
-        tServices("service-6-features.5"),
-      ],
-    },
-    {
-      title: tServices("service-5"),
-      description: tServices("service-5-description"),
-      image: "/images/PERMITS.png",
-      features: [
-        tServices("service-5-features.1"),
-        tServices("service-5-features.2"),
-        tServices("service-5-features.3"),
-        tServices("service-5-features.4"),
-        tServices("service-5-features.5"),
-      ],
-    },
-    {
-      title: tServices("service-8"),
-      description: tServices("service-8-description"),
-      image: "/images/ENGINEERING STUDIES.png",
-      features: [
-        tServices("service-8-features.1"),
-        tServices("service-8-features.2"),
-        tServices("service-8-features.3"),
-        tServices("service-8-features.4"),
-        tServices("service-8-features.5"),
-      ],
-    },
-    {
-      title: tServices("service-7"),
-      description: tServices("service-7-description"),
-      image: "/images/VALUE ENGINEERING.png",
-      features: [
-        tServices("service-7-features.1"),
-        tServices("service-7-features.2"),
-        tServices("service-7-features.3"),
-        tServices("service-7-features.4"),
-        tServices("service-7-features.5"),
-      ],
-    },
-    {
-      type: "landscape",
-      title: tServices("service-9"),
-      description: tServices("service-9-description"),
-      image: "/images/LANDSCAPING.png",
-      features: [
-        tServices("service-9-features.1"),
-        tServices("service-9-features.2"),
-        tServices("service-9-features.3"),
-        tServices("service-9-features.4"),
-        tServices("service-9-features.5"),
-      ],
-    },
-    {
-      type: "Project Management",
-      title: tServices("service-11"),
-      description: tServices("service-11-description"),
-      image: "/images/PROJECT MANAGEMENT.png",
-      features: [
-        tServices("service-11-features.1"),
-        tServices("service-11-features.2"),
-        tServices("service-11-features.3"),
-        tServices("service-11-features.4"),
-        tServices("service-11-features.5"),
-      ],
-    },
-    {
-      title: tServices("service-10"),
-      description: tServices("service-10-description"),
+      type: "interior design",
+      title: t("servicess.service-10"),
+      description: t("servicess.service-10-description"),
       image: "/images/INTERIOR DESIGN.png",
       features: [
-        tServices("service-10-features.1"),
-        tServices("service-10-features.2"),
-        tServices("service-10-features.3"),
-        tServices("service-10-features.4"),
-        tServices("service-10-features.5"),
-      ],
-    },
-    {
-      title: tServices("service-12"),
-      description: tServices("service-12-description"),
-      image: "/images/OR ARCHITECT OF RECORD.png",
-      features: [
-        tServices("service-12-features.1"),
-        tServices("service-12-features.2"),
-        tServices("service-12-features.3"),
-        tServices("service-12-features.4"),
-        tServices("service-12-features.5"),
+        t("servicess.service-10-features.1"),
+        t("servicess.service-10-features.2"),
+        t("servicess.service-10-features.3"),
+        t("servicess.service-10-features.4"),
+        t("servicess.service-10-features.5"),
       ],
     },
   ];
 
-  const categories = [
-    "all",
-    "urban",
-    "architecture",
-    "landscape",
-    "Project Management",
-    "Workshop Drawings",
-  ];
+  const categories = ["all", "urban", "architecture", "interior design"];
 
   const handleTabClick = (type: string) => {
     setSelectedType(type);
@@ -264,8 +139,7 @@ const Page = () => {
 
   return (
     <motion.main
-      style={afacad.style}
-      className="px-5 md:px-[70px] pt-20 flex flex-col justify-between"
+      className="px-5 md:px-[70px] ltr:font-neue-montreal rtl:font-noto-kufi-arabic pt-20 flex flex-col justify-between"
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
@@ -277,14 +151,10 @@ const Page = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
       >
-        <PageTitle>
-          {t("title-1")}
-          <br />
-          {t("title-2")}
-        </PageTitle>
+        <PageTitle>{t("projects.title-1")}</PageTitle>
 
         <p className="text-xl mb-4 text-white text-center md:text-start flex-1">
-          {t("breif")}
+          {t("projects.breif")}
         </p>
       </motion.section>
       <motion.section

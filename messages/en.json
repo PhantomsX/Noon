@@ -1,22 +1,31 @@
 {
   "About US": "About US",
+  "About_noon_consultants": "About noon consultants",
   "CHAIRMAN": "CHAIRMAN& FOUNDER",
   "Choose Architectural Design": "Choose Architectural Design",
   "Commercial": "Commercial",
   "Email": "Email",
   "FUTURE REACH": "FUTURE REACH",
-  "FUTURE REACH TEXT": "Achieving a modern and highly professional strategy to                   translate investment opportunities that can bring high                   financial returns to reality and prductive economic                   development for society.",
+  "FUTURE REACH TEXT": "By aligning strategic insight with market potential, we convert investment opportunities into profitable ventures that generate strong financial returns and contribute meaningfully to economic advancement.",
   "First Name": "First Name",
+  "Forbidden": {
+    "backToHome": "Back to Home",
+    "message": "You do not have permission to access this page."
+  },
   "Health Care": "Health Care",
   "Hospitality": "Hospitality",
   "Last Name": "Last Name",
   "Message": "Message",
   "Mixed Use": "Mixed Use",
+  "NotFound": {
+    "backToHome": "Back to Home",
+    "message": "The page you are looking for does not exist."
+  },
   "Notes From The CEO": "Notes From The CEO",
   "OUR MISSION": "OUR MISSION",
-  "OUR MISSION TEXT": "                  We are masters in creating architectural and sustainable                   solutions with a big team who had a vision that will effect                   the architectural culture in Saudi Arabia.",
+  "OUR MISSION TEXT": "Our mission is to lead in delivering innovative architectural and sustainable solutions, driven by a visionary team committed to shaping and enriching the architectural landscape of Saudi Arabia.",
   "OUR VISION": "OUR VISION",
-  "OUR VISION TEXT": "Our vision is to provide solutions that are both creative and                   feasible, and to be the marine engineering company of choice                   leader in the industry and invaluable asset to our clients.",
+  "OUR VISION TEXT": "Our vision is to deliver solutions that are both innovative and practical, positioning ourselves as an engineering firm of choice, a leader in the industry, and a trusted, invaluable partner to our clients.",
   "Office Use": "Office Use",
   "Offices": "Offices",
   "Residential": "Residential",
@@ -27,9 +36,9 @@
   "What Our Clients Say": "partners words about noon",
   "about": "About",
   "aboutNoon": "About noon",
-  "aboutText1": "noon Engineering services is one of the recognized Urban, Architecture and Interior Design practice in the KSA. founded in 2011. noon designs, adapt and respond to the context of each project to create intelligent and enduring Urban Planning & Design.",
-  "aboutText2": "Our success has been principally due to the quality of our people and their ability to be able to produce high quality design together with an understanding of what makes the Design successful Socially, Environmentally and Economically.",
-  "aboutText3": "It is our objective to continually evolve as a Designing practice, always striving to find new solutions to traditional challenges and to provide the best possible service to our clients and the community",
+  "aboutText1": "Noon Consultants, a division of Noon Engineering Services, is a prominent urban planning, architecture, and interior design practice based in the Kingdom of Saudi Arabia. Founded in 2011, Noon is committed to designing and adapting solutions that respond thoughtfully to the unique context of each project, with a focus on creating intelligent and enduring urban planning and design.",
+  "aboutText2": "Our success is primarily attributed to the exceptional caliber of our team and their ability to deliver high-quality designs that thoughtfully integrate social, environmental, and economic considerations, ensuring holistic and sustainable outcomes.",
+  "aboutText3": "Our objective is to continuously evolve as a design practice, consistently seeking innovative solutions to conventional challenges while delivering the highest standard of service to our clients and the wider community",
   "aboutText4": "“We, as noon, are a professional engineering services firm that                 engages in urban, architectural design, supervision, interior                 design, project management as well as related research, planning                 and consultancy activities.",
   "aboutText5": "Our firm provides solutions that are both creative and feasible.                 Our goal is to continue to strive as a team of professionals to                 guarantee our unwavering commitment to value and quality that                 satisfies our clients.”",
   "address1": "Riyadh, Saudi Arabia Olaya St, Al Wurud District",
@@ -37,20 +46,134 @@
   "branchOffice": "Branch Office",
   "building": "building",
   "calculate": "calculate",
+  "careers": {
+    "title": "Careers",
+    "subtitle": "Join Our Team",
+    "description": "At Noon Consultants, we believe that great design comes from great people. We're always looking for talented individuals who are passionate about architecture, urban planning, and design to join our dynamic team.",
+    "whyJoinUs": "Why Join Us?",
+    "benefits": {
+      "growth": {
+        "title": "Professional Growth",
+        "description": "Continuous learning opportunities and career advancement in a supportive environment."
+      },
+      "projects": {
+        "title": "Innovative Projects",
+        "description": "Work on cutting-edge architectural and urban planning projects across Saudi Arabia."
+      },
+      "culture": {
+        "title": "Collaborative Culture",
+        "description": "Join a team of creative professionals who value collaboration and innovation."
+      },
+      "impact": {
+        "title": "Make an Impact",
+        "description": "Contribute to shaping the urban landscape and architectural heritage of the Kingdom."
+      }
+    },
+    "openPositions": "Open Positions",
+    "positions": {
+      "architect": {
+        "title": "Senior Architect",
+        "department": "Architecture Department",
+        "type": "Full-time",
+        "location": "Riyadh, Saudi Arabia",
+        "description": "We are seeking a talented Senior Architect to lead design projects and mentor junior team members.",
+        "requirements": [
+          "Bachelor's or Master's degree in Architecture",
+          "5+ years of experience in architectural design",
+          "Proficiency in AutoCAD, Revit, and SketchUp",
+          "Strong design and visualization skills",
+          "Experience with Saudi building codes and regulations"
+        ]
+      },
+      "urbanPlanner": {
+        "title": "Urban Planner",
+        "department": "Urban Planning Department",
+        "type": "Full-time",
+        "location": "Riyadh, Saudi Arabia",
+        "description": "Join our urban planning team to create sustainable and innovative urban development solutions.",
+        "requirements": [
+          "Bachelor's degree in Urban Planning or related field",
+          "3+ years of experience in urban planning",
+          "Knowledge of GIS software and planning tools",
+          "Understanding of sustainable development principles",
+          "Excellent analytical and communication skills"
+        ]
+      },
+      "interiorDesigner": {
+        "title": "Interior Designer",
+        "department": "Interior Design Department",
+        "type": "Full-time",
+        "location": "Riyadh, Saudi Arabia",
+        "description": "Create inspiring interior spaces that blend functionality with aesthetic excellence.",
+        "requirements": [
+          "Bachelor's degree in Interior Design",
+          "2+ years of experience in interior design",
+          "Proficiency in design software (3D Max, Photoshop, etc.)",
+          "Strong sense of color, texture, and space",
+          "Portfolio showcasing completed projects"
+        ]
+      },
+      "projectManager": {
+        "title": "Project Manager",
+        "department": "Project Management",
+        "type": "Full-time",
+        "location": "Riyadh, Saudi Arabia",
+        "description": "Lead and coordinate architectural and engineering projects from conception to completion.",
+        "requirements": [
+          "Bachelor's degree in Engineering or Architecture",
+          "PMP certification preferred",
+          "5+ years of project management experience",
+          "Strong leadership and communication skills",
+          "Experience with construction and design projects"
+        ]
+      }
+    },
+    "applicationProcess": "Application Process",
+    "steps": {
+      "apply": {
+        "title": "Submit Application",
+        "description": "Send us your resume, portfolio, and cover letter through our online portal."
+      },
+      "review": {
+        "title": "Initial Review",
+        "description": "Our HR team will review your application and contact qualified candidates."
+      },
+      "interview": {
+        "title": "Interview Process",
+        "description": "Participate in technical and cultural fit interviews with our team."
+      },
+      "offer": {
+        "title": "Job Offer",
+        "description": "Successful candidates will receive a comprehensive job offer."
+      }
+    },
+    "howToApply": "How to Apply",
+    "applyText": "Ready to join our team? Send your application to careers@noonconsultants.com with the position title in the subject line.",
+    "applyNow": "Apply Now",
+    "viewPosition": "View Position",
+    "backToPositions": "Back to Positions"
+  },
   "calculateTitle": "Architectural Design Calculator",
   "clientText1": "The architectural drawings provided by the team were exceptionally detailed and innovative. Their expertise transformed our vision into reality",
   "clients": "clients",
   "clientsSubtitle": "Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects.",
+  "coming_soon": "coming soon Hail",
   "contact": "contact us",
   "factory": "factory",
   "find": "find more",
-  "founded in 2011": "founded in 2011",
+  "founded in 2011": "since 2011",
   "headquarters": "Head quarters",
   "home": "home",
   "industrial": "industrial",
+  "login": "Login",
   "m": "m²",
+  "mainText": "noon Consultants is one of the recognized Architecture in the KSA.",
+  "new_branch": "New Branch",
+  "our_team": "Our Team & Designers",
   "partners": "Our partners",
-  "portfolio": "Portfolio",
+  "partners_of_success": "partners",
+  "partners_words_about_noon": "partners words about noon",
+  "pr": "Portfolio",
   "pricing for all services is in saudi riyals": "pricing for all services is in saudi riyals.",
   "projects": {
     "Details": "Details",
@@ -61,112 +184,35 @@
     "all": "all",
     "architecture": "architecture",
     "area": "AREA",
-    "breif": "For years we have worked with organizations around Saudi Arabia. We are proud of the work we have done, and the unique depth of knowledge it has allowed us to build. Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects.",
+    "breif": "Over the years, we have partnered with a wide range of organizations across Saudi Arabia, earning a reputation for excellence and reliability. Each project has contributed to the deep, specialized knowledge we bring to every new challenge. Our portfolio is delivered by seasoned professionals with extensive industry experience, each bringing focused expertise across key functional areas. We are committed to providing high-quality, client-focused solutions that support the sustainable, innovative, and long-term success of every project we undertake.",
     "copy rights": " all renders is back to noon copyrights.",
     "description": " For years we have worked with organizations around Saudi Arabia. We are proud of the work we have done, and the unique depth of knowledge it has allowed us to build. Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects..",
+    "interior design": "interior design",
     "landscape": "landscape",
     "location": "LOCATION",
     "scope": "SCOPE OF WORK",
     "status": "STATUS",
-    "title-1": "Portfolio",
-    "title-2": "of work",
+    "title-1": "Our Projects",
     "urban": "urban"
   },
+  "projectsTitle": "Our Projects",
+  "register": "Register",
   "rights": "All Right Reserved To noon Consultants 2024. ®",
   "send inquiry": "send inquiry",
   "services": "Our services",
   "servicess": {
     "allServices": " All Services",
-    "breif": "An Delivery By Seasoned Professionals With Extensive Industry\n            Expertise, Each Specializing in Financial Financial Areas. Committed\n            To Delivering High-Quality Services That Understand Our Users Needs,\n            Conflicts To The Sustainable And Innovative Success Of Their\n            Projects.",
+    "breif": "Over the years, we have proudly served a wide range of clients throughout Saudi Arabia, building a reputation for technical excellence and client-centric solutions. Our services are delivered by experts with in-depth knowledge across various engineering disciplines, each committed to delivering value-driven, high-performance outcomes. We focus on innovation, sustainability, and precision to support the long-term success of our clients’ projects.",
     "service-1": "ENGINEERING & ARCHITECTURAL DESIGN",
-    "service-10": "INTERIOR DESIGN",
-    "service-11": "PROJECT MANAGEMENT",
-    "service-12": "OR | ARCHITECT OF RECORD",
-    "service-2": "URBAN DESIGN",
-    "service-3": "MASTER PLANNING",
-    "service-4": "CONSTRUCTION SUPERVISION",
-    "service-5": "PERMITS",
-    "service-6": "ENGINEERING REPORTS",
-    "service-7": "VALUE ENGINEERING",
-    "service-8": "ENGINEERING STUDIES",
-    "service-9": "LANDSCAPING",
-    "service-btn": "  SERVICE PROJECTS",
-    "title-1": "Our Best",
-    "title-2": "  Of Services",
     "service-1-description": "The art and science of creating buildings and ther physical structures. It involves the careful consideration of aesthetics, functionality, and the environment.",
-    "service-2-description": "Urban design is the process of shaping the physical setting for life in cities, towns, and villages. It involves the arrangement, appearance, and functionality of urban spaces, including the design of buildings, streets, parks, and other public spaces.",
-    "service-3-description": "Is a comprehensive, long-term planning process that provides a blueprint for the physical, economic, and social development of a particular area, such as a city, neighborhood, or large-scale development project.",
-    "service-4-description": "the process of overseeing the construction phase of a project to ensure that it is completed on time, within budget, and according to the specified standards and plans. It involves managing various aspects of the construction process.",
-    "service-6-description": "Detailed documents that present technical information, findings, analysis, and recommendations related to engineering projects. These reports are essential for communicating complex information clearly and effectively.",
-    "service-5-description": "The process of obtaining official permission or certification to practice as a professional in these fields. It ensures that individuals meet specific educational, professional, ethical standards to safeguard public health, safety, and welfare.",
-    "service-7-description": "To improve the value of a project by analyzing its functions. The goal is to enhance the project’s performance, quality, and reliability while minimizing costs. It involves identifying and eliminating unnecessary expenditures,",
-    "service-8-description": "Comprehensive analyses conducted to evaluate various aspects of engineering projects. These studies aim to provide detailed insights, inform decision-making, and ensure the feasibility, safety, and efficiency of a project.",
-    "service-9-description": "Refers to the art and practice of designing and arranging outdoor spaces, including gardens, parks, and other natural environments, to enhance their aesthetic appeal, functionality, and environmental value. plants, hardscapes, and structures to create pleasing and functional outdoor areas.",
-    "service-11-description": "The discipline of planning, organizing, and overseeing the completion of a project to achieve specific goals and meet specific success criteria. It involves managing resources, time, and scope to deliver the project on time, within budget, required quality standards.",
-    "service-10-description": "The art and science of enhancing the interior of a space to create a more aesthetically pleasing and functional environment. It involves designing the layout, selecting furnishings and finishes, coordinating color schemes ,lighting",
-    "service-12-description": "The licensed architect responsible for the legal and professional aspects of a project. This role involves overseeing the design and documentation to ensure that the project complies with local building codes, regulations, and standards.",
     "service-1-features": {
       "1": "Concept and Preliminary Design",
       "2": "Interior Design",
       "3": "Construction Documents & Workshop Drawings",
       "4": "Value Engineering and Bill of Materials"
     },
-    "service-2-features": {
-      "1": "Feasibility Studies",
-      "2": "Site Appraisals",
-      "3": "Asset Appraisals",
-      "4": "Environmental Impact Assessment",
-      "5": "Social Impact Assessment"
-    },
-    "service-3-features": {
-      "1": "Site Analysis and Feasibility Studies",
-      "2": "Land Use and Zoning Planning",
-      "3": "Infrastructure and Transportation Planning",
-      "4": "Environmental and Sustainability Planning",
-      "5": "Community Engagement and Stakeholder Consultation"
-    },
-    "service-4-features": {
-      "1": "On-Site Monitoring and Inspection",
-      "2": "Quality Control and Assurance",
-      "3": "Safety Compliance",
-      "4": "Progress Reporting and Documentation",
-      "5": "Coordination with Contractors and Stakeholders"
-    },
-    "service-5-features": {
-      "1": "Regulatory Compliance",
-      "2": "Application Preparation and Submission",
-      "3": "Review and Approval by Authorities",
-      "4": "Issuance of Permits and Licenses",
-      "5": "Ongoing Compliance and Renewals"
-    },
-    "service-6-features": {
-      "1": "Data Collection and Analysis",
-      "2": "Problem Identification and Assessment",
-      "3": "Design Solutions and Recommendations",
-      "4": "Technical Specifications and Calculations",
-      "5": "Conclusion and Future Considerations"
-    },
-    "service-7-features": {
-      "1": "Function Analysis",
-      "2": "Cost Reduction",
-      "3": "Alternative Solutions",
-      "4": "Efficiency Optimization",
-      "5": "Quality Maintenance"
-    },
-    "service-8-features": {
-      "1": "Gather & review all necessary engineering documents",
-      "2": "Site survey",
-      "3": "Check the performance of building and equipment",
-      "4": "Inspection, casting, and risk assessment",
-      "5": "Rectify identified issues"
-    },
-    "service-9-features": {
-      "1": "Site Analysis and Design",
-      "2": "Plant Selection and Placement",
-      "3": "Hardscape Installation (e.g., pathways, walls)",
-      "4": "Irrigation Systems Design",
-      "5": "Maintenance and Seasonal Care"
-    },
+    "service-10": "INTERIOR DESIGN",
+    "service-10-description": "The art and science of enhancing the interior of a space to create a more aesthetically pleasing and functional environment. It involves designing the layout, selecting furnishings and finishes, coordinating color schemes ,lighting",
     "service-10-features": {
       "1": "Space Planning",
       "2": "Aesthetic and Functional Design",
@@ -174,6 +220,8 @@
       "4": "Lighting and Color Schemes",
       "5": "Furniture and Fixture Arrangement"
     },
+    "service-11": "PROJECT MANAGEMENT",
+    "service-11-description": "The discipline of planning, organizing, and overseeing the completion of a project to achieve specific goals and meet specific success criteria. It involves managing resources, time, and scope to deliver the project on time, within budget, required quality standards.",
     "service-11-features": {
       "1": "Planning and Scheduling",
       "2": "Resource Allocation",
@@ -181,20 +229,91 @@
       "4": "Team Coordination",
       "5": "Progress Tracking and Reporting"
     },
+    "service-12": "OR | ARCHITECT OF RECORD",
+    "service-12-description": "The licensed architect responsible for the legal and professional aspects of a project. This role involves overseeing the design and documentation to ensure that the project complies with local building codes, regulations, and standards.",
     "service-12-features": {
       "1": "Project Oversight",
       "2": "Compliance with Codes and Standards",
       "3": "Coordination with Design Team",
       "4": "Documentation and Certification",
       "5": "Client Liaison and Communication"
-    }
+    },
+    "service-2": "URBAN DESIGN",
+    "service-2-description": "Urban design is the process of shaping the physical setting for life in cities, towns, and villages. It involves the arrangement, appearance, and functionality of urban spaces, including the design of buildings, streets, parks, and other public spaces.",
+    "service-2-features": {
+      "1": "Feasibility Studies",
+      "2": "Site Appraisals",
+      "3": "Asset Appraisals",
+      "4": "Environmental Impact Assessment",
+      "5": "Social Impact Assessment"
+    },
+    "service-3": "MASTER PLANNING",
+    "service-3-description": "Is a comprehensive, long-term planning process that provides a blueprint for the physical, economic, and social development of a particular area, such as a city, neighborhood, or large-scale development project.",
+    "service-3-features": {
+      "1": "Site Analysis and Feasibility Studies",
+      "2": "Land Use and Zoning Planning",
+      "3": "Infrastructure and Transportation Planning",
+      "4": "Environmental and Sustainability Planning",
+      "5": "Community Engagement and Stakeholder Consultation"
+    },
+    "service-4": "CONSTRUCTION SUPERVISION",
+    "service-4-description": "the process of overseeing the construction phase of a project to ensure that it is completed on time, within budget, and according to the specified standards and plans. It involves managing various aspects of the construction process.",
+    "service-4-features": {
+      "1": "On-Site Monitoring and Inspection",
+      "2": "Quality Control and Assurance",
+      "3": "Safety Compliance",
+      "4": "Progress Reporting and Documentation",
+      "5": "Coordination with Contractors and Stakeholders"
+    },
+    "service-5": "PERMITS",
+    "service-5-description": "The process of obtaining official permission or certification to practice as a professional in these fields. It ensures that individuals meet specific educational, professional, ethical standards to safeguard public health, safety, and welfare.",
+    "service-5-features": {
+      "1": "Regulatory Compliance",
+      "2": "Application Preparation and Submission",
+      "3": "Review and Approval by Authorities",
+      "4": "Issuance of Permits and Licenses",
+      "5": "Ongoing Compliance and Renewals"
+    },
+    "service-6": "ENGINEERING REPORTS",
+    "service-6-description": "Detailed documents that present technical information, findings, analysis, and recommendations related to engineering projects. These reports are essential for communicating complex information clearly and effectively.",
+    "service-6-features": {
+      "1": "Data Collection and Analysis",
+      "2": "Problem Identification and Assessment",
+      "3": "Design Solutions and Recommendations",
+      "4": "Technical Specifications and Calculations",
+      "5": "Conclusion and Future Considerations"
+    },
+    "service-7": "VALUE ENGINEERING",
+    "service-7-description": "To improve the value of a project by analyzing its functions. The goal is to enhance the project's performance, quality, and reliability while minimizing costs. It involves identifying and eliminating unnecessary expenditures,",
+    "service-7-features": {
+      "1": "Function Analysis",
+      "2": "Cost Reduction",
+      "3": "Alternative Solutions",
+      "4": "Efficiency Optimization",
+      "5": "Quality Maintenance"
+    },
+    "service-8": "ENGINEERING STUDIES",
+    "service-8-description": "Comprehensive analyses conducted to evaluate various aspects of engineering projects. These studies aim to provide detailed insights, inform decision-making, and ensure the feasibility, safety, and efficiency of a project.",
+    "service-8-features": {
+      "1": "Gather & review all necessary engineering documents",
+      "2": "Site survey",
+      "3": "Check the performance of building and equipment",
+      "4": "Inspection, casting, and risk assessment",
+      "5": "Rectify identified issues"
+    },
+    "service-9": "LANDSCAPING",
+    "service-9-description": "Refers to the art and practice of designing and arranging outdoor spaces, including gardens, parks, and other natural environments, to enhance their aesthetic appeal, functionality, and environmental value. plants, hardscapes, and structures to create pleasing and functional outdoor areas.",
+    "service-9-features": {
+      "1": "Site Analysis and Design",
+      "2": "Plant Selection and Placement",
+      "3": "Hardscape Installation (e.g., pathways, walls)",
+      "4": "Irrigation Systems Design",
+      "5": "Maintenance and Seasonal Care"
+    },
+    "service-btn": "  SERVICE PROJECTS",
+    "title-1": "Our Services"
   },
   "slide to select the space of the services in m2": "slide to select the space of the services in m².",
-  "partners_words_about_noon": "partners words about noon",
-  "About_noon_consultants": "About noon consultants",
-  "mainText": "noon Consultants is one of the recognized Architecture in the KSA.",
-  "partners_of_success": "partners of success",
-  "new_branch": "New Branch",
-  "coming_soon": "coming soon Hail",
+  "team_text": "With years of experience collaborating with organizations across Saudi Arabia, our team has cultivated a deep, industry-specific knowledge base. Our projects are delivered by seasoned professionals with specialized expertise across key functional areas. Each team member is dedicated to providing high-quality, tailored services that align with our clients' goals contributing to the sustainable, innovative, and enduring success of every project.",
   "viewProjects": "explore projects"
 }

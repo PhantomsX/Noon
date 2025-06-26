@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { Afacad } from "next/font/google";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { motion, AnimatePresence } from "motion/react";
 import UploadBox from "./components/upload-component";
@@ -103,13 +102,6 @@ const tabContentVariants = {
   },
 };
 
-const afacad = Afacad({
-  subsets: ["latin"],
-  variable: "--font-afacad",
-  weight: ["500", "400"],
-  display: "swap",
-});
-
 const tabSections = [
   { value: "general", label: "GENERAL INFORMATION" },
   { value: "job", label: "JOB DESCRIPTION" },
@@ -125,7 +117,7 @@ const PersonalDetails = () => (
   <div className="flex flex-col h-full">
     <motion.h3
       variants={titleVariants}
-      className="text-xl sm:text-2xl font-elegance font-bold mb-2 text-bg"
+      className="text-xl sm:text-2xl ltr:font-elegance rtl:font-amiri font-bold mb-2 text-bg"
     >
       PERSONAL DETAILS
     </motion.h3>
@@ -175,7 +167,7 @@ const JobDescription = () => (
   <div className="flex flex-col h-full">
     <motion.h3
       variants={titleVariants}
-      className="text-xl sm:text-2xl font-elegance font-bold mb-2 text-bg"
+      className="text-xl sm:text-2xl ltr:font-elegance rtl:font-amiri font-bold mb-2 text-bg"
     >
       JOB DESCRIPTION
     </motion.h3>
@@ -216,7 +208,7 @@ const EmployeeDocument = () => (
   <div className="flex flex-col h-full">
     <motion.h3
       variants={titleVariants}
-      className="text-xl font-bold font-elegance mb-2 text-bg"
+      className="text-xl font-bold ltr:font-elegance rtl:font-amiri mb-2 text-bg"
     >
       EMPLOYEE DOCUMENT
     </motion.h3>
@@ -238,7 +230,7 @@ const SalaryDetails = () => (
   <div className="flex flex-col h-full">
     <motion.h3
       variants={titleVariants}
-      className="text-xl font-bold mb-2 font-elegance text-bg"
+      className="text-xl font-bold mb-2 ltr:font-elegance rtl:font-amiri text-bg"
     >
       SALARY DETAILS
     </motion.h3>
@@ -288,7 +280,7 @@ const BankInformation = () => (
   <div className="flex flex-col h-full">
     <motion.h3
       variants={titleVariants}
-      className="text-xl font-bold font-elegance mb-2 text-bg"
+      className="text-xl font-bold ltr:font-elegance rtl:font-amiri mb-2 text-bg"
     >
       BANK INFORMATION
     </motion.h3>
@@ -338,7 +330,7 @@ const MedicalInsurance = () => (
   <div className="flex flex-col h-full">
     <motion.h3
       variants={titleVariants}
-      className="text-xl font-bold font-elegance mb-2 text-bg"
+      className="text-xl font-bold ltr:font-elegance rtl:font-amiri mb-2 text-bg"
     >
       MEDICAL INSURANCE
     </motion.h3>
@@ -393,13 +385,12 @@ const ProfilePage = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      style={afacad.style}
-      className="p-4 sm:p-6 md:p-8"
+      className="p-4 sm:p-6 md:p-8 ltr:font-neue-montreal rtl:font-noto-kufi-arabic"
     >
       {/* Profile Title */}
       <motion.h1
         variants={titleVariants}
-        className="text-3xl md:text-4xl font-elegance font-bold mb-6 md:mb-8 text-bg"
+        className="text-3xl md:text-4xl ltr:font-elegance rtl:font-amiri font-bold mb-6 md:mb-8 text-bg"
       >
         Profile
       </motion.h1>
@@ -429,7 +420,7 @@ const ProfilePage = () => {
           <motion.div variants={itemVariants} className="md:col-span-4">
             <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
               <motion.h1
-                className="text-2xl font-elegance sm:text-3xl md:text-4xl font-bold text-bg"
+                className="text-2xl ltr:font-elegance rtl:font-amiri sm:text-3xl md:text-4xl font-bold text-bg"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
@@ -493,7 +484,7 @@ const ProfilePage = () => {
           >
             <motion.h3
               variants={titleVariants}
-              className="text-xl font-elegance sm:text-2xl font-bold mb-4 md:mb-6 text-bg"
+              className="text-xl ltr:font-elegance rtl:font-amiri sm:text-2xl font-bold mb-4 md:mb-6 text-bg"
             >
               NOTES TO EMPLOYEES
             </motion.h3>
@@ -615,7 +606,7 @@ const ProfilePage = () => {
                   <motion.div variants={containerVariants}>
                     <motion.h3
                       variants={titleVariants}
-                      className="text-xl font-bold mb-2 font-elegance text-bg"
+                      className="text-xl font-bold mb-2 ltr:font-elegance rtl:font-amiri text-bg"
                     >
                       PERSONAL CV
                     </motion.h3>
