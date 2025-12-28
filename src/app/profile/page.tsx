@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion, AnimatePresence } from "motion/react";
 import UploadBox from "./components/upload-component";
 
@@ -24,12 +24,6 @@ const titleVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 400,
-      damping: 30,
-      duration: 0.25,
-    },
   },
 };
 
@@ -117,6 +111,18 @@ const PersonalDetails = () => (
   <div className="flex flex-col h-full">
     <motion.h3
       variants={titleVariants}
+      transition={{
+        type: "spring",
+        stiffness: 400,
+        damping: 30,
+        duration: 0.25,
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 400,
+        damping: 30,
+        duration: 0.25,
+      }}
       className="text-xl sm:text-2xl ltr:font-elegance rtl:font-amiri font-bold mb-2 text-bg"
     >
       PERSONAL DETAILS
@@ -167,6 +173,18 @@ const JobDescription = () => (
   <div className="flex flex-col h-full">
     <motion.h3
       variants={titleVariants}
+      transition={{
+        type: "spring",
+        stiffness: 400,
+        damping: 30,
+        duration: 0.25,
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 400,
+        damping: 30,
+        duration: 0.25,
+      }}
       className="text-xl sm:text-2xl ltr:font-elegance rtl:font-amiri font-bold mb-2 text-bg"
     >
       JOB DESCRIPTION
@@ -208,6 +226,12 @@ const EmployeeDocument = () => (
   <div className="flex flex-col h-full">
     <motion.h3
       variants={titleVariants}
+      transition={{
+        type: "spring",
+        stiffness: 400,
+        damping: 30,
+        duration: 0.25,
+      }}
       className="text-xl font-bold ltr:font-elegance rtl:font-amiri mb-2 text-bg"
     >
       EMPLOYEE DOCUMENT
@@ -230,6 +254,12 @@ const SalaryDetails = () => (
   <div className="flex flex-col h-full">
     <motion.h3
       variants={titleVariants}
+      transition={{
+        type: "spring",
+        stiffness: 400,
+        damping: 30,
+        duration: 0.25,
+      }}
       className="text-xl font-bold mb-2 ltr:font-elegance rtl:font-amiri text-bg"
     >
       SALARY DETAILS
@@ -280,6 +310,12 @@ const BankInformation = () => (
   <div className="flex flex-col h-full">
     <motion.h3
       variants={titleVariants}
+      transition={{
+        type: "spring",
+        stiffness: 400,
+        damping: 30,
+        duration: 0.25,
+      }}
       className="text-xl font-bold ltr:font-elegance rtl:font-amiri mb-2 text-bg"
     >
       BANK INFORMATION
@@ -330,6 +366,12 @@ const MedicalInsurance = () => (
   <div className="flex flex-col h-full">
     <motion.h3
       variants={titleVariants}
+      transition={{
+        type: "spring",
+        stiffness: 400,
+        damping: 30,
+        duration: 0.25,
+      }}
       className="text-xl font-bold ltr:font-elegance rtl:font-amiri mb-2 text-bg"
     >
       MEDICAL INSURANCE
@@ -390,6 +432,12 @@ const ProfilePage = () => {
       {/* Profile Title */}
       <motion.h1
         variants={titleVariants}
+      transition={{
+        type: "spring",
+        stiffness: 400,
+        damping: 30,
+        duration: 0.25,
+      }}
         className="text-3xl md:text-4xl ltr:font-elegance rtl:font-amiri font-bold mb-6 md:mb-8 text-bg"
       >
         Profile
@@ -484,6 +532,12 @@ const ProfilePage = () => {
           >
             <motion.h3
               variants={titleVariants}
+      transition={{
+        type: "spring",
+        stiffness: 400,
+        damping: 30,
+        duration: 0.25,
+      }}
               className="text-xl ltr:font-elegance rtl:font-amiri sm:text-2xl font-bold mb-4 md:mb-6 text-bg"
             >
               NOTES TO EMPLOYEES
@@ -492,9 +546,9 @@ const ProfilePage = () => {
               variants={itemVariants}
               className="text-white text-sm md:text-base"
             >
-              We're Excited To Have You On Our Employee Platform. Here, We Share
+              We&apos;re Excited To Have You On Our Employee Platform. Here, We Share
               Updates, Celebrate Wins, And Grow Together As One Team Shaping The
-              Future. Thank You For Being Part Of noon's Journey Toward
+              Future. Thank You For Being Part Of noon&apos;s Journey Toward
               Excellence. Together, We Engineer The Difference.
             </motion.p>
           </motion.div>
@@ -606,6 +660,12 @@ const ProfilePage = () => {
                   <motion.div variants={containerVariants}>
                     <motion.h3
                       variants={titleVariants}
+      transition={{
+        type: "spring",
+        stiffness: 400,
+        damping: 30,
+        duration: 0.25,
+      }}
                       className="text-xl font-bold mb-2 ltr:font-elegance rtl:font-amiri text-bg"
                     >
                       PERSONAL CV

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Upload, Check, AlertCircle, Loader2 } from "lucide-react";
 import { motion, AnimatePresence, useAnimation } from "motion/react";
 
@@ -14,23 +14,10 @@ const containerVariants = {
   animate: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.4,
-      ease: [0.25, 1, 0.5, 1],
-      when: "beforeChildren",
-      staggerChildren: 0.04,
-    },
   },
   exit: {
     opacity: 0,
     y: -10,
-    transition: {
-      duration: 0.25,
-      ease: [0.25, 0.1, 0.25, 1],
-      when: "afterChildren",
-      staggerChildren: 0.03,
-      staggerDirection: -1,
-    },
   },
 };
 
@@ -40,52 +27,22 @@ const iconVariants = {
     scale: 1,
     opacity: 1,
     rotateY: 0,
-    transition: {
-      type: "spring",
-      stiffness: 400,
-      damping: 17,
-      duration: 0.3,
-    },
   },
   hover: {
     scale: 1.1,
     y: -3,
-    transition: {
-      type: "spring",
-      stiffness: 400,
-      damping: 12,
-      duration: 0.2,
-    },
   },
   drag: {
     scale: 1.15,
     y: -5,
     rotate: [0, -3, 3, -2, 0],
-    transition: {
-      rotate: {
-        duration: 0.8,
-        repeat: Infinity,
-        repeatType: "mirror",
-      },
-      type: "spring",
-      stiffness: 300,
-      damping: 10,
-      duration: 0.3,
-    },
   },
   success: {
     scale: [1, 1.2, 1],
     borderRadius: ["50%", "35%", "50%"],
-    transition: {
-      duration: 0.4,
-      ease: "easeInOut",
-    },
   },
   error: {
     x: [0, -3, 3, -3, 3, 0],
-    transition: {
-      duration: 0.4,
-    },
   },
 };
 
@@ -197,7 +154,7 @@ const UploadBox = ({ label }: UploadBoxProps) => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{
         duration: 0.4,
-        ease: [0.34, 1.56, 0.64, 1], // Custom spring-like easing
+        ease: "easeOut", // Custom spring-like easing
       }}
     >
       <motion.label
@@ -220,7 +177,7 @@ const UploadBox = ({ label }: UploadBoxProps) => {
         }}
         transition={{
           duration: 0.3,
-          ease: [0.34, 1.56, 0.64, 1],
+          ease: "easeOut",
         }}
       >
         {/* Background glow effect when dragging */}
@@ -276,6 +233,12 @@ const UploadBox = ({ label }: UploadBoxProps) => {
               initial="initial"
               animate="animate"
               exit="exit"
+              transition={{
+                duration: 0.4,
+                ease: "easeOut",
+                when: "beforeChildren",
+                staggerChildren: 0.04,
+              }}
               className="flex flex-col items-center justify-center p-2 sm:p-4 text-center relative"
             >
               <motion.div
@@ -296,6 +259,12 @@ const UploadBox = ({ label }: UploadBoxProps) => {
                     ? "error"
                     : "animate"
                 }
+                transition={{
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                  duration: 0.3,
+                }}
                 whileHover="hover"
               >
                 {uploadStatus === "success" ? (
@@ -415,6 +384,12 @@ const UploadBox = ({ label }: UploadBoxProps) => {
                 className="w-8 h-8 sm:w-12 sm:h-12 bg-[#f9c39d]/20 rounded-full flex items-center justify-center mb-2 sm:mb-3"
                 variants={iconVariants}
                 animate={isDragging ? "drag" : "animate"}
+                transition={{
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                  duration: 0.3,
+                }}
                 whileHover="hover"
               >
                 <Upload className="text-[#f9c39d]" size={16} />

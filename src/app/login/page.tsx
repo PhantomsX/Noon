@@ -64,7 +64,7 @@ const LoginPage = () => {
 
         <div className="flex justify-between items-center pt-2">
           <button className="text-sm text-white hover:text-[#f9c39d] transition-colors">
-            Can't sign in?
+            Can&apos;t sign in?
           </button>
           <motion.button
             whileHover={{ scale: 1.02 }}

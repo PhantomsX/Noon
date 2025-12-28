@@ -4,10 +4,8 @@ import tiktok from "@/public/tiktok.svg";
 import snapchat from "@/public/snapchat.svg";
 import linkedIn from "@/public/linkedIn.svg";
 import phone from "@/public/phone.svg";
-import calc from "@/public/calculator.svg";
 import Image from "next/image";
 import Link from "next/link";
-import { useMediaQuery } from "usehooks-ts";
 import { cn } from "@/lib/utils";
 
 const Sidebar = ({
@@ -15,7 +13,6 @@ const Sidebar = ({
 }: {
   orientation?: "vertical" | "horizontal";
 }) => {
-  const isMobile = useMediaQuery("(max-width: 768px)");
   return (
     <nav
       className={cn(`px-1.5 py-2.5 [&_img]:size-5 flex gap-7`, {

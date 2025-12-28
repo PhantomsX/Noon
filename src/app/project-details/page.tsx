@@ -4,8 +4,19 @@ import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
 
+interface Project {
+  title?: string;
+  description?: string;
+  location?: string;
+  area?: string;
+  scope?: string;
+  status?: string;
+  image?: string;
+  [key: string]: unknown;
+}
+
 const Page = () => {
-  const [project, setProject] = useState<any>(null);
+  const [project, setProject] = useState<Project | null>(null);
 
   const t = useTranslations("projects");
   useEffect(() => {

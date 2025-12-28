@@ -3,7 +3,6 @@
 import React, { useState, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { motion, useInView } from "motion/react";
-import Image from "next/image";
 import PageTitle from "../components/PageTitle";
 
 // Job positions data

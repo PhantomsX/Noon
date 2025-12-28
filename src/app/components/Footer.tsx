@@ -3,12 +3,10 @@ import Image from "next/image";
 import React from "react";
 import logoEn from "@/public/icons/big-logo-en.svg";
 import logoAr from "@/public/icons/big-logo-ar.svg";
-import { useTranslations, useLocale } from "next-intl";
+import { useLocale } from "next-intl";
 import { motion } from "motion/react";
-import Sidebar from "./Sidebar";
 
 const Footer = () => {
-  const t = useTranslations("");
   const locale = useLocale();
   return (
     <motion.footer
@@ -21,18 +19,10 @@ const Footer = () => {
     >
       <span
         dir={locale === "ar" ? "rtl" : "ltr"}
-        className="justify-self-center md:justify-self-start text-bg max-md:text-[10px] md:text-base"
+        className="justify-self-center md:justify-self-start text-[#C6A87D]/50 max-md:text-[8px] md:text-[10px] uppercase tracking-widest font-neue-montreal"
       >
-        {t("rights")}
+        All Right Reserved To Noon CONSULTANTS 2025. ®
       </span>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 4.8 }}
-        className="place-self-center z-[1]"
-      >
-        <Sidebar orientation="horizontal" />
-      </motion.div>
       <div className="justify-self-center md:justify-self-end select-none pointer-events-none">
         <Image
           src={locale === "ar" ? logoAr : logoEn}

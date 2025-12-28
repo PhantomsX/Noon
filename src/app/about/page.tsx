@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { useTranslations } from "next-intl";
 import ceo from "@/public/images/ceoimage.svg";
 import suadiarabia from "@/public/suadiarabia.svg";
@@ -8,7 +8,6 @@ import Image from "next/image";
 import aboutBg from "@/public/images/background-about.png";
 import { motion, useInView } from "motion/react";
 import PageTitle from "../components/PageTitle";
-import Sidebar from "../components/Sidebar";
 
 // Team members data
 const teamMembers = [

@@ -1,6 +1,6 @@
 "use client";
 import { useTranslations } from "next-intl";
-import React, { useState, useMemo, useRef } from "react";
+import React, { useState, useMemo } from "react";
 import { motion } from "motion/react";
 
 import Image from "next/image";
@@ -85,7 +85,7 @@ const Page = () => {
   const isMobile = useMediaQuery("(max-width: 768px)");
   const router = useRouter();
 
-  const services = [
+  const services = useMemo(() => [
     {
       type: "architecture",
       title: t("servicess.service-1"),
@@ -124,7 +124,7 @@ const Page = () => {
         t("servicess.service-10-features.5"),
       ],
     },
-  ];
+  ], [t]);
 
   const categories = ["all", "urban", "architecture", "interior design"];
 
@@ -134,7 +134,7 @@ const Page = () => {
 
   const selectedService = useMemo(
     () => services.find((service) => service?.type === selectedType),
-    [selectedType]
+    [selectedType, services]
   );
 
   return (
