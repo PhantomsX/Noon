@@ -25,13 +25,12 @@ const NavbarDropdown = () => {
   useOnClickOutside(menuRef, closeMenu);
 
   const menuItems = [
-    { title: "about", href: "/about" },
-    { title: "projectsTitle", href: "/projects" },
-    { title: "services", href: "/services" },
-    { title: "careers.title", href: "/careers" },
-    // { title: "login", href: "/login" },
-    // { title: "register", href: "/register" },
-    // { title: "profile", href: "/profile" },
+    { title: "ABOUT US", href: "/about" },
+    { title: "OUR PROJECTS", href: "/projects" },
+    { title: "OUR SERVICES", href: "/services" },
+    { title: "BLOGS", href: "/blogs" },
+    { title: "CAREERS", href: "/careers" },
+    { title: "PROFILE", href: "/profile" },
   ];
 
   const toggleMenu = () => {
@@ -46,58 +45,67 @@ const NavbarDropdown = () => {
   };
 
   return (
-    <div ref={menuRef} className="relative md:hidden">
+    <div ref={menuRef} className="relative lg:hidden">
       <motion.button
         id="menu-button"
         onClick={toggleMenu}
         className={cn(
           "btn btn-square btn-ghost p-2 transition-all duration-300",
-          isOpen ? "rotate-90" : ""
+          isOpen ? "rotate-90" : "",
         )}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        aria-label={isOpen ? "Close menu" : "Open menu"}
+        aria-label={isOpen ? t("aria.close_menu") : t("aria.open_menu")}
       >
-        {isOpen ? <X /> : <Menu />}
+        {isOpen ? <X className="text-[#f9c39d]" /> : <Menu />}
       </motion.button>
 
       <AnimatePresence>
         {isVisible && (
           <motion.div
             id="dropdown-menu"
-            initial={{ opacity: 0, y: -10 }}
-            animate={isOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            initial={{ opacity: 0, scale: 0.95, y: -20 }}
+            animate={
+              isOpen
+                ? { opacity: 1, scale: 1, y: 0 }
+                : { opacity: 0, scale: 0.95, y: -20 }
+            }
+            exit={{ opacity: 0, scale: 0.95, y: -20 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
             className={cn(
-              "absolute right-0 mt-2 w-72 rounded-lg bg-black/90 backdrop-blur-sm shadow-xl z-50 overflow-hidden",
-              "ring-1 ring-white/10"
+              "absolute mt-2 w-72 rounded-2xl bg-black/95 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-50 overflow-hidden",
+              "border border-[#f9c39d]/20",
+              locale === "ar" ? "left-0" : "right-0",
             )}
             style={{
               position: "fixed",
-              top: "5rem",
-              right: "1rem",
+              top: "5.5rem",
+              ...(locale === "ar" ? { left: "1.25rem" } : { right: "1.25rem" }),
             }}
           >
-            <ul className="py-2">
+            <ul className="py-4 px-2">
               {menuItems.map((item, index) => (
                 <motion.li
                   key={index}
-                  initial={{ x: -20, opacity: 0 }}
+                  initial={{ x: locale === "ar" ? 20 : -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{
                     delay: 0.05 * index,
                     duration: 0.3,
                   }}
-                  className="hover:bg-white/10 transition-colors"
+                  className="mb-1"
                 >
                   <Link
                     href={item.href}
                     onClick={closeMenu}
-                    className="px-4 py-3 flex items-center text-white/90 hover:text-white text-lg font-medium"
+                    className={cn(
+                      "group px-4 py-3 flex items-center rounded-xl transition-all duration-300",
+                      "text-white/80 hover:bg-[#f9c39d]/10 hover:text-[#f9c39d]",
+                      "text-lg font-medium tracking-wide",
+                    )}
                     prefetch
                   >
-                    <span>{t(item.title)}</span>
+                    <span className="capitalize">{t(item.title)}</span>
                   </Link>
                 </motion.li>
               ))}
@@ -111,7 +119,7 @@ const NavbarDropdown = () => {
               <Image
                 src={locale === "ar" ? logoAr : logoEn}
                 draggable={false}
-                alt="logo"
+                alt={t("alt.logo")}
                 width={160}
                 height={60}
                 className="opacity-80 hover:opacity-100 transition-opacity"

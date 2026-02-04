@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Upload, Check, AlertCircle, Loader2 } from "lucide-react";
 import { motion, AnimatePresence, useAnimation } from "motion/react";
+import { useTranslations } from "next-intl";
 
 type UploadBoxProps = {
   label: string;
@@ -50,7 +51,7 @@ const iconVariants = {
 const Particle = ({ index }: { index: number }) => {
   return (
     <motion.div
-      className="absolute w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-gradient-to-r from-[#f9c39d] to-[#f9a56a]"
+      className="absolute w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-linear-to-r from-[#f9c39d] to-[#f9a56a]"
       initial={{
         opacity: 1,
         scale: 0,
@@ -83,6 +84,7 @@ const UploadBox = ({ label }: UploadBoxProps) => {
   const [uploadStatus, setUploadStatus] = useState<
     "idle" | "uploading" | "success" | "error"
   >("idle");
+  const t = useTranslations("profile");
   const [showParticles, setShowParticles] = useState(false);
   const controls = useAnimation();
 
@@ -184,7 +186,7 @@ const UploadBox = ({ label }: UploadBoxProps) => {
         <AnimatePresence>
           {isDragging && (
             <motion.div
-              className="absolute inset-0 bg-gradient-to-tr from-[#f9c39d]/20 via-[#f9c39d]/5 to-transparent"
+              className="absolute inset-0 bg-linear-to-tr from-[#f9c39d]/20 via-[#f9c39d]/5 to-transparent"
               initial={{ opacity: 0 }}
               animate={{
                 opacity: 1,
@@ -246,24 +248,36 @@ const UploadBox = ({ label }: UploadBoxProps) => {
                   uploadStatus === "success"
                     ? "bg-green-500/20"
                     : uploadStatus === "error"
-                    ? "bg-red-500/20"
-                    : uploadStatus === "uploading"
-                    ? "bg-[#f9c39d]/30"
-                    : "bg-[#f9c39d]/20"
+                      ? "bg-red-500/20"
+                      : uploadStatus === "uploading"
+                        ? "bg-[#f9c39d]/30"
+                        : "bg-[#f9c39d]/20"
                 }`}
                 variants={iconVariants}
                 animate={
                   uploadStatus === "success"
                     ? "success"
                     : uploadStatus === "error"
-                    ? "error"
-                    : "animate"
+                      ? "error"
+                      : "animate"
                 }
                 transition={{
-                  type: "spring",
-                  stiffness: 400,
-                  damping: 17,
-                  duration: 0.3,
+                  type:
+                    uploadStatus === "success" || uploadStatus === "error"
+                      ? "tween"
+                      : "spring",
+                  stiffness: uploadStatus === "idle" ? 400 : undefined,
+                  damping: uploadStatus === "idle" ? 17 : undefined,
+                  duration:
+                    uploadStatus === "success"
+                      ? 0.5
+                      : uploadStatus === "error"
+                        ? 0.4
+                        : 0.3,
+                  ease:
+                    uploadStatus === "success" || uploadStatus === "error"
+                      ? "easeOut"
+                      : undefined,
                 }}
                 whileHover="hover"
               >
@@ -274,7 +288,12 @@ const UploadBox = ({ label }: UploadBoxProps) => {
                       scale: [0, 1.2, 1],
                       rotate: [0, 10, 0],
                     }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
+                    transition={{
+                      type: "tween",
+                      duration: 0.5,
+                      delay: 0.1,
+                      ease: "easeOut",
+                    }}
                   >
                     <Check className="text-green-500" size={18} />
                   </motion.div>
@@ -285,7 +304,12 @@ const UploadBox = ({ label }: UploadBoxProps) => {
                       scale: [0, 1.2, 1],
                       rotate: [0, -10, 0],
                     }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
+                    transition={{
+                      type: "tween",
+                      duration: 0.5,
+                      delay: 0.1,
+                      ease: "easeOut",
+                    }}
                   >
                     <AlertCircle className="text-red-500" size={18} />
                   </motion.div>
@@ -306,7 +330,7 @@ const UploadBox = ({ label }: UploadBoxProps) => {
               </motion.div>
 
               <motion.p
-                className="text-xs sm:text-sm text-white font-medium truncate w-full max-w-[120px] sm:max-w-full"
+                className="text-xs sm:text-sm text-white font-medium wrap-break-word text-center w-full max-w-[200px] sm:max-w-full px-2"
                 initial={{ opacity: 0, y: 5 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
@@ -340,7 +364,7 @@ const UploadBox = ({ label }: UploadBoxProps) => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2 }}
                   >
-                    Uploaded
+                    {t("uploadStatus.uploaded")}
                   </motion.span>
                 )}
                 {uploadStatus === "error" && (
@@ -350,7 +374,7 @@ const UploadBox = ({ label }: UploadBoxProps) => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2 }}
                   >
-                    Failed
+                    {t("uploadStatus.failed")}
                   </motion.span>
                 )}
                 {uploadStatus === "uploading" && (
@@ -366,7 +390,7 @@ const UploadBox = ({ label }: UploadBoxProps) => {
                       x: { delay: 0.2 },
                     }}
                   >
-                    Uploading...
+                    {t("uploadStatus.uploading")}
                   </motion.span>
                 )}
               </motion.div>
@@ -414,9 +438,7 @@ const UploadBox = ({ label }: UploadBoxProps) => {
                   color: { duration: 0.3 },
                 }}
               >
-                {isDragging
-                  ? "Drop to Upload"
-                  : "Drag & Drop or Click to Upload"}
+                {isDragging ? t("uploadPrompt.drop") : t("uploadPrompt.click")}
               </motion.p>
 
               <motion.p
@@ -430,7 +452,7 @@ const UploadBox = ({ label }: UploadBoxProps) => {
                   delay: 0.25,
                 }}
               >
-                Supports JPG, PNG, PDF
+                {t("uploadPrompt.supports")}
               </motion.p>
             </motion.div>
           )}

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
+import { ChevronLeft, ChevronRight, Slash } from "lucide-react";
 
 export default function Testimonials() {
   const t = useTranslations();
@@ -9,26 +10,26 @@ export default function Testimonials() {
   const testimonials = [
     {
       text: t("clientText1"),
-      name: "Ahmed Al-Mansouri",
-      title: "CEO of Skyline Developers",
+      name: t("testimonials.ahmed_al_mansouri"),
+      title: t("testimonials.ceo_skyline"),
       image: "/images/engineer.svg",
     },
     {
       text: t("clientText1"),
-      name: "Ahmed Al-Mansouri",
-      title: "CEO of Skyline Developers",
+      name: t("testimonials.ahmed_al_mansouri"),
+      title: t("testimonials.ceo_skyline"),
       image: "/images/engineer.svg",
     },
     {
       text: t("clientText1"),
-      name: "Ahmed Al-Mansouri",
-      title: "CEO of Skyline Developers",
+      name: t("testimonials.ahmed_al_mansouri"),
+      title: t("testimonials.ceo_skyline"),
       image: "/images/engineer.svg",
     },
   ];
 
   return (
-    <section className="w-full bg-black py-40 px-4 md:px-2 overflow-hidden">
+    <section className="w-full py-20 px-4 md:px-2 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <h2 className="mb-20 font-elegance text-4xl md:text-5xl text-[#C6A87D] text-center">
           {t("partners_words_about_noon")}
@@ -72,11 +73,13 @@ export default function Testimonials() {
         {/* Navigation Controls */}
         <div className="mt-16 flex justify-end items-center gap-6 font-neue-montreal text-xs tracking-widest text-gray-400 uppercase">
           <button className="hover:text-[#C6A87D] transition-colors flex items-center gap-2">
-            <span className="text-[10px]">‹</span> back
+            <ChevronLeft className="size-3.5 rtl:rotate-180" />{" "}
+            {t("common.back")}
           </button>
-          <span className="text-gray-700 font-light">\</span>
+          <Slash className="-rotate-20" />
           <button className="hover:text-[#C6A87D] transition-colors flex items-center gap-2">
-            Next <span className="text-[10px]">›</span>
+            {t("common.next")}{" "}
+            <ChevronRight className="size-3.5 rtl:rotate-180" />
           </button>
         </div>
       </div>

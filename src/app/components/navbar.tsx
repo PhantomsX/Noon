@@ -6,42 +6,17 @@ import logoAr from "@/public/icons/big-logo-ar.svg";
 import Link from "next/link";
 import { Translate } from "./icons";
 import { setUserLocale } from "@/i18n/locale";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import NavbarDropdown from "./NavbarDropdown";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import NavLink from "./NavLink";
+import { Search, Moon, Sun, Globe } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const locale = useLocale();
+  const t = useTranslations();
   const pathname = usePathname();
-  const isHomePage = pathname === "/";
-
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling down and past 100px
-        setIsVisible(false);
-      } else if (currentScrollY < lastScrollY) {
-        // Scrolling up
-        setIsVisible(true);
-      }
-
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollY]);
 
   const handleChangeLang = () => {
     startTransition(() => {
@@ -51,81 +26,118 @@ const Navbar = () => {
 
   const AnimatedLogo = motion.create(Image);
 
+  const navLinks = [
+    { title: "ABOUT US", href: "/about" },
+    { title: "OUR PROJECTS", href: "/projects" },
+    { title: "OUR SERVICES", href: "/services" },
+    { title: "BLOGS", href: "/blogs" },
+    { title: "CAREERS", href: "/careers" },
+    { title: "PROFILE", href: "/profile" },
+  ];
+
+  // Check if a link is active
+  const isActive = (href: string) => {
+    return pathname === href || pathname?.startsWith(href + "/");
+  };
+
   return (
-    <motion.div
+    <motion.nav
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={cn(
-        `flex items-center justify-between z-50 h-24 px-4 md:px-10 sticky top-0 transition-all duration-300`,
-        isHomePage
-          ? "bg-transparent backdrop-blur-none shadow-none"
-          : "bg-black/20 backdrop-blur-sm shadow-sm",
-        !isVisible && "-translate-y-full" // Hide navbar when scrolling down
+        `sticky top-0 left-0 right-0 z-50 transition-all duration-300`,
+        `bg-black/60 backdrop-blur-xl border-b border-white/10`,
       )}
     >
-      <Link href={"/"}>
-        <AnimatedLogo
-          src={locale === "ar" ? logoAr : logoEn}
-          draggable={false}
-          priority
-          alt="logo"
-          className="w-24 cursor-pointer"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        />
-      </Link>
+      <div className="max-w-[1920px] mx-auto px-4 sm:px-6 md:px-12 lg:px-16">
+        <div className="flex items-center justify-between h-16 md:h-20 lg:h-24">
+          {/* Logo */}
+          <Link href={"/"} className="shrink-0 relative z-10">
+            <AnimatedLogo
+              src={locale === "ar" ? logoAr : logoEn}
+              draggable={false}
+              priority
+              alt={t("alt.logo")}
+              className="w-12 sm:w-16 md:w-20 lg:w-24 h-auto cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            />
+          </Link>
 
-      {/* Desktop Navigation Links */}
-      <motion.div
-        className="hidden md:flex gap-x-12"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3, staggerChildren: 0.05 }}
-      >
-        <NavLink title="about" href="/about" />
-        <NavLink title="projectsTitle" href="/projects" />
-        <NavLink title="services" href="/services" />
-        <NavLink title="contact" href="/contact" />
-        <NavLink title="careers.title" href="/careers" />
-        {/* <NavLink title="login" href="/login" />
-        <NavLink title="register" href="/register" /> */}
-      </motion.div>
-
-      <motion.div
-        className="flex-none gap-x-1 flex"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.2 }}
-      >
-        <Link href="/profile">
+          {/* Desktop Navigation Links - Center */}
           <motion.div
-            className="btn btn-ghost btn-circle avatar"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            className="hidden lg:flex items-center gap-x-6 xl:gap-x-10 absolute left-1/2 -translate-x-1/2"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, staggerChildren: 0.05 }}
           >
-            <div className="w-10 rounded-full">
-              <Image
-                src="/images/ceoimage.svg"
-                alt="Profile"
-                width={40}
-                height={40}
-                className="object-cover"
-              />
-            </div>
+            {navLinks.map((link, index) => (
+              <motion.div
+                key={link.href}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 + index * 0.05 }}
+              >
+                <Link
+                  href={link.href}
+                  className={cn(
+                    "transition-all duration-300 text-sm font-semibold tracking-widest uppercase",
+                    isActive(link.href)
+                      ? "bg-[linear-gradient(270deg,#BE7B2C_0%,#F9C39D_100%)] bg-clip-text text-transparent"
+                      : "text-white/60 hover:text-white",
+                  )}
+                >
+                  {t(link.title)}
+                </Link>
+              </motion.div>
+            ))}
           </motion.div>
-        </Link>
-        <motion.button
-          onClick={handleChangeLang}
-          className="btn btn-square btn-ghost"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <Translate />
-        </motion.button>
-        <NavbarDropdown />
-      </motion.div>
-    </motion.div>
+
+          {/* Right Side Icons */}
+          <motion.div
+            className="flex items-center gap-1 sm:gap-2 md:gap-3"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            {/* Search Icon */}
+            <motion.button
+              className="btn btn-ghost btn-circle btn-sm md:btn-md text-white/70 hover:text-white"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              aria-label={t("aria.search")}
+            >
+              <Search className="size-4 md:size-5" />
+            </motion.button>
+
+            {/* Dark Mode Toggle */}
+            <motion.button
+              className="btn btn-ghost btn-circle btn-sm md:btn-md text-white/70 hover:text-white"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              aria-label={t("aria.toggle_dark_mode")}
+            >
+              <Moon className="size-4 md:size-5" />
+            </motion.button>
+
+            {/* Language Toggle */}
+            <motion.button
+              onClick={handleChangeLang}
+              className="btn btn-ghost btn-circle btn-sm md:btn-md text-white/70 hover:text-white"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              aria-label={t("aria.change_language")}
+            >
+              <Globe className="size-4 md:size-5" />
+            </motion.button>
+
+            {/* Mobile Menu */}
+            <NavbarDropdown />
+          </motion.div>
+        </div>
+      </div>
+    </motion.nav>
   );
 };
 

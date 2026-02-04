@@ -9,45 +9,7 @@ import aboutBg from "@/public/images/background-about.png";
 import { motion, useInView } from "motion/react";
 import PageTitle from "../components/PageTitle";
 
-// Team members data
-const teamMembers = [
-  {
-    id: 1,
-    name: "DR. NIZAR EL SAYED",
-    role: "CHAIRMAN & FOUNDER",
-    image: "/images/ceoimage.svg",
-  },
-  {
-    id: 2,
-    name: "DR. NIZAR EL SAYED",
-    role: "CHAIRMAN & FOUNDER",
-    image: "/images/ceoimage.svg",
-  },
-  {
-    id: 3,
-    name: "DR. NIZAR EL SAYED",
-    role: "CHAIRMAN & FOUNDER",
-    image: "/images/ceoimage.svg",
-  },
-  {
-    id: 4,
-    name: "DR. NIZAR EL SAYED",
-    role: "CHAIRMAN & FOUNDER",
-    image: "/images/ceoimage.svg",
-  },
-  {
-    id: 5,
-    name: "DR. NIZAR EL SAYED",
-    role: "CHAIRMAN & FOUNDER",
-    image: "/images/ceoimage.svg",
-  },
-  {
-    id: 6,
-    name: "DR. NIZAR EL SAYED",
-    role: "CHAIRMAN & FOUNDER",
-    image: "/images/ceoimage.svg",
-  },
-];
+// Team member card component
 
 // Team member card component
 const TeamMemberCard = ({ member, index }) => {
@@ -80,7 +42,7 @@ const TeamMemberCard = ({ member, index }) => {
       }}
     >
       {/* Image Container */}
-      <div className="relative w-full aspect-[4/5] overflow-hidden rounded-t-xl">
+      <div className="relative w-full aspect-4/5 overflow-hidden rounded-t-xl">
         <motion.div
           className="w-full h-full"
           animate={{
@@ -99,7 +61,7 @@ const TeamMemberCard = ({ member, index }) => {
 
         {/* Gradient Overlay */}
         <motion.div
-          className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"
+          className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent"
           animate={{
             opacity: isHovered ? 0.8 : 0.6,
           }}
@@ -110,7 +72,7 @@ const TeamMemberCard = ({ member, index }) => {
       {/* Content */}
       <div className="p-6 text-center">
         <motion.h3
-          className="text-[#f9c39d] ltr:font-elegance rtl:font-amiri font-semibold text-lg sm:text-xl mb-2"
+          className="text-[#f9c39d] ltr:font-elegance rtl:font-font-noto-kufi-arabic font-semibold text-lg sm:text-xl mb-2"
           animate={{
             scale: isHovered ? 1.02 : 1,
           }}
@@ -131,7 +93,7 @@ const TeamMemberCard = ({ member, index }) => {
 
         {/* Decorative line */}
         <motion.div
-          className="w-12 h-0.5 bg-gradient-to-r from-[#be7b2c] to-[#f9c39d] mx-auto mt-3"
+          className="w-12 h-0.5 bg-linear-to-r from-[#be7b2c] to-[#f9c39d] mx-auto mt-3"
           animate={{
             scaleX: isHovered ? 1.5 : 1,
           }}
@@ -144,6 +106,45 @@ const TeamMemberCard = ({ member, index }) => {
 
 const AboutPage = () => {
   const t = useTranslations();
+  // Team members data
+  const teamMembers = [
+    {
+      id: 1,
+      name: t("team.name"),
+      role: t("team.role"),
+      image: "/images/ceoimage.svg",
+    },
+    {
+      id: 2,
+      name: t("team.name"),
+      role: t("team.role"),
+      image: "/images/ceoimage.svg",
+    },
+    {
+      id: 3,
+      name: t("team.name"),
+      role: t("team.role"),
+      image: "/images/ceoimage.svg",
+    },
+    {
+      id: 4,
+      name: t("team.name"),
+      role: t("team.role"),
+      image: "/images/ceoimage.svg",
+    },
+    {
+      id: 5,
+      name: t("team.name"),
+      role: t("team.role"),
+      image: "/images/ceoimage.svg",
+    },
+    {
+      id: 6,
+      name: t("team.name"),
+      role: t("team.role"),
+      image: "/images/ceoimage.svg",
+    },
+  ];
   return (
     <main className="container mx-auto px-4 sm:px-6 lg:px-8 ltr:font-neue-montreal rtl:font-noto-kufi-arabic">
       <motion.section
@@ -217,18 +218,18 @@ const AboutPage = () => {
               className="relative group"
             >
               {/* Background decoration */}
-              <div className="absolute -inset-4 bg-gradient-to-br from-[#BE7B2C]/20 to-[#F9C39D]/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+              <div className="absolute -inset-4 bg-linear-to-br from-[#BE7B2C]/20 to-[#F9C39D]/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
 
               {/* Main image container */}
               <div className="relative overflow-hidden rounded-2xl shadow-2xl group-hover:shadow-3xl transition-all duration-500">
                 <Image
                   src={aboutBg}
-                  alt="About Noon Consultants - Modern Architecture"
+                  alt={t("alt.modern_architecture")}
                   className="h-[400px] sm:h-[500px] lg:h-[600px] xl:h-[650px] w-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
 
                 {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
 
                 {/* Decorative elements */}
                 <div className="absolute top-6 right-6 w-16 h-16 border-2 border-[#F9C39D]/60 rounded-full group-hover:scale-110 group-hover:border-[#F9C39D]/80 transition-all duration-500" />
@@ -263,12 +264,12 @@ const AboutPage = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 1.9 }}
-              className="flex-shrink-0"
+              className="shrink-0"
             >
-              <div className="relative w-[180px] sm:w-[200px] lg:w-[220px] xl:w-[240px] aspect-[3/4] rounded-xl overflow-hidden shadow-lg">
+              <div className="relative w-[180px] sm:w-[200px] lg:w-[220px] xl:w-[240px] aspect-3/4 rounded-xl overflow-hidden shadow-lg">
                 <Image
                   src={ceo}
-                  alt="CEO Dr. Nizar El Sayed"
+                  alt={t("alt.ceo")}
                   fill
                   priority
                   className="object-cover"
@@ -287,9 +288,9 @@ const AboutPage = () => {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 2.1 }}
-                className="text-bg capitalize text-xl sm:text-2xl lg:text-3xl ltr:font-elegance rtl:font-amiri italic font-medium"
+                className="text-bg capitalize text-xl sm:text-2xl lg:text-3xl ltr:font-elegance rtl:font-font-noto-kufi-arabic italic font-medium"
               >
-                {t("Notes From The CEO")}
+                {t("common.notes_ceo")}
               </motion.h3>
 
               <div className="space-y-3">
@@ -331,7 +332,7 @@ const AboutPage = () => {
                   transition={{ duration: 0.5, delay: 2.6 }}
                   className="uppercase text-xs lg:text-sm tracking-wider text-gray-300"
                 >
-                  {t("CHAIRMAN")} & FOUNDER
+                  {t("CHAIRMAN")}
                 </motion.p>
               </motion.div>
             </motion.div>
@@ -752,7 +753,7 @@ const AboutPage = () => {
                   15+
                 </div>
                 <div className="text-sm text-gray-400 uppercase tracking-wide">
-                  Years Experience
+                  {t("common.years_experience")}
                 </div>
               </div>
               <div className="text-center lg:text-left">
@@ -760,7 +761,7 @@ const AboutPage = () => {
                   50+
                 </div>
                 <div className="text-sm text-gray-400 uppercase tracking-wide">
-                  Projects Completed
+                  {t("common.projects_completed")}
                 </div>
               </div>
               <div className="text-center lg:text-left">
@@ -768,7 +769,7 @@ const AboutPage = () => {
                   20+
                 </div>
                 <div className="text-sm text-gray-400 uppercase tracking-wide">
-                  Team Members
+                  {t("common.team_members")}
                 </div>
               </div>
             </motion.div>
@@ -813,7 +814,7 @@ const AboutPage = () => {
               className="relative p-6 lg:p-8 rounded-2xl bg-white/5 border border-gray-800/50 hover:bg-white/10 transition-all duration-300 group"
             >
               {/* Background decoration */}
-              <div className="absolute -inset-0.5 bg-gradient-to-br from-[#BE7B2C]/20 to-[#F9C39D]/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute -inset-0.5 bg-linear-to-br from-[#BE7B2C]/20 to-[#F9C39D]/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
               <div className="relative">
                 <motion.div
@@ -822,7 +823,7 @@ const AboutPage = () => {
                   transition={{ duration: 0.6, delay: 3.6 }}
                   className="flex items-center gap-4 mb-6"
                 >
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#BE7B2C] to-[#F9C39D] flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-linear-to-br from-[#BE7B2C] to-[#F9C39D] flex items-center justify-center">
                     <svg
                       className="w-6 h-6 text-white"
                       fill="currentColor"
@@ -836,7 +837,7 @@ const AboutPage = () => {
                     </svg>
                   </div>
                   <motion.h2
-                    className="text-bg capitalize ltr:font-elegance rtl:font-amiri font-medium text-2xl sm:text-3xl lg:text-4xl"
+                    className="text-bg capitalize ltr:font-elegance rtl:font-font-noto-kufi-arabic font-medium text-2xl sm:text-3xl lg:text-4xl"
                     whileHover={{ scale: 1.02 }}
                   >
                     {t("headquarters")}
@@ -856,7 +857,7 @@ const AboutPage = () => {
                     className="flex items-start gap-3 hover:translate-x-1 transition-transform"
                   >
                     <svg
-                      className="w-5 h-5 text-[#F9C39D] mt-1 flex-shrink-0"
+                      className="w-5 h-5 text-[#F9C39D] mt-1 shrink-0"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -879,7 +880,7 @@ const AboutPage = () => {
                     className="flex items-center gap-3 hover:translate-x-1 transition-transform"
                   >
                     <svg
-                      className="w-5 h-5 text-[#F9C39D] flex-shrink-0"
+                      className="w-5 h-5 text-[#F9C39D] shrink-0"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -887,6 +888,7 @@ const AboutPage = () => {
                     </svg>
                     <a
                       href="tel:00966114110000"
+                      dir="ltr"
                       className="text-white text-base lg:text-lg hover:text-bg transition-colors"
                     >
                       +966 11 411 0000
@@ -900,7 +902,7 @@ const AboutPage = () => {
                     className="flex items-center gap-3 hover:translate-x-1 transition-transform"
                   >
                     <svg
-                      className="w-5 h-5 text-[#F9C39D] flex-shrink-0"
+                      className="w-5 h-5 text-[#F9C39D] shrink-0"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -909,6 +911,7 @@ const AboutPage = () => {
                     </svg>
                     <a
                       href="mailto:info@noon.sa"
+                      dir="ltr"
                       className="text-white text-base lg:text-lg hover:text-bg transition-colors"
                     >
                       info@noon.sa
@@ -926,7 +929,7 @@ const AboutPage = () => {
               className="relative p-6 lg:p-8 rounded-2xl bg-white/5 border border-gray-800/50 hover:bg-white/10 transition-all duration-300 group"
             >
               {/* Background decoration */}
-              <div className="absolute -inset-0.5 bg-gradient-to-br from-[#F9C39D]/20 to-[#BE7B2C]/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute -inset-0.5 bg-linear-to-br from-[#F9C39D]/20 to-[#BE7B2C]/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
               <div className="relative">
                 <motion.div
@@ -935,7 +938,7 @@ const AboutPage = () => {
                   transition={{ duration: 0.6, delay: 4.2 }}
                   className="flex items-center gap-4 mb-6"
                 >
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#F9C39D] to-[#BE7B2C] flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-linear-to-br from-[#F9C39D] to-[#BE7B2C] flex items-center justify-center">
                     <svg
                       className="w-6 h-6 text-white"
                       fill="currentColor"
@@ -950,7 +953,7 @@ const AboutPage = () => {
                     </svg>
                   </div>
                   <motion.h2
-                    className="text-bg capitalize ltr:font-elegance rtl:font-amiri font-medium text-2xl sm:text-3xl lg:text-4xl"
+                    className="text-bg capitalize ltr:font-elegance rtl:font-font-noto-kufi-arabic font-medium text-2xl sm:text-3xl lg:text-4xl"
                     whileHover={{ scale: 1.02 }}
                   >
                     {t("branchOffice")}
@@ -970,7 +973,7 @@ const AboutPage = () => {
                     className="flex items-start gap-3 hover:translate-x-1 transition-transform"
                   >
                     <svg
-                      className="w-5 h-5 text-[#F9C39D] mt-1 flex-shrink-0"
+                      className="w-5 h-5 text-[#F9C39D] mt-1 shrink-0"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -993,7 +996,7 @@ const AboutPage = () => {
                     className="flex items-center gap-3 hover:translate-x-1 transition-transform"
                   >
                     <svg
-                      className="w-5 h-5 text-[#F9C39D] flex-shrink-0"
+                      className="w-5 h-5 text-[#F9C39D] shrink-0"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -1001,6 +1004,7 @@ const AboutPage = () => {
                     </svg>
                     <a
                       href="tel:00966124199999"
+                      dir="ltr"
                       className="text-white text-base lg:text-lg hover:text-bg transition-colors"
                     >
                       +966 12 419 9999
@@ -1014,7 +1018,7 @@ const AboutPage = () => {
                     className="flex items-center gap-3 hover:translate-x-1 transition-transform"
                   >
                     <svg
-                      className="w-5 h-5 text-[#F9C39D] flex-shrink-0"
+                      className="w-5 h-5 text-[#F9C39D] shrink-0"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -1023,6 +1027,7 @@ const AboutPage = () => {
                     </svg>
                     <a
                       href="mailto:info@noon.sa"
+                      dir="ltr"
                       className="text-white text-base lg:text-lg hover:text-bg transition-colors"
                     >
                       info@noon.sa
@@ -1037,10 +1042,10 @@ const AboutPage = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 4.7 }}
-              className="relative p-6 lg:p-8 rounded-2xl bg-gradient-to-br from-[#BE7B2C]/10 to-[#F9C39D]/10 border border-[#F9C39D]/30 hover:border-[#F9C39D]/50 transition-all duration-300 group overflow-hidden"
+              className="relative p-6 lg:p-8 rounded-2xl bg-linear-to-br from-[#BE7B2C]/10 to-[#F9C39D]/10 border border-[#F9C39D]/30 hover:border-[#F9C39D]/50 transition-all duration-300 group overflow-hidden"
             >
               {/* Background decoration */}
-              <div className="absolute -inset-0.5 bg-gradient-to-br from-[#BE7B2C]/30 to-[#F9C39D]/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute -inset-0.5 bg-linear-to-br from-[#BE7B2C]/30 to-[#F9C39D]/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
               {/* Animated background elements */}
               <div className="absolute top-4 right-4 w-20 h-20 border border-[#F9C39D]/20 rounded-full animate-pulse" />
@@ -1053,7 +1058,7 @@ const AboutPage = () => {
                   transition={{ duration: 0.6, delay: 4.8 }}
                   className="flex items-center justify-center gap-4 mb-6"
                 >
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#BE7B2C] to-[#F9C39D] flex items-center justify-center animate-pulse">
+                  <div className="w-12 h-12 rounded-full bg-linear-to-br from-[#BE7B2C] to-[#F9C39D] flex items-center justify-center animate-pulse">
                     <svg
                       className="w-6 h-6 text-white"
                       fill="currentColor"
@@ -1069,7 +1074,7 @@ const AboutPage = () => {
                 </motion.div>
 
                 <motion.h2
-                  className="text-bg capitalize ltr:font-elegance rtl:font-amiri font-medium text-2xl sm:text-3xl lg:text-4xl xl:text-5xl mb-4 leading-tight"
+                  className="text-bg capitalize ltr:font-elegance rtl:font-font-noto-kufi-arabic font-medium text-2xl sm:text-3xl lg:text-4xl xl:text-5xl mb-4 leading-tight"
                   whileHover={{ scale: 1.02 }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -1087,7 +1092,7 @@ const AboutPage = () => {
                   transition={{ duration: 0.8, delay: 5.0 }}
                   className="text-white/80 text-base lg:text-lg"
                 >
-                  <p>Stay tuned for our expansion</p>
+                  <p>{t("common.stay_tuned")}</p>
                 </motion.div>
               </div>
             </motion.div>
@@ -1101,7 +1106,7 @@ const AboutPage = () => {
             className="relative h-[500px] lg:h-[700px] xl:h-[800px] group"
           >
             {/* Background decoration */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#BE7B2C]/10 to-[#F9C39D]/10 rounded-3xl" />
+            <div className="absolute inset-0 bg-linear-to-br from-[#BE7B2C]/10 to-[#F9C39D]/10 rounded-3xl" />
 
             {/* Map container with enhanced styling */}
             <div className="relative h-full rounded-3xl overflow-hidden border border-gray-800/30 bg-black/20 backdrop-blur-sm group-hover:border-[#F9C39D]/30 transition-all duration-300">
@@ -1112,14 +1117,14 @@ const AboutPage = () => {
 
               <Image
                 src={suadiarabia}
-                alt="Saudi Arabia Map"
+                alt={t("alt.saudi_map")}
                 fill
                 className="object-contain p-6 lg:p-8 xl:p-12 group-hover:scale-105 transition-transform duration-700"
                 priority
               />
 
               {/* Gradient overlay at bottom */}
-              <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/40 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 h-20 bg-linear-to-t from-black/40 to-transparent" />
             </div>
 
             {/* Map title */}
@@ -1130,7 +1135,7 @@ const AboutPage = () => {
               className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center"
             >
               <h3 className="text-bg font-elegance text-xl lg:text-2xl xl:text-3xl">
-                Our Presence in Saudi Arabia
+                {t("common.presence_ksa")}
               </h3>
             </motion.div>
           </motion.div>

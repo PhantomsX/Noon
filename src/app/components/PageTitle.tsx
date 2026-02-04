@@ -9,7 +9,7 @@ const PageTitle = ({ children }: { children?: React.ReactNode }) => {
   return (
     <motion.div style={{ y: titleY }} className="flex flex-col gap-3 mb-4">
       <motion.h1
-        className="text-4xl py-2 leading-14 md:text-5xl font-bold text-bg ltr:font-elegance rtl:font-amiri"
+        className="text-4xl py-2 leading-14 md:text-5xl font-bold text-bg ltr:font-elegance rtl:font-font-noto-kufi-arabic"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         whileInView={{ opacity: 1, y: 0 }}

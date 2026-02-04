@@ -249,7 +249,7 @@ const ServiceFlipCard = ({ service, id }: { service: Service; id: number }) => {
               className="object-cover"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent" />
 
             {/* Service Number - Top Left */}
             <motion.div
@@ -259,11 +259,11 @@ const ServiceFlipCard = ({ service, id }: { service: Service; id: number }) => {
               transition={{ delay: 0.2, duration: 0.5 }}
               whileHover={{ scale: 1.1 }}
             >
-              <div className="bg-gradient-to-r from-[#BE7B2C] to-[#F9C39D] rounded-full px-3 py-1 backdrop-blur-sm border border-white/20">
+              <div className="bg-linear-to-r from-[#BE7B2C] to-[#F9C39D] rounded-full px-3 py-1 backdrop-blur-sm border border-white/20">
                 <div className="flex items-center gap-1">
                   <Slash
                     size={12}
-                    className="-rotate-[20deg] text-white"
+                    className="-rotate-20 text-white"
                     strokeWidth={3}
                   />
                   <span className="text-white font-bold text-sm">
@@ -299,7 +299,7 @@ const ServiceFlipCard = ({ service, id }: { service: Service; id: number }) => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.5 }}
               >
-                <span>Click to view details</span>
+                <span>{t("common.click_to_view")}</span>
                 <ArrowRight
                   size={16}
                   className="ml-2 transition-transform group-hover:translate-x-1"
@@ -311,7 +311,7 @@ const ServiceFlipCard = ({ service, id }: { service: Service; id: number }) => {
 
         {/* Back Side */}
         <div
-          className="absolute inset-0 w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-gray-900 via-gray-800 to-black border border-gray-700"
+          className="absolute inset-0 w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-2xl bg-linear-to-br from-gray-900 via-gray-800 to-black border border-gray-700"
           style={{
             backfaceVisibility: "hidden",
             transform: "rotateY(180deg)",
@@ -326,11 +326,11 @@ const ServiceFlipCard = ({ service, id }: { service: Service; id: number }) => {
               transition={{ delay: 0.2, duration: 0.5 }}
               whileHover={{ scale: 1.1 }}
             >
-              <div className="bg-gradient-to-r from-[#BE7B2C] to-[#F9C39D] rounded-full px-3 py-1 backdrop-blur-sm border border-gray-500/30">
+              <div className="bg-linear-to-r from-[#BE7B2C] to-[#F9C39D] rounded-full px-3 py-1 backdrop-blur-sm border border-gray-500/30">
                 <div className="flex items-center gap-1">
                   <Slash
                     size={12}
-                    className="-rotate-[20deg] text-white"
+                    className="-rotate-20 text-white"
                     strokeWidth={3}
                   />
                   <span className="text-white font-bold text-sm">
@@ -345,13 +345,13 @@ const ServiceFlipCard = ({ service, id }: { service: Service; id: number }) => {
               <h3 className="text-lg font-bold text-bg mb-2 ltr:font-neue-montreal rtl:font-noto-kufi-arabic">
                 {service.title}
               </h3>
-              <div className="h-px bg-gradient-to-r from-[#BE7B2C] to-[#F9C39D] mb-4" />
+              <div className="h-px bg-linear-to-r from-[#BE7B2C] to-[#F9C39D] mb-4" />
             </div>
 
             {/* Features List */}
             <div className="flex-1 overflow-y-auto">
               <h4 className="text-white font-semibold mb-3 text-sm">
-                Key Features:
+                {t("common.key_features")}
               </h4>
               <ul className="space-y-2">
                 {service.features.map((feature, index) => (
@@ -362,7 +362,7 @@ const ServiceFlipCard = ({ service, id }: { service: Service; id: number }) => {
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: 0.1 + index * 0.05 }}
                   >
-                    <div className="w-1.5 h-1.5 rounded-full bg-bg mt-1.5 flex-shrink-0" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-bg mt-1.5 shrink-0" />
                     <span className="flex-1">{feature}</span>
                   </motion.li>
                 ))}
@@ -372,7 +372,7 @@ const ServiceFlipCard = ({ service, id }: { service: Service; id: number }) => {
             {/* Back Actions */}
             <div className="mt-6 space-y-3">
               <motion.button
-                className="w-full py-3 bg-gradient-to-r from-[#BE7B2C] to-[#F9C39D] text-white rounded-lg font-medium text-sm transition-all duration-300 hover:shadow-lg hover:shadow-[#BE7B2C]/25"
+                className="w-full py-3 bg-linear-to-r from-[#BE7B2C] to-[#F9C39D] text-white rounded-lg font-medium text-sm transition-all duration-300 hover:shadow-lg hover:shadow-[#BE7B2C]/25"
                 onClick={handleViewProjects}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -389,7 +389,7 @@ const ServiceFlipCard = ({ service, id }: { service: Service; id: number }) => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Back to Image
+                {t("common.back_to_image")}
               </motion.button>
             </div>
           </div>

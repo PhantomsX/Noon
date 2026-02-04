@@ -1,7 +1,7 @@
 {
   "About US": "About US",
   "About_noon_consultants": "About noon consultants",
-  "CHAIRMAN": "CHAIRMAN& FOUNDER",
+  "CHAIRMAN": "CHAIRMAN & FOUNDER",
   "Choose Architectural Design": "Choose Architectural Design",
   "Commercial": "Commercial",
   "Email": "Email",
@@ -35,6 +35,12 @@
   "Warehouse": "Warehouse",
   "What Our Clients Say": "partners words about noon",
   "about": "About",
+  "ABOUT US": "ABOUT US",
+  "OUR PROJECTS": "OUR PROJECTS",
+  "OUR SERVICES": "OUR SERVICES",
+  "BLOGS": "BLOGS",
+  "CAREERS": "CAREERS",
+  "PROFILE": "PROFILE",
   "aboutNoon": "About Noon Consultants",
   "aboutText1": "Noon Consultants is one of the recognized Urban, Architecture and Interior Design practice in the KSA. Founded in 2011, we adapt and respond to the context of each project to create intelligent and enduring Urban Planning & Design.",
   "aboutChairman": "Dr. Naser El Sayed",
@@ -48,6 +54,7 @@
   "building": "building",
   "calculate": "calculate",
   "calculateTitle": "Architectural Design Calculator",
+  "certificates": "Certificates",
   "careers": {
     "applicationProcess": "Application Process",
     "applyNow": "Apply Now",
@@ -158,7 +165,14 @@
   "clientText1": "The architectural drawings provided by the team were exceptionally detailed and innovative. Their expertise transformed our vision into reality",
   "clients": "clients",
   "clientsSubtitle": "Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects.",
-  "coming_soon": "coming soon Hail",
+  "coming_soon": "Coming Soon",
+  "comingSoon": "Coming Soon",
+  "comingSoonPage": {
+    "subtitle": "We are working hard to bring you something amazing. Stay tuned for updates!",
+    "blogSubtitle": "Explore our upcoming blog for expert insights into urban design, architecture, and interior innovation in Saudi Arabia.",
+    "underDevelopment": "Under Development",
+    "notifyMe": "Notify Me"
+  },
   "contact": "contact us",
   "contactPage": {
     "title": "Let's Discuss The Upcoming Projects",
@@ -199,6 +213,7 @@
       "bankInformation": "BANK INFORMATION",
       "personalCv": "PERSONAL CV"
     },
+    "coming_soon": "Coming Soon",
     "comingSoon": "Coming Soon",
     "documents": {
       "idCardPhoto": "ID CARD PHOTO",
@@ -243,24 +258,86 @@
       "annualLeaveDays": "Number of days of annual leave",
       "firstName": "First Name"
     },
+    "alt": {
+      "profile_picture": "Profile Picture"
+    },
     "values": {
       "married": "Married",
       "bachelor": "Bachelor",
       "seniorBrandDesigner": "SENIOR BRAND DESIGNER",
       "male": "Male",
       "egyptian": "Egyptian",
-      "egypt": "Egypt"
+      "egypt": "Egypt",
+      "alexandria": "Alexandria",
+      "fullNameArabic": "على على عبد الحميد ابوزامل",
+      "fullNameEnglish": "Ali Ali Abdel Hameed Abozamel"
+    },
+    "uploadStatus": {
+      "uploaded": "Uploaded",
+      "failed": "Failed",
+      "uploading": "Uploading..."
+    },
+    "uploadPrompt": {
+      "drop": "Drop to Upload",
+      "click": "Drag & Drop or Click to Upload",
+      "supports": "Supports JPG, PNG, PDF"
     },
     "header": {
       "fullName": "ALI ALI ABOZAMEL",
       "jobTitle": "SENIOR BRAND DESIGNER"
     }
   },
+  "auth": {
+    "sign_in": "Sign in",
+    "sign_up": "Sign up",
+    "sign_up_title": "Sign up now to start your free trial.",
+    "new_user": "New user?",
+    "create_account": "Create an account",
+    "password": "Password",
+    "cant_sign_in": "Can't sign in?",
+    "already_have_account": "Already have an account?",
+    "job_title": "Job Title",
+    "company": "Company",
+    "employees": "Employees",
+    "mobile": "Mobile",
+    "country": "Country",
+    "start_now": "Start Now",
+    "agree_terms": "I agree to the Firm Agreement",
+    "select_job_title": "Select your job title",
+    "select_company_size": "Select company size",
+    "select_country": "Select country",
+    "or": "or",
+    "privacy_note": "Protected by reCAPTCHA and subject to the",
+    "privacy_policy": "Privacy Policy",
+    "terms_service": "Terms of Service",
+    "and": "and",
+    "register_note": "By registering, you agree to the processing of your personal data by Salesforce as described in the",
+    "privacy_statement": "Privacy Statement",
+    "jobs": {
+      "designer": "Designer",
+      "developer": "Developer",
+      "manager": "Manager",
+      "other": "Other"
+    },
+    "countries": {
+      "egypt": "Egypt",
+      "saudi": "Saudi Arabia",
+      "uae": "United Arab Emirates",
+      "qatar": "Qatar",
+      "other": "Other"
+    },
+    "company_sizes": {
+      "1-10": "1-10 employees",
+      "11-50": "11-50 employees",
+      "51-200": "51-200 employees",
+      "201-500": "201-500 employees",
+      "501+": "501+ employees"
+    }
+  },
   "factory": "factory",
   "find": "find more",
   "founded in 2011": "since 2011",
   "headquarters": "Head quarters",
-
   "home": {
     "founded": "FOUNDED IN 2011",
     "title": "Noon Consultants is one of the recognized Architecture in the KSA.",
@@ -304,11 +381,51 @@
     "scope": "SCOPE OF WORK",
     "status": "STATUS",
     "title-1": "Our Projects",
-    "urban": "urban"
+    "urban": "urban",
+    "project_1_title": "AL DHUHAYAN BLOCK 39",
+    "project_1_description": "A large urban planning project.",
+    "project_1_location": "Riyadh, KSA",
+    "project_1_area": "656027 SQM",
+    "project_1_scope": "Urban Planning & Design",
+    "project_1_status": "Approved",
+    "project_2_title": "ARCHITECTURE MASTERPIECE",
+    "project_2_description": "An architectural icon in the region.",
+    "project_2_location": "Jeddah, KSA",
+    "project_2_area": "300000 SQM",
+    "project_2_scope": "Architecture Design",
+    "project_2_status": "Ongoing",
+    "project_3_title": "INTERIOR DESIGN HAVEN",
+    "project_3_description": "Modern interior design for residential spaces.",
+    "project_3_location": "Dammam, KSA",
+    "project_3_area": "15000 SQM",
+    "project_3_scope": "Interior Design",
+    "project_3_status": "Completed",
+    "project_4_title": "RIYADH URBAN DEVELOPMENT",
+    "project_4_description": "Comprehensive urban planning for sustainable growth.",
+    "project_4_location": "Riyadh, KSA",
+    "project_4_area": "450000 SQM",
+    "project_4_scope": "Urban Planning & Design",
+    "project_4_status": "In Progress",
+    "project_5_title": "JEDDAH ARCHITECTURAL GEM",
+    "project_5_description": "Innovative architectural solutions for commercial buildings.",
+    "project_5_location": "Jeddah, KSA",
+    "project_5_area": "85000 SQM",
+    "project_5_scope": "Architecture Design",
+    "project_5_status": "Under Construction",
+    "project_6_title": "LUXURY INTERIOR SPACES",
+    "project_6_description": "High-end interior design for luxury developments.",
+    "project_6_location": "Riyadh, KSA",
+    "project_6_area": "25000 SQM",
+    "project_6_scope": "Interior Design",
+    "project_6_status": "Approved"
+  },
+  "team": {
+    "name": "DR. NIZAR EL SAYED",
+    "role": "CHAIRMAN & FOUNDER"
   },
   "projectsTitle": "Our Projects",
   "register": "Register",
-  "rights": "All Right Reserved To noon Consultants 2024. ®",
+  "rights": "All Right Reserved To Noon Consultants 2025. ®",
   "send inquiry": "send inquiry",
   "services": "Our Services",
   "servicess": {
@@ -426,5 +543,52 @@
   },
   "slide to select the space of the services in m2": "slide to select the space of the services in m².",
   "team_text": "With years of experience collaborating with organizations across Saudi Arabia, our team has cultivated a deep, industry-specific knowledge base. Our projects are delivered by seasoned professionals with specialized expertise across key functional areas. Each team member is dedicated to providing high-quality, tailored services that align with our clients' goals contributing to the sustainable, innovative, and enduring success of every project.",
-  "viewProjects": "explore projects"
+  "viewProjects": "explore projects",
+  "common": {
+    "back": "back",
+    "next": "Next",
+    "requirements": "Requirements",
+    "years_experience": "Years Experience",
+    "projects_completed": "Projects Completed",
+    "team_members": "Team Members",
+    "client_satisfaction": "Client Satisfaction",
+    "view_details": "View Details",
+    "view_projects": "View Projects",
+    "back_to_image": "Back to Image",
+    "click_to_view": "Click to view details",
+    "key_features": "Key Features:",
+    "show_all": "SHOW ALL",
+    "stay_tuned": "Stay tuned for our expansion",
+    "presence_ksa": "Our Presence in Saudi Arabia",
+    "notes_ceo": "NOTES FROM THE CEO",
+    "project_image": "Project Image",
+    "redirect_to_about": "Redirecting to About page...",
+    "founder": "founder"
+  },
+  "aria": {
+    "open_menu": "Open menu",
+    "close_menu": "Close menu",
+    "search": "Search",
+    "toggle_dark_mode": "Toggle dark mode",
+    "change_language": "Change language",
+    "scroll_left": "Partner logos scrolling left",
+    "scroll_right": "Partner logos scrolling right",
+    "close_modal": "Close modal"
+  },
+  "alt": {
+    "partner_logo": "Partner Logo",
+    "certificate": "Certificate",
+    "certificate_full": "Certificate Full View",
+    "hero": "Noon Consultants Architecture",
+    "ceo": "Dr. Naser Al Sayed",
+    "social": "social",
+    "logo": "Noon Consultants Logo",
+    "modern_architecture": "About Noon Consultants - Modern Architecture",
+    "saudi_map": "Saudi Arabia Map",
+    "projects": "Noon Consultants Projects Portfolio"
+  },
+  "testimonials": {
+    "ahmed_al_mansouri": "Ahmed Al-Mansouri",
+    "ceo_skyline": "CEO of Skyline Developers"
+  }
 }

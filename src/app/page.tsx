@@ -6,125 +6,87 @@ import AboutNoon from "./components/AboutNoon";
 import Testimonials from "./components/Testimonials";
 import PartnersLogos from "./components/PartnersLogos";
 import ContactInfoSection from "./components/ContactInfoSection";
+import Certificates from "./components/Certificates";
 
 export default function Home() {
-  const t = useTranslations("home");
-
-  // Links data for the bottom navigation
-  const links = [
-    { title: t("nav.portfolio"), href: "/projects" },
-    { title: t("nav.about"), href: "/about" },
-    { title: t("nav.services"), href: "/services" },
-    { title: t("nav.contact"), href: "/contact" },
-    { title: t("nav.login"), href: "/login" },
-  ];
+  const t = useTranslations();
 
   return (
-    <main className="w-full overflow-hidden bg-white text-[#C6A87D]">
-      {/* Top Section: Header & Title (Black Background) */}
-      <section className="w-full flex flex-col items-center text-center pt-16 pb-12 bg-black z-20 relative">
+    <main className="w-full overflow-hidden text-[#C6A87D]">
+      {/* Hero Section with Full Screen Image */}
+      <section className="relative w-full h-screen overflow-hidden">
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex flex-col items-center gap-4 max-w-6xl px-4"
+          className="absolute inset-0 w-full h-full"
+          initial={{ scale: 1.1, x: "-2%", y: "-1%" }}
+          animate={{
+            scale: [1.1, 1.2, 1.1],
+            x: ["-2%", "2%", "-2%"],
+            y: ["-1%", "1%", "-1%"],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear",
+          }}
         >
-          {/* Top small text */}
-          <span className="font-neue-montreal tracking-[0.3em] text-[10px] md:text-sm uppercase text-[#C6A87D]">
-            {t("founded")}
-          </span>
-
-          {/* Main Title */}
-          <div className="px-2 md:px-0">
-            <h1 className="font-elegance text-1xl md:text-2xl lg:text-3xl font-normal leading-tight text-[#C6A87D] drop-shadow-sm">
-              {t("title")}
-            </h1>
-          </div>
-        </motion.div>
-      </section>
-
-      {/* Hero Image Section & Navigation */}
-      <div className="relative w-full h-[60vh] md:h-[80vh] bg-black">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
           <Image
-            src="/images/home-hero-bg.png"
-            alt="Home Background"
+            src="/hero-image.jpg"
+            alt={t("alt.hero")}
             fill
             priority
-            className="object-cover object-center"
+            quality={100}
+            className="object-cover object-top"
           />
-           {/* Gradient Overlay for better text readability at bottom */}
-           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-        </div>
-
-        {/* Hero Navigation Links - Overlay on Image */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="absolute bottom-0 left-0 w-full z-10 pb-12 px-4 md:px-8 lg:px-16"
-        >
-            <div className="w-full grid grid-cols-2 gap-8 md:grid-cols-5 md:gap-4">
-            {links.map((link, index) => {
-                const isLogin = link.title.includes("Sign In");
-
-                return (
-                <a
-                    key={index}
-                    href={link.href}
-                    className="group flex flex-col items-center justify-start text-center gap-4 transition-transform hover:-translate-y-1"
-                >
-                  <div className="flex flex-col items-center px-2 py-1">
-                    <span
-                        className={`whitespace-pre-line font-elegance ${
-                        isLogin
-                            ? "text-xs md:text-sm"
-                            : "text-xl md:text-2xl lg:text-3xl"
-                      } text-white group-hover:text-[#BE7B2C] transition-colors duration-300 drop-shadow-md leading-tight`}
-                        style={{ textShadow: "0 2px 4px rgba(0,0,0,0.5)" }}
-                    >
-                      {link.title.includes("About") ? (
-                        <>
-                          <span className="text-white group-hover:text-[#BE7B2C]">
-                            {t("nav.aboutShort")}
-                          </span>
-                            {"\n"}
-                          <span className="text-white group-hover:text-[#BE7B2C]">
-                            {t("nav.noon")}
-                          </span>
-                        </>
-                        ) : (
-                        <span className="text-white group-hover:text-[#BE7B2C]">
-                            {link.title}
-                        </span>
-                        )}
-                    </span>
-                    <div className="flex items-center gap-1 mt-3 text-[8px] md:text-[9px] tracking-[0.2em] font-neue-montreal text-[#C6A87D]/60 group-hover:text-[#BE7B2C] transition-colors uppercase">
-                      {t("nav.findMore")}{" "}
-                        <span className="transform group-hover:translate-x-1 transition-transform">
-                        →
-                        </span>
-                    </div>
-                    </div>
-                </a>
-                );
-            })}
-            </div>
         </motion.div>
-      </div>
+        {/* Gradient Overlay - Bottom to Top (Dark to Transparent) */}
+        <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/60 to-transparent" />
+        {/* Gradient Overlay - Directional (Left in LTR, Right in RTL) */}
+        <div className="absolute inset-0 ltr:bg-linear-to-r rtl:bg-linear-to-l from-black/80 via-black/40 to-transparent" />
 
-      {/* Scrollable Content Below Hero */}
-      <div className="relative z-10 w-full">
-        {/* About Noon Section */}
-        <AboutNoon />
-        {/* Partners Words (Testimonials) */}
-        <Testimonials />
-        {/* Partners of Success (Logos) */}
-        <PartnersLogos />
-        {/* Contact Info Section */}
-        <ContactInfoSection />
-      </div>
+        {/* Hero Content */}
+        <div className="relative z-10 h-full flex flex-col justify-center px-6 md:px-12 lg:px-16 max-w-[1920px] mx-auto">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="max-w-[850px]"
+          >
+            {/* Founded Text */}
+            <motion.p
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="font-abeezee text-2xl tracking-[0.3em] uppercase mb-6 bg-[linear-gradient(270deg,#BE7B2C_0%,#F9C39D_100%)] bg-clip-text text-transparent"
+            >
+              {t("home.founded")}
+            </motion.p>
+
+            {/* Main Heading */}
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+              className="ltr:font-elegance rtl:font-noto-kufi-arabic text-3xl md:text-5xl leading-tight mb-8 bg-[linear-gradient(270deg,#BE7B2C_0%,#F9C39D_100%)] bg-clip-text text-transparent"
+            >
+              {t("home.title")}
+            </motion.h1>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* About Noon Section */}
+      <AboutNoon />
+
+      {/* Partners of Success (Logos) */}
+      <PartnersLogos />
+
+      {/* Certificates */}
+      <Certificates />
+
+      {/* Partners Words (Testimonials) */}
+      <Testimonials />
+      {/* Contact Info Section */}
+      <ContactInfoSection />
     </main>
   );
 }

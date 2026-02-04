@@ -21,12 +21,12 @@ const NavLink = ({ title, href }: NavLinkProps) => {
     >
       <Link
         href={href}
-        className="text-white/80 capitalize ltr:font-elegance rtl:font-amiri hover:text-white transition-colors text-lg font-medium py-2 px-3 relative z-10"
+        className="text-white/80 capitalize ltr:font-elegance rtl:font-font-noto-kufi-arabic hover:text-white transition-colors text-lg font-medium py-2 px-3 relative z-10"
       >
         {t(title)}
         {/* Underline effect */}
         <motion.span
-          className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#BE7B2C] to-[#F9C39D]"
+          className="absolute bottom-0 left-0 w-full h-[2px] bg-linear-to-r from-[#BE7B2C] to-[#F9C39D]"
           initial={{ scaleX: 0 }}
           whileHover={{ scaleX: 1 }}
           transition={{ duration: 0.3, ease: "easeOut" }}

@@ -17,7 +17,7 @@ const NotFoundPage = () => {
       transition={{ duration: 0.8 }}
     >
       <motion.h1
-        className="text-bg py-3 flex items-center gap-2 tracking-widest ltr:font-elegance rtl:font-amiri text-5xl md:text-7xl font-bold mb-4"
+        className="text-bg py-3 flex items-center gap-2 tracking-widest ltr:font-elegance rtl:font-font-noto-kufi-arabic text-5xl md:text-7xl font-bold mb-4"
         initial={{ opacity: 0, scale: 0.8, y: -20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}

@@ -3,6 +3,12 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
   /* config options here */
+  turbopack: {
+    root: process.cwd(),
+  },
+  images: {
+    qualities: [100, 75],
+  },
 };
 
 const withNextIntl = createNextIntlPlugin();

@@ -1,5 +1,5 @@
 "use client";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import React, { useState, useMemo } from "react";
 import { motion } from "motion/react";
 
@@ -9,122 +9,125 @@ import { useIsClient, useMediaQuery } from "usehooks-ts";
 import { useRouter } from "next/navigation";
 import PageTitle from "../components/PageTitle";
 
-const projects = [
-  {
-    id: 1,
-    title: "AL DHUHAYAN BLOCK 39",
-    type: "urban",
-    description: "A large urban planning project.",
-    image: "/images/portfolio-bg.png",
-    location: "Riyadh, KSA",
-    area: "656027 SQM",
-    scope: "Urban Planning & Design",
-    status: "Approved",
-  },
-  {
-    id: 2,
-    title: "ARCHITECTURE MASTERPIECE",
-    type: "architecture",
-    description: "An architectural icon in the region.",
-    image: "/images/portfolio-bg.png",
-    location: "Jeddah, KSA",
-    area: "300000 SQM",
-    scope: "Architecture Design",
-    status: "Ongoing",
-  },
-  {
-    id: 3,
-    title: "INTERIOR DESIGN HAVEN",
-    type: "interior design",
-    description: "Modern interior design for residential spaces.",
-    image: "/images/portfolio-bg.png",
-    location: "Dammam, KSA",
-    area: "15000 SQM",
-    scope: "Interior Design",
-    status: "Completed",
-  },
-  {
-    id: 4,
-    title: "RIYADH URBAN DEVELOPMENT",
-    type: "urban",
-    description: "Comprehensive urban planning for sustainable growth.",
-    image: "/images/portfolio-bg.png",
-    location: "Riyadh, KSA",
-    area: "450000 SQM",
-    scope: "Urban Planning & Design",
-    status: "In Progress",
-  },
-  {
-    id: 5,
-    title: "JEDDAH ARCHITECTURAL GEM",
-    type: "architecture",
-    description: "Innovative architectural solutions for commercial buildings.",
-    image: "/images/portfolio-bg.png",
-    location: "Jeddah, KSA",
-    area: "85000 SQM",
-    scope: "Architecture Design",
-    status: "Under Construction",
-  },
-  {
-    id: 6,
-    title: "LUXURY INTERIOR SPACES",
-    type: "interior design",
-    description: "High-end interior design for luxury developments.",
-    image: "/images/portfolio-bg.png",
-    location: "Riyadh, KSA",
-    area: "25000 SQM",
-    scope: "Interior Design",
-    status: "Approved",
-  },
-];
-
 const Page = () => {
-  const [selectedType, setSelectedType] = useState("all");
   const t = useTranslations();
+  const locale = useLocale();
+  const projects = [
+    {
+      id: 1,
+      title: t("projects.project_1_title"),
+      type: "urban",
+      description: t("projects.project_1_description"),
+      image: "/images/portfolio-bg.png",
+      location: t("projects.project_1_location"),
+      area: t("projects.project_1_area"),
+      scope: t("projects.project_1_scope"),
+      status: t("projects.project_1_status"),
+    },
+    {
+      id: 2,
+      title: t("projects.project_2_title"),
+      type: "architecture",
+      description: t("projects.project_2_description"),
+      image: "/images/portfolio-bg.png",
+      location: t("projects.project_2_location"),
+      area: t("projects.project_2_area"),
+      scope: t("projects.project_2_scope"),
+      status: t("projects.project_2_status"),
+    },
+    {
+      id: 3,
+      title: t("projects.project_3_title"),
+      type: "interior design",
+      description: t("projects.project_3_description"),
+      image: "/images/portfolio-bg.png",
+      location: t("projects.project_3_location"),
+      area: t("projects.project_3_area"),
+      scope: t("projects.project_3_scope"),
+      status: t("projects.project_3_status"),
+    },
+    {
+      id: 4,
+      title: t("projects.project_4_title"),
+      type: "urban",
+      description: t("projects.project_4_description"),
+      image: "/images/portfolio-bg.png",
+      location: t("projects.project_4_location"),
+      area: t("projects.project_4_area"),
+      scope: t("projects.project_4_scope"),
+      status: t("projects.project_4_status"),
+    },
+    {
+      id: 5,
+      title: t("projects.project_5_title"),
+      type: "architecture",
+      description: t("projects.project_5_description"),
+      image: "/images/portfolio-bg.png",
+      location: t("projects.project_5_location"),
+      area: t("projects.project_5_area"),
+      scope: t("projects.project_5_scope"),
+      status: t("projects.project_5_status"),
+    },
+    {
+      id: 6,
+      title: t("projects.project_6_title"),
+      type: "interior design",
+      description: t("projects.project_6_description"),
+      image: "/images/portfolio-bg.png",
+      location: t("projects.project_6_location"),
+      area: t("projects.project_6_area"),
+      scope: t("projects.project_6_scope"),
+      status: t("projects.project_6_status"),
+    },
+  ];
+  const [selectedType, setSelectedType] = useState("all");
   const isClient = useIsClient();
   const isMobile = useMediaQuery("(max-width: 768px)");
   const router = useRouter();
 
-  const services = useMemo(() => [
-    {
-      type: "architecture",
-      title: t("servicess.service-1"),
-      description: t("servicess.service-1-description"),
-      image: "/images/ENGINEERING AND ARCHITECTURAL DESIGN.png",
-      features: [
-        t("servicess.service-1-features.1"),
-        t("servicess.service-1-features.2"),
-        t("servicess.service-1-features.3"),
-        t("servicess.service-1-features.4"),
-      ],
-    },
-    {
-      type: "urban",
-      title: t("servicess.service-2"),
-      description: t("servicess.service-2-description"),
-      image: "/images/URBAN DESIGN.png",
-      features: [
-        t("servicess.service-2-features.1"),
-        t("servicess.service-2-features.2"),
-        t("servicess.service-2-features.3"),
-        t("servicess.service-2-features.4"),
-        t("servicess.service-2-features.5"),
-      ],
-    },
-    {
-      type: "interior design",
-      title: t("servicess.service-10"),
-      description: t("servicess.service-10-description"),
-      image: "/images/INTERIOR DESIGN.png",
-      features: [
-        t("servicess.service-10-features.1"),
-        t("servicess.service-10-features.2"),
-        t("servicess.service-10-features.3"),
-        t("servicess.service-10-features.4"),
-        t("servicess.service-10-features.5"),
-      ],
-    },
-  ], [t]);
+  const services = useMemo(
+    () => [
+      {
+        type: "architecture",
+        title: t("servicess.service-1"),
+        description: t("servicess.service-1-description"),
+        image: "/images/ENGINEERING AND ARCHITECTURAL DESIGN.png",
+        features: [
+          t("servicess.service-1-features.1"),
+          t("servicess.service-1-features.2"),
+          t("servicess.service-1-features.3"),
+          t("servicess.service-1-features.4"),
+        ],
+      },
+      {
+        type: "urban",
+        title: t("servicess.service-2"),
+        description: t("servicess.service-2-description"),
+        image: "/images/URBAN DESIGN.png",
+        features: [
+          t("servicess.service-2-features.1"),
+          t("servicess.service-2-features.2"),
+          t("servicess.service-2-features.3"),
+          t("servicess.service-2-features.4"),
+          t("servicess.service-2-features.5"),
+        ],
+      },
+      {
+        type: "interior design",
+        title: t("servicess.service-10"),
+        description: t("servicess.service-10-description"),
+        image: "/images/INTERIOR DESIGN.png",
+        features: [
+          t("servicess.service-10-features.1"),
+          t("servicess.service-10-features.2"),
+          t("servicess.service-10-features.3"),
+          t("servicess.service-10-features.4"),
+          t("servicess.service-10-features.5"),
+        ],
+      },
+    ],
+    [t],
+  );
 
   const categories = ["all", "urban", "architecture", "interior design"];
 
@@ -134,7 +137,7 @@ const Page = () => {
 
   const selectedService = useMemo(
     () => services.find((service) => service?.type === selectedType),
-    [selectedType, services]
+    [selectedType, services],
   );
 
   return (
@@ -158,20 +161,20 @@ const Page = () => {
         </p>
       </motion.section>
       <motion.section
-        className="relative p-5 z-[1]"
+        className="relative p-5 z-1"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
       >
         <Image
           src={"/images/portofolio-frame.jpg"}
-          alt="projects"
+          alt={t("alt.projects")}
           fill
           className="z-[-1] rounded-2xl object-cover"
         />
         <Image
           src={"/images/portfolio-bg.png"}
-          alt="projects"
+          alt={t("alt.projects")}
           width={2000}
           height={2000}
           className="rounded-2xl object-cover max-sm:h-[400px]"
@@ -185,7 +188,7 @@ const Page = () => {
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center w-full">
-              <h2 className="text-3xl md:text-5xl max-w-full md:max-w-[13ch] mb-4 md:mb-0 break-words">
+              <h2 className="text-3xl md:text-5xl max-w-full md:max-w-[13ch] mb-4 md:mb-0 wrap-break-word">
                 {selectedService?.title}
               </h2>
               {selectedService?.features && (
@@ -210,7 +213,11 @@ const Page = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
       >
-        <Tabs value={selectedType} onValueChange={handleTabClick}>
+        <Tabs
+          dir={locale === "ar" ? "rtl" : "ltr"}
+          value={selectedType}
+          onValueChange={handleTabClick}
+        >
           <TabsList className="overflow-x-auto whitespace-nowrap">
             {categories.map((cat) => (
               <TabsTrigger
@@ -218,7 +225,9 @@ const Page = () => {
                 value={cat}
                 className="uppercase cursor-pointer text-xs md:text-base px-4 py-2 min-w-[120px]"
               >
-                {cat === "all" ? "SHOW ALL" : cat.toUpperCase()}
+                {cat === "all"
+                  ? t("common.show_all")
+                  : t(`projects.${cat}`).toUpperCase()}
               </TabsTrigger>
             ))}
           </TabsList>
@@ -237,7 +246,7 @@ const Page = () => {
                   : projects.filter((p) => p.type === cat)
                 ).map((project) => {
                   const serviceDetails = services.find(
-                    (service) => service.title === project.type
+                    (service) => service.type === project.type,
                   );
                   return (
                     <motion.button
@@ -259,7 +268,7 @@ const Page = () => {
                         router.push(`/project-details`);
                         localStorage.setItem(
                           "selectedProject",
-                          JSON.stringify(project)
+                          JSON.stringify(project),
                         );
                       }}
                     >
@@ -294,7 +303,7 @@ const Page = () => {
                                 {serviceDetails.features.map(
                                   (feature, fIdx) => (
                                     <li key={fIdx}>{feature}</li>
-                                  )
+                                  ),
                                 )}
                               </ul>
                             )}
@@ -329,7 +338,7 @@ const Page = () => {
                                 {serviceDetails.features.map(
                                   (feature, fIdx) => (
                                     <li key={fIdx}>{feature}</li>
-                                  )
+                                  ),
                                 )}
                               </ul>
                             )}

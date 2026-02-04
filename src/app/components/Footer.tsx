@@ -1,13 +1,13 @@
 "use client";
 import Image from "next/image";
-import React from "react";
 import logoEn from "@/public/icons/big-logo-en.svg";
 import logoAr from "@/public/icons/big-logo-ar.svg";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { motion } from "motion/react";
 
 const Footer = () => {
   const locale = useLocale();
+  const t = useTranslations();
   return (
     <motion.footer
       initial={{ opacity: 0, y: 20 }}
@@ -21,13 +21,13 @@ const Footer = () => {
         dir={locale === "ar" ? "rtl" : "ltr"}
         className="text-[#C6A87D]/50 text-[8px] md:text-[10px] uppercase tracking-widest font-neue-montreal order-2 md:order-1"
       >
-        All Right Reserved To Noon CONSULTANTS 2025. ®
+        {t("rights")}
       </span>
       <div className="select-none pointer-events-none order-1 md:order-2">
         <Image
           src={locale === "ar" ? logoAr : logoEn}
           draggable={false}
-          alt="logo"
+          alt={t("alt.logo")}
           className="w-32 md:w-28"
         />
       </div>

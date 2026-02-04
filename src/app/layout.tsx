@@ -4,19 +4,20 @@ import { getLocale, getMessages } from "next-intl/server";
 import Navbar from "./components/navbar";
 import { NextIntlClientProvider } from "next-intl";
 import Footer from "./components/Footer";
-import { Amiri,  Noto_Kufi_Arabic } from "next/font/google";
+import { Noto_Kufi_Arabic, ABeeZee } from "next/font/google";
 import { cn } from "@/lib/utils";
 
 const notoKufiArabic = Noto_Kufi_Arabic({
-  subsets: ["latin"],
+  subsets: ["arabic"],
   variable: "--font-noto-kufi-arabic",
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
-const amiri = Amiri({
+
+const aBeeZee = ABeeZee({
   subsets: ["latin"],
-  variable: "--font-amiri",
-  weight: ["400", "700"],
+  variable: "--font-abeezee",
+  weight: ["400"],
   display: "swap",
 });
 
@@ -43,15 +44,15 @@ export default async function RootLayout({
       <body
         suppressHydrationWarning
         className={cn(
-          `flex flex-col min-h-screen relative main-bg-gradient text-white ltr:font-neue-montreal rtl:font-noto-kufi-arabic`,
+          `flex flex-col min-h-screen relative text-white ltr:font-neue-montreal rtl:font-noto-kufi-arabic`,
           notoKufiArabic.variable,
-          amiri.variable
+          aBeeZee.variable,
         )}
+        style={{
+          background:
+            "linear-gradient(189.91deg, #000000 77.69%, #231708 89.53%, #BE7B2D 142.18%)",
+        }}
       >
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-20 -left-20 w-80 h-80 bg-gradient-to-br from-[#f9c39d]/20 to-transparent rounded-full blur-3xl" />
-          <div className="absolute bottom-20 -right-20 w-80 h-80 bg-gradient-to-tl from-[#f9c39d]/20 to-transparent rounded-full blur-3xl" />
-        </div>
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           {children}

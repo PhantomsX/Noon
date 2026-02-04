@@ -37,7 +37,7 @@ const Page = () => {
         <Image
           className="object-cover"
           src={"/images/rectangelImage.svg"}
-          alt={project?.title || "Project image"}
+          alt={project?.title || t("common.project_image")}
           fill
         />
       </motion.figure>
@@ -62,7 +62,7 @@ const Page = () => {
       </motion.section>
       {project?.image && (
         <motion.section
-          className="grid grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))] gap-5 px-5 md:px-10 my-10"
+          className="grid grid-cols-[repeat(auto-fill,minmax(350px,1fr))] gap-5 px-5 md:px-10 my-10"
           initial="hidden"
           animate="visible"
           variants={{
@@ -79,7 +79,7 @@ const Page = () => {
           >
             <Image
               src={project?.image}
-              alt={`Project related image`}
+              alt={t("common.project_image")}
               width={500}
               height={300}
               className="w-full h-full object-cover"

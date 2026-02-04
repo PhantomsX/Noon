@@ -4,8 +4,10 @@ import React from "react";
 import Link from "next/link";
 import { Eye } from "lucide-react";
 import { motion } from "motion/react";
+import { useTranslations } from "next-intl";
 
 const LoginPage = () => {
+  const t = useTranslations();
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
@@ -19,7 +21,7 @@ const LoginPage = () => {
         transition={{ delay: 0.1, duration: 0.5 }}
         className="text-3xl font-bold text-center mb-6 text-white"
       >
-        Sign in
+        {t("auth.sign_in")}
       </motion.h1>
 
       <motion.p
@@ -28,9 +30,9 @@ const LoginPage = () => {
         transition={{ delay: 0.2, duration: 0.5 }}
         className="text-center text-white mb-6"
       >
-        New user?{" "}
+        {t("auth.new_user")}{" "}
         <Link href="/register" className="text-[#f9c39d] hover:underline">
-          Create an account
+          {t("auth.create_account")}
         </Link>
       </motion.p>
 
@@ -41,7 +43,7 @@ const LoginPage = () => {
         className="space-y-4"
       >
         <div className="space-y-1">
-          <label className="text-sm text-white">Email address</label>
+          <label className="text-sm text-white">{t("Email")}</label>
           <input
             type="email"
             defaultValue="ali.abozamel@noon.sa"
@@ -50,7 +52,7 @@ const LoginPage = () => {
         </div>
 
         <div className="space-y-1 relative">
-          <label className="text-sm text-white">Password</label>
+          <label className="text-sm text-white">{t("auth.password")}</label>
           <div className="relative">
             <input
               type="password"
@@ -64,21 +66,21 @@ const LoginPage = () => {
 
         <div className="flex justify-between items-center pt-2">
           <button className="text-sm text-white hover:text-[#f9c39d] transition-colors">
-            Can&apos;t sign in?
+            {t("auth.cant_sign_in")}
           </button>
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="px-8 py-3 bg-gradient-to-r from-[#f9c39d] to-[#f9a56a] rounded-lg text-white font-medium shadow-md hover:shadow-lg transition-all"
+            className="px-8 py-3 bg-linear-to-r from-[#f9c39d] to-[#f9a56a] rounded-lg text-white font-medium shadow-md hover:shadow-lg transition-all"
           >
-            Sign in
+            {t("auth.sign_in")}
           </motion.button>
         </div>
 
         <div className="relative flex items-center py-4">
-          <div className="flex-grow border-t border-gray-300"></div>
-          <span className="flex-shrink mx-4 text-white">or</span>
-          <div className="flex-grow border-t border-gray-300"></div>
+          <div className="grow border-t border-gray-300"></div>
+          <span className="shrink mx-4 text-white">{t("auth.or")}</span>
+          <div className="grow border-t border-gray-300"></div>
         </div>
 
         <div className="grid grid-cols-2 gap-4">
@@ -111,7 +113,7 @@ const LoginPage = () => {
                 d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"
               />
             </svg>
-            <span>Google</span>
+            <span>{t("auth.jobs.other")} (Google)</span>
           </motion.button>
 
           <motion.button
@@ -146,18 +148,18 @@ const LoginPage = () => {
                 d="M26.707,29.301h5.176l0.813-5.258h-5.989v-2.874c0-2.184,0.714-4.121,2.757-4.121h3.283V12.46 c-0.577-0.078-1.797-0.248-4.102-0.248c-4.814,0-7.636,2.542-7.636,8.334v3.498H16.06v5.258h4.948v14.452 C21.988,43.9,22.981,44,24,44c0.921,0,1.82-0.084,2.707-0.204V29.301z"
               />
             </svg>
-            <span>Facebook</span>
+            <span>{t("auth.jobs.other")} (Facebook)</span>
           </motion.button>
         </div>
 
         <p className="text-xs text-center text-white mt-6">
-          Protected by reCAPTCHA and subject to the{" "}
+          {t("auth.privacy_note")}{" "}
           <a href="#" className="text-[#f9c39d] hover:underline">
-            Cuboid Privacy Policy
+            Cuboid {t("auth.privacy_policy")}
           </a>{" "}
-          and{" "}
+          {t("auth.and")}{" "}
           <a href="#" className="text-[#f9c39d] hover:underline">
-            Terms of Service
+            {t("auth.terms_service")}
           </a>
           .
         </p>

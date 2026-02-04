@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { motion, useInView } from "motion/react";
+import CountUp from "@/components/CountUp";
 import PageTitle from "../components/PageTitle";
 
 // Job positions data
@@ -82,12 +83,12 @@ const BenefitIcon = ({ type }: { type: string }) => {
 
 // Application process step icon
 const StepIcon = ({ step }: { step: number }) => (
-  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#BE7B2C] to-[#F9C39D] flex items-center justify-center text-white font-bold text-lg">
+  <div className="w-12 h-12 rounded-full bg-linear-to-r from-[#BE7B2C] to-[#F9C39D] flex items-center justify-center text-white font-bold text-lg">
     {step}
   </div>
 );
 
-// Animated counter component
+// Animated counter component using react-bits Counter
 const AnimatedCounter = ({
   target,
   suffix = "",
@@ -95,35 +96,25 @@ const AnimatedCounter = ({
   target: number;
   suffix?: string;
 }) => {
-  const [count, setCount] = useState(0);
+  const [val, setVal] = useState(0);
   const countRef = useRef(null);
-  const isInView = useInView(countRef, { once: true });
+  const isInView = useInView(countRef, { once: true, amount: 0.5 });
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (isInView) {
-      const duration = 2000;
-      const step = target / (duration / 16);
-      let current = 0;
-
-      const timer = setInterval(() => {
-        current += step;
-        if (current >= target) {
-          setCount(target);
-          clearInterval(timer);
-        } else {
-          setCount(Math.floor(current));
-        }
-      }, 16);
-
-      return () => clearInterval(timer);
+      setVal(target);
     }
   }, [isInView, target]);
 
   return (
-    <span ref={countRef} className="text-4xl font-bold text-[#f9c39d]">
-      {count}
-      {suffix}
-    </span>
+    <div className="flex items-center justify-center gap-1">
+      <CountUp
+        to={target}
+        duration={2}
+        className="text-4xl font-bold text-[#f9c39d]"
+      />
+      <span className="text-4xl font-bold text-[#f9c39d] mb-1">{suffix}</span>
+    </div>
   );
 };
 
@@ -134,7 +125,7 @@ const JobCard = ({ position, index }: { position: string; index: number }) => {
   const cardRef = useRef(null);
   const isInView = useInView(cardRef, { once: true, margin: "-100px" });
 
-  const positionData = t.raw(`careers.positions.${position}`);
+  const positionData = t.raw("careers.positions." + position);
 
   return (
     <motion.div
@@ -234,7 +225,9 @@ const JobCard = ({ position, index }: { position: string; index: number }) => {
           className="overflow-hidden"
         >
           <div className="border-t border-[#BE7B2C]/20 pt-4 mt-4">
-            <h4 className="text-[#f9c39d] font-semibold mb-3">Requirements:</h4>
+            <h4 className="text-[#f9c39d] font-semibold mb-3">
+              {t("common.requirements")}:
+            </h4>
             <ul className="space-y-2">
               {positionData.requirements.map(
                 (req: string, reqIndex: number) => (
@@ -248,7 +241,7 @@ const JobCard = ({ position, index }: { position: string; index: number }) => {
                     transition={{ delay: reqIndex * 0.1 }}
                   >
                     <svg
-                      className="w-4 h-4 text-[#f9c39d] mt-0.5 flex-shrink-0"
+                      className="w-4 h-4 text-[#f9c39d] mt-0.5 shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -262,11 +255,11 @@ const JobCard = ({ position, index }: { position: string; index: number }) => {
                     </svg>
                     {req}
                   </motion.li>
-                )
+                ),
               )}
             </ul>
             <motion.button
-              className="mt-6 px-6 py-3 bg-gradient-to-r from-[#BE7B2C] to-[#F9C39D] text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300"
+              className="mt-6 px-6 py-3 bg-linear-to-r from-[#BE7B2C] to-[#F9C39D] text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -337,19 +330,23 @@ const CareersPage = () => {
         >
           <div className="text-center">
             <AnimatedCounter target={50} suffix="+" />
-            <p className="text-gray-400 mt-2">Team Members</p>
+            <p className="text-gray-400 mt-2">{t("common.team_members")}</p>
           </div>
           <div className="text-center">
             <AnimatedCounter target={200} suffix="+" />
-            <p className="text-gray-400 mt-2">Projects Completed</p>
+            <p className="text-gray-400 mt-2">
+              {t("common.projects_completed")}
+            </p>
           </div>
           <div className="text-center">
             <AnimatedCounter target={12} suffix="+" />
-            <p className="text-gray-400 mt-2">Years Experience</p>
+            <p className="text-gray-400 mt-2">{t("common.years_experience")}</p>
           </div>
           <div className="text-center">
             <AnimatedCounter target={95} suffix="%" />
-            <p className="text-gray-400 mt-2">Client Satisfaction</p>
+            <p className="text-gray-400 mt-2">
+              {t("common.client_satisfaction")}
+            </p>
           </div>
         </motion.div>
       </section>
@@ -376,7 +373,7 @@ const CareersPage = () => {
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => {
-              const benefitData = t.raw(`careers.benefits.${benefit}`);
+              const benefitData = t.raw("careers.benefits." + benefit);
               return (
                 <motion.div
                   key={benefit}
@@ -454,12 +451,15 @@ const CareersPage = () => {
             {t("careers.applicationProcess")}
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+            {/* The "Stick" - Continuous connecting line */}
+            <div className="hidden md:block absolute top-6 h-0.5 left-[12.5%] right-[12.5%] bg-linear-to-r from-[#BE7B2C] via-[#F9C39D] to-[#BE7B2C] opacity-30 z-0" />
+
             {steps.map((step, index) => {
-              const stepData = t.raw(`careers.steps.${step}`);
+              const stepData = t.raw("careers.steps." + step);
               return (
                 <motion.div
                   key={step}
-                  className="text-center relative"
+                  className="text-center relative z-10"
                   initial={{ opacity: 0, y: 30 }}
                   animate={
                     processInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
@@ -477,9 +477,6 @@ const CareersPage = () => {
                     {stepData.title}
                   </h3>
                   <p className="text-gray-300">{stepData.description}</p>
-                  {index < steps.length - 1 && (
-                    <div className="hidden md:block absolute top-6 left-full w-full h-0.5 bg-gradient-to-r from-[#BE7B2C] to-transparent z-[-1]" />
-                  )}
                 </motion.div>
               );
             })}
@@ -490,7 +487,7 @@ const CareersPage = () => {
       {/* Call to Action Section */}
       <section className="px-5 md:px-[70px] py-16">
         <motion.div
-          className="max-w-4xl mx-auto text-center bg-gradient-to-r from-[#BE7B2C]/20 to-[#F9C39D]/20 rounded-3xl p-12 backdrop-blur-md border border-[#BE7B2C]/30"
+          className="max-w-4xl mx-auto text-center bg-linear-to-r from-[#BE7B2C]/20 to-[#F9C39D]/20 rounded-3xl p-12 backdrop-blur-md border border-[#BE7B2C]/30"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -512,7 +509,7 @@ const CareersPage = () => {
             {t("careers.applyText")}
           </motion.p>
           <motion.button
-            className="px-8 py-4 bg-gradient-to-r from-[#BE7B2C] to-[#F9C39D] text-white rounded-xl font-bold text-lg hover:shadow-2xl transition-all duration-300"
+            className="px-8 py-4 bg-linear-to-r from-[#BE7B2C] to-[#F9C39D] text-white rounded-xl font-bold text-lg hover:shadow-2xl transition-all duration-300"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}

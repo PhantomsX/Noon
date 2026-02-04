@@ -2,9 +2,7 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
-/* @plugin "daisyui" {
-  themes: ["light"];
-} */
+
 
 @font-face {
   font-family: "Monalisa";
@@ -108,10 +106,10 @@
 
 @layer utilities {
   .gradient-gold-text {
-    @apply text-transparent bg-gradient-to-l from-[#BE7B2C] to-[#F9C39D] bg-clip-text;
+    @apply text-transparent bg-linear-to-l from-[#BE7B2C] to-[#F9C39D] bg-clip-text;
   }
   .gradient-gold-line {
-    @apply bg-gradient-to-l from-[#BE7B2C] to-[#F9C39D];
+    @apply bg-linear-to-l from-[#BE7B2C] to-[#F9C39D];
   }
 }
 
@@ -125,6 +123,7 @@
   --font-jaridah: var(--font-jaridah);
   --font-amiri: var(--font-amiri);
   --font-noto-kufi-arabic: var(--font-noto-kufi-arabic);
+  --font-abeezee: var(--font-abeezee);
   --font-neue-montreal: var(--font-neue-montreal);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);

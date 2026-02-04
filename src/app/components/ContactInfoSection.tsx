@@ -21,7 +21,7 @@ const ContactInfoSection = () => {
   ];
 
   return (
-    <section className="w-full bg-black py-40 px-8 md:px-16 lg:px-24 border-t border-[#C6A87D]/20">
+    <section className="w-full py-40 px-8 md:px-16 lg:px-24 border-t border-[#C6A87D]/20">
       <div className="max-w-7xl mx-auto flex flex-col gap-16">
         {/* Container for both offices and socials */}
         <div className="flex flex-col lg:flex-row justify-between items-start gap-12">
@@ -38,8 +38,12 @@ const ContactInfoSection = () => {
             <div className="flex flex-col font-neue-montreal text-sm md:text-base text-gray-300 gap-1 mt-2">
               <p>{t("address1")}</p>
               <p>12253</p>
-              <p>+966565498620</p>
-              <p>info@nnc.sa</p>
+              <a dir="ltr" href="tel:+966565498620">
+                +966565498620
+              </a>
+              <a dir="ltr" href="mailto:info@nnc.sa">
+                info@nnc.sa
+              </a>
             </div>
           </motion.div>
 
@@ -56,8 +60,12 @@ const ContactInfoSection = () => {
             <div className="flex flex-col font-neue-montreal text-sm md:text-base text-gray-300 gap-1 mt-2">
               <p>{t("address2")}</p>
               <p>42317</p>
-              <p>+966598959098</p>
-              <p>infomadina@nnc.sa</p>
+              <a dir="ltr" href="tel:+966598959098">
+                +966598959098
+              </a>
+              <a dir="ltr" href="mailto:infomadina@nnc.sa">
+                infomadina@nnc.sa
+              </a>
             </div>
           </motion.div>
 
@@ -74,11 +82,12 @@ const ContactInfoSection = () => {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                dir="ltr"
                 className="hover:scale-110 transition-all duration-300"
               >
                 <Image
                   src={social.icon}
-                  alt="social"
+                  alt={t("alt.social")}
                   width={20}
                   height={20}
                   className="w-5 h-5 object-contain"
