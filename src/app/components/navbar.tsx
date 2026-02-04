@@ -1,5 +1,5 @@
 "use client";
-import React, { startTransition } from "react";
+import React, { startTransition, useState, useEffect } from "react";
 import { motion } from "motion/react";
 import logoEn from "@/public/icons/big-logo-en.svg";
 import logoAr from "@/public/icons/big-logo-ar.svg";
@@ -12,12 +12,36 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import NavLink from "./NavLink";
 import { usePathname } from "next/navigation";
-import { User } from "lucide-react";
 
 const Navbar = () => {
   const locale = useLocale();
   const pathname = usePathname();
   const isHomePage = pathname === "/";
+
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down and past 100px
+        setIsVisible(false);
+      } else if (currentScrollY < lastScrollY) {
+        // Scrolling up
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
 
   const handleChangeLang = () => {
     startTransition(() => {
@@ -36,7 +60,8 @@ const Navbar = () => {
         `flex items-center justify-between z-50 h-24 px-4 md:px-10 sticky top-0 transition-all duration-300`,
         isHomePage
           ? "bg-transparent backdrop-blur-none shadow-none"
-          : "bg-black/20 backdrop-blur-sm shadow-sm"
+          : "bg-black/20 backdrop-blur-sm shadow-sm",
+        !isVisible && "-translate-y-full" // Hide navbar when scrolling down
       )}
     >
       <Link href={"/"}>
@@ -61,7 +86,7 @@ const Navbar = () => {
         <NavLink title="about" href="/about" />
         <NavLink title="projectsTitle" href="/projects" />
         <NavLink title="services" href="/services" />
-        {/* <NavLink title="contact" href="/contact" /> */}
+        <NavLink title="contact" href="/contact" />
         <NavLink title="careers.title" href="/careers" />
         {/* <NavLink title="login" href="/login" />
         <NavLink title="register" href="/register" /> */}

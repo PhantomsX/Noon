@@ -1,34 +1,37 @@
 "use client";
 import Image from "next/image";
 import { motion } from "motion/react";
-
-const testimonials = [
-  {
-    text: "The architectural drawings produced by the team were exceptionally detailed and innovative. Their expertise transformed our vision into reality.",
-    name: "Ahmed Al-Mansouri",
-    title: "CEO of Skyline Developers",
-    image: "/images/engineer.svg",
-  },
-  {
-    text: "The architectural drawings provided by the team were exceptionally detailed and innovative. Their expertise transformed our vision into reality.",
-    name: "Ahmed Al-Mansouri",
-    title: "CEO of Skyline Developers",
-    image: "/images/engineer.svg",
-  },
-  {
-    text: "The architectural drawings provided by the team were exceptionally detailed and innovative. Their expertise transformed our vision into reality.",
-    name: "Ahmed Al-Mansouri",
-    title: "CEO of Skyline Developers",
-    image: "/images/engineer.svg",
-  },
-];
+import { useTranslations } from "next-intl";
 
 export default function Testimonials() {
+  const t = useTranslations();
+
+  const testimonials = [
+    {
+      text: t("clientText1"),
+      name: "Ahmed Al-Mansouri",
+      title: "CEO of Skyline Developers",
+      image: "/images/engineer.svg",
+    },
+    {
+      text: t("clientText1"),
+      name: "Ahmed Al-Mansouri",
+      title: "CEO of Skyline Developers",
+      image: "/images/engineer.svg",
+    },
+    {
+      text: t("clientText1"),
+      name: "Ahmed Al-Mansouri",
+      title: "CEO of Skyline Developers",
+      image: "/images/engineer.svg",
+    },
+  ];
+
   return (
-    <section className="w-full bg-black py-24 px-4 md:px-16 overflow-hidden">
+    <section className="w-full bg-black py-40 px-4 md:px-2 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <h2 className="mb-20 font-elegance text-4xl md:text-5xl text-[#C6A87D] text-center">
-          Partners Words About Noon
+          {t("partners_words_about_noon")}
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20">

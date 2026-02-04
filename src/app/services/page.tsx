@@ -210,11 +210,6 @@ const ServiceFlipCard = ({ service, id }: { service: Service; id: number }) => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: [0.25, 0.1, 0.25, 1],
-        delay: (id % 3) * 0.1, // Stagger animation based on position in row
-      },
     },
   };
 
@@ -226,7 +221,11 @@ const ServiceFlipCard = ({ service, id }: { service: Service; id: number }) => {
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
       whileHover={{ scale: 1.02 }}
-      transition={{ duration: 0.3 }}
+      transition={{
+        duration: 0.6,
+        ease: "easeOut",
+        delay: (id % 3) * 0.1,
+      }}
     >
       {/* Flip Card Container */}
       <div

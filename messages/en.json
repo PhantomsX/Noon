@@ -35,8 +35,9 @@
   "Warehouse": "Warehouse",
   "What Our Clients Say": "partners words about noon",
   "about": "About",
-  "aboutNoon": "About noon",
-  "aboutText1": "Noon Consultants, a division of Noon Engineering Services, is a prominent urban planning, architecture, and interior design practice based in the Kingdom of Saudi Arabia. Founded in 2011, Noon is committed to designing and adapting solutions that respond thoughtfully to the unique context of each project, with a focus on creating intelligent and enduring urban planning and design.",
+  "aboutNoon": "About Noon Consultants",
+  "aboutText1": "Noon Consultants is one of the recognized Urban, Architecture and Interior Design practice in the KSA. Founded in 2011, we adapt and respond to the context of each project to create intelligent and enduring Urban Planning & Design.",
+  "aboutChairman": "Dr. Naser El Sayed",
   "aboutText2": "Our success is primarily attributed to the exceptional caliber of our team and their ability to deliver high-quality designs that thoughtfully integrate social, environmental, and economic considerations, ensuring holistic and sustainable outcomes.",
   "aboutText3": "Our objective is to continuously evolve as a design practice, consistently seeking innovative solutions to conventional challenges while delivering the highest standard of service to our clients and the wider community",
   "aboutText4": "“We, as noon, are a professional engineering services firm that                 engages in urban, architectural design, supervision, interior                 design, project management as well as related research, planning                 and consultancy activities.",
@@ -159,11 +160,121 @@
   "clientsSubtitle": "Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects.",
   "coming_soon": "coming soon Hail",
   "contact": "contact us",
+  "contactPage": {
+    "title": "Let's Discuss The Upcoming Projects",
+    "description": "For years we have worked with organizations around Saudi Arabia. We are proud of the work we have done, and the unique depth of knowledge it has allowed us to build. Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects.",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "telephone": "Telephone",
+    "email": "Email",
+    "message": "Message",
+    "sendInquiry": "Send Inquiry"
+  },
+  "profile": {
+    "title": "Profile",
+    "welcome": {
+      "title": "NOTES TO EMPLOYEES",
+      "description": "We're Excited To Have You On Our Employee Platform. Here, We Share Updates, Celebrate Wins, And Grow Together As One Team Shaping The Future. Thank You For Being Part Of noon'S Journey Toward Excellence. Together, We Engineer The Difference."
+    },
+    "jobResponsibilities": {
+      "title": "Brand Design & Creative Direction:",
+      "responsibility1": "Develop And Lead Brand Identity Systems, Including Logos, Typography, Color Palettes, And Visual Languages.",
+      "responsibility2": "Translate Brand Strategy Into Compelling Visual Narratives Across Digital And Print.",
+      "responsibility3": "Create Mood Boards, Concept Presentations, And Brand Guidelines Tailored To Client Needs.",
+      "responsibility4": "Collaborate With Cross-Functional Teams (Marketing, Development, Production) To Ensure Brand Consistency.",
+      "responsibility5": "Supervise Junior Designers And Provide Mentorship, Feedback, And Creative Direction."
+    },
+    "tabs": {
+      "general": "GENERAL INFORMATION",
+      "job": "JOB DESCRIPTION",
+      "document": "EMPLOYEE DOCUMENT",
+      "salary": "SALARY DETAILS",
+      "cv": "PERSONAL CV",
+      "bank": "BANK INFORMATION",
+      "medical": "MEDICAL INSURANCE"
+    },
+    "sections": {
+      "personalDetails": "PERSONAL DETAILS",
+      "jobDescription": "JOB DESCRIPTION",
+      "bankInformation": "BANK INFORMATION",
+      "personalCv": "PERSONAL CV"
+    },
+    "comingSoon": "Coming Soon",
+    "documents": {
+      "idCardPhoto": "ID CARD PHOTO",
+      "passportPhoto": "PASSPORT PHOTO",
+      "resumeCv": "RESUME & CV",
+      "contractPaper": "CONTRACT PAPER",
+      "insuranceTypePhoto": "INSURANCE TYPE PHOTO"
+    },
+    "fields": {
+      "fullNameArabic": "Full Name (Arabic)",
+      "fullNameEnglish": "Full Name (English)",
+      "identityNo": "Identity NO",
+      "identityEnd": "Identity End",
+      "maritalStatus": "Marital Status",
+      "educationalQualification": "Educational Qualification",
+      "presentAddress": "Present Address",
+      "basicSalary": "Basic Salary",
+      "department": "Department",
+      "sectionDepartment": "Section:Department",
+      "jobTime": "Job Time",
+      "jobPlace": "Job Place",
+      "annualLeave": "Number of days of annual leave",
+      "bankName": "Bank Name",
+      "branchName": "Branch Name",
+      "accountNumber": "Account Number",
+      "phoneNumber": "Phone Number",
+      "employeeId": "Employee ID",
+      "joiningDate": "Joining Date",
+      "gender": "Gender",
+      "male": "Male",
+      "directManager": "Direct Manager",
+      "email": "Email",
+      "nationality": "Nationality",
+      "egyptian": "Egyptian",
+      "kafrAlsheikhEgypt": "Kafr Alsheikh, Egypt",
+      "dateOfBirth": "Date Of Birth",
+      "insuranceNo": "Insurance NO",
+      "relativeRelation": "relative relation",
+      "marketingCommunication": "Marketing & Communication",
+      "fullTime": "Full Time",
+      "onlineRemotely": "Online & Remotely",
+      "annualLeaveDays": "Number of days of annual leave",
+      "firstName": "First Name"
+    },
+    "values": {
+      "married": "Married",
+      "bachelor": "Bachelor",
+      "seniorBrandDesigner": "SENIOR BRAND DESIGNER",
+      "male": "Male",
+      "egyptian": "Egyptian",
+      "egypt": "Egypt"
+    },
+    "header": {
+      "fullName": "ALI ALI ABOZAMEL",
+      "jobTitle": "SENIOR BRAND DESIGNER"
+    }
+  },
   "factory": "factory",
   "find": "find more",
   "founded in 2011": "since 2011",
   "headquarters": "Head quarters",
-  "home": "home",
+
+  "home": {
+    "founded": "FOUNDED IN 2011",
+    "title": "Noon Consultants is one of the recognized Architecture in the KSA.",
+    "nav": {
+      "portfolio": "Portfolio\nOf Work",
+      "about": "About\nNoon",
+      "aboutShort": "About",
+      "noon": "Noon",
+      "services": "Our Best\nOf Services",
+      "contact": "Contact\nOf Us",
+      "login": "Sign In \\ Sign Up",
+      "findMore": "FIND MORE"
+    }
+  },
   "industrial": "industrial",
   "login": "Login",
   "m": "m²",
@@ -171,7 +282,7 @@
   "new_branch": "New Branch",
   "our_team": "Our Team & Designers",
   "partners": "Our partners",
-  "partners_of_success": "partners",
+  "partners_of_success": "Partners of Success",
   "partners_words_about_noon": "partners words about noon",
   "pr": "Portfolio",
   "pricing for all services is in saudi riyals": "pricing for all services is in saudi riyals.",

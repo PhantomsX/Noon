@@ -1,8 +1,10 @@
 "use client";
 import Image from "next/image";
 import { motion } from "motion/react";
+import { useTranslations } from "next-intl";
 
 export default function AboutNoon() {
+  const t = useTranslations();
   return (
     <section className="relative w-full bg-black py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-12 md:gap-20">
@@ -29,21 +31,18 @@ export default function AboutNoon() {
           className="w-full md:w-1/2 flex flex-col justify-center items-start text-left"
         >
           <h2 className="font-elegance text-4xl md:text-6xl text-[#C6A87D] mb-8 leading-tight">
-            About Noon <br /> Consultants
+            {t("aboutNoon")}
           </h2>
 
           <div className="max-w-md">
             <p className="font-neue-montreal text-gray-300 mb-12 leading-relaxed text-base">
-              Noon Consultants is one of the recognized Urban, Architecture and
-              Interior Design practice in the KSA. Founded in 2011, we adapt and
-              respond to the context of each project to create intelligent and
-              enduring Urban Planning & Design.
+              {t("aboutText1")}
             </p>
 
             {/* Signature and Caption */}
             <div className="flex flex-col items-start">
               <span className="font-monalisa text-4xl text-[#C6A87D]">
-                Dr. Naser El Sayed
+                {t("aboutChairman")}
               </span>
             </div>
           </div>

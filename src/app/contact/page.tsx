@@ -2,9 +2,10 @@
 
 import React from "react";
 import { motion } from "motion/react";
-import Footer from "../components/Footer";
+import { useTranslations } from "next-intl";
 
 export default function ContactPage() {
+  const t = useTranslations();
   return (
     <main className="relative min-h-screen w-full bg-black text-[#C6A87D] flex flex-col overflow-hidden pt-32">
        {/* Background decorative elements (optional, to match home vibe if needed) */}
@@ -20,9 +21,7 @@ export default function ContactPage() {
                     className="w-full lg:w-1/3"
                 >
                     <h1 className="font-elegance text-2xl md:text-4xl lg:text-5xl leading-tight text-[#C6A87D]">
-                        Let’s Discuss <br />
-                        The Upcoming <br />
-                        Projects
+                        {t("contactPage.title")}
                     </h1>
                 </motion.div>
 
@@ -34,7 +33,7 @@ export default function ContactPage() {
                     className="w-full lg:w-full max-w-2xl text-white/90 font-neue-montreal text-base md:text-lg leading-relaxed text-justify lg:mt-4"
                 >
                     <p>
-                        For years we have worked with organizations around Saudi Arabia. We are proud of the work we have done, and the unique depth of knowledge it has allowed us to build. Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients’ Needs, Contribute To The Sustainable And Innovative Success Of Their Projects.
+                        {t("contactPage.description")}
                     </p>
                 </motion.div>
             </div>
@@ -51,7 +50,7 @@ export default function ContactPage() {
                         {/* First Name */}
                         <div className="flex flex-col gap-2">
                              <label className="text-xs uppercase tracking-widest font-bold text-gray-800">
-                                 FIRST NAME
+                                 {t("contactPage.firstName").toUpperCase()}
                              </label>
                              <input 
                                 type="text" 
@@ -61,7 +60,7 @@ export default function ContactPage() {
                         {/* Last Name */}
                          <div className="flex flex-col gap-2">
                              <label className="text-xs uppercase tracking-widest font-bold text-gray-800">
-                                 LAST NAME
+                                 {t("contactPage.lastName").toUpperCase()}
                              </label>
                              <input 
                                 type="text" 
@@ -71,7 +70,7 @@ export default function ContactPage() {
                         {/* Telephone */}
                          <div className="flex flex-col gap-2">
                              <label className="text-xs uppercase tracking-widest font-bold text-gray-800">
-                                 TELEPHONE
+                                 {t("contactPage.telephone").toUpperCase()}
                              </label>
                              <input 
                                 type="tel" 
@@ -81,7 +80,7 @@ export default function ContactPage() {
                         {/* Email */}
                          <div className="flex flex-col gap-2">
                              <label className="text-xs uppercase tracking-widest font-bold text-gray-800">
-                                 EMAIL
+                                 {t("contactPage.email").toUpperCase()}
                              </label>
                              <input 
                                 type="email" 
@@ -93,7 +92,7 @@ export default function ContactPage() {
                     {/* Message */}
                      <div className="flex flex-col gap-2 mt-4">
                              <label className="text-xs uppercase tracking-widest font-bold text-gray-800">
-                                 MESSAGE
+                                 {t("contactPage.message").toUpperCase()}
                              </label>
                              <textarea 
                                 rows={6}
@@ -102,18 +101,16 @@ export default function ContactPage() {
                     </div>
 
                     {/* Submit Button */}
-                    <button 
+                    <button
                         type="submit"
                         className="w-full bg-[#C6A87D] text-black font-bold uppercase tracking-widest py-4 hover:bg-[#b09265] transition-colors mt-4"
                     >
-                        SEND INQUIRY
+                        {t("contactPage.sendInquiry").toUpperCase()}
                     </button>
 
                 </form>
             </motion.div>
        </div>
-
-       <Footer />
     </main>
   );
 }

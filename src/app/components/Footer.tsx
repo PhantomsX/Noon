@@ -15,15 +15,15 @@ const Footer = () => {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, delay: 0.7 }}
       dir="ltr"
-      className="grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-2.5 items-center mt-auto p-4 md:p-8 ltr:font-neue-montreal rtl:font-noto-kufi-arabic"
+      className="flex flex-col md:flex-row justify-between items-center mt-auto p-4 md:p-8 ltr:font-neue-montreal rtl:font-noto-kufi-arabic gap-4"
     >
       <span
         dir={locale === "ar" ? "rtl" : "ltr"}
-        className="justify-self-center md:justify-self-start text-[#C6A87D]/50 max-md:text-[8px] md:text-[10px] uppercase tracking-widest font-neue-montreal"
+        className="text-[#C6A87D]/50 text-[8px] md:text-[10px] uppercase tracking-widest font-neue-montreal order-2 md:order-1"
       >
         All Right Reserved To Noon CONSULTANTS 2025. ®
       </span>
-      <div className="justify-self-center md:justify-self-end select-none pointer-events-none">
+      <div className="select-none pointer-events-none order-1 md:order-2">
         <Image
           src={locale === "ar" ? logoAr : logoEn}
           draggable={false}
