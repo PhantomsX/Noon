@@ -14,70 +14,174 @@ const Page = () => {
   const locale = useLocale();
   const projects = [
     {
-      id: 1,
-      title: t("projects.project_1_title"),
+      id: "u1",
+      title: "AL DHUHAYAN BLOCK 39",
+      client: "Olayan Co",
+      designedBy: "Noon Consultants",
+      statusDate: "05-2023 Under Construction",
+      location: "Riyadh, Saudi Arabia",
+      scope: "Development, Full Design Package",
+      image: "/projects/Urban Projects/AL DHUHAYAN.jpg",
+      category: "urban",
       type: "urban",
-      description: t("projects.project_1_description"),
-      image: "/images/portfolio-bg.png",
-      location: t("projects.project_1_location"),
-      area: t("projects.project_1_area"),
-      scope: t("projects.project_1_scope"),
-      status: t("projects.project_1_status"),
     },
     {
-      id: 2,
-      title: t("projects.project_2_title"),
-      type: "architecture",
-      description: t("projects.project_2_description"),
-      image: "/images/portfolio-bg.png",
-      location: t("projects.project_2_location"),
-      area: t("projects.project_2_area"),
-      scope: t("projects.project_2_scope"),
-      status: t("projects.project_2_status"),
-    },
-    {
-      id: 3,
-      title: t("projects.project_3_title"),
-      type: "interior design",
-      description: t("projects.project_3_description"),
-      image: "/images/portfolio-bg.png",
-      location: t("projects.project_3_location"),
-      area: t("projects.project_3_area"),
-      scope: t("projects.project_3_scope"),
-      status: t("projects.project_3_status"),
-    },
-    {
-      id: 4,
-      title: t("projects.project_4_title"),
+      id: "u2",
+      title: "ALNIMR DOWNTOWN",
+      client: "Olayan Co.",
+      designedBy: "Noon Consultants",
+      statusDate: "05-2023 Under Construction",
+      location: "Riyadh, Saudi Arabia",
+      scope: "Development, Full Design Package",
+      image: "/projects/Urban Projects/ALNIMR.jpg",
+      category: "urban",
       type: "urban",
-      description: t("projects.project_4_description"),
-      image: "/images/portfolio-bg.png",
-      location: t("projects.project_4_location"),
-      area: t("projects.project_4_area"),
-      scope: t("projects.project_4_scope"),
-      status: t("projects.project_4_status"),
     },
     {
-      id: 5,
-      title: t("projects.project_5_title"),
+      id: "u3",
+      title: "LIVEN RESIDENTIAL COMPUND",
+      client: "Yaqeen capital",
+      designedBy: "Noon Consultants",
+      statusDate: "07-2025in Progress",
+      location: "AL KHOBAR City, Saudi Arabia",
+      scope: "Development, Full Design Package",
+      image: "/projects/Urban Projects/Liven Residential Compund.jpg",
+      category: "urban",
+      type: "urban",
+    },
+    {
+      id: "u4",
+      title: "TANGIER HILLS",
+      client: "Tangier Hills Company",
+      designedBy: "Noon Consultants",
+      statusDate: "07-2016 Completed",
+      location: "Morocco - Tangier 32,868 SQM",
+      scope: "Urban Planning & Master Plan",
+      image: "/projects/Urban Projects/TANGIER HILLS.png",
+      category: "urban",
+      type: "urban",
+    },
+    {
+      id: "u5",
+      title: "BUSINESS PAY",
+      client: "Tangier Hills Company",
+      designedBy: "Noon Consultants",
+      statusDate: "07-2016 Completed",
+      location: "Morocco - Tangier 32,868 SQM",
+      scope: "Urban Planning & Master Plan",
+      image: "/projects/Urban Projects/business pay.png",
+      category: "urban",
+      type: "urban",
+    },
+    {
+      id: "a1",
+      title: "AL WOMEN EQUESTRIAN CLUB",
+      client: "Investment Company",
+      designedBy: "Noon Consultants",
+      statusDate: "2021 Completed",
+      location: "Riyadh, Saudi Arabia",
+      scope: "Full Design Package",
+      image: "/projects/Architectural Projects/AL WOMEN EQUESTRIAN CLUB.png",
+      category: "architectural",
       type: "architecture",
-      description: t("projects.project_5_description"),
-      image: "/images/portfolio-bg.png",
-      location: t("projects.project_5_location"),
-      area: t("projects.project_5_area"),
-      scope: t("projects.project_5_scope"),
-      status: t("projects.project_5_status"),
     },
     {
-      id: 6,
-      title: t("projects.project_6_title"),
+      id: "a2",
+      title: "AL-QAHTANI COMPLEX",
+      client: "Faisal Alqahtani",
+      designedBy: "Noon Consultants",
+      statusDate: "2025 in progress",
+      location: "Riyadh, Saudi Arabia",
+      scope: "Full Design Package",
+      image: "/projects/Architectural Projects/Al-Qahtani Complex.png",
+      category: "architectural",
+      type: "architecture",
+    },
+    {
+      id: "a3",
+      title: "DR. MOHAMMED ALMALIK RESIDENCE",
+      client: "Dr. Mohammed Almalik",
+      designedBy: "Noon Consultants",
+      statusDate: "2021 Completed",
+      location: "Riyadh, Saudi Arabia",
+      scope: "Full Design Package",
+      image:
+        "/projects/Architectural Projects/Dr. Mohammed Almalik Residence.png",
+      category: "architectural",
+      type: "architecture",
+    },
+    {
+      id: "a4",
+      title: "MR. WAEL ALRAIS PRIVATE VILLA",
+      client: "Private villa",
+      designedBy: "Noon Consultants",
+      statusDate: "2024 Under Construction",
+      location: "Riyadh, Saudi Arabia",
+      scope: "Full Design Package",
+      image:
+        "/projects/Architectural Projects/M R .WA E L A L R A I S PR IVATE VI L L A.png",
+      category: "architectural",
+      type: "architecture",
+    },
+    {
+      id: "a5",
+      title: "V TOWER",
+      client: "Alei Al-Qimma Real Estate Development Company",
+      designedBy: "Noon Consultants",
+      statusDate: "2024 Under Construction",
+      location: "Riyadh City, Saudi Arabia 1,500 SQM",
+      scope: "Full Design Package",
+      image: "/projects/Architectural Projects/V Tower.jpg",
+      category: "architectural",
+      type: "architecture",
+    },
+    {
+      id: "i1",
+      title: "VIP RESIDENCE",
+      client: "Bin Saedan Group",
+      designedBy: "Noon Consultants",
+      statusDate: "2020 Completed",
+      location: "Riyadh City, Saudi Arabia 1,500 SQM",
+      scope: "Full Design Package",
+      image: "/projects/Interior projects/VIP RESIDENCE.png",
+      category: "interior design",
       type: "interior design",
-      description: t("projects.project_6_description"),
-      image: "/images/portfolio-bg.png",
-      location: t("projects.project_6_location"),
-      area: t("projects.project_6_area"),
-      scope: t("projects.project_6_scope"),
-      status: t("projects.project_6_status"),
+    },
+    {
+      id: "i2",
+      title: "KINDERGARTEN DESIGN",
+      client: "KFMC PROJECT",
+      designedBy: "Noon Consultants",
+      statusDate: "2020 Completed",
+      location: "Riyadh City, Saudi Arabia 1,500 SQM",
+      scope: "Design Concept",
+      image: "/projects/Interior projects/KINDERGARTEN DESIGN.png",
+      category: "interior design",
+      type: "interior design",
+    },
+    {
+      id: "i3",
+      title: "AL-WALLAN HEAD QUARTER OFFICES",
+      client: "Al-Wallan Holding Company",
+      designedBy: "Noon Consultants",
+      statusDate: "2024 Completed",
+      location: "Riyadh City, Saudi Arabia 1,500 SQM",
+      scope: "Interior Design",
+      image: "/projects/Interior projects/AL-WALLAN HEAD QUARTER OFFICES.png",
+      category: "interior design",
+      type: "interior design",
+    },
+    {
+      id: "i4",
+      title: "AL-WALLAN HEAD QUARTER OFFICES 2",
+      client: "Al-Wallan Holding Company",
+      designedBy: "Noon Consultants",
+      statusDate: "2024 Completed",
+      location: "Riyadh City, Saudi Arabia 1,500 SQM",
+      scope: "Interior Design",
+      image: "/projects/Interior projects/AL-WALLAN HEAD QUARTER OFFICES 2.png",
+      category: "interior design",
+      type: "interior design",
     },
   ];
   const [selectedType, setSelectedType] = useState("all");
@@ -129,7 +233,10 @@ const Page = () => {
     [t],
   );
 
-  const categories = ["all", "urban", "architecture", "interior design"];
+  const categories = useMemo(() => {
+    const types = projects.map((p) => p.type);
+    return ["all", ...Array.from(new Set(types))];
+  }, [projects]);
 
   const handleTabClick = (type: string) => {
     setSelectedType(type);
@@ -285,10 +392,10 @@ const Page = () => {
                             {project.title}
                           </h3>
                           <p className="text-sm mb-2 text-gray-300 md:hidden">
-                            {project.description}
+                            {project.location}
                           </p>
                           {serviceDetails?.features && (
-                            <ul className="text-left text-xs list-disc list-inside text-gray-300 md:hidden">
+                            <ul className="text-start text-xs list-disc list-outside ps-5 text-gray-300 md:hidden inline-block">
                               {serviceDetails.features.map((feature, fIdx) => (
                                 <li key={fIdx}>{feature}</li>
                               ))}
@@ -296,10 +403,10 @@ const Page = () => {
                           )}
                           <div className="hidden md:block">
                             <p className="text-sm mb-2 text-gray-300">
-                              {project.description}
+                              {project.location}
                             </p>
                             {serviceDetails?.features && (
-                              <ul className="text-left text-xs list-disc list-inside text-gray-300">
+                              <ul className="text-start text-xs list-disc list-outside ps-5 text-gray-300 inline-block">
                                 {serviceDetails.features.map(
                                   (feature, fIdx) => (
                                     <li key={fIdx}>{feature}</li>
@@ -320,10 +427,10 @@ const Page = () => {
                             {project.title}
                           </h3>
                           <p className="text-sm mb-2 text-gray-300 md:hidden">
-                            {project.description}
+                            {project.location}
                           </p>
                           {serviceDetails?.features && (
-                            <ul className="text-left text-xs list-disc list-inside text-gray-300 md:hidden">
+                            <ul className="text-start text-xs list-disc list-outside ps-5 text-gray-300 md:hidden inline-block">
                               {serviceDetails.features.map((feature, fIdx) => (
                                 <li key={fIdx}>{feature}</li>
                               ))}
@@ -331,10 +438,10 @@ const Page = () => {
                           )}
                           <div className="hidden md:block">
                             <p className="text-sm mb-2 text-gray-300">
-                              {project.description}
+                              {project.location}
                             </p>
                             {serviceDetails?.features && (
-                              <ul className="text-left text-xs list-disc list-inside text-gray-300">
+                              <ul className="text-start text-xs list-disc list-outside ps-5 text-gray-300 inline-block">
                                 {serviceDetails.features.map(
                                   (feature, fIdx) => (
                                     <li key={fIdx}>{feature}</li>

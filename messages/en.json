@@ -350,6 +350,17 @@
       "contact": "Contact\nOf Us",
       "login": "Sign In \\ Sign Up",
       "findMore": "FIND MORE"
+    },
+    "portfolio": {
+      "title": "Portfolio Of Work",
+      "description": "For years we have worked with organizations around Saudi Arabia. We are proud of the work we have done, and the unique depth of knowledge it has allowed us to build. Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects.",
+      "urban": "Urban Projects",
+      "architectural": "Architectural Projects",
+      "client": "PROJECT CLIENT",
+      "designedBy": "DESIGNED BY",
+      "statusDate": "DESIGN STATUS DATE",
+      "location": "LOCATION",
+      "scope": "SCOPE OF WORK"
     }
   },
   "industrial": "industrial",
@@ -372,6 +383,9 @@
     "all": "all",
     "architecture": "architecture",
     "area": "AREA",
+    "client": "CLIENT",
+    "designedBy": "DESIGNED BY",
+    "statusDate": "STATUS DATE",
     "breif": "Over the years, we have partnered with a wide range of organizations across Saudi Arabia, earning a reputation for excellence and reliability. Each project has contributed to the deep, specialized knowledge we bring to every new challenge. Our portfolio is delivered by seasoned professionals with extensive industry experience, each bringing focused expertise across key functional areas. We are committed to providing high-quality, client-focused solutions that support the sustainable, innovative, and long-term success of every project we undertake.",
     "copy rights": " all renders is back to noon copyrights.",
     "description": " For years we have worked with organizations around Saudi Arabia. We are proud of the work we have done, and the unique depth of knowledge it has allowed us to build. Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects..",
@@ -420,8 +434,20 @@
     "project_6_status": "Approved"
   },
   "team": {
-    "name": "DR. NIZAR EL SAYED",
-    "role": "CHAIRMAN & FOUNDER"
+    "name": "DR. NIZAR EL|SAYED",
+    "role": "CHAIRMAN & FOUNDER",
+    "member": "Team Member",
+    "architectural_designer": "Architectural Designer",
+    "urban_planner": "Urban Planner",
+    "interior_designer": "Interior Designer",
+    "project_manager": "Project Manager",
+    "senior_consultant": "Senior Consultant",
+    "founder": "Founder",
+    "active": "Active",
+    "consulting": "Consulting",
+    "on_site": "On Site",
+    "profile": "Profile",
+    "connect": "Connect"
   },
   "projectsTitle": "Our Projects",
   "register": "Register",

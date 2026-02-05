@@ -8,98 +8,35 @@ import Image from "next/image";
 import aboutBg from "@/public/images/background-about.png";
 import { motion, useInView } from "motion/react";
 import PageTitle from "../components/PageTitle";
+import ProfileCard from "@/components/ProfileCard";
 
 // Team member card component
 
 // Team member card component
 const TeamMemberCard = ({ member, index }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const cardRef = useRef(null);
-  const isInView = useInView(cardRef, {
-    once: true,
-    margin: "-10% 0px -10% 0px",
-    amount: 0.05,
-  });
-
   return (
     <motion.div
-      ref={cardRef}
-      className="group relative overflow-hidden rounded-xl bg-gray-900/50 backdrop-blur-sm border border-gray-800/50"
       initial={{ opacity: 0, y: 30 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-10%" }}
       transition={{
         duration: 0.7,
         delay: index * 0.1,
         ease: [0.25, 0.1, 0.25, 1],
       }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      whileHover={{
-        scale: 1.02,
-        borderColor: "rgba(249, 195, 157, 0.3)",
-        boxShadow: "0 20px 40px -10px rgba(249, 195, 157, 0.2)",
-        transition: { duration: 0.3, ease: "easeOut" },
-      }}
+      className="flex justify-center"
     >
-      {/* Image Container */}
-      <div className="relative w-full aspect-4/5 overflow-hidden rounded-t-xl">
-        <motion.div
-          className="w-full h-full"
-          animate={{
-            scale: isHovered ? 1.03 : 1,
-          }}
-          transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-        >
-          <Image
-            src={member.image}
-            alt={member.name}
-            fill
-            className="object-cover"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          />
-        </motion.div>
-
-        {/* Gradient Overlay */}
-        <motion.div
-          className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent"
-          animate={{
-            opacity: isHovered ? 0.8 : 0.6,
-          }}
-          transition={{ duration: 0.3 }}
-        />
-      </div>
-
-      {/* Content */}
-      <div className="p-6 text-center">
-        <motion.h3
-          className="text-[#f9c39d] ltr:font-elegance rtl:font-font-noto-kufi-arabic font-semibold text-lg sm:text-xl mb-2"
-          animate={{
-            scale: isHovered ? 1.02 : 1,
-          }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-        >
-          {member.name}
-        </motion.h3>
-
-        <motion.p
-          className="text-gray-300 text-sm tracking-wide uppercase"
-          animate={{
-            color: isHovered ? "#f9c39d" : "#d1d5db",
-          }}
-          transition={{ duration: 0.3 }}
-        >
-          {member.role}
-        </motion.p>
-
-        {/* Decorative line */}
-        <motion.div
-          className="w-12 h-0.5 bg-linear-to-r from-[#be7b2c] to-[#f9c39d] mx-auto mt-3"
-          animate={{
-            scaleX: isHovered ? 1.5 : 1,
-          }}
-          transition={{ duration: 0.3 }}
-        />
-      </div>
+      <ProfileCard
+        avatarUrl={member.image}
+        name={member.name}
+        title={member.role}
+        handle={member.handle}
+        status={member.status}
+        contactText={member.contactText}
+        behindGlowColor={member.glowColor}
+        innerGradient={member.gradient}
+        className="w-full max-w-[320px]"
+      />
     </motion.div>
   );
 };
@@ -112,37 +49,73 @@ const AboutPage = () => {
       id: 1,
       name: t("team.name"),
       role: t("team.role"),
+      handle: "nizar_el_sayed",
+      status: t("team.founder"),
       image: "/images/ceoimage.svg",
+      contactText: t("team.connect"),
+      glowColor: "rgba(190, 123, 44, 0.4)",
+      gradient:
+        "linear-gradient(145deg, rgba(190, 123, 44, 0.2) 0%, rgba(249, 195, 157, 0.1) 100%)",
     },
     {
       id: 2,
-      name: t("team.name"),
-      role: t("team.role"),
+      name: t("team.member"),
+      role: t("team.architectural_designer"),
+      handle: "noon_architect",
+      status: t("team.active"),
       image: "/images/ceoimage.svg",
+      contactText: t("team.profile"),
+      glowColor: "rgba(249, 195, 157, 0.4)",
+      gradient:
+        "linear-gradient(145deg, rgba(249, 195, 157, 0.2) 0%, rgba(190, 123, 44, 0.1) 100%)",
     },
     {
       id: 3,
-      name: t("team.name"),
-      role: t("team.role"),
+      name: t("team.member"),
+      role: t("team.urban_planner"),
+      handle: "noon_planner",
+      status: t("team.consulting"),
       image: "/images/ceoimage.svg",
+      contactText: t("team.profile"),
+      glowColor: "rgba(190, 123, 44, 0.4)",
+      gradient:
+        "linear-gradient(145deg, rgba(190, 123, 44, 0.2) 0%, rgba(249, 195, 157, 0.1) 100%)",
     },
     {
       id: 4,
-      name: t("team.name"),
-      role: t("team.role"),
+      name: t("team.member"),
+      role: t("team.interior_designer"),
+      handle: "noon_interior",
+      status: t("team.active"),
       image: "/images/ceoimage.svg",
+      contactText: t("team.profile"),
+      glowColor: "rgba(249, 195, 157, 0.4)",
+      gradient:
+        "linear-gradient(145deg, rgba(249, 195, 157, 0.2) 0%, rgba(190, 123, 44, 0.1) 100%)",
     },
     {
       id: 5,
-      name: t("team.name"),
-      role: t("team.role"),
+      name: t("team.member"),
+      role: t("team.project_manager"),
+      handle: "noon_pm",
+      status: t("team.on_site"),
       image: "/images/ceoimage.svg",
+      contactText: t("team.profile"),
+      glowColor: "rgba(190, 123, 44, 0.4)",
+      gradient:
+        "linear-gradient(145deg, rgba(190, 123, 44, 0.2) 0%, rgba(249, 195, 157, 0.1) 100%)",
     },
     {
       id: 6,
-      name: t("team.name"),
-      role: t("team.role"),
+      name: t("team.member"),
+      role: t("team.senior_consultant"),
+      handle: "noon_senior",
+      status: t("team.consulting"),
       image: "/images/ceoimage.svg",
+      contactText: t("team.profile"),
+      glowColor: "rgba(249, 195, 157, 0.4)",
+      gradient:
+        "linear-gradient(145deg, rgba(249, 195, 157, 0.2) 0%, rgba(190, 123, 44, 0.1) 100%)",
     },
   ];
   return (

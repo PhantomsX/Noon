@@ -6,11 +6,11 @@ import Image from "next/image";
 
 interface Project {
   title?: string;
-  description?: string;
+  client?: string;
+  designedBy?: string;
+  statusDate?: string;
   location?: string;
-  area?: string;
   scope?: string;
-  status?: string;
   image?: string;
   [key: string]: unknown;
 }
@@ -36,8 +36,8 @@ const Page = () => {
       >
         <Image
           className="object-cover"
-          src={"/images/rectangelImage.svg"}
-          alt={project?.title || t("common.project_image")}
+          src={project?.image || "/images/rectangelImage.svg"}
+          alt={project?.title || ""}
           fill
         />
       </motion.figure>
@@ -47,17 +47,20 @@ const Page = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
       >
-        <aside className="">
-          <h1 className="text-[23px] md:text-[32px] mb-2 ">{project?.title}</h1>
-          <p className="font-normal text-[14px] md:text-[16px] mb-3 ">
-            {project?.description}
+        <aside className="max-w-2xl">
+          <h1 className="text-[23px] md:text-[32px] mb-2 font-bold uppercase tracking-wider">
+            {project?.title}
+          </h1>
+          <p className="font-normal text-[14px] md:text-[16px] text-gray-400">
+            {project?.scope}
           </p>
         </aside>
-        <div>
+        <div className="space-y-4">
+          <RowLine name={t("client")} value={project?.client} />
           <RowLine name={t("location")} value={project?.location} />
-          <RowLine name={t("area")} value={project?.area} />
+          <RowLine name={t("designedBy")} value={project?.designedBy} />
+          <RowLine name={t("status")} value={project?.statusDate} />
           <RowLine name={t("scope")} value={project?.scope} />
-          <RowLine name={t("status")} value={project?.status} />
         </div>
       </motion.section>
       {project?.image && (

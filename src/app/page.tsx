@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion } from "motion/react";
 import AboutNoon from "./components/AboutNoon";
+import ProjectsPortfolio from "./components/ProjectsPortfolio";
 import Testimonials from "./components/Testimonials";
 import PartnersLogos from "./components/PartnersLogos";
 import ContactInfoSection from "./components/ContactInfoSection";
@@ -76,6 +77,9 @@ export default function Home() {
 
       {/* About Noon Section */}
       <AboutNoon />
+
+      {/* Projects Portfolio */}
+      <ProjectsPortfolio />
 
       {/* Partners of Success (Logos) */}
       <PartnersLogos />
