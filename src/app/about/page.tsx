@@ -10,37 +10,6 @@ import { motion, useInView } from "motion/react";
 import PageTitle from "../components/PageTitle";
 import ProfileCard from "@/components/ProfileCard";
 
-// Team member card component
-
-// Team member card component
-const TeamMemberCard = ({ member, index }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-10%" }}
-      transition={{
-        duration: 0.7,
-        delay: index * 0.1,
-        ease: [0.25, 0.1, 0.25, 1],
-      }}
-      className="flex justify-center"
-    >
-      <ProfileCard
-        avatarUrl={member.image}
-        name={member.name}
-        title={member.role}
-        handle={member.handle}
-        status={member.status}
-        contactText={member.contactText}
-        behindGlowColor={member.glowColor}
-        innerGradient={member.gradient}
-        className="w-full max-w-[320px]"
-      />
-    </motion.div>
-  );
-};
-
 const AboutPage = () => {
   const t = useTranslations();
   // Team members data
@@ -754,11 +723,21 @@ const AboutPage = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 3.3 }}
-          className="max-w-7xl mx-auto px-4"
+          className="max-w-7xl mx-auto"
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
-            {teamMembers.map((member, index) => (
-              <TeamMemberCard key={member.id} member={member} index={index} />
+            {teamMembers.map((member) => (
+              <ProfileCard
+                key={member.id}
+                avatarUrl={member.image}
+                name={member.name}
+                title={member.role}
+                handle={member.handle}
+                status={member.status}
+                contactText={member.contactText}
+                behindGlowColor={member.glowColor}
+                innerGradient={member.gradient}
+              />
             ))}
           </div>
         </motion.div>

@@ -3,7 +3,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-
 @font-face {
   font-family: "Monalisa";
   src: url("/fonts/monalisa/MonalisaSignature.otf") format("truetype");
