@@ -10,37 +10,6 @@ import { motion, useInView } from "motion/react";
 import PageTitle from "../components/PageTitle";
 import ProfileCard from "@/components/ProfileCard";
 
-// Team member card component
-
-// Team member card component
-const TeamMemberCard = ({ member, index }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-10%" }}
-      transition={{
-        duration: 0.7,
-        delay: index * 0.1,
-        ease: [0.25, 0.1, 0.25, 1],
-      }}
-      className="flex justify-center"
-    >
-      <ProfileCard
-        avatarUrl={member.image}
-        name={member.name}
-        title={member.role}
-        handle={member.handle}
-        status={member.status}
-        contactText={member.contactText}
-        behindGlowColor={member.glowColor}
-        innerGradient={member.gradient}
-        className="w-full max-w-[320px]"
-      />
-    </motion.div>
-  );
-};
-
 const AboutPage = () => {
   const t = useTranslations();
   // Team members data
@@ -147,7 +116,7 @@ const AboutPage = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.7 }}
-              className="text-justify text-base sm:text-lg lg:text-xl leading-relaxed mb-8 lg:mb-10"
+              className=" text-base sm:text-lg lg:text-xl leading-relaxed mb-8 lg:mb-10"
             >
               {t("aboutText1")}
             </motion.p>
@@ -159,7 +128,7 @@ const AboutPage = () => {
               className="space-y-4 lg:space-y-5"
             >
               <div className="flex items-center gap-4 sm:gap-6 before:content-['/01'] before:text-bg before:text-3xl sm:before:text-4xl lg:before:text-5xl before:font-bold after:w-full after:block after:h-0.5 after:bg-linearGradient after:content-['']" />
-              <p className="text-justify text-base sm:text-lg leading-relaxed pl-12 sm:pl-16 lg:pl-20">
+              <p className=" text-base sm:text-lg leading-relaxed pl-12 sm:pl-16 lg:pl-20">
                 {t("aboutText2")}
               </p>
             </motion.div>
@@ -171,7 +140,7 @@ const AboutPage = () => {
               className="space-y-4 lg:space-y-5"
             >
               <div className="flex items-center gap-4 sm:gap-6 before:content-['/02'] before:text-bg before:text-3xl sm:before:text-4xl lg:before:text-5xl before:font-bold after:w-full after:block after:h-0.5 after:bg-linearGradient after:content-['']" />
-              <p className="text-justify text-base sm:text-lg leading-relaxed pl-12 sm:pl-16 lg:pl-20">
+              <p className=" text-base sm:text-lg leading-relaxed pl-12 sm:pl-16 lg:pl-20">
                 {t("aboutText3")}
               </p>
             </motion.div>
@@ -379,7 +348,7 @@ const AboutPage = () => {
                   initial={{ y: 5 }}
                   animate={{ y: 0 }}
                   transition={{ duration: 0.5, delay: 2.5 }}
-                  className="text-sm sm:text-base text-justify leading-relaxed"
+                  className="text-sm sm:text-base  leading-relaxed"
                 >
                   {t("OUR MISSION TEXT")}
                 </motion.p>
@@ -524,7 +493,7 @@ const AboutPage = () => {
                   initial={{ y: 5 }}
                   animate={{ y: 0 }}
                   transition={{ duration: 0.5, delay: 2.7 }}
-                  className="text-sm sm:text-base text-justify leading-relaxed"
+                  className="text-sm sm:text-base  leading-relaxed"
                 >
                   {t("OUR VISION TEXT")}
                 </motion.p>
@@ -664,7 +633,7 @@ const AboutPage = () => {
                   initial={{ y: 5 }}
                   animate={{ y: 0 }}
                   transition={{ duration: 0.5, delay: 2.8 }}
-                  className="text-sm sm:text-base text-justify leading-relaxed"
+                  className="text-sm sm:text-base  leading-relaxed"
                 >
                   {t("FUTURE REACH TEXT")}
                 </motion.p>
@@ -754,11 +723,21 @@ const AboutPage = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 3.3 }}
-          className="max-w-7xl mx-auto px-4"
+          className="max-w-7xl mx-auto"
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
-            {teamMembers.map((member, index) => (
-              <TeamMemberCard key={member.id} member={member} index={index} />
+            {teamMembers.map((member) => (
+              <ProfileCard
+                key={member.id}
+                avatarUrl={member.image}
+                name={member.name}
+                title={member.role}
+                handle={member.handle}
+                status={member.status}
+                contactText={member.contactText}
+                behindGlowColor={member.glowColor}
+                innerGradient={member.gradient}
+              />
             ))}
           </div>
         </motion.div>

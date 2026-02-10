@@ -3,7 +3,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-
 @font-face {
   font-family: "Monalisa";
   src: url("/fonts/monalisa/MonalisaSignature.otf") format("truetype");
@@ -110,6 +109,13 @@
   }
   .gradient-gold-line {
     @apply bg-linear-to-l from-[#BE7B2C] to-[#F9C39D];
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
   }
 }
 

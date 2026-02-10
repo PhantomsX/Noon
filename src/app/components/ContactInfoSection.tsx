@@ -21,8 +21,8 @@ const ContactInfoSection = () => {
   ];
 
   return (
-    <section className="w-full py-40 px-8 md:px-16 lg:px-24 border-t border-[#C6A87D]/20">
-      <div className="max-w-7xl mx-auto flex flex-col gap-16">
+    <section className="w-full py-10 md:pt-20 md:pb-10 px-4 md:px-16 lg:px-24 border-t border-[#C6A87D]/20">
+      <div className="max-w-7xl mx-auto flex flex-col gap-8 md:gap-16">
         {/* Container for both offices and socials */}
         <div className="flex flex-col lg:flex-row justify-between items-start gap-12">
           {/* Riyadh Office */}
@@ -30,7 +30,7 @@ const ContactInfoSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex items-start gap-12"
+            className="flex flex-col md:flex-row items-start gap-6 md:gap-12"
           >
             <h2 className="font-elegance text-3xl md:text-4xl text-[#C6A87D] leading-none whitespace-nowrap">
               {t("headquarters")}
@@ -52,7 +52,7 @@ const ContactInfoSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex items-start gap-12"
+            className="flex flex-col md:flex-row items-start gap-6 md:gap-12"
           >
             <h2 className="font-elegance text-3xl md:text-4xl text-[#C6A87D] leading-none whitespace-nowrap">
               {t("branchOffice")}
@@ -74,7 +74,7 @@ const ContactInfoSection = () => {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col gap-6 items-center ml-auto lg:pr-4"
+            className="flex flex-row lg:flex-col gap-6 items-center ml-auto lg:pr-4"
           >
             {socials.map((social, index) => (
               <a

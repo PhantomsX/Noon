@@ -106,7 +106,7 @@ const Page = () => {
       location: "Riyadh, Saudi Arabia",
       scope: "Full Design Package",
       image:
-        "/projects/Architectural Projects/Dr. Mohammed Almalik Residence.png",
+        "/projects/Architectural Projects/Dr-Mohammed-Almalik-Residence.png",
       category: "architectural",
       type: "architecture",
     },
@@ -118,8 +118,7 @@ const Page = () => {
       statusDate: "2024 Under Construction",
       location: "Riyadh, Saudi Arabia",
       scope: "Full Design Package",
-      image:
-        "/projects/Architectural Projects/M R .WA E L A L R A I S PR IVATE VI L L A.png",
+      image: "/projects/Architectural Projects/MR-WAELALRAIS-PRIVATE-VILLA.png",
       category: "architectural",
       type: "architecture",
     },
@@ -325,12 +324,12 @@ const Page = () => {
           value={selectedType}
           onValueChange={handleTabClick}
         >
-          <TabsList className="overflow-x-auto whitespace-nowrap">
+          <TabsList className="flex flex-wrap w-full md:w-auto items-center justify-center gap-1 sm:gap-2 p-1 h-auto min-h-0 bg-black/40 border border-[#f9c39d]/20 rounded-xl backdrop-blur-md">
             {categories.map((cat) => (
               <TabsTrigger
                 key={cat}
                 value={cat}
-                className="uppercase cursor-pointer text-xs md:text-base px-4 py-2 min-w-[120px]"
+                className="uppercase cursor-pointer text-[10px] sm:text-xs md:text-base px-2 sm:px-3 py-2 flex-1 sm:flex-none min-w-[80px] sm:min-w-[100px] whitespace-normal text-center h-auto min-h-[40px] leading-tight flex items-center justify-center shrink-0"
               >
                 {cat === "all"
                   ? t("common.show_all")

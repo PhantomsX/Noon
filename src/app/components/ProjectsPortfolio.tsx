@@ -206,7 +206,7 @@ export default function ProjectsPortfolio() {
   };
 
   return (
-    <section className="relative w-full py-20 overflow-hidden">
+    <section className="relative w-full py-10 md:py-20 overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
         {/* Slanted lines group - Top Left */}
@@ -231,14 +231,14 @@ export default function ProjectsPortfolio() {
         </div>
       </div>
 
-      <div className="w-full px-6 md:px-12 lg:px-20">
+      <div className="w-full px-4 md:px-12 lg:px-20">
         {/* Header Section */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 md:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="font-elegance text-4xl md:text-5xl text-[#C6A87D] mb-6"
+            className="font-elegance text-3xl md:text-5xl text-[#C6A87D] mb-6"
           >
             {t("home.portfolio.title")}
           </motion.h2>
@@ -254,19 +254,19 @@ export default function ProjectsPortfolio() {
 
         <div className="relative flex flex-col md:flex-row gap-8 items-stretch mt-12">
           {/* Navigation Dots (Left side) */}
-          <div className="flex md:flex-col justify-center gap-4 md:pt-10">
+          <div className="flex md:flex-col justify-start md:justify-center gap-4 md:pt-10 overflow-x-auto md:overflow-visible pb-4 md:pb-0 px-1 scrollbar-hide w-full md:w-auto">
             {projects.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => scrollTo(idx)}
-                className={`w-4 h-4 rounded-full border flex items-center justify-center transition-all duration-300 ${
+                className={`shrink-0 w-3 h-3 md:w-4 md:h-4 rounded-full border flex items-center justify-center transition-all duration-300 ${
                   activeProjectIndex === idx
                     ? "border-[#C6A87D] scale-110"
                     : "border-gray-600 hover:border-[#C6A87D]"
                 }`}
               >
                 {activeProjectIndex === idx && (
-                  <div className="w-1.5 h-1.5 rounded-full bg-[#C6A87D]" />
+                  <div className="w-1 md:w-1.5 h-1 md:h-1.5 rounded-full bg-[#C6A87D]" />
                 )}
               </button>
             ))}
@@ -310,50 +310,56 @@ export default function ProjectsPortfolio() {
                     </motion.div>
 
                     {/* Overlay with Text */}
-                    <div className="absolute inset-0 bg-linear-to-t from-black/95 via-black/40 to-transparent flex flex-col justify-end p-8 md:p-12">
-                      <div className="flex flex-col md:flex-row justify-between items-end gap-8">
+                    <div className="absolute inset-0 bg-linear-to-t from-black via-black/80 to-transparent flex flex-col justify-end p-4 sm:p-6 md:p-12">
+                      <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-8">
                         {/* Left: Project Title */}
                         <div className="max-w-md text-start">
-                          <h3 className="text-white text-3xl md:text-4xl font-bold uppercase tracking-wider mb-4">
+                          <h3 className="text-white text-2xl md:text-4xl font-bold uppercase tracking-wider mb-2 md:mb-4">
                             {project.title}
                           </h3>
                         </div>
 
                         {/* Right: Project Details Table (matching the image) */}
-                        <div className="w-full md:w-auto min-w-[350px] space-y-2 text-xs md:text-sm text-white/90">
-                          <div className="flex justify-between border-b border-white/20 pb-2">
+                        <div className="w-full md:w-auto md:min-w-[350px] space-y-2 text-xs md:text-sm text-white/90">
+                          <div className="flex justify-between gap-4 border-b border-white/20 pb-2">
                             <span className="text-[#C6A87D] font-medium text-start">
                               {t("home.portfolio.client")}:
                             </span>
-                            <span className="text-end">{project.client}</span>
+                            <span className="text-end truncate max-w-[60%]">
+                              {project.client}
+                            </span>
                           </div>
-                          <div className="flex justify-between border-b border-white/20 pb-2">
+                          <div className="flex justify-between gap-4 border-b border-white/20 pb-2">
                             <span className="text-[#C6A87D] font-medium text-start">
                               {t("home.portfolio.designedBy")}:
                             </span>
-                            <span className="text-end">
+                            <span className="text-end truncate max-w-[60%]">
                               {project.designedBy}
                             </span>
                           </div>
-                          <div className="flex justify-between border-b border-white/20 pb-2">
+                          <div className="flex justify-between gap-4 border-b border-white/20 pb-2">
                             <span className="text-[#C6A87D] font-medium text-start">
                               {t("home.portfolio.statusDate")}:
                             </span>
-                            <span className="text-end">
+                            <span className="text-end truncate max-w-[60%]">
                               {project.statusDate}
                             </span>
                           </div>
-                          <div className="flex justify-between border-b border-white/20 pb-2">
+                          <div className="flex justify-between gap-4 border-b border-white/20 pb-2">
                             <span className="text-[#C6A87D] font-medium text-start">
                               {t("home.portfolio.location")}:
                             </span>
-                            <span className="text-end">{project.location}</span>
+                            <span className="text-end truncate max-w-[60%]">
+                              {project.location}
+                            </span>
                           </div>
-                          <div className="flex justify-between pb-2">
+                          <div className="flex justify-between gap-4 pb-2">
                             <span className="text-[#C6A87D] font-medium text-start">
                               {t("home.portfolio.scope")}:
                             </span>
-                            <span className="text-end">{project.scope}</span>
+                            <span className="text-end truncate max-w-[60%]">
+                              {project.scope}
+                            </span>
                           </div>
                         </div>
                       </div>

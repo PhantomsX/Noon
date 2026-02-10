@@ -487,18 +487,18 @@ const ProfilePage = () => {
             duration: 0.3,
             ease: "easeOut",
           }}
-          className="grid grid-cols-1 md:grid-cols-7 gap-6 mb-8 md:mb-12"
+          className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-7 gap-6 mb-8 md:mb-12"
         >
           <motion.div
             variants={itemVariants}
-            className="relative rounded-2xl overflow-hidden border-2 border-[#f9c39d] h-[250px] md:h-auto"
+            className="relative rounded-2xl overflow-hidden border-2 border-[#f9c39d] aspect-4/5 w-full max-w-[250px] mx-auto md:w-full md:max-w-none md:h-auto md:aspect-auto shrink-0"
             whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
           >
             <Image
               src="/images/ceoimage.svg"
               alt={t("alt.profile_picture")}
               fill
-              className="object-cover"
+              className="object-cover object-top"
             />
           </motion.div>
           <motion.div variants={itemVariants} className="md:col-span-4">
@@ -529,7 +529,7 @@ const ProfilePage = () => {
                 duration: 0.3,
                 ease: "easeOut",
               }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-12 mt-6 text-white"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 lg:gap-12 mt-6 text-white"
             >
               {/* Left column */}
               <div className="space-y-2 *:border-[#f9c39d] *:border-b *:pb-1 text-sm md:text-base">
@@ -593,7 +593,7 @@ const ProfilePage = () => {
               duration: 0.4,
             }}
             whileHover="hover"
-            className="md:col-span-2 border border-[#f9c39d] rounded-2xl p-4 sm:p-6 bg-black/20 backdrop-blur-sm flex flex-col justify-between"
+            className="md:col-span-5 lg:col-span-2 border border-[#f9c39d] rounded-2xl p-4 sm:p-6 bg-black/20 backdrop-blur-sm flex flex-col justify-between"
           >
             <motion.h3
               variants={titleVariants}
@@ -623,7 +623,7 @@ const ProfilePage = () => {
           className="w-full"
           onValueChange={setActiveTab}
         >
-          <TabsList className="mb-6 md:mb-8 flex flex-wrap">
+          <TabsList className="mb-6 md:mb-8 flex flex-wrap p-2">
             {tabSections.map((tab, index) => (
               <motion.div
                 key={tab.value}

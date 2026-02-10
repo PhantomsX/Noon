@@ -46,9 +46,9 @@ export default function PartnersLogos() {
   ];
 
   return (
-    <section className="w-full py-16 overflow-hidden">
+    <section className="w-full py-8 md:py-16 overflow-hidden">
       <div className="w-full">
-        <h2 className="mb-12 md:mb-16 font-elegance text-4xl md:text-5xl text-[#C6A87D] text-center px-4 md:px-2">
+        <h2 className="mb-8 md:mb-16 font-elegance text-3xl md:text-5xl text-[#C6A87D] text-center px-4 md:px-2">
           {t("partners_of_success")}
         </h2>
 
@@ -66,7 +66,7 @@ export default function PartnersLogos() {
               fadeOutColor="#000000"
               scaleOnHover={true}
               ariaLabel={t("aria.scroll_left")}
-              className="partner-logos-loop"
+              className="partner-logos-loop [--logoloop-logoHeight:35px]! md:[--logoloop-logoHeight:60px]! [--logoloop-gap:24px]! md:[--logoloop-gap:48px]!"
             />
           </div>
 
@@ -83,7 +83,7 @@ export default function PartnersLogos() {
               fadeOutColor="#000000"
               scaleOnHover={true}
               ariaLabel={t("aria.scroll_right")}
-              className="partner-logos-loop"
+              className="partner-logos-loop [--logoloop-logoHeight:35px]! md:[--logoloop-logoHeight:60px]! [--logoloop-gap:24px]! md:[--logoloop-gap:48px]!"
             />
           </div>
         </div>
