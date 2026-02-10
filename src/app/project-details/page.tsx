@@ -19,6 +19,7 @@ const Page = () => {
   const [project, setProject] = useState<Project | null>(null);
 
   const t = useTranslations("projects");
+  const tCommon = useTranslations("common");
   useEffect(() => {
     const pro = localStorage.getItem("selectedProject");
     if (pro) {
@@ -82,7 +83,7 @@ const Page = () => {
           >
             <Image
               src={project?.image}
-              alt={t("common.project_image")}
+              alt={tCommon("project_image")}
               width={500}
               height={300}
               className="w-full h-full object-cover"

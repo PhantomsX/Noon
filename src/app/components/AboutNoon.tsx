@@ -6,8 +6,8 @@ import { useTranslations } from "next-intl";
 export default function AboutNoon() {
   const t = useTranslations();
   return (
-    <section className="relative w-full py-24 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-12 md:gap-20">
+    <section className="relative w-full py-12 md:py-24 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-20">
         {/* Left: Image (Dr. Naser Al Sayed) */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -30,7 +30,7 @@ export default function AboutNoon() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="w-full md:w-1/2 flex flex-col justify-center items-start text-left"
         >
-          <h2 className="font-elegance text-4xl md:text-6xl text-[#C6A87D] mb-8 leading-tight">
+          <h2 className="font-elegance text-3xl md:text-6xl text-[#C6A87D] mb-6 md:mb-8 leading-tight">
             {t("aboutNoon")}
           </h2>
 

@@ -116,7 +116,7 @@ const AboutPage = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.7 }}
-              className="text-justify text-base sm:text-lg lg:text-xl leading-relaxed mb-8 lg:mb-10"
+              className=" text-base sm:text-lg lg:text-xl leading-relaxed mb-8 lg:mb-10"
             >
               {t("aboutText1")}
             </motion.p>
@@ -128,7 +128,7 @@ const AboutPage = () => {
               className="space-y-4 lg:space-y-5"
             >
               <div className="flex items-center gap-4 sm:gap-6 before:content-['/01'] before:text-bg before:text-3xl sm:before:text-4xl lg:before:text-5xl before:font-bold after:w-full after:block after:h-0.5 after:bg-linearGradient after:content-['']" />
-              <p className="text-justify text-base sm:text-lg leading-relaxed pl-12 sm:pl-16 lg:pl-20">
+              <p className=" text-base sm:text-lg leading-relaxed pl-12 sm:pl-16 lg:pl-20">
                 {t("aboutText2")}
               </p>
             </motion.div>
@@ -140,7 +140,7 @@ const AboutPage = () => {
               className="space-y-4 lg:space-y-5"
             >
               <div className="flex items-center gap-4 sm:gap-6 before:content-['/02'] before:text-bg before:text-3xl sm:before:text-4xl lg:before:text-5xl before:font-bold after:w-full after:block after:h-0.5 after:bg-linearGradient after:content-['']" />
-              <p className="text-justify text-base sm:text-lg leading-relaxed pl-12 sm:pl-16 lg:pl-20">
+              <p className=" text-base sm:text-lg leading-relaxed pl-12 sm:pl-16 lg:pl-20">
                 {t("aboutText3")}
               </p>
             </motion.div>
@@ -348,7 +348,7 @@ const AboutPage = () => {
                   initial={{ y: 5 }}
                   animate={{ y: 0 }}
                   transition={{ duration: 0.5, delay: 2.5 }}
-                  className="text-sm sm:text-base text-justify leading-relaxed"
+                  className="text-sm sm:text-base  leading-relaxed"
                 >
                   {t("OUR MISSION TEXT")}
                 </motion.p>
@@ -493,7 +493,7 @@ const AboutPage = () => {
                   initial={{ y: 5 }}
                   animate={{ y: 0 }}
                   transition={{ duration: 0.5, delay: 2.7 }}
-                  className="text-sm sm:text-base text-justify leading-relaxed"
+                  className="text-sm sm:text-base  leading-relaxed"
                 >
                   {t("OUR VISION TEXT")}
                 </motion.p>
@@ -633,7 +633,7 @@ const AboutPage = () => {
                   initial={{ y: 5 }}
                   animate={{ y: 0 }}
                   transition={{ duration: 0.5, delay: 2.8 }}
-                  className="text-sm sm:text-base text-justify leading-relaxed"
+                  className="text-sm sm:text-base  leading-relaxed"
                 >
                   {t("FUTURE REACH TEXT")}
                 </motion.p>

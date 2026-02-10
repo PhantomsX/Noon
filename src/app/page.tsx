@@ -45,7 +45,7 @@ export default function Home() {
         <div className="absolute inset-0 ltr:bg-linear-to-r rtl:bg-linear-to-l from-black/80 via-black/40 to-transparent" />
 
         {/* Hero Content */}
-        <div className="relative z-10 h-full flex flex-col justify-center px-6 md:px-12 lg:px-16 max-w-[1920px] mx-auto">
+        <div className="relative z-10 h-full flex flex-col justify-center px-4 md:px-12 lg:px-16 max-w-[1920px] mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
