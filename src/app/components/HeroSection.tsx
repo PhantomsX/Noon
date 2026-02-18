@@ -5,20 +5,19 @@ import { useTranslations } from "next-intl";
 import { motion } from "motion/react";
 
 const ALL_PROJECT_IMAGES = [
-  "/projects/Urban%20Projects/AL%20DHUHAYAN.jpg",
-  "/projects/Urban%20Projects/ALNIMR.jpg",
-  "/projects/Urban%20Projects/Liven%20Residential%20Compund.jpg",
-  "/projects/Urban%20Projects/TANGIER%20HILLS.png",
-  "/projects/Urban%20Projects/business%20pay.png",
-  "/projects/Architectural%20Projects/AL%20WOMEN%20EQUESTRIAN%20CLUB.png",
-  "/projects/Architectural%20Projects/Al-Qahtani%20Complex.png",
-  "/projects/Architectural%20Projects/Dr-Mohammed-Almalik-Residence.png",
-  "/projects/Architectural%20Projects/MR-WAELALRAIS-PRIVATE-VILLA.png",
-  "/projects/Architectural%20Projects/V%20Tower.jpg",
-  "/projects/Interior%20projects/VIP%20RESIDENCE.png",
-  "/projects/Interior%20projects/KINDERGARTEN%20DESIGN.png",
-  "/projects/Interior%20projects/AL-WALLAN%20HEAD%20QUARTER%20OFFICES.png",
-  "/projects/Interior%20projects/AL-WALLAN%20HEAD%20QUARTER%20OFFICES%202.png",
+  "/projects/Urban Projects/al-dhuhayan.jpg",
+  "/projects/Urban Projects/alnimr.jpg",
+  "/projects/Urban Projects/liven-residential-compund.jpg",
+  "/projects/Urban Projects/business-pay.png",
+  "/projects/Architectural Projects/al-women-equestrian-club.png",
+  "/projects/Architectural Projects/al-qahtani-complex.png",
+  "/projects/Architectural Projects/dr-mohammed-almalik-residence.png",
+  "/projects/Architectural Projects/mr-waelalrais-private-villa.png",
+  "/projects/Architectural Projects/v-tower.jpg",
+  "/projects/Interior projects/vip-residence.png",
+  "/projects/Interior projects/kindergarten-design.png",
+  "/projects/Interior projects/al-wallan-hq-offices.png",
+  "/projects/Interior projects/al-wallan-hq-offices-2.png",
 ];
 
 /** Pick `count` unique random items from an array. */

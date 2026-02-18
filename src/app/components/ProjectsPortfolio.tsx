@@ -32,7 +32,7 @@ const projects: Project[] = [
     statusDate: "05-2023 Under Construction",
     location: "Riyadh, Saudi Arabia",
     scope: "Development, Full Design Package",
-    image: "/projects/Urban%20Projects/AL%20DHUHAYAN.jpg",
+    image: "/projects/Urban Projects/al-dhuhayan.jpg",
     category: "urban",
   },
   {
@@ -43,7 +43,7 @@ const projects: Project[] = [
     statusDate: "05-2023 Under Construction",
     location: "Riyadh, Saudi Arabia",
     scope: "Development, Full Design Package",
-    image: "/projects/Urban%20Projects/ALNIMR.jpg",
+    image: "/projects/Urban Projects/alnimr.jpg",
     category: "urban",
   },
   {
@@ -54,7 +54,7 @@ const projects: Project[] = [
     statusDate: "07-2025in Progress",
     location: "AL KHOBAR City, Saudi Arabia",
     scope: "Development, Full Design Package",
-    image: "/projects/Urban%20Projects/Liven%20Residential%20Compund.jpg",
+    image: "/projects/Urban Projects/liven-residential-compund.jpg",
     category: "urban",
   },
   {
@@ -65,7 +65,7 @@ const projects: Project[] = [
     statusDate: "07-2016 Completed",
     location: "Morocco - Tangier 32,868 SQM",
     scope: "Urban Planning & Master Plan",
-    image: "/projects/Urban%20Projects/TANGIER%20HILLS.png",
+    image: "/projects/Urban Projects/tangier-hills.png",
     category: "urban",
   },
   {
@@ -76,7 +76,7 @@ const projects: Project[] = [
     statusDate: "07-2016 Completed",
     location: "Morocco - Tangier 32,868 SQM",
     scope: "Urban Planning & Master Plan",
-    image: "/projects/Urban%20Projects/business%20pay.png",
+    image: "/projects/Urban Projects/business-pay.png",
     category: "urban",
   },
   // Architectural Projects
@@ -88,8 +88,7 @@ const projects: Project[] = [
     statusDate: "2021 Completed",
     location: "Riyadh, Saudi Arabia",
     scope: "Full Design Package",
-    image:
-      "/projects/Architectural%20Projects/AL%20WOMEN%20EQUESTRIAN%20CLUB.png",
+    image: "/projects/Architectural Projects/al-women-equestrian-club.png",
     category: "architectural",
   },
   {
@@ -100,7 +99,7 @@ const projects: Project[] = [
     statusDate: "2025 in progress",
     location: "Riyadh, Saudi Arabia",
     scope: "Full Design Package",
-    image: "/projects/Architectural%20Projects/Al-Qahtani%20Complex.png",
+    image: "/projects/Architectural Projects/al-qahtani-complex.png",
     category: "architectural",
   },
   {
@@ -111,8 +110,7 @@ const projects: Project[] = [
     statusDate: "2021 Completed",
     location: "Riyadh, Saudi Arabia",
     scope: "Full Design Package",
-    image:
-      "/projects/Architectural%20Projects/Dr-Mohammed-Almalik-Residence.png",
+    image: "/projects/Architectural Projects/dr-mohammed-almalik-residence.png",
     category: "architectural",
   },
   {
@@ -123,7 +121,7 @@ const projects: Project[] = [
     statusDate: "2024 Under Construction",
     location: "Riyadh, Saudi Arabia",
     scope: "Full Design Package",
-    image: "/projects/Architectural%20Projects/MR-WAELALRAIS-PRIVATE-VILLA.png",
+    image: "/projects/Architectural Projects/mr-waelalrais-private-villa.png",
     category: "architectural",
   },
   {
@@ -134,7 +132,7 @@ const projects: Project[] = [
     statusDate: "2024 Under Construction",
     location: "Riyadh City, Saudi Arabia 1,500 SQM",
     scope: "Full Design Package",
-    image: "/projects/Architectural%20Projects/V%20Tower.jpg",
+    image: "/projects/Architectural Projects/v-tower.jpg",
     category: "architectural",
   },
   // Interior Projects
@@ -146,7 +144,7 @@ const projects: Project[] = [
     statusDate: "2020 Completed",
     location: "Riyadh City, Saudi Arabia 1,500 SQM",
     scope: "Full Design Package",
-    image: "/projects/Interior%20projects/VIP%20RESIDENCE.png",
+    image: "/projects/Interior projects/vip-residence.png",
     category: "interior design",
   },
   {
@@ -157,7 +155,7 @@ const projects: Project[] = [
     statusDate: "2020 Completed",
     location: "Riyadh City, Saudi Arabia 1,500 SQM",
     scope: "Design Concept",
-    image: "/projects/Interior%20projects/KINDERGARTEN%20DESIGN.png",
+    image: "/projects/Interior projects/kindergarten-design.png",
     category: "interior design",
   },
   {
@@ -168,8 +166,7 @@ const projects: Project[] = [
     statusDate: "2024 Completed",
     location: "Riyadh City, Saudi Arabia 1,500 SQM",
     scope: "Interior Design",
-    image:
-      "/projects/Interior%20projects/AL-WALLAN%20HEAD%20QUARTER%20OFFICES.png",
+    image: "/projects/Interior projects/al-wallan-hq-offices.png",
     category: "interior design",
   },
 ];

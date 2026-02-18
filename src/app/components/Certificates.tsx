@@ -13,41 +13,33 @@ interface CertificateEntry {
 
 const CERTIFICATE_DATA: CertificateEntry[] = [
   {
-    logo: "/certificates/certificates%20logos/tci.png",
+    logo: "/certificates/certificates logos/tci.png",
     logoAlt: "TCI – ISO Certification",
     certificates: [
-      "/certificates/%D8%B4%D9%87%D8%A7%D8%AF%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A5%D9%8A%D8%B2%D9%88%20%D9%84%D9%85%D9%83%D8%AA%D8%A8%20%D9%86%D9%88%D9%86%20%D9%84%D9%84%D8%A5%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D9%87%D9%86%D8%AF%D8%B3%D9%8A%D8%A9%20%D8%AD%D8%AA%D9%89%2017-08-2026%D9%85_page-0001.jpg",
-      "/certificates/%D8%B4%D9%87%D8%A7%D8%AF%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A5%D9%8A%D8%B2%D9%88%20%D9%84%D9%85%D9%83%D8%AA%D8%A8%20%D9%86%D9%88%D9%86%20%D9%84%D9%84%D8%A5%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D9%87%D9%86%D8%AF%D8%B3%D9%8A%D8%A9%20%D8%AD%D8%AA%D9%89%2017-08-2026%D9%85_page-0002.jpg",
-      "/certificates/%D8%B4%D9%87%D8%A7%D8%AF%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A5%D9%8A%D8%B2%D9%88%20%D9%84%D9%85%D9%83%D8%AA%D8%A8%20%D9%86%D9%88%D9%86%20%D9%84%D9%84%D8%A5%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D9%87%D9%86%D8%AF%D8%B3%D9%8A%D8%A9%20%D8%AD%D8%AA%D9%89%2017-08-2026%D9%85_page-0003.jpg",
+      "/certificates/iso-certificate-page-1.jpg",
+      "/certificates/iso-certificate-page-2.jpg",
+      "/certificates/iso-certificate-page-3.jpg",
     ],
   },
   {
-    logo: "/certificates/certificates%20logos/balady.jpg",
+    logo: "/certificates/certificates logos/balady.jpg",
     logoAlt: "Balady – بلدي",
-    certificates: [
-      "/certificates/%D8%B4%D9%87%D8%A7%D8%AF%D8%A9%20%D8%A5%D8%B9%D8%AA%D9%85%D8%A7%D8%AF%20%D8%AA%D8%B5%D9%86%D9%8A%D9%81%20%D9%85%D9%82%D8%AF%D9%85%D9%8A%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D8%AF%D9%86%20(%20%D8%A8%D9%84%D8%AF%D9%8A)%20%D9%85%D9%83%D8%AA%D8%A8%20%D9%86%D9%88%D9%86%20%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%20%D8%AD%D8%AA%D9%89%2011-09-2026%D9%85_page-0001.jpg",
-    ],
+    certificates: ["/certificates/balady-certificate.jpg"],
   },
   {
-    logo: "/certificates/certificates%20logos/modon.png",
+    logo: "/certificates/certificates logos/modon.png",
     logoAlt: "Modon – مدن",
-    certificates: [
-      "/certificates/%D8%B4%D9%87%D8%A7%D8%AF%D8%A9%20%D8%AA%D8%A3%D9%87%D9%8A%D9%84%20%D9%85%D9%83%D8%AA%D8%A8%20%D9%86%D9%88%D9%86%20%D9%84%D9%84%D8%A5%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D9%87%D9%86%D8%AF%D8%B3%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%85%D8%AF%D9%86%20%D8%AD%D8%AA%D9%89%2027-07-2027%D9%85_page-0001.jpg",
-    ],
+    certificates: ["/certificates/modon-certificate.jpg"],
   },
   {
-    logo: "/certificates/certificates%20logos/real%20estate%20general%20authority.png",
+    logo: "/certificates/certificates logos/real-estate-authority.png",
     logoAlt: "Real Estate General Authority",
-    certificates: [
-      "/certificates/%D8%B4%D9%87%D8%A7%D8%AF%D8%A9%20%D8%AA%D8%A3%D9%87%D9%8A%D9%84%20%D9%85%D9%83%D8%AA%D8%A8%20%D9%86%D9%88%D9%86%20%D9%84%D9%84%D8%A5%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D9%87%D9%86%D8%AF%D8%B3%D9%8A%D8%A9%20%D9%84%D9%84%D8%A5%D8%B4%D8%B1%D8%A7%D9%81%20%D8%B9%D9%84%D9%89%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D8%A7%D8%AA%20%D8%B9%D9%82%D8%A7%D8%B1%D9%8A%D8%A9%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%AE%D8%A7%D8%B1%D8%B7%D8%A9%20%D8%AD%D8%AA%D9%89%2031-12-2026%D9%85_page-0001.jpg",
-    ],
+    certificates: ["/certificates/real-estate-certificate.jpg"],
   },
   {
-    logo: "/certificates/certificates%20logos/economic%20cities%20and%20special%20zones%20authority.png",
+    logo: "/certificates/certificates logos/economic-cities-authority.png",
     logoAlt: "Economic Cities & Special Zones Authority",
-    certificates: [
-      "/certificates/%D8%B4%D9%87%D8%A7%D8%AF%D8%A9%20%D8%AA%D8%A3%D9%87%D9%8A%D9%84%20%D9%85%D9%83%D8%AA%D8%A8%20%D9%86%D9%88%D9%86%20%D9%84%D9%84%D8%A5%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D9%87%D9%86%D8%AF%D8%B3%D9%8A%D8%A9-%D9%87%D9%8A%D8%A6%D8%A9%20%D8%A7%D9%84%D9%85%D8%AF%D9%86%20%D9%88%D8%A7%D9%84%D9%85%D9%86%D8%A7%D8%B7%D9%82%20%D8%A7%D9%84%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AE%D8%A7%D8%B5%D8%A9%20%D8%AD%D8%AA%D9%89%2013-11-2027%D9%85_page-0001.jpg",
-    ],
+    certificates: ["/certificates/economic-cities-certificate.jpg"],
   },
 ];
 
