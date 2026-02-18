@@ -28,7 +28,7 @@ const NavbarDropdown = () => {
     { title: "ABOUT US", href: "/about" },
     { title: "OUR PROJECTS", href: "/projects" },
     { title: "OUR SERVICES", href: "/services" },
-    { title: "BLOGS", href: "/blogs" },
+    { title: "NEWS", href: "/news" },
     { title: "CAREERS", href: "/careers" },
     { title: "PROFILE", href: "/profile" },
   ];

@@ -35,9 +35,9 @@ const Navbar = () => {
     { title: "ABOUT US", href: "/about" },
     { title: "OUR PROJECTS", href: "/projects" },
     { title: "OUR SERVICES", href: "/services" },
-    { title: "BLOGS", href: "/blogs" },
+    { title: "NEWS", href: "/news" },
     { title: "CAREERS", href: "/careers" },
-    { title: "PROFILE", href: "/profile" },
+    // { title: "PROFILE", href: "/profile" },
   ];
 
   // Check if a link is active

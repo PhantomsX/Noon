@@ -38,7 +38,7 @@
   "ABOUT US": "ABOUT US",
   "OUR PROJECTS": "OUR PROJECTS",
   "OUR SERVICES": "OUR SERVICES",
-  "BLOGS": "BLOGS",
+  "NEWS": "NEWS",
   "CAREERS": "CAREERS",
   "PROFILE": "PROFILE",
   "aboutNoon": "About Noon Consultants",
@@ -55,6 +55,7 @@
   "calculate": "calculate",
   "calculateTitle": "Architectural Design Calculator",
   "certificates": "Certificates",
+  "view": "view",
   "careers": {
     "applicationProcess": "Application Process",
     "applyNow": "Apply Now",
@@ -169,7 +170,7 @@
   "comingSoon": "Coming Soon",
   "comingSoonPage": {
     "subtitle": "We are working hard to bring you something amazing. Stay tuned for updates!",
-    "blogSubtitle": "Explore our upcoming blog for expert insights into urban design, architecture, and interior innovation in Saudi Arabia.",
+    "blogSubtitle": "Explore our upcoming news section for expert insights into urban design, architecture, and interior innovation in Saudi Arabia.",
     "underDevelopment": "Under Development",
     "notifyMe": "Notify Me"
   },
