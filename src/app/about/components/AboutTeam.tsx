@@ -14,7 +14,7 @@ const TeamStats = () => {
 
   const stats = [
     { target: 15, suffix: "+", label: t("common.years_experience") },
-    { target: 50, suffix: "+", label: t("common.projects_completed") },
+    { target: 400, suffix: "+", label: t("common.projects_completed") },
     { target: 20, suffix: "+", label: t("common.team_members") },
     { target: 95, suffix: "%", label: t("common.client_satisfaction") },
   ];
@@ -77,7 +77,7 @@ const AboutTeam = () => {
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 2.8 }}
-          className="lg:col-span-1 text-center lg:text-left"
+          className="lg:col-span-1 text-center lg:text-start"
         >
           <PageTitle>{t("our_team")}</PageTitle>
         </motion.div>

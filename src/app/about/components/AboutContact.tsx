@@ -69,7 +69,7 @@ const AboutContact = () => {
                   initial={{ x: -10 }}
                   animate={{ x: 0 }}
                   transition={{ duration: 0.5, delay: 3.8 }}
-                  className="flex items-start gap-3 hover:translate-x-1 transition-transform"
+                  className="flex items-start gap-3"
                 >
                   <svg
                     className="w-5 h-5 text-[#F9C39D] mt-1 shrink-0"
@@ -84,7 +84,7 @@ const AboutContact = () => {
                   </svg>
                   <div className="text-white text-base lg:text-lg">
                     <div className="font-medium">{t("address1")}</div>
-                    <div className="text-gray-400 text-sm">12253</div>
+                    <div className="text-gray-400 text-sm">12385</div>
                   </div>
                 </motion.div>
 
@@ -92,7 +92,7 @@ const AboutContact = () => {
                   initial={{ x: -10 }}
                   animate={{ x: 0 }}
                   transition={{ duration: 0.5, delay: 3.9 }}
-                  className="flex items-center gap-3 hover:translate-x-1 transition-transform"
+                  className="flex items-center gap-3"
                 >
                   <svg
                     className="w-5 h-5 text-[#F9C39D] shrink-0"
@@ -102,11 +102,11 @@ const AboutContact = () => {
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
                   <a
-                    href="tel:00966114110000"
+                    href="tel:+966539929050"
                     dir="ltr"
-                    className="text-white text-base lg:text-lg hover:text-bg transition-colors"
+                    className="text-white text-base lg:text-lg hover:scale-105 transition-transform"
                   >
-                    +966 11 411 0000
+                    +966 53 992 9050
                   </a>
                 </motion.div>
 
@@ -114,7 +114,7 @@ const AboutContact = () => {
                   initial={{ x: -10 }}
                   animate={{ x: 0 }}
                   transition={{ duration: 0.5, delay: 4.0 }}
-                  className="flex items-center gap-3 hover:translate-x-1 transition-transform"
+                  className="flex items-center gap-3"
                 >
                   <svg
                     className="w-5 h-5 text-[#F9C39D] shrink-0"
@@ -125,11 +125,11 @@ const AboutContact = () => {
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                   </svg>
                   <a
-                    href="mailto:info@noon.sa"
+                    href="mailto:info@nnc.sa"
                     dir="ltr"
-                    className="text-white text-base lg:text-lg hover:text-bg transition-colors"
+                    className="text-white text-base lg:text-lg hover:scale-105 transition-transform"
                   >
-                    info@noon.sa
+                    info@nnc.sa
                   </a>
                 </motion.div>
               </motion.div>
@@ -183,10 +183,10 @@ const AboutContact = () => {
                   initial={{ x: -10 }}
                   animate={{ x: 0 }}
                   transition={{ duration: 0.5, delay: 4.4 }}
-                  className="flex items-start gap-3 hover:translate-x-1 transition-transform"
+                  className="flex items-start gap-3"
                 >
                   <svg
-                    className="w-5 h-5 text-[#F9C39D] mt-1 shrink-0"
+                    className="size-5 text-[#F9C39D] mt-1 shrink-0"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -206,21 +206,21 @@ const AboutContact = () => {
                   initial={{ x: -10 }}
                   animate={{ x: 0 }}
                   transition={{ duration: 0.5, delay: 4.5 }}
-                  className="flex items-center gap-3 hover:translate-x-1 transition-transform"
+                  className="flex items-center gap-3"
                 >
                   <svg
-                    className="w-5 h-5 text-[#F9C39D] shrink-0"
+                    className="size-5 text-[#F9C39D] shrink-0"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
                   <a
-                    href="tel:00966124199999"
+                    href="tel:+966598959098"
                     dir="ltr"
-                    className="text-white text-base lg:text-lg hover:text-bg transition-colors"
+                    className="text-white text-base lg:text-lg hover:scale-105 transition-transform"
                   >
-                    +966 12 419 9999
+                    +966 59 895 9098{" "}
                   </a>
                 </motion.div>
 
@@ -228,10 +228,10 @@ const AboutContact = () => {
                   initial={{ x: -10 }}
                   animate={{ x: 0 }}
                   transition={{ duration: 0.5, delay: 4.6 }}
-                  className="flex items-center gap-3 hover:translate-x-1 transition-transform"
+                  className="flex items-center gap-3"
                 >
                   <svg
-                    className="w-5 h-5 text-[#F9C39D] shrink-0"
+                    className="size-5 text-[#F9C39D] shrink-0"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -239,11 +239,11 @@ const AboutContact = () => {
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                   </svg>
                   <a
-                    href="mailto:info@noon.sa"
+                    href="mailto:info@nnc.sa"
                     dir="ltr"
-                    className="text-white text-base lg:text-lg hover:text-bg transition-colors"
+                    className="text-white text-base lg:text-lg hover:scale-105 transition-transform"
                   >
-                    info@noon.sa
+                    info@nnc.sa
                   </a>
                 </motion.div>
               </motion.div>

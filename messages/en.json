@@ -35,6 +35,7 @@
   "Warehouse": "Warehouse",
   "What Our Clients Say": "partners words about noon",
   "about": "About",
+  "HOME": "HOME",
   "ABOUT US": "ABOUT US",
   "OUR PROJECTS": "OUR PROJECTS",
   "OUR SERVICES": "OUR SERVICES",
@@ -46,8 +47,8 @@
   "aboutChairman": "Dr. Naser El Sayed",
   "aboutText2": "Our success is primarily attributed to the exceptional caliber of our team and their ability to deliver high-quality designs that thoughtfully integrate social, environmental, and economic considerations, ensuring holistic and sustainable outcomes.",
   "aboutText3": "Our objective is to continuously evolve as a design practice, consistently seeking innovative solutions to conventional challenges while delivering the highest standard of service to our clients and the wider community",
-  "aboutText4": "“We, as noon, are a professional engineering services firm that                 engages in urban, architectural design, supervision, interior                 design, project management as well as related research, planning                 and consultancy activities.",
-  "aboutText5": "Our firm provides solutions that are both creative and feasible.                 Our goal is to continue to strive as a team of professionals to                 guarantee our unwavering commitment to value and quality that                 satisfies our clients.”",
+  "aboutText4": "At Noon Engineering Consultants, we do not view projects as drawings or plans alone — we see them as a responsibility and a trust placed in our hands.",
+  "aboutText5": "We believe that successful projects begin with a deep understanding of our clients' needs and are realized through creative, practical solutions that balance quality, efficiency, and design excellence. Working as one team, we strive at every stage to deliver real value that exceeds expectations — with full commitment to professional standards and execution precision.\nOur ambition continues to grow, guided by a clear vision: to be a trusted partner who leaves a distinct mark on every project through expertise, professionalism, and dedication.\nAt Noon, quality is not an option — it is our standard.",
   "address1": "Riyadh, Saudi Arabia Olaya St, Al Wurud District",
   "address2": "Al-Madinah, Saudi Arabia Abdusalam Ibn Hafes St, Al Iskan District",
   "branchOffice": "Branch Office",
@@ -59,7 +60,7 @@
   "careers": {
     "applicationProcess": "Application Process",
     "applyNow": "Apply Now",
-    "applyText": "Ready to join our team? Send your application to careers@noonconsultants.com with the position title in the subject line.",
+    "applyText": "Ready to join our team? Send your application to careers@nnc.sa with the position title in the subject line.",
     "backToPositions": "Back to Positions",
     "benefits": {
       "culture": {

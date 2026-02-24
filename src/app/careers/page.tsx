@@ -329,17 +329,17 @@ const CareersPage = () => {
           transition={{ duration: 0.8 }}
         >
           <div className="text-center">
-            <AnimatedCounter target={50} suffix="+" />
+            <AnimatedCounter target={20} suffix="+" />
             <p className="text-gray-400 mt-2">{t("common.team_members")}</p>
           </div>
           <div className="text-center">
-            <AnimatedCounter target={200} suffix="+" />
+            <AnimatedCounter target={400} suffix="+" />
             <p className="text-gray-400 mt-2">
               {t("common.projects_completed")}
             </p>
           </div>
           <div className="text-center">
-            <AnimatedCounter target={12} suffix="+" />
+            <AnimatedCounter target={15} suffix="+" />
             <p className="text-gray-400 mt-2">{t("common.years_experience")}</p>
           </div>
           <div className="text-center">
@@ -515,9 +515,7 @@ const CareersPage = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() =>
-              window.open("mailto:careers@noonconsultants.com", "_blank")
-            }
+            onClick={() => window.open("mailto:careers@nnc.sa", "_blank")}
           >
             {t("careers.applyNow")}
           </motion.button>
