@@ -38,6 +38,7 @@ const Navbar = () => {
     { title: "OUR SERVICES", href: "/services" },
     { title: "NEWS", href: "/news" },
     { title: "CAREERS", href: "/careers" },
+    { title: "CONTACT US", href: "/contact" },
     // { title: "PROFILE", href: "/profile" },
   ];
 
@@ -77,7 +78,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation Links - Center */}
-          <div className="hidden lg:flex items-center gap-x-8 xl:gap-x-12 absolute left-1/2 -translate-x-1/2">
+          <div className="hidden lg:flex items-center gap-x-4 absolute left-1/2 -translate-x-1/2">
             {navLinks.map((link, index) => (
               <motion.div
                 key={link.href}

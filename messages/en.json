@@ -35,12 +35,15 @@
   "Warehouse": "Warehouse",
   "What Our Clients Say": "partners words about noon",
   "about": "About",
+  "aboutCeoNoteTitle": "CEO's Note",
+  "aboutCeoSignature": "Dr. Nazar El Sayed",
   "HOME": "HOME",
   "ABOUT US": "ABOUT US",
   "OUR PROJECTS": "OUR PROJECTS",
   "OUR SERVICES": "OUR SERVICES",
   "NEWS": "NEWS",
   "CAREERS": "CAREERS",
+  "CONTACT US": "CONTACT US",
   "PROFILE": "PROFILE",
   "aboutNoon": "About Noon Consultants",
   "aboutText1": "Noon Consultants is one of the recognized Urban, Architecture and Interior Design practice in the KSA. Founded in 2011, we adapt and respond to the context of each project to create intelligent and enduring Urban Planning & Design.",
@@ -48,7 +51,7 @@
   "aboutText2": "Our success is primarily attributed to the exceptional caliber of our team and their ability to deliver high-quality designs that thoughtfully integrate social, environmental, and economic considerations, ensuring holistic and sustainable outcomes.",
   "aboutText3": "Our objective is to continuously evolve as a design practice, consistently seeking innovative solutions to conventional challenges while delivering the highest standard of service to our clients and the wider community",
   "aboutText4": "At Noon Engineering Consultants, we do not view projects as drawings or plans alone — we see them as a responsibility and a trust placed in our hands.",
-  "aboutText5": "We believe that successful projects begin with a deep understanding of our clients' needs and are realized through creative, practical solutions that balance quality, efficiency, and design excellence. Working as one team, we strive at every stage to deliver real value that exceeds expectations — with full commitment to professional standards and execution precision.\nOur ambition continues to grow, guided by a clear vision: to be a trusted partner who leaves a distinct mark on every project through expertise, professionalism, and dedication.\nAt Noon, quality is not an option — it is our standard.",
+  "aboutText5": "We believe that successful projects begin with a deep understanding of our clients' needs and are realized through creative, practical solutions that balance quality, efficiency, and design excellence. \n Working as one team, we strive at every stage to deliver real value that exceeds expectations — with full commitment to professional standards and execution precision.\nOur ambition continues to grow, guided by a clear vision: to be a trusted partner who leaves a distinct mark on every project through expertise, professionalism, and dedication.\nAt Noon, quality is not an option — it is our standard.",
   "address1": "Riyadh, Saudi Arabia Olaya St, Al Wurud District",
   "address2": "Al-Madinah, Saudi Arabia Abdusalam Ibn Hafes St, Al Iskan District",
   "branchOffice": "Branch Office",
@@ -176,6 +179,15 @@
     "notifyMe": "Notify Me"
   },
   "contact": "contact us",
+  "contactForm": {
+    "title": "Contact Us",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "telephone": "Telephone",
+    "email": "Email",
+    "message": "Message",
+    "sendInquiry": "Send Inquiry"
+  },
   "contactPage": {
     "title": "Let's Discuss The Upcoming Projects",
     "description": "For years we have worked with organizations around Saudi Arabia. We are proud of the work we have done, and the unique depth of knowledge it has allowed us to build. Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects.",
@@ -343,6 +355,20 @@
   "home": {
     "founded": "FOUNDED IN 2011",
     "title": "Noon Consultants is one of the recognized Architecture in the KSA.",
+    "hero": {
+      "slide1": {
+        "title": "At Noon Engineering Consultants,",
+        "body": "We provide integrated solutions in planning, design, and engineering supervision since 2011. We work to transform ideas into high-quality, realizable projects that combine engineering creativity, operational efficiency, and long-term sustainability."
+      },
+      "slide2": {
+        "title": "We Believe Every Project Is an Opportunity to Create Real Value",
+        "body": "That is why we focus on understanding the client's needs, studying the urban context, and delivering smart, practical solutions that reflect luxury while achieving economic viability at the same time."
+      },
+      "slide3": {
+        "title": "Our Reach Extends Locally and Internationally, with Expertise Covering Various Sectors and Projects.",
+        "body": ""
+      }
+    },
     "nav": {
       "portfolio": "Portfolio\nOf Work",
       "about": "About\nNoon",

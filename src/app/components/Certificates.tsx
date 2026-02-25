@@ -69,10 +69,10 @@ export default function Certificates() {
     setCertIndex((i) => (i + 1) % (selected?.certificates.length ?? 1));
 
   return (
-    <section className="w-full py-12 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 md:px-12 lg:px-16">
+    <section className="w-full pb-12 md:pb-24">
+      <div className="max-w-4xl mx-auto px-4 md:px-12 lg:px-16">
         {/* Section Title */}
-        <motion.h2
+        {/* <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -80,10 +80,13 @@ export default function Certificates() {
           className="text-3xl md:text-5xl font-elegance text-center py-2 mb-8 md:mb-16 bg-[linear-gradient(270deg,#BE7B2C_0%,#F9C39D_100%)] bg-clip-text text-transparent"
         >
           {t("certificates")}
-        </motion.h2>
+        </motion.h2> */}
 
         {/* Logo Grid – full width, equal dimensions */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div
+          dir="ltr"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2"
+        >
           {CERTIFICATE_DATA.map((entry, index) => (
             <motion.button
               key={index}
@@ -91,7 +94,7 @@ export default function Certificates() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               onClick={() => openModal(entry)}
-              className="bg-white hover:scale-105 hover:shadow-amber-500 overflow-hidden group relative flex flex-col items-center justify-center aspect-8/5 w-full rounded-2xl border border-[#C6A87D]/20 hover:border-[#BE7B2C]/60 transition-all duration-300 shadow-2xl cursor-pointer"
+              className="bg-white hover:scale-105 hover:shadow-amber-500 overflow-hidden group relative flex flex-col items-center justify-center aspect-8/5 w-full rounded-lg border border-[#C6A87D]/20 hover:border-[#BE7B2C]/60 transition-all duration-300 shadow-2xl cursor-pointer"
               aria-label={entry.logoAlt}
             >
               <Image

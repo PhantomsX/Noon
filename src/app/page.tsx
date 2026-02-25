@@ -5,6 +5,7 @@ import ProjectsPortfolio from "./components/ProjectsPortfolio";
 import Testimonials from "./components/Testimonials";
 import PartnersLogos from "./components/PartnersLogos";
 import ContactInfoSection from "./components/ContactInfoSection";
+import ContactFormSection from "./components/ContactFormSection";
 import Certificates from "./components/Certificates";
 
 export default function Home() {
@@ -16,9 +17,6 @@ export default function Home() {
       {/* About Noon Section */}
       <AboutNoon />
 
-      {/* Certificates */}
-      <Certificates />
-
       {/* Projects Portfolio */}
       <ProjectsPortfolio />
 
@@ -27,6 +25,11 @@ export default function Home() {
 
       {/* Partners Words (Testimonials) */}
       {/* <Testimonials /> */}
+
+      {/* Contact Form Section */}
+      <ContactFormSection />
+      {/* Certificates */}
+      <Certificates />
 
       {/* Contact Info Section */}
       <ContactInfoSection />

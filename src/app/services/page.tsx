@@ -167,7 +167,7 @@ function Page() {
     <main className="min-h-screen">
       {/* Header Section */}
       <section className="flex max-sm:flex-col gap-8 lg:gap-16 px-6 md:px-9 pt-12 sm:ps-[80px]">
-        <aside className="sm:max-w-[350px] space-y-4">
+        <aside className="sm:max-w-[350px]">
           <PageTitle>{t("title-1")}</PageTitle>
         </aside>
         <div className="flex-1">
