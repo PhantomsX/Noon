@@ -31,7 +31,6 @@ const NavbarDropdown = () => {
     { title: "NEWS", href: "/news" },
     { title: "CAREERS", href: "/careers" },
     { title: "CONTACT US", href: "/contact" },
-    { title: "PROFILE", href: "/profile" },
   ];
 
   const toggleMenu = () => {
