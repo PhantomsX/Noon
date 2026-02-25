@@ -188,6 +188,10 @@
     "message": "Message",
     "sendInquiry": "Send Inquiry"
   },
+  "contactBanner": {
+    "subtitle": "If you have any engineering project or need engineering consultations",
+    "cta": "Contact Us"
+  },
   "contactPage": {
     "title": "Let's Discuss The Upcoming Projects",
     "description": "For years we have worked with organizations around Saudi Arabia. We are proud of the work we have done, and the unique depth of knowledge it has allowed us to build. Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects.",
@@ -424,6 +428,16 @@
     "status": "STATUS",
     "title-1": "Our Projects",
     "urban": "urban",
+    "Residdential": "Residential",
+    "Commerical": "Commercial",
+    "Industrial": "Industrial",
+    "Hospitality": "Hospitality",
+    "offices": "Offices",
+    "Master plananing": "Master Planning",
+    "Healthcare": "Healthcare",
+    "Development": "Development",
+    "emptyTitle": "No Projects Yet",
+    "emptyDescription": "There are no projects in this category at the moment. Check back soon or explore another category.",
     "project_1_title": "AL DHUHAYAN BLOCK 39",
     "project_1_description": "A large urban planning project.",
     "project_1_location": "Riyadh, KSA",

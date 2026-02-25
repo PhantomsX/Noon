@@ -69,19 +69,8 @@ export default function Certificates() {
     setCertIndex((i) => (i + 1) % (selected?.certificates.length ?? 1));
 
   return (
-    <section className="w-full pb-12 md:pb-24">
+    <section className="w-full py-12 md:py-24">
       <div className="max-w-4xl mx-auto px-4 md:px-12 lg:px-16">
-        {/* Section Title */}
-        {/* <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-3xl md:text-5xl font-elegance text-center py-2 mb-8 md:mb-16 bg-[linear-gradient(270deg,#BE7B2C_0%,#F9C39D_100%)] bg-clip-text text-transparent"
-        >
-          {t("certificates")}
-        </motion.h2> */}
-
         {/* Logo Grid – full width, equal dimensions */}
         <div
           dir="ltr"

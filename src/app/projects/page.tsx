@@ -4,6 +4,13 @@ import React, { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Empty,
+  EmptyHeader,
+  EmptyMedia,
+  EmptyTitle,
+  EmptyDescription,
+} from "@/components/ui/empty";
 import { useIsClient, useMediaQuery } from "usehooks-ts";
 import PageTitle from "../components/PageTitle";
 
@@ -252,8 +259,17 @@ const Page = () => {
   );
 
   const categories = useMemo(() => {
-    const types = projects.map((p) => p.type);
-    return ["all", ...Array.from(new Set(types))];
+    return [
+      "all",
+      "Residdential",
+      "Commerical",
+      "Industrial",
+      "Hospitality",
+      "offices",
+      "Master plananing",
+      "Healthcare",
+      "Development",
+    ];
   }, [projects]);
 
   return (
@@ -377,7 +393,7 @@ const Page = () => {
             if (first) setSelectedId(first.id);
           }}
         >
-          <TabsList className="flex flex-wrap w-full md:w-auto items-center justify-center gap-1 sm:gap-2 p-1 h-auto min-h-0 bg-black/40 border border-[#f9c39d]/20 rounded-xl backdrop-blur-md">
+          <TabsList className="w-full justify-between flex-wrap">
             {categories.map((cat) => (
               <TabsTrigger
                 key={cat}
@@ -391,131 +407,168 @@ const Page = () => {
             ))}
           </TabsList>
 
-          {categories.map((cat) => (
-            <TabsContent key={cat} value={cat} className="pt-8">
-              <motion.div
-                className="grid grid-cols-2 md:grid-cols-4 gap-6"
-                initial="hidden"
-                animate="visible"
-                variants={{
-                  visible: { transition: { staggerChildren: 0.08 } },
-                }}
-              >
-                {(cat === "all"
-                  ? projects
-                  : projects.filter((p) => p.type === cat)
-                ).map((project) => {
-                  const isSelected = project.id === selectedId;
-                  const serviceDetails = services.find(
-                    (s) => s.type === project.type,
-                  );
+          {categories.map((cat) => {
+            const filtered =
+              cat === "all" ? projects : projects.filter((p) => p.type === cat);
 
-                  return (
-                    <motion.button
-                      key={project.id}
-                      className="rounded-xl cursor-pointer overflow-hidden bg-[#181818] relative group flex flex-col md:block focus:outline-none"
-                      variants={{
-                        hidden: { opacity: 0, y: 30, scale: 0.98 },
-                        visible: { opacity: 1, y: 0, scale: 1 },
-                      }}
-                      transition={{ duration: 0.5, ease: "easeOut" }}
-                      whileHover={{
-                        scale: 1.03,
-                        boxShadow: "0 4px 32px #00000033",
-                      }}
-                      whileTap={{ scale: 0.98 }}
-                      onClick={() => setSelectedId(project.id)}
-                    >
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        width={400}
-                        height={300}
-                        className="w-full h-48 object-cover"
-                      />
-
-                      {/* Info overlay — always visible when selected, hover-only otherwise */}
-                      {isClient && isMobile ? (
-                        <div className="relative p-4 text-white text-center">
-                          <h3 className="font-bold text-lg mb-2">
-                            {project.title}
-                          </h3>
-                          <p className="text-sm text-gray-300">
-                            {project.location}
-                          </p>
-                        </div>
-                      ) : (
-                        <div
-                          className={[
-                            "absolute inset-0 bg-black/40 flex flex-col justify-center items-center p-4 text-white text-center transition-opacity duration-300",
-                            isSelected
-                              ? "opacity-100"
-                              : "opacity-0 group-hover:opacity-100",
-                          ].join(" ")}
+            return (
+              <TabsContent key={cat} value={cat} className="pt-8">
+                {filtered.length === 0 ? (
+                  <Empty className="border border-[#C6A87D]/20 bg-black/20 min-h-[320px]">
+                    <EmptyHeader>
+                      <EmptyMedia>
+                        {/* Architectural compass / blueprint icon */}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-16 h-16 text-[#C6A87D]/40"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth={1}
                         >
-                          <h3 className="font-bold text-lg md:text-xl mb-2">
-                            {project.title}
-                          </h3>
-                          <p className="text-sm mb-2 text-gray-300">
-                            {project.location}
-                          </p>
-                          {serviceDetails?.features && (
-                            <ul className="text-start text-xs list-disc list-outside ps-5 text-gray-300 inline-block">
-                              {serviceDetails.features.map((f, fi) => (
-                                <li key={fi}>{f}</li>
-                              ))}
-                            </ul>
-                          )}
-                        </div>
-                      )}
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M3.75 3v11.25A2.25 2.25 0 006 16.5h12A2.25 2.25 0 0020.25 14.25V3M3.75 3h16.5M3.75 3H3m17.25 0H21M9 16.5v4.5m6-4.5v4.5M9 21h6"
+                          />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M9 7.5h6M9 10.5h3"
+                          />
+                        </svg>
+                      </EmptyMedia>
+                      <EmptyTitle className="text-[#C6A87D] rtl:font-noto-kufi-arabic ltr:font-neue-montreal text-xl">
+                        {t("projects.emptyTitle")}
+                      </EmptyTitle>
+                      <EmptyDescription className="text-white/40 rtl:font-noto-kufi-arabic ltr:font-neue-montreal">
+                        {t("projects.emptyDescription")}
+                      </EmptyDescription>
+                    </EmptyHeader>
+                  </Empty>
+                ) : (
+                  <motion.div
+                    className="grid grid-cols-2 md:grid-cols-4 gap-6"
+                    initial="hidden"
+                    animate="visible"
+                    variants={{
+                      visible: { transition: { staggerChildren: 0.08 } },
+                    }}
+                  >
+                    {filtered.map((project) => {
+                      const isSelected = project.id === selectedId;
+                      const serviceDetails = services.find(
+                        (s) => s.type === project.type,
+                      );
 
-                      {/* Gold border + check badge — rendered ABOVE the overlay */}
-                      <AnimatePresence>
-                        {isSelected && (
-                          <motion.div
-                            className="absolute inset-0 border-2 border-[#C6A87D] rounded-xl pointer-events-none"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.25 }}
-                          >
-                            {/* Gold corner accents */}
-                            <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-[#C6A87D] rounded-tl" />
-                            <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-[#C6A87D] rounded-br" />
+                      return (
+                        <motion.button
+                          key={project.id}
+                          className="rounded-xl cursor-pointer overflow-hidden bg-[#181818] relative group flex flex-col md:block focus:outline-none"
+                          variants={{
+                            hidden: { opacity: 0, y: 30, scale: 0.98 },
+                            visible: { opacity: 1, y: 0, scale: 1 },
+                          }}
+                          transition={{ duration: 0.5, ease: "easeOut" }}
+                          whileHover={{
+                            scale: 1.03,
+                            boxShadow: "0 4px 32px #00000033",
+                          }}
+                          whileTap={{ scale: 0.98 }}
+                          onClick={() => setSelectedId(project.id)}
+                        >
+                          <Image
+                            src={project.image}
+                            alt={project.title}
+                            width={400}
+                            height={300}
+                            className="w-full h-48 object-cover"
+                          />
 
-                            {/* Check badge */}
-                            <motion.div
-                              className="absolute top-2 right-2 w-7 h-7 rounded-full bg-[#C6A87D] flex items-center justify-center shadow-lg"
-                              initial={{ scale: 0 }}
-                              animate={{ scale: 1 }}
-                              exit={{ scale: 0 }}
-                              transition={{
-                                type: "spring",
-                                stiffness: 300,
-                                damping: 20,
-                              }}
+                          {/* Info overlay — always visible when selected, hover-only otherwise */}
+                          {isClient && isMobile ? (
+                            <div className="relative p-4 text-white text-center">
+                              <h3 className="font-bold text-lg mb-2">
+                                {project.title}
+                              </h3>
+                              <p className="text-sm text-gray-300">
+                                {project.location}
+                              </p>
+                            </div>
+                          ) : (
+                            <div
+                              className={[
+                                "absolute inset-0 bg-black/40 flex flex-col justify-center items-center p-4 text-white text-center transition-opacity duration-300",
+                                isSelected
+                                  ? "opacity-100"
+                                  : "opacity-0 group-hover:opacity-100",
+                              ].join(" ")}
                             >
-                              <svg
-                                className="w-4 h-4 text-black"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth={3}
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
+                              <h3 className="font-bold text-lg md:text-xl mb-2">
+                                {project.title}
+                              </h3>
+                              <p className="text-sm mb-2 text-gray-300">
+                                {project.location}
+                              </p>
+                              {serviceDetails?.features && (
+                                <ul className="text-start text-xs list-disc list-outside ps-5 text-gray-300 inline-block">
+                                  {serviceDetails.features.map((f, fi) => (
+                                    <li key={fi}>{f}</li>
+                                  ))}
+                                </ul>
+                              )}
+                            </div>
+                          )}
+
+                          {/* Gold border + check badge — rendered ABOVE the overlay */}
+                          <AnimatePresence>
+                            {isSelected && (
+                              <motion.div
+                                className="absolute inset-0 border-2 border-[#C6A87D] rounded-xl pointer-events-none"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.25 }}
                               >
-                                <polyline points="20 6 9 17 4 12" />
-                              </svg>
-                            </motion.div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </motion.button>
-                  );
-                })}
-              </motion.div>
-            </TabsContent>
-          ))}
+                                {/* Gold corner accents */}
+                                <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-[#C6A87D] rounded-tl" />
+                                <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-[#C6A87D] rounded-br" />
+
+                                {/* Check badge */}
+                                <motion.div
+                                  className="absolute top-2 right-2 w-7 h-7 rounded-full bg-[#C6A87D] flex items-center justify-center shadow-lg"
+                                  initial={{ scale: 0 }}
+                                  animate={{ scale: 1 }}
+                                  exit={{ scale: 0 }}
+                                  transition={{
+                                    type: "spring",
+                                    stiffness: 300,
+                                    damping: 20,
+                                  }}
+                                >
+                                  <svg
+                                    className="w-4 h-4 text-black"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth={3}
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                  >
+                                    <polyline points="20 6 9 17 4 12" />
+                                  </svg>
+                                </motion.div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </motion.button>
+                      );
+                    })}
+                  </motion.div>
+                )}
+              </TabsContent>
+            );
+          })}
         </Tabs>
       </motion.section>
     </motion.main>
