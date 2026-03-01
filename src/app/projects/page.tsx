@@ -220,7 +220,7 @@ const Page = () => {
         type: "architecture",
         title: t("servicess.service-1"),
         description: t("servicess.service-1-description"),
-        image: "/images/ENGINEERING AND ARCHITECTURAL DESIGN.png",
+        image: "/services/ENGINEERING_AND_ARCHITECTURAL_DESIGN.jpg",
         features: [
           t("servicess.service-1-features.1"),
           t("servicess.service-1-features.2"),
@@ -232,7 +232,7 @@ const Page = () => {
         type: "urban",
         title: t("servicess.service-2"),
         description: t("servicess.service-2-description"),
-        image: "/images/URBAN DESIGN.png",
+        image: "/services/URBAN_DESIGN.jpg",
         features: [
           t("servicess.service-2-features.1"),
           t("servicess.service-2-features.2"),
@@ -245,7 +245,7 @@ const Page = () => {
         type: "interior design",
         title: t("servicess.service-10"),
         description: t("servicess.service-10-description"),
-        image: "/images/INTERIOR DESIGN.png",
+        image: "/services/INTERIOR_DESIGN.jpg",
         features: [
           t("servicess.service-10-features.1"),
           t("servicess.service-10-features.2"),
