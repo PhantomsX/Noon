@@ -9,8 +9,14 @@ import { useLocale, useTranslations } from "next-intl";
 import NavbarDropdown from "./NavbarDropdown";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { Search, Globe } from "lucide-react";
+import { Globe, ChevronDown } from "lucide-react";
 import { usePathname } from "next/navigation";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const locale = useLocale();
@@ -33,13 +39,20 @@ const Navbar = () => {
 
   const navLinks = [
     { title: "HOME", href: "/" },
-    { title: "ABOUT US", href: "/about" },
-    { title: "OUR PROJECTS", href: "/projects" },
     { title: "OUR SERVICES", href: "/services" },
+    {
+      title: "WHO WE ARE",
+      href: "/about",
+      isDropdown: true,
+      dropdownItems: [
+        { title: "ABOUT US", href: "/about" },
+        { title: "OUR TEAM", href: "/about#team" },
+      ],
+    },
+    { title: "OUR PROJECTS", href: "/projects" },
     { title: "NEWS", href: "/news" },
     { title: "CAREERS", href: "/careers" },
     { title: "CONTACT US", href: "/contact" },
-    // { title: "PROFILE", href: "/profile" },
   ];
 
   // Check if a link is active
@@ -85,35 +98,104 @@ const Navbar = () => {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 + index * 0.05, duration: 0.5 }}
+                className="relative"
               >
-                <Link
-                  href={link.href}
-                  className={cn(
-                    "relative text-xs lg:text-sm font-medium tracking-[0.15em] uppercase transition-all duration-300 group py-2",
-                    isActive(link.href)
-                      ? "text-transparent bg-clip-text bg-linear-to-r from-[#BE7B2C] to-[#F9C39D]"
-                      : "text-white/70 hover:text-[#F9C39D]",
-                  )}
-                >
-                  {t(link.title)}
-                  <span
+                {link.isDropdown ? (
+                  <DropdownMenu dir={locale === "ar" ? "rtl" : "ltr"}>
+                    <DropdownMenuTrigger asChild>
+                      <button
+                        className={cn(
+                          "relative cursor-pointer text-xs lg:text-sm font-medium tracking-[0.15em] uppercase transition-all duration-300 group py-2 flex items-center gap-1 outline-none",
+                          isActive(link.href) ||
+                            (link.dropdownItems &&
+                              link.dropdownItems.some((item) =>
+                                isActive(item.href),
+                              ))
+                            ? "text-transparent bg-clip-text bg-linear-to-r from-[#BE7B2C] to-[#F9C39D]"
+                            : "text-white/70 hover:text-[#F9C39D]",
+                        )}
+                      >
+                        {t(link.title)}
+                        <ChevronDown className="size-3 fill-white" />
+                        <span
+                          className={cn(
+                            "absolute -bottom-1 left-0 w-0 h-[2px] bg-linear-to-r from-[#BE7B2C] to-[#F9C39D] transition-all duration-300 group-hover:w-full opacity-0 group-hover:opacity-100",
+                            isActive(link.href) ||
+                              (link.dropdownItems &&
+                                link.dropdownItems.some((item) =>
+                                  isActive(item.href),
+                                ) &&
+                                "w-full opacity-100"),
+                          )}
+                        />
+                        {(isActive(link.href) ||
+                          (link.dropdownItems &&
+                            link.dropdownItems.some((item) =>
+                              isActive(item.href),
+                            ))) && (
+                          <motion.span
+                            layoutId="activeTab"
+                            className="absolute -inset-x-4 -inset-y-2 bg-white/3 rounded-lg -z-10 blur-sm"
+                            transition={{
+                              type: "spring",
+                              stiffness: 300,
+                              damping: 30,
+                            }}
+                          />
+                        )}
+                      </button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent
+                      className="bg-black/90 backdrop-blur-xl border border-white/10 rounded-lg shadow-xl z-50"
+                      sideOffset={8}
+                    >
+                      {link.dropdownItems?.map((item) => (
+                        <DropdownMenuItem key={item.href} asChild>
+                          <Link
+                            href={item.href}
+                            className={cn(
+                              "text-sm transition-colors duration-200",
+                              isActive(item.href)
+                                ? "text-[#F9C39D] bg-white/5"
+                                : "text-white/70 hover:text-[#F9C39D] hover:bg-white/5",
+                            )}
+                          >
+                            {t(item.title)}
+                          </Link>
+                        </DropdownMenuItem>
+                      ))}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                ) : (
+                  <Link
+                    href={link.href}
                     className={cn(
-                      "absolute -bottom-1 left-0 w-0 h-[2px] bg-linear-to-r from-[#BE7B2C] to-[#F9C39D] transition-all duration-300 group-hover:w-full opacity-0 group-hover:opacity-100",
-                      isActive(link.href) && "w-full opacity-100",
+                      "relative text-xs lg:text-sm font-medium tracking-[0.15em] uppercase transition-all duration-300 group py-2",
+                      isActive(link.href)
+                        ? "text-transparent bg-clip-text bg-linear-to-r from-[#BE7B2C] to-[#F9C39D]"
+                        : "text-white/70 hover:text-[#F9C39D]",
                     )}
-                  />
-                  {isActive(link.href) && (
-                    <motion.span
-                      layoutId="activeTab"
-                      className="absolute -inset-x-4 -inset-y-2 bg-white/3 rounded-lg -z-10 blur-sm"
-                      transition={{
-                        type: "spring",
-                        stiffness: 300,
-                        damping: 30,
-                      }}
+                  >
+                    {t(link.title)}
+                    <span
+                      className={cn(
+                        "absolute -bottom-1 left-0 w-0 h-[2px] bg-linear-to-r from-[#BE7B2C] to-[#F9C39D] transition-all duration-300 group-hover:w-full opacity-0 group-hover:opacity-100",
+                        isActive(link.href) && "w-full opacity-100",
+                      )}
                     />
-                  )}
-                </Link>
+                    {isActive(link.href) && (
+                      <motion.span
+                        layoutId="activeTab"
+                        className="absolute -inset-x-4 -inset-y-2 bg-white/3 rounded-lg -z-10 blur-sm"
+                        transition={{
+                          type: "spring",
+                          stiffness: 300,
+                          damping: 30,
+                        }}
+                      />
+                    )}
+                  </Link>
+                )}
               </motion.div>
             ))}
           </div>

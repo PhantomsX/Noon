@@ -53,11 +53,11 @@ export default function HeroSection() {
       body: t("home.hero.slide1.body"),
     },
     {
-      title: t("home.hero.slide2.title"),
-      body: t("home.hero.slide2.body"),
+      title: null,
+      body: null,
     },
     {
-      title: t("home.hero.slide3.title"),
+      title: null,
       body: null,
     },
   ];
@@ -119,7 +119,7 @@ export default function HeroSection() {
           {textVisible && (
             <motion.div
               key={current}
-              className="max-w-[800px] rtl:text-right ltr:text-left"
+              className="rtl:text-right ltr:text-left"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -133,7 +133,7 @@ export default function HeroSection() {
               {/* Body */}
               {slides[current].body && (
                 <motion.p
-                  className="rtl:font-noto-kufi-arabic ltr:font-elegance text-base md:text-lg leading-relaxed text-bg max-w-[620px]"
+                  className="uppercase text-xl md:text-[40px] leading-relaxed text-bg"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.15 }}

@@ -105,10 +105,11 @@
 
 @layer utilities {
   .gradient-gold-text {
-    @apply text-transparent bg-linear-to-l from-[#BE7B2C] to-[#F9C39D] bg-clip-text;
+    background-image: linear-gradient(90deg, #c28035 26.97%, #f8c29b 100%);
+    @apply text-transparent bg-clip-text;
   }
   .gradient-gold-line {
-    @apply bg-linear-to-l from-[#BE7B2C] to-[#F9C39D];
+    background-image: linear-gradient(90deg, #c28035 26.97%, #f8c29b 100%);
   }
   .scrollbar-hide {
     -ms-overflow-style: none; /* IE and Edge */
@@ -168,18 +169,18 @@
 }
 
 @utility text-bg {
-  background-image: linear-gradient(270deg, #be7b2c 0%, #f9c39d 100%);
+  background-image: linear-gradient(90deg, #c28035 26.97%, #f8c29b 100%);
   background-clip: text;
   color: transparent;
   padding-top: 8px;
 }
 
 @utility border-bg {
-  border-image: linear-gradient(270deg, #be7b2c 0%, #f9c39d 100%) 1;
+  border-image: linear-gradient(90deg, #c28035 26.97%, #f8c29b 100%) 1;
 }
 
 @utility bg-linearGradient {
-  background: linear-gradient(270deg, #be7b2c 0%, #f9c39d 100%);
+  background: linear-gradient(90deg, #c28035 26.97%, #f8c29b 100%);
 }
 
 @utility main-bg-gradient {

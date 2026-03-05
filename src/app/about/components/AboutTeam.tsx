@@ -65,6 +65,7 @@ const AboutTeam = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 2.5 }}
       className="my-16 sm:my-20 lg:my-24"
+      id="team"
     >
       <motion.div
         initial={{ opacity: 0 }}

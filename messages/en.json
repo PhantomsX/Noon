@@ -38,6 +38,8 @@
   "aboutCeoNoteTitle": "CEO's Note",
   "aboutCeoSignature": "Dr. Nazar El Sayed",
   "HOME": "HOME",
+  "WHO WE ARE": "WHO WE ARE",
+  "OUR TEAM": "OUR TEAM",
   "ABOUT US": "ABOUT US",
   "OUR PROJECTS": "OUR PROJECTS",
   "OUR SERVICES": "OUR SERVICES",
@@ -361,8 +363,8 @@
     "title": "Noon Consultants is one of the recognized Architecture in the KSA.",
     "hero": {
       "slide1": {
-        "title": "At Noon Engineering Consultants,",
-        "body": "We provide integrated solutions in planning, design, and engineering supervision since 2011. We work to transform ideas into high-quality, realizable projects that combine engineering creativity, operational efficiency, and long-term sustainability."
+        "title": "Noon Engineering Consultants",
+        "body": "Designing the future… delivering it with confidence."
       },
       "slide2": {
         "title": "We Believe Every Project Is an Opportunity to Create Real Value",
