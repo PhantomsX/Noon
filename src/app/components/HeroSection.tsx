@@ -133,7 +133,7 @@ export default function HeroSection() {
               {/* Body */}
               {slides[current].body && (
                 <motion.p
-                  className="uppercase text-xl md:text-2xl lg:text-3xl leading-relaxed text-bg"
+                  className="uppercase text-base md:text-2xl lg:text-3xl leading-relaxed text-bg"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.15 }}
