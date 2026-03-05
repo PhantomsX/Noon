@@ -126,14 +126,14 @@ export default function HeroSection() {
               transition={{ duration: 0.7, ease: "easeOut" }}
             >
               {/* Main Heading */}
-              <motion.h1 className="ltr:font-elegance rtl:font-noto-kufi-arabic text-2xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-5 text-bg">
+              <motion.h1 className="ltr:font-elegance rtl:font-noto-kufi-arabic text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight mb-5 text-bg">
                 {slides[current].title}
               </motion.h1>
 
               {/* Body */}
               {slides[current].body && (
                 <motion.p
-                  className="uppercase text-xl md:text-[40px] leading-relaxed text-bg"
+                  className="uppercase text-xl md:text-2xl lg:text-3xl leading-relaxed text-bg"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.15 }}
