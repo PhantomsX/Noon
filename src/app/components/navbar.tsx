@@ -38,7 +38,6 @@ const Navbar = () => {
   const AnimatedLogo = motion.create(Image);
 
   const navLinks = [
-    { title: "HOME", href: "/" },
     { title: "OUR SERVICES", href: "/services" },
     {
       title: "WHO WE ARE",

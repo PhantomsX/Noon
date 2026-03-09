@@ -6,6 +6,7 @@ import { NextIntlClientProvider } from "next-intl";
 import Footer from "./components/Footer";
 import { Noto_Kufi_Arabic, ABeeZee } from "next/font/google";
 import { cn } from "@/lib/utils";
+import CustomCursor from "./components/CustomCursor";
 
 const notoKufiArabic = Noto_Kufi_Arabic({
   subsets: ["arabic"],
@@ -54,6 +55,7 @@ export default async function RootLayout({
         }}
       >
         <NextIntlClientProvider messages={messages}>
+          <CustomCursor />
           <Navbar />
           {children}
           <Footer />

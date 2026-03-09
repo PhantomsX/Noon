@@ -21,60 +21,78 @@ const ContactInfoSection = () => {
   ];
 
   return (
-    <section className="w-full py-10 md:pt-20 md:pb-10 px-4 md:px-16 lg:px-24 border-t border-[#C6A87D]/20">
-      <div className="max-w-7xl mx-auto flex flex-col gap-8 md:gap-16">
-        {/* Container for both offices and socials */}
-        <div className="flex flex-col lg:flex-row justify-between items-start gap-12">
-          {/* Riyadh Office */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col md:flex-row items-start gap-6 md:gap-12"
-          >
-            <h2 className="font-elegance text-3xl md:text-4xl text-[#C6A87D] leading-none whitespace-nowrap">
-              {t("headquarters")}
-            </h2>
-            <div className="flex flex-col font-neue-montreal text-sm md:text-base text-gray-300 gap-1 mt-2">
-              <p>{t("address1")}</p>
-              <p>12253</p>
-              <a dir="ltr" href="tel:+966565498620">
-                +966565498620
-              </a>
-              <a dir="ltr" href="mailto:info@nnc.sa">
-                info@nnc.sa
-              </a>
-            </div>
-          </motion.div>
+    <section className="w-full relative overflow-hidden border-t border-[#C6A87D]/20">
+      {/* Diagonal lines background pattern */}
+      <div className="absolute inset-0 opacity-10">
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute h-full w-px bg-[#C6A87D]"
+            style={{
+              left: `${i * 5}%`,
+              transform: "rotate(45deg)",
+              transformOrigin: "top left",
+            }}
+          />
+        ))}
+      </div>
 
-          {/* Madinah Office */}
+      <div className="relative px-6 md:px-14 py-8 md:py-12">
+        {/* Main content row */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+          {/* Head Quarters Title */}
+          <motion.h2
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="font-elegance text-4xl md:text-5xl text-[#C6A87D] leading-tight"
+          >
+            Head
+            <br />
+            Quarters
+          </motion.h2>
+
+          {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col md:flex-row items-start gap-6 md:gap-12"
+            className="flex flex-col gap-2 text-white/80 text-sm md:text-base"
           >
-            <h2 className="font-elegance text-3xl md:text-4xl text-[#C6A87D] leading-none whitespace-nowrap">
-              {t("branchOffice")}
-            </h2>
-            <div className="flex flex-col font-neue-montreal text-sm md:text-base text-gray-300 gap-1 mt-2">
-              <p>{t("address2")}</p>
-              <p>42317</p>
-              <a dir="ltr" href="tel:+966598959098">
-                +966598959098
-              </a>
-              <a dir="ltr" href="mailto:infomadina@nnc.sa">
-                infomadina@nnc.sa
-              </a>
-            </div>
+            <p>Riyadh, Saudi Arabia Olaya St,</p>
+            <p>Al Wurud District</p>
+            <p>12253</p>
           </motion.div>
 
-          {/* Social Icons (Vertical Stack on the right) */}
+          {/* Phone and Email */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex flex-col gap-2 text-white/80 text-sm md:text-base"
+          >
+            <a
+              dir="ltr"
+              href="tel:+966565498620"
+              className="hover:text-[#C6A87D] transition-colors"
+            >
+              +966565498620
+            </a>
+            <a
+              dir="ltr"
+              href="mailto:info@nnc.sa"
+              className="hover:text-[#C6A87D] transition-colors"
+            >
+              info@nnc.sa
+            </a>
+          </motion.div>
+
+          {/* Social Icons - Vertical */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-row lg:flex-col gap-6 items-center ml-auto lg:pr-4"
+            className="flex flex-row md:flex-col gap-4 md:gap-6"
           >
             {socials.map((social, index) => (
               <a
