@@ -57,11 +57,18 @@ const ContactInfoSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col gap-2 text-white/80 text-sm md:text-base"
+            className=""
           >
-            <p>Riyadh, Saudi Arabia Olaya St,</p>
-            <p>Al Wurud District</p>
-            <p>12253</p>
+            <a
+              href="https://maps.app.goo.gl/ZCuLy3Jwe8Bwg47y9?g_st=ic"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#C6A87D] hover:underline transition-colors cursor-pointer flex flex-col gap-2 text-white/80 text-sm md:text-base"
+            >
+              <span>Riyadh, Saudi Arabia Olaya St,</span>
+              <span>Al Wurud District</span>
+              <span>12253</span>
+            </a>
           </motion.div>
 
           {/* Phone and Email */}
