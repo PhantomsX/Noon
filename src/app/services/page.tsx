@@ -88,42 +88,6 @@ function Page() {
       ],
     },
     {
-      title: t("service-8"),
-      description: t("service-8-description"),
-      image: "/services/ENGINEERING_STUDIES.png",
-      features: [
-        t("service-8-features.1"),
-        t("service-8-features.2"),
-        t("service-8-features.3"),
-        t("service-8-features.4"),
-        t("service-8-features.5"),
-      ],
-    },
-    {
-      title: t("service-7"),
-      description: t("service-7-description"),
-      image: "/services/VALUE_ENGINEERING.png",
-      features: [
-        t("service-7-features.1"),
-        t("service-7-features.2"),
-        t("service-7-features.3"),
-        t("service-7-features.4"),
-        t("service-7-features.5"),
-      ],
-    },
-    {
-      title: t("service-9"),
-      description: t("service-9-description"),
-      image: "/services/LANDSCAPING.jpg",
-      features: [
-        t("service-9-features.1"),
-        t("service-9-features.2"),
-        t("service-9-features.3"),
-        t("service-9-features.4"),
-        t("service-9-features.5"),
-      ],
-    },
-    {
       title: t("service-11"),
       description: t("service-11-description"),
       image: "/services/PROJECT_MANAGEMENT.png",
@@ -177,7 +141,7 @@ function Page() {
 
       {/* Services Grid */}
       <section className="px-6 md:px-9 sm:ps-[80px] pb-16">
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-x-8 gap-y-16 max-w-[1400px] mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(330px,1fr))] gap-x-8 gap-y-16 max-w-[1400px] mx-auto">
           {services.map((service, i) => (
             <ServiceCard key={i} id={i} service={service} />
           ))}

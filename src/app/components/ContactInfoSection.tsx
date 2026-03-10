@@ -17,7 +17,7 @@ const ContactInfoSection = () => {
     },
     { icon: XIcon, href: "#" },
     { icon: linkedIn, href: "https://www.linkedin.com/company/nnc-ksa/" },
-    { icon: phone, href: "tel:+966114110000" },
+    { icon: phone, href: "tel:+966539929050" },
   ];
 
   return (
@@ -65,9 +65,9 @@ const ContactInfoSection = () => {
               rel="noopener noreferrer"
               className="hover:text-[#C6A87D] hover:underline transition-colors cursor-pointer flex flex-col gap-2 text-white/80 text-sm md:text-base"
             >
-              <span>Riyadh, Saudi Arabia Olaya St,</span>
-              <span>Al Wurud District</span>
-              <span>12253</span>
+              <span>Riyadh, Saudi Arabia</span>
+              <span>Northern Ring Road, Exit 2</span>
+              <span>12385</span>
             </a>
           </motion.div>
 
@@ -80,10 +80,10 @@ const ContactInfoSection = () => {
           >
             <a
               dir="ltr"
-              href="tel:+966565498620"
+              href="tel:+966539929050"
               className="hover:text-[#C6A87D] transition-colors"
             >
-              +966565498620
+              +966 53 992 9050
             </a>
             <a
               dir="ltr"

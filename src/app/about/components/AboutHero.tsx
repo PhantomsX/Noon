@@ -48,8 +48,7 @@ const AboutHero = () => {
             transition={{ duration: 0.8, delay: 0.9 }}
             className="space-y-4 lg:space-y-5"
           >
-            <div className="flex items-center gap-4 sm:gap-6 before:content-['/01'] before:text-bg before:text-3xl sm:before:text-4xl lg:before:text-5xl before:font-bold after:w-full after:block after:h-0.5 after:bg-linearGradient after:content-['']" />
-            <p className="text-base sm:text-lg leading-relaxed pl-12 sm:pl-16 lg:pl-20">
+            <p className="text-base sm:text-lg leading-relaxed whitespace-pre-line">
               {t("aboutText2")}
             </p>
           </motion.div>
@@ -60,8 +59,7 @@ const AboutHero = () => {
             transition={{ duration: 0.8, delay: 1.1 }}
             className="space-y-4 lg:space-y-5"
           >
-            <div className="flex items-center gap-4 sm:gap-6 before:content-['/02'] before:text-bg before:text-3xl sm:before:text-4xl lg:before:text-5xl before:font-bold after:w-full after:block after:h-0.5 after:bg-linearGradient after:content-['']" />
-            <p className="text-base sm:text-lg leading-relaxed pl-12 sm:pl-16 lg:pl-20">
+            <p className="text-base sm:text-lg leading-relaxed whitespace-pre-line">
               {t("aboutText3")}
             </p>
           </motion.div>

@@ -5,7 +5,7 @@
   "Choose Architectural Design": "Choose Architectural Design",
   "Commercial": "Commercial",
   "Email": "Email",
-  "FUTURE REACH": "FUTURE REACH",
+  "FUTURE REACH": "OUR GROWTH STRATEGY",
   "FUTURE REACH TEXT": "By aligning strategic insight with market potential, we convert investment opportunities into profitable ventures that generate strong financial returns and contribute meaningfully to economic advancement.",
   "First Name": "First Name",
   "Forbidden": {
@@ -43,18 +43,18 @@
   "ABOUT US": "ABOUT US",
   "OUR PROJECTS": "OUR PROJECTS",
   "OUR SERVICES": "OUR SERVICES",
-  "NEWS": "NEWS",
+  "NEWS": "NEWS & INSIGHTS",
   "CAREERS": "CAREERS",
   "CONTACT US": "CONTACT US",
   "PROFILE": "PROFILE",
   "aboutNoon": "About Noon Consultants",
-  "aboutText1": "Noon Consultants is one of the recognized Urban, Architecture and Interior Design practice in the KSA. Founded in 2011, we adapt and respond to the context of each project to create intelligent and enduring Urban Planning & Design.",
+  "aboutText1": "Noon Engineering Consultants is one of the specialized firms in urban planning, architecture, and interior design in the Kingdom of Saudi Arabia.",
   "aboutChairman": "Dr. Naser El Sayed",
-  "aboutText2": "Our success is primarily attributed to the exceptional caliber of our team and their ability to deliver high-quality designs that thoughtfully integrate social, environmental, and economic considerations, ensuring holistic and sustainable outcomes.",
-  "aboutText3": "Our objective is to continuously evolve as a design practice, consistently seeking innovative solutions to conventional challenges while delivering the highest standard of service to our clients and the wider community",
+  "aboutText2": "Since our establishment in 2011, we have developed a design methodology based on:\n• Understanding the context of each project\n• Studying client needs\n• Achieving balance between beauty and function\n• Delivering sustainable and executable solutions",
+  "aboutText3": "Our success is built on the quality of our team and their diverse expertise, and their ability to produce high-level designs that contribute to the success of projects socially, environmentally, and economically.",
   "aboutText4": "At Noon Engineering Consultants, we do not view projects as drawings or plans alone — we see them as a responsibility and a trust placed in our hands.",
   "aboutText5": "We believe that successful projects begin with a deep understanding of our clients' needs and are realized through creative, practical solutions that balance quality, efficiency, and design excellence. \n Working as one team, we strive at every stage to deliver real value that exceeds expectations — with full commitment to professional standards and execution precision.\nOur ambition continues to grow, guided by a clear vision: to be a trusted partner who leaves a distinct mark on every project through expertise, professionalism, and dedication.\nAt Noon, quality is not an option — it is our standard.",
-  "address1": "Riyadh, Saudi Arabia Olaya St, Al Wurud District",
+  "address1": "Riyadh, Saudi Arabia – Northern Ring Road, Exit 2, 12385",
   "address2": "Al-Madinah, Saudi Arabia Abdusalam Ibn Hafes St, Al Iskan District",
   "branchOffice": "Branch Office",
   "building": "building",
@@ -364,7 +364,7 @@
     "hero": {
       "slide1": {
         "title": "Noon Engineering Consultants",
-        "body": "Designing the future… delivering it with confidence."
+        "body": "We are shaping a future of engineering excellence."
       },
       "slide2": {
         "title": "We Believe Every Project Is an Opportunity to Create Real Value",
