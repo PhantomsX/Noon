@@ -4,63 +4,81 @@ import { motion } from "motion/react";
 
 const CERTIFICATE_LOGOS = [
   {
-    logo: "/certificates/certificates logos/image 2.png",
-    logoAlt: "Certificate 1",
+    logo: "/cert-logos/ministry-municipalities.png",
+    logoAlt: "وزارة البلديات والإسكان",
   },
   {
-    logo: "/certificates/certificates logos/image 3.png",
-    logoAlt: "Certificate 2",
+    logo: "/cert-logos/balady.png",
+    logoAlt: "بلدي - Balady",
   },
   {
-    logo: "/certificates/certificates logos/image 4.png",
-    logoAlt: "Certificate 3",
+    logo: "/cert-logos/tandheem.png",
+    logoAlt: "تنظيم مشغلي المدن",
   },
   {
-    logo: "/certificates/certificates logos/image 5.png",
-    logoAlt: "Certificate 4",
+    logo: "/cert-logos/modon.png",
+    logoAlt: "مدن - Modon",
   },
   {
-    logo: "/certificates/certificates logos/image 6.png",
-    logoAlt: "Certificate 5",
+    logo: "/cert-logos/REGA.png",
+    logoAlt: "REGA - Real Estate General Authority",
   },
   {
-    logo: "/certificates/certificates logos/image 7.png",
-    logoAlt: "Certificate 6",
+    logo: "/cert-logos/economic-cities.png",
+    logoAlt: "هيئة المدن والمناطق الاقتصادية الخاصة",
   },
   {
-    logo: "/certificates/certificates logos/image 8.png",
-    logoAlt: "Certificate 7",
+    logo: "/cert-logos/iso-certificates.png",
+    logoAlt: "ISO Certificates",
   },
 ];
 
 export default function Certificates() {
   return (
-    <section className="w-full py-12 md:py-24">
-      <div className="max-w-6xl mx-auto px-4 md:px-12 lg:px-16">
-        {/* Logo Grid */}
-        <div
-          dir="ltr"
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4"
-        >
+    <section className="w-full py-8 md:py-12 px-4 md:px-12 lg:px-16">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="bg-white rounded-2xl shadow-2xl py-5 max-w-6xl mx-auto"
+        dir="ltr"
+      >
+        {/* Mobile: 3-col grid */}
+        <div className="grid grid-cols-3 gap-4 px-4 md:hidden">
           {CERTIFICATE_LOGOS.map((entry, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="group relative flex flex-col items-center justify-center aspect-square w-full"
-            >
+            <div key={index} className="flex items-center justify-center py-2">
               <Image
                 src={entry.logo}
                 alt={entry.logoAlt}
-                fill
-                className="object-contain"
+                width={90}
+                height={45}
+                className="object-contain max-h-[45px] w-auto"
               />
-            </motion.div>
+            </div>
           ))}
         </div>
-      </div>
+
+        {/* md+: horizontal row with separators */}
+        <div className="hidden md:flex items-center justify-between overflow-x-auto gap-0 scrollbar-hide">
+          {CERTIFICATE_LOGOS.map((entry, index) => (
+            <div key={index} className="flex items-center shrink-0">
+              <div className="flex items-center justify-center px-4 lg:px-6 py-2">
+                <Image
+                  src={entry.logo}
+                  alt={entry.logoAlt}
+                  width={110}
+                  height={55}
+                  className="object-contain max-h-[55px] w-auto"
+                />
+              </div>
+              {index >= 2 && index < CERTIFICATE_LOGOS.length - 1 && (
+                <div className="w-0.5 h-14 bg-gray-400 shrink-0" />
+              )}
+            </div>
+          ))}
+        </div>
+      </motion.div>
     </section>
   );
 }

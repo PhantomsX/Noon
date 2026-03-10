@@ -27,8 +27,8 @@ const CustomCursor = () => {
   if (!mounted) return null;
 
   return (
-    <>
-      {/* Outer circle — mix-blend-mode: difference inverts color against background */}
+    <div className="hidden pointer-fine:block">
+      {/* Outer circle */}
       <motion.div
         className="fixed top-0 left-0 size-14 pointer-events-none z-9999 rounded-full border-white border-2"
         style={{
@@ -38,7 +38,7 @@ const CustomCursor = () => {
           translateY: "-50%",
         }}
       />
-      {/* Inner dot — same blend mode, snaps instantly */}
+      {/* Inner dot */}
       <motion.div
         className="fixed top-0 left-0 size-4 pointer-events-none z-9999 rounded-full bg-white"
         style={{
@@ -48,7 +48,7 @@ const CustomCursor = () => {
           translateY: "-50%",
         }}
       />
-    </>
+    </div>
   );
 };
 

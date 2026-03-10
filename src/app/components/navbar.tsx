@@ -90,7 +90,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation Links - Center */}
-          <div className="hidden lg:flex items-center gap-x-4 absolute left-1/2 -translate-x-1/2">
+          <div className="hidden lg:flex items-center gap-x-3">
             {navLinks.map((link, index) => (
               <motion.div
                 key={link.href}
