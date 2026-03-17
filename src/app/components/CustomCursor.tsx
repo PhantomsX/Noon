@@ -30,7 +30,7 @@ const CustomCursor = () => {
     <div className="hidden pointer-fine:block">
       {/* Outer circle */}
       <motion.div
-        className="fixed top-0 left-0 size-14 pointer-events-none z-9999 rounded-full border-white border-2"
+        className="fixed top-0 left-0 size-8 pointer-events-none z-9999 rounded-full border-white border-2"
         style={{
           x: springX,
           y: springY,
@@ -40,7 +40,7 @@ const CustomCursor = () => {
       />
       {/* Inner dot */}
       <motion.div
-        className="fixed top-0 left-0 size-4 pointer-events-none z-9999 rounded-full bg-white"
+        className="fixed top-0 left-0 size-2 pointer-events-none z-9999 rounded-full bg-white"
         style={{
           x: dotX,
           y: dotY,
