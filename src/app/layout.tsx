@@ -4,23 +4,7 @@ import { getLocale, getMessages } from "next-intl/server";
 import Navbar from "./components/navbar";
 import { NextIntlClientProvider } from "next-intl";
 import Footer from "./components/Footer";
-import { Noto_Kufi_Arabic, ABeeZee } from "next/font/google";
-import { cn } from "@/lib/utils";
 import CustomCursor from "./components/CustomCursor";
-
-const notoKufiArabic = Noto_Kufi_Arabic({
-  subsets: ["arabic"],
-  variable: "--font-noto-kufi-arabic",
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-});
-
-const aBeeZee = ABeeZee({
-  subsets: ["latin"],
-  variable: "--font-abeezee",
-  weight: ["400"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "NOON",
@@ -44,11 +28,7 @@ export default async function RootLayout({
     >
       <body
         suppressHydrationWarning
-        className={cn(
-          `flex flex-col min-h-screen relative text-white ltr:font-neue-montreal rtl:font-noto-kufi-arabic`,
-          notoKufiArabic.variable,
-          aBeeZee.variable,
-        )}
+        className="flex flex-col min-h-screen relative text-white ltr:font-neue-montreal rtl:font-ibm-plex-arabic"
         style={{
           background:
             "linear-gradient(189.91deg, #000000 77.69%, #231708 89.53%, #BE7B2D 142.18%)",

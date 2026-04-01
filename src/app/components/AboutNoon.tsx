@@ -34,13 +34,13 @@ export default function AboutNoon() {
           className="w-full md:w-[55%] flex flex-col justify-center rtl:text-right ltr:text-left"
         >
           {/* Section title */}
-          <h2 className="rtl:font-noto-kufi-arabic ltr:font-elegance text-3xl md:text-5xl font-semibold text-[#C6A87D] mb-8 leading-tight">
+          <h2 className="rtl:font-year-of-camel ltr:font-elegance text-3xl md:text-5xl font-semibold text-[#C6A87D] mb-8 leading-tight">
             {t("aboutCeoNoteTitle")}
           </h2>
 
           {/* Body paragraphs */}
           <div className="max-w-xl">
-            <p className="rtl:font-noto-kufi-arabic ltr:font-neue-montreal text-gray-300 leading-loose text-sm md:text-base">
+            <p className="rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-gray-300 leading-loose text-sm md:text-base">
               {t("aboutText4")
                 .split("\n")
                 .map((line, index) => (
@@ -49,7 +49,7 @@ export default function AboutNoon() {
                   </span>
                 ))}
             </p>
-            <p className="rtl:font-noto-kufi-arabic ltr:font-neue-montreal text-gray-300 leading-loose text-sm md:text-base">
+            <p className="rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-gray-300 leading-loose text-sm md:text-base">
               {t("aboutText5")
                 .split("\n")
                 .map((line, index) => (
@@ -62,7 +62,7 @@ export default function AboutNoon() {
 
           {/* Signature */}
           <div className="mt-10">
-            <span className="rtl:font-noto-kufi-arabic ltr:font-monalisa text-2xl md:text-3xl font-bold text-[#C6A87D]">
+            <span className="rtl:font-year-of-camel ltr:font-monalisa text-2xl md:text-3xl font-bold text-[#C6A87D]">
               {t("aboutCeoSignature")}
             </span>
           </div>

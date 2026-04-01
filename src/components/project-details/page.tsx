@@ -28,7 +28,7 @@ const Page = () => {
   }, []);
 
   return (
-    <main className="text-white pt-20 ltr:font-neue-montreal rtl:font-noto-kufi-arabic">
+    <main className="text-white pt-20 ltr:font-neue-montreal rtl:font-ibm-plex-arabic">
       <motion.figure
         className="h-[400px] sm:h-[600px] relative mx-10 rounded-2xl overflow-hidden"
         initial={{ opacity: 0, y: 40 }}

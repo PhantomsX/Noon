@@ -31,7 +31,7 @@ export default function Testimonials() {
   return (
     <section className="w-full py-10 md:py-20 px-4 md:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <h2 className="mb-10 md:mb-20 font-elegance text-3xl md:text-5xl text-[#C6A87D] text-center">
+        <h2 className="mb-10 md:mb-20 ltr:font-elegance rtl:font-year-of-camel text-3xl md:text-5xl text-[#C6A87D] text-center">
           {t("partners_words_about_noon")}
         </h2>
 
@@ -44,7 +44,7 @@ export default function Testimonials() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="flex flex-col border-t border-[#C6A87D]/20 pt-6 md:pt-10"
             >
-              <p className="font-neue-montreal text-gray-300 leading-relaxed mb-6 md:mb-12 text-base">
+              <p className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-gray-300 leading-relaxed mb-6 md:mb-12 text-base">
                 &ldquo;{item.text}&rdquo;
               </p>
 
@@ -58,7 +58,7 @@ export default function Testimonials() {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-white font-medium font-neue-montreal">
+                  <span className="text-white font-medium ltr:font-neue-montreal rtl:font-ibm-plex-arabic">
                     {item.name}
                   </span>
                   <span className="text-[#C6A87D] text-[10px] uppercase tracking-widest font-normal">
@@ -71,7 +71,7 @@ export default function Testimonials() {
         </div>
 
         {/* Navigation Controls */}
-        <div className="mt-8 md:mt-16 flex justify-end items-center gap-6 font-neue-montreal text-xs tracking-widest text-gray-400 uppercase">
+        <div className="mt-8 md:mt-16 flex justify-end items-center gap-6 ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-xs tracking-widest text-gray-400 uppercase">
           <button className="hover:text-[#C6A87D] transition-colors flex items-center gap-2">
             <ChevronLeft className="size-3.5 rtl:rotate-180" />{" "}
             {t("common.back")}

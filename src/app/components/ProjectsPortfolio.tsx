@@ -179,7 +179,7 @@ export default function ProjectsPortfolio() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="font-elegance text-3xl md:text-5xl text-[#C6A87D] mb-6"
+            className="ltr:font-elegance rtl:font-year-of-camel text-3xl md:text-5xl text-[#C6A87D] mb-6"
           >
             {t("home.portfolio.title")}
           </motion.h2>

@@ -52,7 +52,7 @@ const AboutContact = () => {
                   </svg>
                 </div>
                 <motion.h2
-                  className="text-bg capitalize ltr:font-elegance rtl:font-font-noto-kufi-arabic font-medium text-2xl sm:text-3xl lg:text-4xl"
+                  className="text-bg capitalize ltr:font-elegance  rtl:font-year-of-camel font-medium text-2xl sm:text-3xl lg:text-4xl"
                   whileHover={{ scale: 1.02 }}
                 >
                   {t("headquarters")}
@@ -166,7 +166,7 @@ const AboutContact = () => {
                   </svg>
                 </div>
                 <motion.h2
-                  className="text-bg capitalize ltr:font-elegance rtl:font-font-noto-kufi-arabic font-medium text-2xl sm:text-3xl lg:text-4xl"
+                  className="text-bg capitalize ltr:font-elegance  rtl:font-year-of-camel font-medium text-2xl sm:text-3xl lg:text-4xl"
                   whileHover={{ scale: 1.02 }}
                 >
                   {t("branchOffice")}
@@ -284,7 +284,7 @@ const AboutContact = () => {
               </motion.div>
 
               <motion.h2
-                className="text-bg capitalize ltr:font-elegance rtl:font-font-noto-kufi-arabic font-medium text-2xl sm:text-3xl lg:text-4xl xl:text-5xl mb-4 leading-tight"
+                className="text-bg capitalize ltr:font-elegance  rtl:font-year-of-camel font-medium text-2xl sm:text-3xl lg:text-4xl xl:text-5xl mb-4 leading-tight"
                 whileHover={{ scale: 1.02 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -336,7 +336,7 @@ const AboutContact = () => {
             transition={{ duration: 0.6, delay: 5.0 }}
             className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center"
           >
-            <h3 className="text-bg font-elegance text-xl lg:text-2xl xl:text-3xl">
+            <h3 className="text-bg ltr:font-elegance  rtl:font-year-of-camel text-xl lg:text-2xl xl:text-3xl">
               {t("common.presence_ksa")}
             </h3>
           </motion.div>

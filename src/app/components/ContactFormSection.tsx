@@ -28,7 +28,7 @@ export default function ContactFormSection() {
   const inputCls =
     "w-full bg-transparent border-0 border-b border-[#C6A87D]/40 py-2 text-gray-200 text-sm placeholder-transparent focus:outline-none focus:border-[#C6A87D] transition-colors duration-300";
   const labelCls =
-    "block rtl:font-noto-kufi-arabic ltr:font-neue-montreal text-[10px] tracking-widest text-[#C6A87D]/70 mb-1 uppercase";
+    "block rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-[10px] tracking-widest text-[#C6A87D]/70 mb-1 uppercase";
 
   return (
     <section className="w-full py-16 md:py-24 px-4 md:px-16 lg:px-24">
@@ -39,7 +39,7 @@ export default function ContactFormSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="rtl:font-noto-kufi-arabic ltr:font-elegance text-4xl md:text-5xl text-[#C6A87D] text-center mb-14"
+          className="rtl:font-year-of-camel ltr:font-elegance text-4xl md:text-5xl text-[#C6A87D] text-center mb-14"
         >
           {t("contactForm.title")}
         </motion.h2>

@@ -289,7 +289,7 @@ const CareersPage = () => {
   const steps = ["apply", "review", "interview", "offer"];
 
   return (
-    <main className="ltr:font-neue-montreal rtl:font-noto-kufi-arabic">
+    <main className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic">
       {/* Hero Section */}
       <section className="relative px-5 md:px-[70px] pt-20 pb-16">
         <div className="relative z-10">

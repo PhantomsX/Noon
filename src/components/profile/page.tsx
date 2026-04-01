@@ -92,7 +92,7 @@ const PersonalDetails = () => {
           damping: 30,
           duration: 0.25,
         }}
-        className="text-xl sm:text-2xl ltr:font-elegance rtl:font-font-noto-kufi-arabic font-bold mb-2 text-bg"
+        className="text-xl sm:text-2xl ltr:font-elegance rtl:font-year-of-camel font-bold mb-2 text-bg"
       >
         {t("sections.personalDetails")}
       </motion.h3>
@@ -190,7 +190,7 @@ const JobDescription = () => {
           damping: 30,
           duration: 0.25,
         }}
-        className="text-xl sm:text-2xl ltr:font-elegance rtl:font-font-noto-kufi-arabic font-bold mb-2 text-bg"
+        className="text-xl sm:text-2xl ltr:font-elegance rtl:font-year-of-camel font-bold mb-2 text-bg"
       >
         {t("sections.jobDescription")}
       </motion.h3>
@@ -252,7 +252,7 @@ const EmployeeDocument = () => {
           damping: 30,
           duration: 0.25,
         }}
-        className="text-xl font-bold ltr:font-elegance rtl:font-font-noto-kufi-arabic mb-2 text-bg"
+        className="text-xl font-bold ltr:font-elegance rtl:font-year-of-camel mb-2 text-bg"
       >
         {t("tabs.document")}
       </motion.h3>
@@ -289,7 +289,7 @@ const SalaryDetails = () => {
           damping: 30,
           duration: 0.25,
         }}
-        className="text-xl font-bold mb-2 ltr:font-elegance rtl:font-font-noto-kufi-arabic text-bg"
+        className="text-xl font-bold mb-2 ltr:font-elegance rtl:font-year-of-camel text-bg"
       >
         {t("tabs.salary")}
       </motion.h3>
@@ -346,7 +346,7 @@ const BankInformation = () => {
           damping: 30,
           duration: 0.25,
         }}
-        className="text-xl font-bold ltr:font-elegance rtl:font-font-noto-kufi-arabic mb-2 text-bg"
+        className="text-xl font-bold ltr:font-elegance rtl:font-year-of-camel mb-2 text-bg"
       >
         {t("sections.bankInformation")}
       </motion.h3>
@@ -399,7 +399,7 @@ const MedicalInsurance = () => {
           damping: 30,
           duration: 0.25,
         }}
-        className="text-xl font-bold ltr:font-elegance rtl:font-font-noto-kufi-arabic mb-2 text-bg"
+        className="text-xl font-bold ltr:font-elegance rtl:font-year-of-camel mb-2 text-bg"
       >
         {t("tabs.medical")}
       </motion.h3>
@@ -451,7 +451,7 @@ const ProfilePage = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="p-4 sm:p-6 md:p-8 ltr:font-neue-montreal rtl:font-noto-kufi-arabic"
+      className="p-4 sm:p-6 md:p-8 ltr:font-neue-montreal rtl:font-ibm-plex-arabic"
     >
       {/* Profile Title */}
       <motion.h1
@@ -462,7 +462,7 @@ const ProfilePage = () => {
           damping: 30,
           duration: 0.25,
         }}
-        className="text-3xl md:text-4xl ltr:font-elegance rtl:font-font-noto-kufi-arabic font-bold mb-6 md:mb-8 text-bg"
+        className="text-3xl md:text-4xl ltr:font-elegance rtl:font-year-of-camel font-bold mb-6 md:mb-8 text-bg"
       >
         {t("title")}
       </motion.h1>
@@ -504,7 +504,7 @@ const ProfilePage = () => {
           <motion.div variants={itemVariants} className="md:col-span-4">
             <div className="flex flex-col md:flex-row ltr:md:justify-between rtl:md:justify-start md:items-center gap-2">
               <motion.h1
-                className="text-2xl ltr:font-elegance rtl:font-font-noto-kufi-arabic sm:text-3xl md:text-4xl font-bold text-bg"
+                className="text-2xl ltr:font-elegance rtl:font-year-of-camel sm:text-3xl md:text-4xl font-bold text-bg"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
@@ -603,7 +603,7 @@ const ProfilePage = () => {
                 damping: 30,
                 duration: 0.25,
               }}
-              className="text-xl ltr:font-elegance rtl:font-font-noto-kufi-arabic sm:text-2xl font-bold mb-4 md:mb-6 text-bg"
+              className="text-xl ltr:font-elegance rtl:font-year-of-camel sm:text-2xl font-bold mb-4 md:mb-6 text-bg"
             >
               {t("welcome.title")}
             </motion.h3>
@@ -792,7 +792,7 @@ const ProfilePage = () => {
                         damping: 30,
                         duration: 0.25,
                       }}
-                      className="text-xl font-bold mb-2 ltr:font-elegance rtl:font-font-noto-kufi-arabic text-bg"
+                      className="text-xl font-bold mb-2 ltr:font-elegance rtl:font-year-of-camel text-bg"
                     >
                       {t("sections.personalCv")}
                     </motion.h3>

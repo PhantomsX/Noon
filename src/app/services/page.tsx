@@ -133,7 +133,7 @@ function Page() {
           <PageTitle>{t("title-1")}</PageTitle>
         </aside>
         <div className="flex-1">
-          <p className="text-xl mb-8 text-white text-center md:text-start ltr:font-neue-montreal rtl:font-noto-kufi-arabic">
+          <p className="text-xl mb-8 text-white text-center md:text-start ltr:font-neue-montreal rtl:font-ibm-plex-arabic">
             {t("breif")}
           </p>
         </div>
@@ -162,7 +162,7 @@ const ServiceCard = ({ service, id }: { service: Service; id: number }) => {
       viewport={{ once: true, margin: "-50px" }}
       transition={{ delay: (id % 3) * 0.1, duration: 0.6 }}
     >
-      <div className="text-white text-xl md:text-2xl font-medium tracking-widest mb-4 ltr:font-neue-montreal rtl:font-noto-kufi-arabic">
+      <div className="text-white text-xl md:text-2xl font-medium tracking-widest mb-4 ltr:font-neue-montreal rtl:font-ibm-plex-arabic">
         / {(id + 1).toString().padStart(2, "0")}
       </div>
 
@@ -181,7 +181,7 @@ const ServiceCard = ({ service, id }: { service: Service; id: number }) => {
             {service.features.map((feature, index) => (
               <li
                 key={index}
-                className="flex items-start gap-3 text-white text-sm md:text-base ltr:font-neue-montreal rtl:font-noto-kufi-arabic transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500"
+                className="flex items-start gap-3 text-white text-sm md:text-base ltr:font-neue-montreal rtl:font-ibm-plex-arabic transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500"
                 style={{ transitionDelay: `${index * 75}ms` }}
               >
                 <div className="w-1.5 h-1.5 rounded-full bg-[#C6A87D] mt-2 shrink-0 shadow-sm" />
@@ -195,7 +195,7 @@ const ServiceCard = ({ service, id }: { service: Service; id: number }) => {
       </div>
 
       <div className="flex flex-col flex-1 justify-between gap-4 mt-6">
-        <h3 className="text-white text-lg md:text-xl lg:text-2xl font-bold uppercase tracking-wider ltr:font-neue-montreal rtl:font-noto-kufi-arabic line-clamp-2">
+        <h3 className="text-white text-lg md:text-xl lg:text-2xl font-bold uppercase tracking-wider ltr:font-neue-montreal rtl:font-ibm-plex-arabic line-clamp-2">
           {service.title}
         </h3>
         <div className="h-px w-full bg-[#C6A87D]/50 transition-colors duration-300 group-hover:bg-[#C6A87D]" />

@@ -48,7 +48,7 @@ export default function PartnersLogos() {
   return (
     <section className="w-full py-8 md:py-16 overflow-hidden">
       <div className="w-full">
-        <h2 className="mb-8 md:mb-16 font-elegance text-3xl md:text-5xl text-[#C6A87D] text-center px-4 md:px-2">
+        <h2 className="mb-8 md:mb-16 ltr:font-elegance rtl:font-year-of-camel text-3xl md:text-5xl text-[#C6A87D] text-center px-4 md:px-2">
           {t("partners_of_success")}
         </h2>
 

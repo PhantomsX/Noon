@@ -15,11 +15,11 @@ const Footer = () => {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, delay: 0.7 }}
       dir="ltr"
-      className="flex flex-col md:flex-row justify-between items-center mt-auto p-4 md:p-8 ltr:font-neue-montreal rtl:font-noto-kufi-arabic gap-4"
+      className="flex flex-col md:flex-row justify-between items-center mt-auto p-4 md:p-8 ltr:font-neue-montreal rtl:font-ibm-plex-arabic gap-4"
     >
       <span
         dir={locale === "ar" ? "rtl" : "ltr"}
-        className="text-[#C6A87D]/50 text-[8px] md:text-[10px] uppercase tracking-widest font-neue-montreal order-2 md:order-1"
+        className="text-[#C6A87D]/50 text-[8px] md:text-[10px] uppercase tracking-widest ltr:font-neue-montreal rtl:font-ibm-plex-arabic order-2 md:order-1"
       >
         {t("rights")}
       </span>

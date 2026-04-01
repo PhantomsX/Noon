@@ -274,7 +274,7 @@ const Page = () => {
 
   return (
     <motion.main
-      className="px-5 md:px-[70px] ltr:font-neue-montreal rtl:font-noto-kufi-arabic pt-20 flex flex-col justify-between"
+      className="px-5 md:px-[70px] ltr:font-neue-montreal rtl:font-ibm-plex-arabic pt-20 flex flex-col justify-between"
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
@@ -438,10 +438,10 @@ const Page = () => {
                           />
                         </svg>
                       </EmptyMedia>
-                      <EmptyTitle className="text-[#C6A87D] rtl:font-noto-kufi-arabic ltr:font-neue-montreal text-xl">
+                      <EmptyTitle className="text-[#C6A87D] rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-xl">
                         {t("projects.emptyTitle")}
                       </EmptyTitle>
-                      <EmptyDescription className="text-white/40 rtl:font-noto-kufi-arabic ltr:font-neue-montreal">
+                      <EmptyDescription className="text-white/40 rtl:font-ibm-plex-arabic ltr:font-neue-montreal">
                         {t("projects.emptyDescription")}
                       </EmptyDescription>
                     </EmptyHeader>

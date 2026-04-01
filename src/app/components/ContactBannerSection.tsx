@@ -43,7 +43,7 @@ export default function ContactBannerSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="rtl:font-noto-kufi-arabic ltr:font-elegance text-4xl md:text-5xl lg:text-6xl font-semibold text-[#C6A87D] mb-6 leading-tight"
+          className="rtl:font-year-of-camel ltr:font-elegance text-4xl md:text-5xl lg:text-6xl font-semibold text-[#C6A87D] mb-6 leading-tight"
         >
           {t("contactForm.title")}
         </motion.h2>
@@ -54,7 +54,7 @@ export default function ContactBannerSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.25 }}
-          className="rtl:font-noto-kufi-arabic ltr:font-neue-montreal text-white/85 text-base md:text-xl leading-relaxed max-w-2xl mb-10"
+          className="rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-white/85 text-base md:text-xl leading-relaxed max-w-2xl mb-10"
         >
           {t("contactBanner.subtitle")}
         </motion.p>

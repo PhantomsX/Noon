@@ -31,7 +31,7 @@ export default function ContactPage() {
   const inputCls =
     "w-full bg-transparent border-0 border-b border-[#C6A87D]/40 py-2 text-gray-200 text-sm focus:outline-none focus:border-[#C6A87D] transition-colors duration-300";
   const labelCls =
-    "block rtl:font-noto-kufi-arabic ltr:font-neue-montreal text-[10px] tracking-widest text-[#C6A87D]/70 uppercase mb-1";
+    "block rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-[10px] tracking-widest text-[#C6A87D]/70 uppercase mb-1";
 
   return (
     <main className="min-h-screen">
@@ -42,7 +42,7 @@ export default function ContactPage() {
         </aside>
 
         <div className="flex-1">
-          <p className="text-xl mb-8 text-white text-center md:text-start ltr:font-neue-montreal rtl:font-noto-kufi-arabic">
+          <p className="text-xl mb-8 text-white text-center md:text-start ltr:font-neue-montreal rtl:font-ibm-plex-arabic">
             {t("contactPage.description")}
           </p>
         </div>

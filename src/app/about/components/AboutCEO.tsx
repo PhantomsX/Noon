@@ -311,7 +311,7 @@ const AboutCEO = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 2.1 }}
-              className="text-bg capitalize text-xl sm:text-2xl lg:text-3xl ltr:font-elegance rtl:font-font-noto-kufi-arabic italic font-medium"
+              className="text-bg capitalize text-xl sm:text-2xl lg:text-3xl ltr:font-elegance  rtl:font-year-of-camel font-medium"
             >
               {t("common.notes_ceo")}
             </motion.h3>

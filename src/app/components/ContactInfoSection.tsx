@@ -9,7 +9,8 @@ import phone from "@/public/phone.svg";
 import XIcon from "@/public/X.svg";
 
 const ContactInfoSection = () => {
-  const t = useTranslations();
+  const t = useTranslations("contactInfo");
+  const tAlt = useTranslations("alt");
   const socials = [
     {
       icon: instagram,
@@ -45,11 +46,11 @@ const ContactInfoSection = () => {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="font-elegance text-4xl md:text-5xl text-[#C6A87D] leading-tight"
+            className="ltr:font-elegance rtl:font-year-of-camel text-4xl md:text-5xl text-[#C6A87D] leading-tight"
           >
-            Head
+            {t("titleLine1")}
             <br />
-            Quarters
+            {t("titleLine2")}
           </motion.h2>
 
           {/* Contact Information */}
@@ -65,9 +66,9 @@ const ContactInfoSection = () => {
               rel="noopener noreferrer"
               className="hover:text-[#C6A87D] hover:underline transition-colors cursor-pointer flex flex-col gap-2 text-white/80 text-sm md:text-base"
             >
-              <span>Riyadh, Saudi Arabia</span>
-              <span>Northern Ring Road, Exit 2</span>
-              <span>12385</span>
+              <span>{t("addressCity")}</span>
+              <span>{t("addressStreet")}</span>
+              <span>{t("addressPostal")}</span>
             </a>
           </motion.div>
 
@@ -112,7 +113,7 @@ const ContactInfoSection = () => {
               >
                 <Image
                   src={social.icon}
-                  alt={t("alt.social")}
+                  alt={tAlt("social")}
                   width={20}
                   height={20}
                   className="w-5 h-5 object-contain"

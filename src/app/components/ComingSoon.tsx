@@ -45,7 +45,7 @@ const ComingSoon = ({ title, subtitle, className }: ComingSoonProps) => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-4xl md:text-6xl font-bold mb-4 py-4 ltr:font-neue-montreal rtl:font-noto-kufi-arabic bg-[linear-gradient(270deg,#BE7B2C_0%,#F9C39D_100%)] bg-clip-text text-transparent uppercase tracking-wider"
+          className="text-4xl md:text-6xl font-bold mb-4 py-4 ltr:font-neue-montreal rtl:font-ibm-plex-arabic bg-[linear-gradient(270deg,#BE7B2C_0%,#F9C39D_100%)] bg-clip-text text-transparent uppercase tracking-wider"
         >
           {title || t("comingSoon")}
         </motion.h1>
@@ -54,7 +54,7 @@ const ComingSoon = ({ title, subtitle, className }: ComingSoonProps) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="text-[#C6A87D] text-lg md:text-xl max-w-lg mx-auto font-abeezee leading-relaxed mb-12"
+          className="text-[#C6A87D] text-lg md:text-xl max-w-lg mx-auto ltr:font-neue-montreal rtl:font-ibm-plex-arabic leading-relaxed mb-12"
         >
           {subtitle || t("comingSoonPage.subtitle")}
         </motion.p>

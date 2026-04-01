@@ -21,7 +21,7 @@ const NavLink = ({ title, href }: NavLinkProps) => {
     >
       <Link
         href={href}
-        className="text-white/80 capitalize ltr:font-elegance rtl:font-font-noto-kufi-arabic hover:text-white transition-colors text-lg font-medium py-2 px-3 relative z-10"
+        className="text-white/80 capitalize ltr:font-elegance rtl:font-year-of-camel hover:text-white transition-colors text-lg font-medium py-2 px-3 relative z-10"
       >
         {t(title)}
         {/* Underline effect */}

@@ -17,7 +17,7 @@ const NotFoundPage = () => {
       transition={{ duration: 0.8 }}
     >
       <motion.h1
-        className="text-bg py-3 flex items-center gap-2 tracking-widest ltr:font-elegance rtl:font-font-noto-kufi-arabic text-5xl md:text-7xl font-bold mb-4"
+        className="text-bg py-3 flex items-center gap-2 tracking-widest ltr:font-elegance  rtl:font-year-of-camel text-5xl md:text-7xl font-bold mb-4"
         initial={{ opacity: 0, scale: 0.8, y: -20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
@@ -41,7 +41,7 @@ const NotFoundPage = () => {
         <span>4</span>
       </motion.h1>
       <motion.p
-        className="text-white ltr:font-elegance rtl:font-amirit-lg md:text-2xl mb-8"
+        className="text-white ltr:font-elegance  rtl:font-year-of-camel md:text-2xl mb-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
