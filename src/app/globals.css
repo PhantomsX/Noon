@@ -338,6 +338,9 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html[dir="rtl"] {
+    font-size: 110%;
+  }
   body {
     @apply bg-background text-foreground;
   }

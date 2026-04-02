@@ -507,6 +507,8 @@
   "services": "Our Services",
   "servicess": {
     "allServices": " All Services",
+    "learnMore": "Learn More",
+    "fullServices": "FULL {title} SERVICES",
     "breif": "Over the years, we have proudly served a wide range of clients throughout Saudi Arabia, building a reputation for technical excellence and client-centric solutions. Our services are delivered by experts with in-depth knowledge across various engineering disciplines, each committed to delivering value-driven, high-performance outcomes. We focus on innovation, sustainability, and precision to support the long-term success of our clients’ projects.",
     "service-1": "ENGINEERING & ARCHITECTURAL DESIGN",
     "service-1-description": "The art and science of creating buildings and ther physical structures. It involves the careful consideration of aesthetics, functionality, and the environment.",

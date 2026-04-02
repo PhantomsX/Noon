@@ -154,6 +154,7 @@ function Page() {
 export default Page;
 
 const ServiceCard = ({ service, id }: { service: Service; id: number }) => {
+  const t = useTranslations("servicess");
   return (
     <motion.div
       className="flex flex-col h-full w-full group cursor-pointer"
@@ -162,11 +163,7 @@ const ServiceCard = ({ service, id }: { service: Service; id: number }) => {
       viewport={{ once: true, margin: "-50px" }}
       transition={{ delay: (id % 3) * 0.1, duration: 0.6 }}
     >
-      <div className="text-white text-xl md:text-2xl font-medium tracking-widest mb-4 ltr:font-neue-montreal rtl:font-ibm-plex-arabic">
-        / {(id + 1).toString().padStart(2, "0")}
-      </div>
-
-      <div className="relative w-full aspect-4/5 overflow-hidden">
+      <div className="relative w-full overflow-hidden h-[220px] sm:h-[240px] lg:h-[260px]">
         <Image
           src={service.image}
           alt={service.title}
@@ -175,31 +172,22 @@ const ServiceCard = ({ service, id }: { service: Service; id: number }) => {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
 
-        {/* Blurred Layer with Features on Hover */}
-        <div className="absolute inset-0 bg-black/40 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex flex-col justify-center p-6 md:p-8">
-          <ul className="space-y-4">
-            {service.features.map((feature, index) => (
-              <li
-                key={index}
-                className="flex items-start gap-3 text-white text-sm md:text-base ltr:font-neue-montreal rtl:font-ibm-plex-arabic transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500"
-                style={{ transitionDelay: `${index * 75}ms` }}
-              >
-                <div className="w-1.5 h-1.5 rounded-full bg-[#C6A87D] mt-2 shrink-0 shadow-sm" />
-                <span className="flex-1 drop-shadow-md font-medium">
-                  {feature}
-                </span>
-              </li>
-            ))}
-          </ul>
+        <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-black/10 transition-colors duration-300 group-hover:from-black/80" />
+
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+          <div className="text-white/80 uppercase tracking-[0.25em] text-[10px] sm:text-xs ltr:font-neue-montreal rtl:font-ibm-plex-arabic">
+            {t("fullServices", { title: service.title })}
+          </div>
+
+          <h3 className="mt-3 text-white text-xl sm:text-2xl lg:text-3xl font-semibold uppercase tracking-wider ltr:font-neue-montreal rtl:font-ibm-plex-arabic drop-shadow-sm">
+            {service.title}
+          </h3>
         </div>
       </div>
 
-      <div className="flex flex-col flex-1 justify-between gap-4 mt-6">
-        <h3 className="text-white text-lg md:text-xl lg:text-2xl font-bold uppercase tracking-wider ltr:font-neue-montreal rtl:font-ibm-plex-arabic line-clamp-2">
-          {service.title}
-        </h3>
-        <div className="h-px w-full bg-[#C6A87D]/50 transition-colors duration-300 group-hover:bg-[#C6A87D]" />
-      </div>
+      <p className="mt-6 text-white/70 text-sm sm:text-base leading-relaxed ltr:font-neue-montreal rtl:font-ibm-plex-arabic">
+        {service.description}
+      </p>
     </motion.div>
   );
 };
