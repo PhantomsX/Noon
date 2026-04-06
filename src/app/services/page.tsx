@@ -1,6 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
-import React from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { motion } from "motion/react";
@@ -10,7 +8,6 @@ type Service = {
   title: string;
   description: string;
   image: string;
-  features: string[];
 };
 
 function Page() {
@@ -19,109 +16,62 @@ function Page() {
     {
       title: t("service-1"),
       description: t("service-1-description"),
-      image: "/services/ENGINEERING_AND_ARCHITECTURAL_DESIGN.jpg",
-      features: [
-        t("service-1-features.1"),
-        t("service-1-features.2"),
-        t("service-1-features.3"),
-        t("service-1-features.4"),
-      ],
+      image: "/services/ENGINEERING_AND_ARCHITECTURAL_DESIGN.webp",
     },
     {
       title: t("service-2"),
       description: t("service-2-description"),
-      image: "/services/URBAN_DESIGN.jpg",
-      features: [
-        t("service-2-features.1"),
-        t("service-2-features.2"),
-        t("service-2-features.3"),
-        t("service-2-features.4"),
-        t("service-2-features.5"),
-      ],
+      image: "/services/URBAN_DESIGN.webp",
     },
     {
       title: t("service-4"),
       description: t("service-4-description"),
-      image: "/services/CONSTRUCTION_SUPERVISION.jpg",
-      features: [
-        t("service-4-features.1"),
-        t("service-4-features.2"),
-        t("service-4-features.3"),
-        t("service-4-features.4"),
-        t("service-4-features.5"),
-      ],
+      image: "/services/CONSTRUCTION_SUPERVISION.webp",
     },
     {
       title: t("service-3"),
       description: t("service-3-description"),
-      image: "/services/MASTER_PLANNING.jpg",
-      features: [
-        t("service-3-features.1"),
-        t("service-3-features.2"),
-        t("service-3-features.3"),
-        t("service-3-features.4"),
-        t("service-3-features.5"),
-      ],
+      image: "/services/MASTER_PLANNING.webp",
+    },
+    {
+      title: t("service-7"),
+      description: t("service-7-description"),
+      image: "/services/VALUE_ENGINEERING.webp",
+    },
+    {
+      title: t("service-8"),
+      description: t("service-8-description"),
+      image: "/services/ENGINEERING_STUDIES.webp",
     },
     {
       title: t("service-6"),
       description: t("service-6-description"),
-      image: "/services/ENGINEERING_REPORTS.png",
-      features: [
-        t("service-6-features.1"),
-        t("service-6-features.2"),
-        t("service-6-features.3"),
-        t("service-6-features.4"),
-        t("service-6-features.5"),
-      ],
+      image: "/services/ENGINEERING_REPORTS.webp",
+    },
+    {
+      title: t("service-9"),
+      description: t("service-9-description"),
+      image: "/services/LANDSCAPING.webp",
     },
     {
       title: t("service-5"),
       description: t("service-5-description"),
-      image: "/services/PERMITS.png",
-      features: [
-        t("service-5-features.1"),
-        t("service-5-features.2"),
-        t("service-5-features.3"),
-        t("service-5-features.4"),
-        t("service-5-features.5"),
-      ],
+      image: "/services/PERMITS.webp",
     },
     {
       title: t("service-11"),
       description: t("service-11-description"),
-      image: "/services/PROJECT_MANAGEMENT.png",
-      features: [
-        t("service-11-features.1"),
-        t("service-11-features.2"),
-        t("service-11-features.3"),
-        t("service-11-features.4"),
-        t("service-11-features.5"),
-      ],
+      image: "/services/PROJECT_MANAGEMENT.webp",
     },
     {
       title: t("service-10"),
       description: t("service-10-description"),
-      image: "/services/INTERIOR_DESIGN.jpg",
-      features: [
-        t("service-10-features.1"),
-        t("service-10-features.2"),
-        t("service-10-features.3"),
-        t("service-10-features.4"),
-        t("service-10-features.5"),
-      ],
+      image: "/services/INTERIOR_DESIGN.webp",
     },
     {
       title: t("service-12"),
       description: t("service-12-description"),
-      image: "/services/OR_ARCHITECT_OF_RECORD.jpg",
-      features: [
-        t("service-12-features.1"),
-        t("service-12-features.2"),
-        t("service-12-features.3"),
-        t("service-12-features.4"),
-        t("service-12-features.5"),
-      ],
+      image: "/services/OR_ARCHITECT_OF_RECORD.webp",
     },
   ];
 
