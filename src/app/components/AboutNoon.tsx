@@ -18,7 +18,7 @@ export default function AboutNoon() {
           className="relative w-full md:w-[45%] h-[420px] md:h-[560px] shrink-0"
         >
           <Image
-            src="/images/ceoimage.svg"
+            src="/images/ceoimage.png"
             alt={t("alt.ceo")}
             fill
             className="object-contain object-center"
@@ -33,11 +33,6 @@ export default function AboutNoon() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="w-full md:w-[55%] flex flex-col justify-center rtl:text-right ltr:text-left"
         >
-          {/* Section title */}
-          <h2 className="rtl:font-year-of-camel ltr:font-elegance text-3xl md:text-5xl font-semibold text-[#C6A87D] mb-8 leading-tight">
-            {t("aboutCeoNoteTitle")}
-          </h2>
-
           {/* Body paragraphs */}
           <div className="max-w-xl">
             <p className="rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-gray-300 leading-loose text-sm md:text-base">

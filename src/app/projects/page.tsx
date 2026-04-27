@@ -3,6 +3,7 @@ import { useLocale, useTranslations } from "next-intl";
 import React, { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
+import { X } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Empty,
@@ -205,14 +206,11 @@ const Page = () => {
 
   const projects = ALL_PROJECTS;
 
-  /* selected project — defaults to first */
-  const [selectedId, setSelectedId] = useState<string>(projects[0].id);
-  const [selectedType, setSelectedType] = useState("all");
-
-  const selectedProject = useMemo(
-    () => projects.find((p) => p.id === selectedId) ?? projects[0],
-    [selectedId, projects],
+  /* modal state */
+  const [modalProject, setModalProject] = useState<(typeof projects)[0] | null>(
+    null,
   );
+  const [selectedType, setSelectedType] = useState("all");
 
   const services = useMemo(
     () => [
@@ -292,87 +290,6 @@ const Page = () => {
         </p>
       </motion.section>
 
-      {/* ── Dynamic Hero ─────────────────────────────────────────────────── */}
-      <motion.section
-        className="relative rounded-2xl overflow-hidden z-1"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
-        style={{ minHeight: isMobile ? 420 : 720 }}
-      >
-        {/* Background image — cross-fades on project change */}
-        <AnimatePresence mode="sync">
-          <motion.div
-            key={selectedProject.id}
-            className="absolute inset-0"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
-          >
-            <Image
-              src={selectedProject.image}
-              alt={selectedProject.title}
-              fill
-              priority
-              className="object-cover"
-            />
-          </motion.div>
-        </AnimatePresence>
-
-        {/* Dark gradient overlay */}
-        <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-black/20" />
-
-        {/* Project details panel */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={selectedProject.id + "-info"}
-            className="absolute inset-0 flex flex-col justify-end p-6 md:p-12"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.45, ease: "easeOut" }}
-          >
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-8">
-              {/* Title */}
-              <div className="max-w-md">
-                <p className="text-[#C6A87D] text-xs uppercase tracking-widest mb-2 font-medium">
-                  {t(`projects.${selectedProject.type}`) ??
-                    selectedProject.type}
-                </p>
-                <h2 className="text-white text-2xl md:text-4xl lg:text-5xl font-bold uppercase tracking-wider leading-tight">
-                  {selectedProject.title}
-                </h2>
-              </div>
-
-              {/* Detail table */}
-              <div className="w-full md:w-auto md:min-w-[340px] space-y-2 text-xs md:text-sm bg-black/40 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-                <DetailRow
-                  label={t("home.portfolio.client")}
-                  value={selectedProject.client}
-                />
-                <DetailRow
-                  label={t("home.portfolio.designedBy")}
-                  value={selectedProject.designedBy}
-                />
-                <DetailRow
-                  label={t("home.portfolio.statusDate")}
-                  value={selectedProject.statusDate}
-                />
-                <DetailRow
-                  label={t("home.portfolio.location")}
-                  value={selectedProject.location}
-                />
-                <DetailRow
-                  label={t("home.portfolio.scope")}
-                  value={selectedProject.scope}
-                />
-              </div>
-            </div>
-          </motion.div>
-        </AnimatePresence>
-      </motion.section>
-
       {/* ── Project grid with tabs ────────────────────────────────────────── */}
       <motion.section
         className="mt-10"
@@ -383,15 +300,7 @@ const Page = () => {
         <Tabs
           dir={locale === "ar" ? "rtl" : "ltr"}
           value={selectedType}
-          onValueChange={(type) => {
-            setSelectedType(type);
-            // Auto-select first project of the new tab
-            const first =
-              type === "all"
-                ? projects[0]
-                : projects.find((p) => p.type === type);
-            if (first) setSelectedId(first.id);
-          }}
+          onValueChange={setSelectedType}
         >
           <TabsList className="w-full justify-between flex-wrap">
             {categories.map((cat) => (
@@ -448,7 +357,7 @@ const Page = () => {
                   </Empty>
                 ) : (
                   <motion.div
-                    className="grid grid-cols-2 md:grid-cols-4 gap-6"
+                    className="grid grid-cols-2 md:grid-cols-4 gap-3"
                     initial="hidden"
                     animate="visible"
                     variants={{
@@ -456,7 +365,6 @@ const Page = () => {
                     }}
                   >
                     {filtered.map((project) => {
-                      const isSelected = project.id === selectedId;
                       const serviceDetails = services.find(
                         (s) => s.type === project.type,
                       );
@@ -464,7 +372,7 @@ const Page = () => {
                       return (
                         <motion.button
                           key={project.id}
-                          className="rounded-xl cursor-pointer overflow-hidden bg-[#181818] relative group flex flex-col md:block focus:outline-none"
+                          className="rounded-xl cursor-pointer overflow-hidden aspect-square bg-[#181818] relative group flex flex-col md:block focus:outline-none"
                           variants={{
                             hidden: { opacity: 0, y: 30, scale: 0.98 },
                             visible: { opacity: 1, y: 0, scale: 1 },
@@ -475,17 +383,17 @@ const Page = () => {
                             boxShadow: "0 4px 32px #00000033",
                           }}
                           whileTap={{ scale: 0.98 }}
-                          onClick={() => setSelectedId(project.id)}
+                          onClick={() => setModalProject(project)}
                         >
                           <Image
                             src={project.image}
                             alt={project.title}
                             width={400}
-                            height={300}
-                            className="w-full h-48 object-cover"
+                            height={400}
+                            className="w-full h-full object-cover"
                           />
 
-                          {/* Info overlay — always visible when selected, hover-only otherwise */}
+                          {/* Info overlay — hover-only */}
                           {isClient && isMobile ? (
                             <div className="relative p-4 text-white text-center">
                               <h3 className="font-bold text-lg mb-2">
@@ -496,14 +404,7 @@ const Page = () => {
                               </p>
                             </div>
                           ) : (
-                            <div
-                              className={[
-                                "absolute inset-0 bg-black/40 flex flex-col justify-center items-center p-4 text-white text-center transition-opacity duration-300",
-                                isSelected
-                                  ? "opacity-100"
-                                  : "opacity-0 group-hover:opacity-100",
-                              ].join(" ")}
-                            >
+                            <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center p-4 text-white text-center transition-opacity duration-300 opacity-0 group-hover:opacity-100">
                               <h3 className="font-bold text-lg md:text-xl mb-2">
                                 {project.title}
                               </h3>
@@ -519,48 +420,6 @@ const Page = () => {
                               )}
                             </div>
                           )}
-
-                          {/* Gold border + check badge — rendered ABOVE the overlay */}
-                          <AnimatePresence>
-                            {isSelected && (
-                              <motion.div
-                                className="absolute inset-0 border-2 border-[#C6A87D] rounded-xl pointer-events-none"
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                                transition={{ duration: 0.25 }}
-                              >
-                                {/* Gold corner accents */}
-                                <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-[#C6A87D] rounded-tl" />
-                                <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-[#C6A87D] rounded-br" />
-
-                                {/* Check badge */}
-                                <motion.div
-                                  className="absolute top-2 right-2 w-7 h-7 rounded-full bg-[#C6A87D] flex items-center justify-center shadow-lg"
-                                  initial={{ scale: 0 }}
-                                  animate={{ scale: 1 }}
-                                  exit={{ scale: 0 }}
-                                  transition={{
-                                    type: "spring",
-                                    stiffness: 300,
-                                    damping: 20,
-                                  }}
-                                >
-                                  <svg
-                                    className="w-4 h-4 text-black"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth={3}
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                  >
-                                    <polyline points="20 6 9 17 4 12" />
-                                  </svg>
-                                </motion.div>
-                              </motion.div>
-                            )}
-                          </AnimatePresence>
                         </motion.button>
                       );
                     })}
@@ -571,6 +430,86 @@ const Page = () => {
           })}
         </Tabs>
       </motion.section>
+
+      {/* ── Project Modal ─────────────────────────────────────────────────── */}
+      <AnimatePresence>
+        {modalProject && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
+            onClick={() => setModalProject(null)}
+          >
+            {/* Close Button */}
+            <motion.button
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ delay: 0.1 }}
+              onClick={() => setModalProject(null)}
+              className="absolute top-4 right-4 md:top-8 md:right-8 z-10 size-12 rounded-full bg-[#BE7B2C] hover:bg-[#F9C39D] transition-colors duration-300 flex items-center justify-center text-white"
+              aria-label="Close"
+            >
+              <X className="size-6" />
+            </motion.button>
+
+            {/* Modal Content */}
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="relative w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-2xl bg-[#181818] border border-[#C6A87D]/20"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Project Image */}
+              <div className="relative w-full h-[300px] md:h-[400px]">
+                <Image
+                  src={modalProject.image}
+                  alt={modalProject.title}
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-[#181818] to-transparent" />
+              </div>
+
+              {/* Project Details */}
+              <div className="p-6 md:p-10">
+                <p className="text-[#C6A87D] text-xs uppercase tracking-widest mb-2 font-medium">
+                  {t(`projects.${modalProject.type}`) ?? modalProject.type}
+                </p>
+                <h2 className="text-white text-2xl md:text-4xl font-bold uppercase tracking-wider leading-tight mb-6">
+                  {modalProject.title}
+                </h2>
+
+                <div className="space-y-3 text-sm md:text-base bg-black/40 rounded-xl p-4 md:p-6 border border-white/10">
+                  <DetailRow
+                    label={t("home.portfolio.client")}
+                    value={modalProject.client}
+                  />
+                  <DetailRow
+                    label={t("home.portfolio.designedBy")}
+                    value={modalProject.designedBy}
+                  />
+                  <DetailRow
+                    label={t("home.portfolio.statusDate")}
+                    value={modalProject.statusDate}
+                  />
+                  <DetailRow
+                    label={t("home.portfolio.location")}
+                    value={modalProject.location}
+                  />
+                  <DetailRow
+                    label={t("home.portfolio.scope")}
+                    value={modalProject.scope}
+                  />
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.main>
   );
 };

@@ -7,6 +7,7 @@ import instagram from "@/public/instegram.svg";
 import linkedIn from "@/public/linkedIn.svg";
 import phone from "@/public/phone.svg";
 import XIcon from "@/public/X.svg";
+import snapchat from "@/public/snapchat.svg";
 
 const ContactInfoSection = () => {
   const t = useTranslations("contactInfo");
@@ -14,11 +15,14 @@ const ContactInfoSection = () => {
   const socials = [
     {
       icon: instagram,
-      href: "https://www.instagram.com/nnc_ksa/profilecard/?igsh=MWpwa3F1YXkzMm5nYg==",
+      href: "https://www.instagram.com/nnc_ksa?igsh=MWpwa3F1YXkzMm5nYg%3D%3D&utm_source=qr",
     },
-    { icon: XIcon, href: "#" },
+    {
+      icon: XIcon,
+      href: "https://x.com/nnc_ksa?s=21&t=CqF_r3h2WoYwJCTx3q1GDw",
+    },
+    { icon: snapchat, href: "https://www.snapchat.com/add/nnc_ksa" },
     { icon: linkedIn, href: "https://www.linkedin.com/company/nnc-ksa/" },
-    { icon: phone, href: "tel:+966539929050" },
   ];
 
   return (

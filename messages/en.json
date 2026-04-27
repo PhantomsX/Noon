@@ -35,7 +35,6 @@
   "Warehouse": "Warehouse",
   "What Our Clients Say": "partners words about noon",
   "about": "About",
-  "aboutCeoNoteTitle": "CEO's Note",
   "aboutCeoSignature": "Dr. Nazar El Sayed",
   "HOME": "HOME",
   "WHO WE ARE": "WHO WE ARE",
@@ -498,7 +497,111 @@
     "consulting": "Consulting",
     "on_site": "On Site",
     "profile": "Profile",
-    "connect": "Connect"
+    "connect": "Connect",
+    "members": [
+      {
+        "name": "DR. NIZAR ALSAYED",
+        "role": "Founder",
+        "description": "Founder of Noon Engineering Consultants, over 30 years in architecture and urban planning. Holds a Bachelor's in Architecture and a Master's in Urban Planning, with a PhD. Expertise in shaping urban environments and delivering high-impact developments.",
+        "image": "/images/ceoimage.png"
+      },
+      {
+        "name": "RAKAN ABUDAQQA",
+        "role": "Design & Development Director",
+        "description": "Design & Development Director at Noon Consultants, over 10 years of experience in architectural design and development. Holds a Bachelor's in Architecture. Specializes in leading design development and coordination across multidisciplinary teams.",
+        "image": "/team/RAKAN-ABUDAQQA.webp"
+      },
+      {
+        "name": "FARES ALSAYED",
+        "role": "General Manager",
+        "description": "General Manager of Administration & Development, with extensive experience in organizational strategy and business operations. Holds a Bachelor's degree in Business Administration. Project Management Officer (PMO) at Noon Consultants.",
+        "image": "/team/FARES-ALSAYED.webp"
+      },
+      {
+        "name": "SHAHAD ALDOWAH",
+        "role": "Executive Assistant",
+        "description": "With the firm for one year, contributing to project planning, coordination, and progress tracking. Holds a B.S degree in Project Management. Executive Assistant at Noon Consultants.",
+        "image": "/team/SHAHAD-ALDOWAH.webp"
+      },
+      {
+        "name": "RANIA MAHI",
+        "role": "Database Controller",
+        "description": "With the firm for one year, supporting administrative and executive operations. Holds a diploma in Public Administration. Database Controller at Noon Consultants, over 12 years of experience in data and document management. Holds a Bachelor's in Computer Science.",
+        "image": "/team/RANIA-MAHI.webp"
+      },
+      {
+        "name": "MUDATHER ABUDRESS",
+        "role": "Architect & AI Specialist",
+        "description": "Responsible for managing and maintaining project data. An Architect and AI Specialist at Noon Consultants, over four years of experience in architectural design and digital innovation. Holds a Bachelor's degree in Architecture.",
+        "image": "/team/MUDATHER-ABUDRESS.webp"
+      },
+      {
+        "name": "AL WALID ALBAIK",
+        "role": "Design Specialist",
+        "description": "Combined architectural expertise with advanced digital tools, focusing on design development, visualization, and integrating AI-driven solutions. Plays a key role in enhancing design efficiency.",
+        "image": "/team/ALWALID-ALBAIK.webp"
+      },
+      {
+        "name": "SALMAN ALSAIDI",
+        "role": "Architect Engineer",
+        "description": "Architect Engineer at Noon Consultants, with experience in architectural design and project coordination. Involved in design development, BIM modeling, and preparation of working drawings. Holds a Bachelor's degree in Architecture.",
+        "image": "/team/SALMAN-ALSAIDI.webp"
+      },
+      {
+        "name": "HOSSAM ALRASHID",
+        "role": "Architectural Designer",
+        "description": "Contributes to concept development, architectural and interior design, and visual presentations. Known for his creative thinking and ability to generate unique design ideas.",
+        "image": "/team/HOSSAM-ALRASHID.webp"
+      },
+      {
+        "name": "AHMED RASHWANI",
+        "role": "Architect & BIM Specialist",
+        "description": "Architect and BIM Specialist at Noon Consultants. Holds a Bachelor's degree in Architecture. Strong technical capabilities in architectural design and Building Information Modeling (BIM). Mechanical Engineer at Noon Consultants, with experience in MEP systems design.",
+        "image": "/team/AHMED-RASHWANI.webp"
+      },
+      {
+        "name": "ABDULBAQI TAHER",
+        "role": "Mechanical Engineer",
+        "description": "Involved in HVAC, plumbing, and firefighting systems. Contributes to design development, technical coordination, and site implementation. Plays an active role in supporting project delivery by ensuring compliance with codes.",
+        "image": "/team/ABDULBAQI-TAHER.webp"
+      },
+      {
+        "name": "ATTA ALATRASH",
+        "role": "Senior Planning Engineer",
+        "description": "Senior Planning Engineer at Noon Consultants, over 10 years of experience in project planning, scheduling, and performance management across engineering projects. Holds a Bachelor's degree in Engineering. Specializes in developing and managing project schedules using Primavera P6 and Microsoft Project.",
+        "image": "/team/ATTA-ALATRASH.webp"
+      },
+      {
+        "name": "MAHMOUD ELASSAS",
+        "role": "Senior Structural Engineer",
+        "description": "Senior Structural Engineer at Noon Consultants, over 6 years of experience in structural engineering and construction supervision. Holds a Bachelor's degree in Civil/Structural Engineering. Involved in supervising reinforced concrete works, site execution, and coordination.",
+        "image": "/team/MAHMOUD-ELASSAS.webp"
+      },
+      {
+        "name": "MOHAMED JAMAL",
+        "role": "Electrical Engineer",
+        "description": "Electrical Engineer at Noon Consultants, with experience in electrical design and coordination for residential and commercial projects. Holds a Bachelor's degree in Electrical Engineering. Currently pursuing a Master's degree in Engineering and Systems Management.",
+        "image": "/team/MOHAMED-JAMAL.webp"
+      },
+      {
+        "name": "MOHAMED DARWISH",
+        "role": "Electrical Engineer",
+        "description": "Specialized in power distribution, low-voltage systems, and panel engineering. Contributes to design development, site execution, and technical coordination. Plays a key role in ensuring compliance with international and local standards.",
+        "image": "/team/MOHAMED-DARWISH.webp"
+      },
+      {
+        "name": "MOHANED SHAABAN",
+        "role": "Technical Officer",
+        "description": "Technical Officer at Noon Consultants, over 17 years of experience in architectural and civil drafting, as well as quantity surveying. Holds a diploma in Civil Engineering and completed studies in India. Developed strong expertise in preparing detailed drawings, quantity take-offs.",
+        "image": "/team/MOHAMED-SHAABAN.webp"
+      },
+      {
+        "name": "BASHIR ALSABRI",
+        "role": "Mechanical Engineer",
+        "description": "Mechanical Engineer at Noon Consultants, over four years of experience in MEP systems, specializing in HVAC, firefighting, and plumbing. Holds a Bachelor's degree in Mechanical Engineering. Involved in both technical office and site operations. Has worked in compliance with international and local standards.",
+        "image": "/team/BASHIR-ALSABRI.webp"
+      }
+    ]
   },
   "projectsTitle": "Our Projects",
   "register": "Register",

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import suadiarabia from "@/public/suadiarabia.svg";
+import suadiarabia from "@/public/suadiarabia.png";
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 
@@ -118,120 +118,6 @@ const AboutContact = () => {
                 >
                   <svg
                     className="w-5 h-5 text-[#F9C39D] shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                  </svg>
-                  <a
-                    href="mailto:info@nnc.sa"
-                    dir="ltr"
-                    className="text-white text-base lg:text-lg hover:scale-105 transition-transform"
-                  >
-                    info@nnc.sa
-                  </a>
-                </motion.div>
-              </motion.div>
-            </div>
-          </motion.div>
-
-          {/* Branch Office */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 4.1 }}
-            className="relative p-6 lg:p-8 rounded-2xl bg-white/5 border border-gray-800/50 hover:bg-white/10 transition-all duration-300 group"
-          >
-            <div className="absolute -inset-0.5 bg-linear-to-br from-[#F9C39D]/20 to-[#BE7B2C]/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <div className="relative">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 4.2 }}
-                className="flex items-center gap-4 mb-6"
-              >
-                <div className="w-12 h-12 rounded-full bg-linear-to-br from-[#F9C39D] to-[#BE7B2C] flex items-center justify-center">
-                  <svg
-                    className="w-6 h-6 text-white"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm0 2h12v8H4V6z"
-                      clipRule="evenodd"
-                    />
-                    <path d="M9 9a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" />
-                  </svg>
-                </div>
-                <motion.h2
-                  className="text-bg capitalize ltr:font-elegance  rtl:font-year-of-camel font-medium text-2xl sm:text-3xl lg:text-4xl"
-                  whileHover={{ scale: 1.02 }}
-                >
-                  {t("branchOffice")}
-                </motion.h2>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 4.3 }}
-                className="space-y-4"
-              >
-                <motion.div
-                  initial={{ x: -10 }}
-                  animate={{ x: 0 }}
-                  transition={{ duration: 0.5, delay: 4.4 }}
-                  className="flex items-start gap-3"
-                >
-                  <svg
-                    className="size-5 text-[#F9C39D] mt-1 shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <div className="text-white text-base lg:text-lg">
-                    <div className="font-medium">{t("address2")}</div>
-                    <div className="text-gray-400 text-sm">42317</div>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  initial={{ x: -10 }}
-                  animate={{ x: 0 }}
-                  transition={{ duration: 0.5, delay: 4.5 }}
-                  className="flex items-center gap-3"
-                >
-                  <svg
-                    className="size-5 text-[#F9C39D] shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                  </svg>
-                  <a
-                    href="tel:+966598959098"
-                    dir="ltr"
-                    className="text-white text-base lg:text-lg hover:scale-105 transition-transform"
-                  >
-                    +966 59 895 9098{" "}
-                  </a>
-                </motion.div>
-
-                <motion.div
-                  initial={{ x: -10 }}
-                  animate={{ x: 0 }}
-                  transition={{ duration: 0.5, delay: 4.6 }}
-                  className="flex items-center gap-3"
-                >
-                  <svg
-                    className="size-5 text-[#F9C39D] shrink-0"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >

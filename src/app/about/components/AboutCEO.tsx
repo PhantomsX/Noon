@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import ceo from "@/public/images/ceoimage.svg";
+import ceo from "@/public/images/ceoimage.png";
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 

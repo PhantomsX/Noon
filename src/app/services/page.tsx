@@ -26,12 +26,12 @@ function Page() {
     {
       title: t("service-4"),
       description: t("service-4-description"),
-      image: "/services/CONSTRUCTION_SUPERVISION.webp",
+      image: "/services/CONSTRUCTION_SUPERVISION_1.webp",
     },
     {
       title: t("service-3"),
       description: t("service-3-description"),
-      image: "/services/MASTER_PLANNING.webp",
+      image: "/services/MASTER_PLANNING_1.webp",
     },
     {
       title: t("service-7"),
@@ -79,7 +79,7 @@ function Page() {
     <main className="min-h-screen">
       {/* Header Section */}
       <section className="flex max-sm:flex-col gap-8 lg:gap-16 px-6 md:px-9 pt-12 sm:ps-[80px]">
-        <aside className="sm:max-w-[350px]">
+        <aside className="sm:max-w-[380px]">
           <PageTitle>{t("title-1")}</PageTitle>
         </aside>
         <div className="flex-1">
@@ -113,7 +113,7 @@ const ServiceCard = ({ service, id }: { service: Service; id: number }) => {
       viewport={{ once: true, margin: "-50px" }}
       transition={{ delay: (id % 3) * 0.1, duration: 0.6 }}
     >
-      <div className="relative w-full overflow-hidden h-[220px] sm:h-[240px] lg:h-[260px]">
+      <div className="relative w-full overflow-hidden aspect-square">
         <Image
           src={service.image}
           alt={service.title}

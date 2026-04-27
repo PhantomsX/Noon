@@ -495,7 +495,7 @@ const ProfilePage = () => {
             whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
           >
             <Image
-              src="/images/ceoimage.svg"
+              src="/images/ceoimage.png"
               alt={t("alt.profile_picture")}
               fill
               className="object-cover object-top"

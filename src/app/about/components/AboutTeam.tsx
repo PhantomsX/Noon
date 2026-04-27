@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { useTranslations } from "next-intl";
 import { motion, useInView } from "motion/react";
+import Image from "next/image";
 import PageTitle from "@/app/components/PageTitle";
 import CountUp from "@/components/CountUp";
 
@@ -55,15 +56,78 @@ const TeamStats = () => {
   );
 };
 
+/* ── Team Member Card ─────────────────────────────────────────────────────── */
+const TeamMemberCard = ({ member, index }: { member: any; index: number }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.6, delay: index * 0.05 }}
+      whileHover={{
+        y: -8,
+        rotateX: 5,
+        rotateY: 5,
+        scale: 1.02,
+      }}
+      style={{ perspective: 1000 }}
+      className="group relative bg-white/5 border border-[#C6A87D]/20 rounded-2xl p-6 hover:border-[#BE7B2C]/50 hover:bg-white/10 transition-all duration-300 transform-style-3d"
+    >
+      <div className="flex flex-col h-full">
+        {member.image ? (
+          <div className="aspect-square w-full rounded-lg overflow-hidden mb-4 relative">
+            <Image
+              src={member.image}
+              alt={member.name}
+              width={400}
+              height={400}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-4">
+              <h3 className="text-lg font-bold text-white group-hover:text-[#F9C39D] transition-colors">
+                {member.name}
+              </h3>
+              <p className="text-sm text-[#C6A87D] font-medium">
+                {member.role}
+              </p>
+            </div>
+          </div>
+        ) : (
+          <div className="aspect-square w-full rounded-lg bg-linear-to-br from-[#BE7B2C] to-[#F9C39D] flex items-center justify-center text-white text-5xl font-bold mb-4 relative">
+            {member.name.charAt(0)}
+            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-4">
+              <h3 className="text-lg font-bold text-white group-hover:text-[#F9C39D] transition-colors">
+                {member.name}
+              </h3>
+              <p className="text-sm text-[#C6A87D] font-medium">
+                {member.role}
+              </p>
+            </div>
+          </div>
+        )}
+        <p className="text-gray-300 text-sm leading-relaxed grow">
+          {member.description}
+        </p>
+      </div>
+    </motion.div>
+  );
+};
+
 /* ── Main component ───────────────────────────────────────────────────────── */
 const AboutTeam = () => {
   const t = useTranslations();
+  const teamMembers = t.raw("team.members") as Array<{
+    name: string;
+    role: string;
+    description: string;
+    image: string;
+  }>;
 
   return (
     <motion.section
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: 2.5 }}
+      transition={{ duration: 0.8 }}
       className="my-16 sm:my-20 lg:my-24"
       id="team"
     >
@@ -101,6 +165,19 @@ const AboutTeam = () => {
 
           <TeamStats />
         </motion.div>
+      </motion.div>
+
+      {/* Team Members Grid */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.8 }}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+        {teamMembers.map((member, index) => (
+          <TeamMemberCard key={index} member={member} index={index} />
+        ))}
       </motion.div>
     </motion.section>
   );

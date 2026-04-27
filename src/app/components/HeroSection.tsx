@@ -13,9 +13,13 @@ import Autoplay from "embla-carousel-autoplay";
 import Fade from "embla-carousel-fade";
 
 const PROJECTS_IMAGES = [
-  "/projects/Urban Projects/alnimr.jpg",
-  "/projects/Architectural Projects/mr-waelalrais-private-villa.png",
-  "/projects/Architectural Projects/dr-mohammed-almalik-residence.png",
+  "/projects/slider-projects/AL-NOUR-MOSQUE.webp",
+  "/projects/slider-projects/ALSHUBAILI-OFFICES.webp",
+  "/projects/slider-projects/ALWASEEL-RESORT.webp",
+  "/projects/slider-projects/Al-Ammariya-Beverly-Hills.webp",
+  "/projects/slider-projects/CULTURE-CENTER.webp",
+  "/projects/slider-projects/LIVEN-PENTHOUSE.webp",
+  "/projects/slider-projects/V-TOWER.webp",
 ];
 
 export default function HeroSection() {
@@ -51,6 +55,22 @@ export default function HeroSection() {
     {
       title: t("home.hero.slide1.title"),
       body: t("home.hero.slide1.body"),
+    },
+    {
+      title: null,
+      body: null,
+    },
+    {
+      title: null,
+      body: null,
+    },
+    {
+      title: null,
+      body: null,
+    },
+    {
+      title: null,
+      body: null,
     },
     {
       title: null,
@@ -113,37 +133,33 @@ export default function HeroSection() {
         </CarouselContent>
       </Carousel>
 
-      {/* Hero Content – rendered on top of the carousel, animates per slide */}
+      {/* Hero Content – rendered on top of the carousel */}
       <div className="absolute inset-0 z-20 h-full flex flex-col justify-end px-4 md:px-12 lg:px-16 pb-50 max-w-[1920px] mx-auto pointer-events-none">
-        <AnimatePresence mode="wait">
-          {textVisible && (
-            <motion.div
-              key={current}
-              className="rtl:text-right ltr:text-left"
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-            >
-              {/* Main Heading */}
-              <motion.h1 className="ltr:font-elegance  text-bg rtl:font-year-of-camel text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight mb-5">
-                {slides[current].title}
-              </motion.h1>
+        {textVisible && (
+          <motion.div
+            className="rtl:text-right ltr:text-left"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
+            {/* Main Heading */}
+            <motion.h1 className="ltr:font-elegance  text-bg rtl:font-year-of-camel text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight mb-5">
+              {slides[0].title}
+            </motion.h1>
 
-              {/* Body */}
-              {slides[current].body && (
-                <motion.p
-                  className="uppercase text-base md:text-2xl lg:text-3xl leading-relaxed text-bg ltr:font-neue-montreal rtl:font-ibm-plex-arabic"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.15 }}
-                >
-                  {slides[current].body}
-                </motion.p>
-              )}
-            </motion.div>
-          )}
-        </AnimatePresence>
+            {/* Body */}
+            {slides[0].body && (
+              <motion.p
+                className="uppercase text-base md:text-2xl lg:text-3xl leading-relaxed text-bg ltr:font-neue-montreal rtl:font-ibm-plex-arabic"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.15 }}
+              >
+                {slides[0].body}
+              </motion.p>
+            )}
+          </motion.div>
+        )}
       </div>
     </section>
   );

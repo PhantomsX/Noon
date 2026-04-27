@@ -373,3 +373,36 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+.jcr-p-6 {
+  @apply bg-black text-[#f8c29b];
+}
+.jcr-author-name {
+  @apply text-[#f8c29b]! font-elegance!;
+}
+
+.jcr-post-message {
+  @apply text-[#f8c29b]! font-neue-montreal!;
+}
+span[x-text="selectedPost?.poster_name"] {
+  @apply font-elegance!;
+}
+div[x-html="selectedPost?.message"] {
+  @apply font-neue-montreal!;
+}
+
+/* Gradient Animation */
+@keyframes gradient-animation {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-animation 3s ease infinite;
+}
