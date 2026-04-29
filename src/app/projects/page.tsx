@@ -1,9 +1,11 @@
 "use client";
+
+import React, { useEffect, useMemo, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import React, { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
 import { X } from "lucide-react";
+import { useIsClient, useMediaQuery } from "usehooks-ts";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Empty,
@@ -12,263 +14,102 @@ import {
   EmptyTitle,
   EmptyDescription,
 } from "@/components/ui/empty";
-import { useIsClient, useMediaQuery } from "usehooks-ts";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 import PageTitle from "../components/PageTitle";
 
-/* ── shared project data ─────────────────────────────────────────────────── */
-const ALL_PROJECTS = [
-  {
-    id: "u5",
-    title: "BUSINESS PAY",
-    client: "Tangier Hills Company",
-    designedBy: "Noon Consultants",
-    statusDate: "07-2016 Completed",
-    location: "Morocco - Tangier 32,868 SQM",
-    scope: "Urban Planning & Master Plan",
-    image: "/projects/Urban Projects/business-pay.png",
-    category: "urban",
-    type: "urban",
-  },
-  {
-    id: "u1",
-    title: "AL DHUHAYAN BLOCK 39",
-    client: "Olayan Co",
-    designedBy: "Noon Consultants",
-    statusDate: "05-2023 Under Construction",
-    location: "Riyadh, Saudi Arabia",
-    scope: "Development, Full Design Package",
-    image: "/projects/Urban Projects/al-dhuhayan.jpg",
-    category: "urban",
-    type: "urban",
-  },
-  {
-    id: "u2",
-    title: "ALNIMR DOWNTOWN",
-    client: "Olayan Co.",
-    designedBy: "Noon Consultants",
-    statusDate: "05-2023 Under Construction",
-    location: "Riyadh, Saudi Arabia",
-    scope: "Development, Full Design Package",
-    image: "/projects/Urban Projects/alnimr.jpg",
-    category: "urban",
-    type: "urban",
-  },
-  {
-    id: "u3",
-    title: "LIVEN RESIDENTIAL COMPUND",
-    client: "Yaqeen capital",
-    designedBy: "Noon Consultants",
-    statusDate: "07-2025 in Progress",
-    location: "AL KHOBAR City, Saudi Arabia",
-    scope: "Development, Full Design Package",
-    image: "/projects/Urban Projects/liven-residential-compund.jpg",
-    category: "urban",
-    type: "urban",
-  },
-  {
-    id: "u4",
-    title: "TANGIER HILLS",
-    client: "Tangier Hills Company",
-    designedBy: "Noon Consultants",
-    statusDate: "07-2016 Completed",
-    location: "Morocco - Tangier 32,868 SQM",
-    scope: "Urban Planning & Master Plan",
-    image: "/projects/Urban Projects/tangier-hills.png",
-    category: "urban",
-    type: "urban",
-  },
-  {
-    id: "a1",
-    title: "AL WOMEN EQUESTRIAN CLUB",
-    client: "Investment Company",
-    designedBy: "Noon Consultants",
-    statusDate: "2021 Completed",
-    location: "Riyadh, Saudi Arabia",
-    scope: "Full Design Package",
-    image: "/projects/Architectural Projects/al-women-equestrian-club.png",
-    category: "architectural",
-    type: "architecture",
-  },
-  {
-    id: "a2",
-    title: "AL-QAHTANI COMPLEX",
-    client: "Faisal Alqahtani",
-    designedBy: "Noon Consultants",
-    statusDate: "2025 in progress",
-    location: "Riyadh, Saudi Arabia",
-    scope: "Full Design Package",
-    image: "/projects/Architectural Projects/al-qahtani-complex.png",
-    category: "architectural",
-    type: "architecture",
-  },
-  {
-    id: "a3",
-    title: "DR. MOHAMMED ALMALIK RESIDENCE",
-    client: "Dr. Mohammed Almalik",
-    designedBy: "Noon Consultants",
-    statusDate: "2021 Completed",
-    location: "Riyadh, Saudi Arabia",
-    scope: "Full Design Package",
-    image: "/projects/Architectural Projects/dr-mohammed-almalik-residence.png",
-    category: "architectural",
-    type: "architecture",
-  },
-  {
-    id: "a4",
-    title: "MR. WAEL ALRAIS PRIVATE VILLA",
-    client: "Private villa",
-    designedBy: "Noon Consultants",
-    statusDate: "2024 Under Construction",
-    location: "Riyadh, Saudi Arabia",
-    scope: "Full Design Package",
-    image: "/projects/Architectural Projects/mr-waelalrais-private-villa.png",
-    category: "architectural",
-    type: "architecture",
-  },
-  {
-    id: "a5",
-    title: "V TOWER",
-    client: "Alei Al-Qimma Real Estate Development Company",
-    designedBy: "Noon Consultants",
-    statusDate: "2024 Under Construction",
-    location: "Riyadh City, Saudi Arabia 1,500 SQM",
-    scope: "Full Design Package",
-    image: "/projects/Architectural Projects/v-tower.jpg",
-    category: "architectural",
-    type: "architecture",
-  },
-  {
-    id: "i1",
-    title: "VIP RESIDENCE",
-    client: "Bin Saedan Group",
-    designedBy: "Noon Consultants",
-    statusDate: "2020 Completed",
-    location: "Riyadh City, Saudi Arabia 1,500 SQM",
-    scope: "Full Design Package",
-    image: "/projects/Interior projects/vip-residence.png",
-    category: "interior design",
-    type: "interior design",
-  },
-  {
-    id: "i2",
-    title: "KINDERGARTEN DESIGN",
-    client: "KFMC PROJECT",
-    designedBy: "Noon Consultants",
-    statusDate: "2020 Completed",
-    location: "Riyadh City, Saudi Arabia 1,500 SQM",
-    scope: "Design Concept",
-    image: "/projects/Interior projects/kindergarten-design.png",
-    category: "interior design",
-    type: "interior design",
-  },
-  {
-    id: "i3",
-    title: "AL-WALLAN HEAD QUARTER OFFICES",
-    client: "Al-Wallan Holding Company",
-    designedBy: "Noon Consultants",
-    statusDate: "2024 Completed",
-    location: "Riyadh City, Saudi Arabia 1,500 SQM",
-    scope: "Interior Design",
-    image: "/projects/Interior projects/al-wallan-hq-offices.png",
-    category: "interior design",
-    type: "interior design",
-  },
-  {
-    id: "i4",
-    title: "AL-WALLAN HEAD QUARTER OFFICES 2",
-    client: "Al-Wallan Holding Company",
-    designedBy: "Noon Consultants",
-    statusDate: "2024 Completed",
-    location: "Riyadh City, Saudi Arabia 1,500 SQM",
-    scope: "Interior Design",
-    image: "/projects/Interior projects/al-wallan-hq-offices-2.png",
-    category: "interior design",
-    type: "interior design",
-  },
-];
+type Project = {
+  id: string;
+  title: string;
+  client: string;
+  designedBy: string;
+  statusDate: string;
+  location: string;
+  scope: string;
+  image: string;
+  images: string[];
+  category: string;
+  categoryLabel: string;
+  type: string;
+};
 
-/* ── detail row used in the hero ─────────────────────────────────────────── */
-const DetailRow = ({ label, value }: { label: string; value: string }) => (
-  <div className="flex justify-between gap-4 border-b border-white/20 pb-2 last:border-b-0 last:pb-0">
-    <span className="text-[#C6A87D] font-medium text-start shrink-0">
-      {label}:
-    </span>
-    <span className="text-end text-white/90 truncate max-w-[60%]">{value}</span>
-  </div>
-);
-
-/* ── page ─────────────────────────────────────────────────────────────────── */
 const Page = () => {
   const t = useTranslations();
   const locale = useLocale();
   const isClient = useIsClient();
   const isMobile = useMediaQuery("(max-width: 768px)");
-
-  const projects = ALL_PROJECTS;
-
-  /* modal state */
-  const [modalProject, setModalProject] = useState<(typeof projects)[0] | null>(
-    null,
-  );
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [modalProject, setModalProject] = useState<Project | null>(null);
   const [selectedType, setSelectedType] = useState("all");
+  const [modalCarouselApi, setModalCarouselApi] = useState<CarouselApi>();
+  const [activeModalImageIndex, setActiveModalImageIndex] = useState(0);
 
-  const services = useMemo(
-    () => [
-      {
-        type: "architecture",
-        title: t("servicess.service-1"),
-        description: t("servicess.service-1-description"),
-        image: "/services/ENGINEERING_AND_ARCHITECTURAL_DESIGN.jpg",
-        features: [
-          t("servicess.service-1-features.1"),
-          t("servicess.service-1-features.2"),
-          t("servicess.service-1-features.3"),
-          t("servicess.service-1-features.4"),
-        ],
-      },
-      {
-        type: "urban",
-        title: t("servicess.service-2"),
-        description: t("servicess.service-2-description"),
-        image: "/services/URBAN_DESIGN.jpg",
-        features: [
-          t("servicess.service-2-features.1"),
-          t("servicess.service-2-features.2"),
-          t("servicess.service-2-features.3"),
-          t("servicess.service-2-features.4"),
-          t("servicess.service-2-features.5"),
-        ],
-      },
-      {
-        type: "interior design",
-        title: t("servicess.service-10"),
-        description: t("servicess.service-10-description"),
-        image: "/services/INTERIOR_DESIGN.jpg",
-        features: [
-          t("servicess.service-10-features.1"),
-          t("servicess.service-10-features.2"),
-          t("servicess.service-10-features.3"),
-          t("servicess.service-10-features.4"),
-          t("servicess.service-10-features.5"),
-        ],
-      },
-    ],
-    [t],
-  );
+  useEffect(() => {
+    let isMounted = true;
+
+    const loadProjects = async () => {
+      try {
+        const response = await fetch("/api/projects");
+        if (!response.ok) return;
+
+        const payload = (await response.json()) as { projects?: Project[] };
+        if (!isMounted) return;
+
+        setProjects(payload.projects ?? []);
+      } catch {
+        if (isMounted) setProjects([]);
+      }
+    };
+
+    void loadProjects();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!modalCarouselApi) return;
+
+    const onSelect = () => {
+      setActiveModalImageIndex(modalCarouselApi.selectedScrollSnap());
+    };
+
+    onSelect();
+    modalCarouselApi.on("select", onSelect);
+    modalCarouselApi.on("reInit", onSelect);
+
+    return () => {
+      modalCarouselApi.off("select", onSelect);
+      modalCarouselApi.off("reInit", onSelect);
+    };
+  }, [modalCarouselApi]);
 
   const categories = useMemo(() => {
+    const unique = new Map<string, string>();
+
+    for (const project of projects) {
+      if (!unique.has(project.category)) {
+        unique.set(project.category, project.categoryLabel);
+      }
+    }
+
     return [
-      "all",
-      "Residdential",
-      "Commerical",
-      "Industrial",
-      "Hospitality",
-      "offices",
-      "Master plananing",
-      "Healthcare",
-      "Development",
+      { id: "all", label: t("common.show_all") },
+      ...Array.from(unique.entries()).map(([id, label]) => ({ id, label })),
     ];
-  }, [projects]);
+  }, [projects, t]);
+
+  useEffect(() => {
+    const categoryExists = categories.some(
+      (category) => category.id === selectedType,
+    );
+    if (!categoryExists) setSelectedType("all");
+  }, [categories, selectedType]);
 
   return (
     <motion.main
@@ -277,7 +118,6 @@ const Page = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
     >
-      {/* ── Page header ──────────────────────────────────────────────────── */}
       <motion.section
         className="mb-10 flex flex-col md:flex-row gap-10"
         initial={{ opacity: 0, y: 40 }}
@@ -290,7 +130,6 @@ const Page = () => {
         </p>
       </motion.section>
 
-      {/* ── Project grid with tabs ────────────────────────────────────────── */}
       <motion.section
         className="mt-10"
         initial={{ opacity: 0, y: 40 }}
@@ -305,28 +144,27 @@ const Page = () => {
           <TabsList className="w-full justify-between flex-wrap">
             {categories.map((cat) => (
               <TabsTrigger
-                key={cat}
-                value={cat}
+                key={cat.id}
+                value={cat.id}
                 className="uppercase cursor-pointer text-[10px] sm:text-xs md:text-base px-2 sm:px-3 py-2 flex-1 sm:flex-none min-w-[80px] sm:min-w-[100px] whitespace-normal text-center h-auto min-h-[40px] leading-tight flex items-center justify-center shrink-0"
               >
-                {cat === "all"
-                  ? t("common.show_all")
-                  : t(`projects.${cat}`).toUpperCase()}
+                {cat.label}
               </TabsTrigger>
             ))}
           </TabsList>
 
           {categories.map((cat) => {
             const filtered =
-              cat === "all" ? projects : projects.filter((p) => p.type === cat);
+              cat.id === "all"
+                ? projects
+                : projects.filter((project) => project.category === cat.id);
 
             return (
-              <TabsContent key={cat} value={cat} className="pt-8">
+              <TabsContent key={cat.id} value={cat.id} className="pt-8">
                 {filtered.length === 0 ? (
                   <Empty className="border border-[#C6A87D]/20 bg-black/20 min-h-[320px]">
                     <EmptyHeader>
                       <EmptyMedia>
-                        {/* Architectural compass / blueprint icon */}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className="w-16 h-16 text-[#C6A87D]/40"
@@ -364,65 +202,52 @@ const Page = () => {
                       visible: { transition: { staggerChildren: 0.08 } },
                     }}
                   >
-                    {filtered.map((project) => {
-                      const serviceDetails = services.find(
-                        (s) => s.type === project.type,
-                      );
+                    {filtered.map((project, index) => (
+                      <motion.button
+                        key={project.id}
+                        className="rounded-xl cursor-pointer overflow-hidden aspect-square bg-[#181818] relative group flex flex-col md:block focus:outline-none"
+                        variants={{
+                          hidden: { opacity: 0, y: 30, scale: 0.98 },
+                          visible: { opacity: 1, y: 0, scale: 1 },
+                        }}
+                        transition={{ duration: 0.5, ease: "easeOut" }}
+                        whileHover={{
+                          scale: 1.03,
+                          boxShadow: "0 4px 32px #00000033",
+                        }}
+                        whileTap={{ scale: 0.98 }}
+                        onClick={() => {
+                          setActiveModalImageIndex(0);
+                          setModalProject(project);
+                        }}
+                      >
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          width={400}
+                          height={400}
+                          loading={index < 4 ? "eager" : "lazy"}
+                          className="w-full h-full object-cover"
+                        />
 
-                      return (
-                        <motion.button
-                          key={project.id}
-                          className="rounded-xl cursor-pointer overflow-hidden aspect-square bg-[#181818] relative group flex flex-col md:block focus:outline-none"
-                          variants={{
-                            hidden: { opacity: 0, y: 30, scale: 0.98 },
-                            visible: { opacity: 1, y: 0, scale: 1 },
-                          }}
-                          transition={{ duration: 0.5, ease: "easeOut" }}
-                          whileHover={{
-                            scale: 1.03,
-                            boxShadow: "0 4px 32px #00000033",
-                          }}
-                          whileTap={{ scale: 0.98 }}
-                          onClick={() => setModalProject(project)}
-                        >
-                          <Image
-                            src={project.image}
-                            alt={project.title}
-                            width={400}
-                            height={400}
-                            className="w-full h-full object-cover"
-                          />
-
-                          {/* Info overlay — hover-only */}
-                          {isClient && isMobile ? (
-                            <div className="relative p-4 text-white text-center">
-                              <h3 className="font-bold text-lg mb-2">
-                                {project.title}
-                              </h3>
-                              <p className="text-sm text-gray-300">
-                                {project.location}
-                              </p>
-                            </div>
-                          ) : (
-                            <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center p-4 text-white text-center transition-opacity duration-300 opacity-0 group-hover:opacity-100">
-                              <h3 className="font-bold text-lg md:text-xl mb-2">
-                                {project.title}
-                              </h3>
-                              <p className="text-sm mb-2 text-gray-300">
-                                {project.location}
-                              </p>
-                              {serviceDetails?.features && (
-                                <ul className="text-start text-xs list-disc list-outside ps-5 text-gray-300 inline-block">
-                                  {serviceDetails.features.map((f, fi) => (
-                                    <li key={fi}>{f}</li>
-                                  ))}
-                                </ul>
-                              )}
-                            </div>
-                          )}
-                        </motion.button>
-                      );
-                    })}
+                        {isClient && isMobile ? (
+                          <div className="relative p-4 text-white text-center">
+                            <h3 className="font-bold text-lg mb-2">
+                              {project.title.toUpperCase()}
+                            </h3>
+                          </div>
+                        ) : (
+                          <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center p-4 text-white text-center transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                            <h3 className="font-bold text-lg md:text-xl mb-2">
+                              {project.title.toUpperCase()}
+                            </h3>
+                            <p className="text-sm mb-2 text-gray-300">
+                              {project.categoryLabel}
+                            </p>
+                          </div>
+                        )}
+                      </motion.button>
+                    ))}
                   </motion.div>
                 )}
               </TabsContent>
@@ -431,7 +256,6 @@ const Page = () => {
         </Tabs>
       </motion.section>
 
-      {/* ── Project Modal ─────────────────────────────────────────────────── */}
       <AnimatePresence>
         {modalProject && (
           <motion.div
@@ -441,7 +265,6 @@ const Page = () => {
             className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
             onClick={() => setModalProject(null)}
           >
-            {/* Close Button */}
             <motion.button
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -453,58 +276,64 @@ const Page = () => {
             >
               <X className="size-6" />
             </motion.button>
-
-            {/* Modal Content */}
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="relative w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-2xl bg-[#181818] border border-[#C6A87D]/20"
-              onClick={(e) => e.stopPropagation()}
+              className="relative w-full max-w-4xl rounded-2xl bg-[#181818] border border-[#C6A87D]/20 overflow-hidden"
+              onClick={(event) => event.stopPropagation()}
             >
-              {/* Project Image */}
-              <div className="relative w-full h-[300px] md:h-[400px]">
-                <Image
-                  src={modalProject.image}
-                  alt={modalProject.title}
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-[#181818] to-transparent" />
-              </div>
-
-              {/* Project Details */}
-              <div className="p-6 md:p-10">
-                <p className="text-[#C6A87D] text-xs uppercase tracking-widest mb-2 font-medium">
-                  {t(`projects.${modalProject.type}`) ?? modalProject.type}
-                </p>
-                <h2 className="text-white text-2xl md:text-4xl font-bold uppercase tracking-wider leading-tight mb-6">
-                  {modalProject.title}
-                </h2>
-
-                <div className="space-y-3 text-sm md:text-base bg-black/40 rounded-xl p-4 md:p-6 border border-white/10">
-                  <DetailRow
-                    label={t("home.portfolio.client")}
-                    value={modalProject.client}
-                  />
-                  <DetailRow
-                    label={t("home.portfolio.designedBy")}
-                    value={modalProject.designedBy}
-                  />
-                  <DetailRow
-                    label={t("home.portfolio.statusDate")}
-                    value={modalProject.statusDate}
-                  />
-                  <DetailRow
-                    label={t("home.portfolio.location")}
-                    value={modalProject.location}
-                  />
-                  <DetailRow
-                    label={t("home.portfolio.scope")}
-                    value={modalProject.scope}
-                  />
+              <div className="relative">
+                <Carousel className="w-full" setApi={setModalCarouselApi}>
+                  <CarouselContent className="ml-0">
+                    {modalProject.images.map((image) => (
+                      <CarouselItem key={image} className="pl-0 relative">
+                        <div className="relative z-1 w-full aspect-square max-w-[700px] mx-auto">
+                          <Image
+                            src={image}
+                            alt={modalProject.title}
+                            fill
+                            sizes="(max-width: 768px) 90vw, 700px"
+                            className="object-cover"
+                          />
+                        </div>
+                        <Image
+                          src={image}
+                          alt={modalProject.title}
+                          width={1000}
+                          height={1000}
+                          className="object-cover absolute inset-0 blur-md"
+                        />
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                </Carousel>
+                <div className="absolute inset-0 pointer-events-none bg-linear-to-t from-black/45 via-black/10 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-5 md:p-7 z-10 pointer-events-none">
+                  <p className="text-[#E8C08D] text-xs md:text-sm uppercase tracking-[0.2em] mb-2">
+                    {modalProject.categoryLabel}
+                  </p>
+                  <h2 className="text-white text-2xl md:text-4xl font-bold uppercase tracking-wider leading-tight">
+                    {modalProject.title}
+                  </h2>
                 </div>
+                {modalProject.images.length > 1 && (
+                  <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20">
+                    {modalProject.images.map((_, index) => (
+                      <button
+                        key={`${modalProject.id}-dot-${index}`}
+                        className={`size-2 rounded-full transition-colors pointer-events-auto ${
+                          activeModalImageIndex === index
+                            ? "bg-[#C6A87D]"
+                            : "bg-white/40 hover:bg-white/60"
+                        }`}
+                        onClick={() => modalCarouselApi?.scrollTo(index)}
+                        aria-label={`Show image ${index + 1}`}
+                      />
+                    ))}
+                  </div>
+                )}
               </div>
             </motion.div>
           </motion.div>

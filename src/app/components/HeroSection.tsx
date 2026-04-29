@@ -13,13 +13,13 @@ import Autoplay from "embla-carousel-autoplay";
 import Fade from "embla-carousel-fade";
 
 const PROJECTS_IMAGES = [
-  "/projects/slider-projects/AL-NOUR-MOSQUE.webp",
-  "/projects/slider-projects/ALSHUBAILI-OFFICES.webp",
-  "/projects/slider-projects/ALWASEEL-RESORT.webp",
-  "/projects/slider-projects/Al-Ammariya-Beverly-Hills.webp",
-  "/projects/slider-projects/CULTURE-CENTER.webp",
-  "/projects/slider-projects/LIVEN-PENTHOUSE.webp",
-  "/projects/slider-projects/V-TOWER.webp",
+  "/slider-projects/AL-NOUR-MOSQUE.webp",
+  "/slider-projects/ALSHUBAILI-OFFICES.webp",
+  "/slider-projects/ALWASEEL-RESORT.webp",
+  "/slider-projects/Al-Ammariya-Beverly-Hills.webp",
+  "/slider-projects/CULTURE-CENTER.webp",
+  "/slider-projects/LIVEN-PENTHOUSE.webp",
+  "/slider-projects/V-TOWER.webp",
 ];
 
 export default function HeroSection() {

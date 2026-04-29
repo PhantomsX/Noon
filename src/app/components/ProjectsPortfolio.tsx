@@ -30,7 +30,7 @@ const projects: Project[] = [
     statusDate: "",
     location: "",
     scope: "",
-    image: "/projects/home-page-projects/AL-JUMAAH-MOSQUE.webp",
+    image: "/home-page-projects/AL-JUMAAH-MOSQUE.webp",
   },
   {
     id: "p2",
@@ -40,7 +40,7 @@ const projects: Project[] = [
     statusDate: "",
     location: "",
     scope: "",
-    image: "/projects/home-page-projects/Apex-Park.webp",
+    image: "/home-page-projects/Apex-Park.webp",
   },
   {
     id: "p3",
@@ -50,7 +50,7 @@ const projects: Project[] = [
     statusDate: "2025 In Progress",
     location: "Saudi Arabia - Riyadh",
     scope: "Full Design Package",
-    image: "/projects/home-page-projects/CALM-PALM-VILLA.webp",
+    image: "/home-page-projects/CALM-PALM-VILLA.webp",
   },
   {
     id: "p4",
@@ -60,7 +60,7 @@ const projects: Project[] = [
     statusDate: "2021 Completed",
     location: "Riyadh, Saudi Arabia - Area: 210,000 SQM",
     scope: "Urban Planning - Design",
-    image: "/projects/home-page-projects/Italalat-Resort.webp",
+    image: "/home-page-projects/Italalat-Resort.webp",
   },
   {
     id: "p5",
@@ -70,7 +70,7 @@ const projects: Project[] = [
     statusDate: "",
     location: "",
     scope: "Interior Design",
-    image: "/projects/home-page-projects/THE-BLOOM-OFFICES.webp",
+    image: "/home-page-projects/THE-BLOOM-OFFICES.webp",
   },
   {
     id: "p6",
@@ -80,7 +80,7 @@ const projects: Project[] = [
     statusDate: "",
     location: "",
     scope: "",
-    image: "/projects/home-page-projects/The-Grid.webp",
+    image: "/home-page-projects/The-Grid.webp",
   },
 ];
 
