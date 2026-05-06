@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import aboutBg from "@/public/images/background-about.png";
+import aboutBg from "@/public/images/openart-image_1776868356275_671e7903_1776868356294_a7b7914c.webp";
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 import PageTitle from "@/app/components/PageTitle";
@@ -86,15 +86,11 @@ const AboutHero = () => {
               <Image
                 src={aboutBg}
                 alt={t("alt.modern_architecture")}
-                className="h-[400px] sm:h-[500px] lg:h-[600px] xl:h-[650px] w-full object-cover group-hover:scale-105 transition-transform duration-700"
+                className="h-[400px] sm:h-[500px] lg:h-[600px] xl:h-[650px] w-full object-cover duration-700"
               />
 
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
-
-              {/* Decorative elements */}
-              <div className="absolute top-6 right-6 w-16 h-16 border-2 border-[#F9C39D]/60 rounded-full group-hover:scale-110 group-hover:border-[#F9C39D]/80 transition-all duration-500" />
-              <div className="absolute bottom-6 left-6 w-20 h-20 border-2 border-[#BE7B2C]/60 rounded-full group-hover:scale-110 group-hover:border-[#BE7B2C]/80 transition-all duration-500" />
             </div>
           </motion.div>
         </motion.div>
