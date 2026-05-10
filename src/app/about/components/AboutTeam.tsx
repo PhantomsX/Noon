@@ -16,7 +16,7 @@ const TeamStats = () => {
   const stats = [
     { target: 15, suffix: "+", label: t("common.years_experience") },
     { target: 400, suffix: "+", label: t("common.projects_completed") },
-    { target: 20, suffix: "+", label: t("common.team_members") },
+    { target: 50, suffix: "+", label: t("common.team_members") },
     { target: 95, suffix: "%", label: t("common.client_satisfaction") },
   ];
 
@@ -57,7 +57,15 @@ const TeamStats = () => {
 };
 
 /* ── Team Member Card ─────────────────────────────────────────────────────── */
-const TeamMemberCard = ({ member, index }: { member: any; index: number }) => {
+const TeamMemberCard = ({
+  member,
+  index,
+  compact,
+}: {
+  member: any;
+  index: number;
+  compact?: boolean;
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -71,11 +79,13 @@ const TeamMemberCard = ({ member, index }: { member: any; index: number }) => {
         scale: 1.02,
       }}
       style={{ perspective: 1000 }}
-      className="group relative bg-white/5 border border-[#C6A87D]/20 rounded-2xl p-6 hover:border-[#BE7B2C]/50 hover:bg-white/10 transition-all duration-300 transform-style-3d"
+      className={`group relative bg-white/5 border border-[#C6A87D]/20 hover:border-[#BE7B2C]/50 hover:bg-white/10 transition-all duration-300 transform-style-3d ${compact ? "rounded-xl p-3" : "rounded-2xl p-6"}`}
     >
       <div className="flex flex-col h-full">
         {member.image ? (
-          <div className="aspect-square w-full rounded-lg overflow-hidden mb-4 relative">
+          <div
+            className={`aspect-square w-full rounded-lg overflow-hidden relative ${compact ? "mb-2" : "mb-4"}`}
+          >
             <Image
               src={member.image}
               alt={member.name}
@@ -83,29 +93,45 @@ const TeamMemberCard = ({ member, index }: { member: any; index: number }) => {
               height={400}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-4">
-              <h3 className="text-lg font-bold text-white group-hover:text-[#F9C39D] transition-colors">
+            <div
+              className={`absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end ${compact ? "p-2" : "p-4"}`}
+            >
+              <h3
+                className={`font-bold text-white group-hover:text-[#F9C39D] transition-colors ${compact ? "text-sm" : "text-lg"}`}
+              >
                 {member.name}
               </h3>
-              <p className="text-sm text-[#C6A87D] font-medium">
+              <p
+                className={`text-[#C6A87D] font-medium ${compact ? "text-xs" : "text-sm"}`}
+              >
                 {member.role}
               </p>
             </div>
           </div>
         ) : (
-          <div className="aspect-square w-full rounded-lg bg-linear-to-br from-[#BE7B2C] to-[#F9C39D] flex items-center justify-center text-white text-5xl font-bold mb-4 relative">
+          <div
+            className={`aspect-square w-full rounded-lg bg-linear-to-br from-[#BE7B2C] to-[#F9C39D] flex items-center justify-center text-white font-bold relative ${compact ? "text-3xl mb-2" : "text-5xl mb-4"}`}
+          >
             {member.name.charAt(0)}
-            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-4">
-              <h3 className="text-lg font-bold text-white group-hover:text-[#F9C39D] transition-colors">
+            <div
+              className={`absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end ${compact ? "p-2" : "p-4"}`}
+            >
+              <h3
+                className={`font-bold text-white group-hover:text-[#F9C39D] transition-colors ${compact ? "text-sm" : "text-lg"}`}
+              >
                 {member.name}
               </h3>
-              <p className="text-sm text-[#C6A87D] font-medium">
+              <p
+                className={`text-[#C6A87D] font-medium ${compact ? "text-xs" : "text-sm"}`}
+              >
                 {member.role}
               </p>
             </div>
           </div>
         )}
-        <p className="text-gray-300 text-sm leading-relaxed grow">
+        <p
+          className={`text-gray-300 leading-relaxed grow ${compact ? "text-xs mt-2" : "text-sm"}`}
+        >
           {member.description}
         </p>
       </div>
@@ -167,7 +193,7 @@ const AboutTeam = () => {
         </motion.div>
       </motion.div>
 
-      {/* Team Members Grid */}
+      {/* Team Members Grid - First 3 */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -175,10 +201,30 @@ const AboutTeam = () => {
         transition={{ duration: 0.8 }}
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
       >
-        {teamMembers.map((member, index) => (
+        {teamMembers.slice(0, 3).map((member, index) => (
           <TeamMemberCard key={index} member={member} index={index} />
         ))}
       </motion.div>
+
+      {/* Team Members Grid - Rest (smaller) */}
+      {teamMembers.length > 3 && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.8 }}
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6"
+        >
+          {teamMembers.slice(3).map((member, index) => (
+            <TeamMemberCard
+              key={index + 3}
+              member={member}
+              index={index + 3}
+              compact
+            />
+          ))}
+        </motion.div>
+      )}
     </motion.section>
   );
 };
