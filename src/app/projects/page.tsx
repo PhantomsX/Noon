@@ -301,9 +301,8 @@ const Page = () => {
                         <Image
                           src={image}
                           alt={modalProject.title}
-                          width={1000}
-                          height={1000}
-                          className="object-cover absolute inset-0 blur-md"
+                          fill
+                          className="object-cover blur-md!"
                         />
                       </CarouselItem>
                     ))}
