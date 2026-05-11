@@ -2,7 +2,7 @@
 import { useEffect, useCallback, useState } from "react";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
-import { motion, AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 import {
   Carousel,
   CarouselContent,
@@ -10,7 +10,6 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import Fade from "embla-carousel-fade";
 
 const PROJECTS_IMAGES = [
   "/slider-projects/AL-NOUR-MOSQUE.webp",
@@ -90,6 +89,8 @@ export default function HeroSection() {
           loop: true,
           align: "start",
           direction: locale === "ar" ? "rtl" : "ltr",
+          // Higher = slower eased scroll between snaps (replaces crossfade)
+          duration: 45,
         }}
         plugins={[
           Autoplay({
@@ -97,7 +98,6 @@ export default function HeroSection() {
             stopOnInteraction: false,
             stopOnMouseEnter: false,
           }),
-          Fade(),
         ]}
         setApi={setApi}
       >
@@ -135,7 +135,7 @@ export default function HeroSection() {
 
       {/* Hero Content – rendered on top of the carousel */}
       <div className="absolute inset-0 z-20 h-full flex flex-col justify-end px-4 md:px-12 lg:px-16 pb-50 max-w-[1920px] mx-auto pointer-events-none">
-        {textVisible && (
+        {current === 0 && textVisible && (
           <motion.div
             className="rtl:text-right ltr:text-left"
             initial={{ opacity: 0, y: 40 }}

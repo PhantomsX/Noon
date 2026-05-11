@@ -36,12 +36,12 @@ function Page() {
     {
       title: t("service-7"),
       description: t("service-7-description"),
-      image: "/services/VALUE_ENGINEERING.webp",
+      image: "/services/VALUE_ENGINEERING.png",
     },
     {
       title: t("service-8"),
       description: t("service-8-description"),
-      image: "/services/ENGINEERING_STUDIES.webp",
+      image: "/services/ENGINEERING_STUDIES.png",
     },
     {
       title: t("service-6"),
