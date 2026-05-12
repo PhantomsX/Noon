@@ -66,20 +66,20 @@ function Page() {
     {
       title: t("service-10"),
       description: t("service-10-description"),
-      image: "/services/INTERIOR_DESIGN.webp",
+      image: "/services/INTERIOR_DESIGN.png",
     },
     {
       title: t("service-12"),
       description: t("service-12-description"),
-      image: "/services/OR_ARCHITECT_OF_RECORD.webp",
+      image: "/services/OR_ARCHITECT_OF_RECORD.png",
     },
   ];
 
   return (
     <main className="min-h-screen">
       {/* Header Section */}
-      <section className="flex max-sm:flex-col gap-8 lg:gap-16 px-6 md:px-9 pt-12 sm:ps-[80px]">
-        <aside className="sm:max-w-[380px]">
+      <section className="flex max-sm:flex-col gap-8 lg:gap-16 px-6 md:px-9 pt-12 sm:ps-20">
+        <aside className="sm:max-w-95">
           <PageTitle>{t("title-1")}</PageTitle>
         </aside>
         <div className="flex-1">
@@ -90,8 +90,8 @@ function Page() {
       </section>
 
       {/* Services Grid */}
-      <section className="px-6 md:px-9 sm:ps-[80px] pb-16">
-        <div className="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(330px,1fr))] gap-x-8 gap-y-16 max-w-[1400px] mx-auto">
+      <section className="px-6 md:px-9 sm:ps-20 pb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(330px,1fr))] gap-x-8 gap-y-16 max-w-350 mx-auto">
           {services.map((service, i) => (
             <ServiceCard key={i} id={i} service={service} />
           ))}
