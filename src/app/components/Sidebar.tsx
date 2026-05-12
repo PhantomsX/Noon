@@ -4,6 +4,7 @@ import tiktok from "@/public/tiktok.svg";
 import snapchat from "@/public/snapchat.svg";
 import linkedIn from "@/public/linkedIn.svg";
 import phone from "@/public/phone.svg";
+import whatsapp from "@/public/whatsapp.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -34,6 +35,9 @@ const Sidebar = ({
       </a>
       <a href="https://www.linkedin.com/company/nnc-ksa/" target="_blank">
         <Image src={linkedIn} alt="linkedIn" />
+      </a>
+      <a href="https://wa.me/966539929050" target="_blank">
+        <Image src={whatsapp} alt="whatsapp" />
       </a>
 
       <Link href={"/about"}>

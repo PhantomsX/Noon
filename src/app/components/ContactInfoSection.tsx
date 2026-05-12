@@ -8,6 +8,7 @@ import linkedIn from "@/public/linkedIn.svg";
 import phone from "@/public/phone.svg";
 import XIcon from "@/public/X.svg";
 import snapchat from "@/public/snapchat.svg";
+import whatsapp from "@/public/whatsapp.svg";
 
 const ContactInfoSection = () => {
   const t = useTranslations("contactInfo");
@@ -23,6 +24,7 @@ const ContactInfoSection = () => {
     },
     { icon: snapchat, href: "https://www.snapchat.com/add/nnc_ksa" },
     { icon: linkedIn, href: "https://www.linkedin.com/company/nnc-ksa/" },
+    { icon: whatsapp, href: "https://wa.me/966539929050" },
   ];
 
   return (

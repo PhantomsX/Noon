@@ -89,6 +89,19 @@ const Page = () => {
     };
   }, [modalCarouselApi]);
 
+  const CATEGORY_ORDER = [
+    "development",
+    "master-planning",
+    "residential",
+    "commercial",
+    "hospitality",
+    "industrial",
+    "offices",
+    "religios",
+    "healthcare",
+    "interior",
+  ];
+
   const categories = useMemo(() => {
     const unique = new Map<string, string>();
 
@@ -98,10 +111,17 @@ const Page = () => {
       }
     }
 
-    return [
-      { id: "all", label: t("common.show_all") },
-      ...Array.from(unique.entries()).map(([id, label]) => ({ id, label })),
-    ];
+    const sorted = Array.from(unique.entries())
+      .map(([id, label]) => ({ id, label }))
+      .sort((a, b) => {
+        const ai = CATEGORY_ORDER.indexOf(a.id);
+        const bi = CATEGORY_ORDER.indexOf(b.id);
+        const aOrder = ai === -1 ? CATEGORY_ORDER.length : ai;
+        const bOrder = bi === -1 ? CATEGORY_ORDER.length : bi;
+        return aOrder - bOrder;
+      });
+
+    return [{ id: "all", label: t("common.show_all") }, ...sorted];
   }, [projects, t]);
 
   useEffect(() => {
@@ -113,7 +133,7 @@ const Page = () => {
 
   return (
     <motion.main
-      className="px-5 md:px-[70px] ltr:font-neue-montreal rtl:font-ibm-plex-arabic pt-20 flex flex-col justify-between"
+      className="px-5 md:px-17.5 ltr:font-neue-montreal rtl:font-ibm-plex-arabic pt-20 flex flex-col justify-between"
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
@@ -146,7 +166,7 @@ const Page = () => {
               <TabsTrigger
                 key={cat.id}
                 value={cat.id}
-                className="uppercase cursor-pointer text-[10px] sm:text-xs md:text-base px-2 sm:px-3 py-2 flex-1 sm:flex-none min-w-[80px] sm:min-w-[100px] whitespace-normal text-center h-auto min-h-[40px] leading-tight flex items-center justify-center shrink-0"
+                className="uppercase cursor-pointer text-[10px] sm:text-xs md:text-base px-2 sm:px-3 py-2 flex-1 sm:flex-none min-w-20 sm:min-w-25 whitespace-normal text-center h-auto min-h-10 leading-tight flex items-center justify-center shrink-0"
               >
                 {cat.label}
               </TabsTrigger>
@@ -162,7 +182,7 @@ const Page = () => {
             return (
               <TabsContent key={cat.id} value={cat.id} className="pt-8">
                 {filtered.length === 0 ? (
-                  <Empty className="border border-[#C6A87D]/20 bg-black/20 min-h-[320px]">
+                  <Empty className="border border-[#C6A87D]/20 bg-black/20 min-h-80">
                     <EmptyHeader>
                       <EmptyMedia>
                         <svg
@@ -289,7 +309,7 @@ const Page = () => {
                   <CarouselContent className="ml-0">
                     {modalProject.images.map((image) => (
                       <CarouselItem key={image} className="pl-0 relative">
-                        <div className="relative z-1 w-full aspect-square max-w-[700px] mx-auto">
+                        <div className="relative z-1 w-full aspect-square max-w-175 mx-auto">
                           <Image
                             src={image}
                             alt={modalProject.title}
