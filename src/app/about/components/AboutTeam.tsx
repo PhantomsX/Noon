@@ -1,9 +1,10 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion, useInView } from "motion/react";
 import Image from "next/image";
+import { User } from "lucide-react";
 import PageTitle from "@/app/components/PageTitle";
 import CountUp from "@/components/CountUp";
 
@@ -66,6 +67,8 @@ const TeamMemberCard = ({
   index: number;
   compact?: boolean;
 }) => {
+  const [imageError, setImageError] = useState(false);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -79,10 +82,10 @@ const TeamMemberCard = ({
         scale: 1.02,
       }}
       style={{ perspective: 1000 }}
-      className={`group relative bg-white/5 border border-[#C6A87D]/20 hover:border-[#BE7B2C]/50 hover:bg-white/10 transition-all duration-300 transform-style-3d ${compact ? "rounded-xl p-3" : "rounded-2xl p-6"}`}
+      className={`group relative bg-white/5 border border-[#C6A87D]/20 hover:border-[#BE7B2C]/50 hover:bg-white/10 transition-all duration-300 transform-style-3d overflow-hidden ${compact ? "rounded-xl" : "rounded-2xl"}`}
     >
-      <div className="flex flex-col h-full">
-        {member.image ? (
+      <div className="flex flex-col h-full relative">
+        {member.image && !imageError ? (
           <div
             className={`aspect-square w-full rounded-lg overflow-hidden relative ${compact ? "mb-2" : "mb-4"}`}
           >
@@ -92,6 +95,7 @@ const TeamMemberCard = ({
               width={400}
               height={400}
               className="w-full h-full object-cover"
+              onError={() => setImageError(true)}
             />
             <div
               className={`absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end ${compact ? "p-2" : "p-4"}`}
@@ -110,9 +114,11 @@ const TeamMemberCard = ({
           </div>
         ) : (
           <div
-            className={`aspect-square w-full rounded-lg bg-linear-to-br from-[#BE7B2C] to-[#F9C39D] flex items-center justify-center text-white font-bold relative ${compact ? "text-3xl mb-2" : "text-5xl mb-4"}`}
+            className={`aspect-square w-full rounded-lg bg-linear-to-br from-[#BE7B2C] to-[#F9C39D] flex items-center justify-center text-white relative ${compact ? "mb-2" : "mb-4"}`}
           >
-            {member.name.charAt(0)}
+            <User
+              className={`${compact ? "w-16 h-16" : "w-24 h-24"} text-white/80`}
+            />
             <div
               className={`absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end ${compact ? "p-2" : "p-4"}`}
             >
@@ -129,11 +135,26 @@ const TeamMemberCard = ({
             </div>
           </div>
         )}
-        <p
-          className={`text-gray-300 leading-relaxed grow ${compact ? "text-xs mt-2" : "text-sm"}`}
+        {/* Full overlay - appears on hover with name, role & full description */}
+        <div
+          className={`absolute inset-0 bg-black/60 backdrop-blur-md flex flex-col justify-center items-center text-center transition-all duration-300 ease-out opacity-0 group-hover:opacity-100 ${compact ? "p-4" : "p-6"}`}
         >
-          {member.description}
-        </p>
+          <h3
+            className={`font-bold text-white mb-1 ${compact ? "text-base" : "text-xl"}`}
+          >
+            {member.name}
+          </h3>
+          <p
+            className={`text-[#F9C39D] font-medium mb-3 ${compact ? "text-xs" : "text-sm"}`}
+          >
+            {member.role}
+          </p>
+          <p
+            className={`text-gray-200 leading-relaxed overflow-y-auto max-h-full ${compact ? "text-xs" : "text-sm"}`}
+          >
+            {member.description}
+          </p>
+        </div>
       </div>
     </motion.div>
   );

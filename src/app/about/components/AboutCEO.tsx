@@ -290,7 +290,7 @@ const AboutCEO = () => {
             transition={{ duration: 0.8, delay: 1.9 }}
             className="shrink-0"
           >
-            <div className="relative w-[180px] sm:w-[200px] lg:w-[220px] xl:w-[240px] aspect-3/4 rounded-xl overflow-hidden shadow-lg">
+            <div className="relative w-45 sm:w-50 lg:w-55 xl:w-60 aspect-3/4 rounded-xl overflow-hidden shadow-lg">
               <Image
                 src={ceo}
                 alt={t("alt.ceo")}

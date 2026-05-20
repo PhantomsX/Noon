@@ -197,7 +197,7 @@ const AboutContact = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 3.6 }}
-          className="relative h-[500px] lg:h-[700px] xl:h-[800px] group"
+          className="relative h-125 lg:h-175 xl:h-200 group"
         >
           <div className="absolute inset-0 bg-linear-to-br from-[#BE7B2C]/10 to-[#F9C39D]/10 rounded-3xl" />
           <div className="relative h-full rounded-3xl overflow-hidden border border-gray-800/30 bg-black/20 backdrop-blur-sm group-hover:border-[#F9C39D]/30 transition-all duration-300">
