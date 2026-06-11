@@ -329,7 +329,7 @@ const CareersPage = () => {
           transition={{ duration: 0.8 }}
         >
           <div className="text-center">
-            <AnimatedCounter target={20} suffix="+" />
+            <AnimatedCounter target={50} suffix="+" />
             <p className="text-gray-400 mt-2">{t("common.team_members")}</p>
           </div>
           <div className="text-center">
