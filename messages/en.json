@@ -481,7 +481,17 @@
     "project_6_location": "Riyadh, KSA",
     "project_6_area": "25000 SQM",
     "project_6_scope": "Interior Design",
-    "project_6_status": "Approved"
+    "project_6_status": "Approved",
+    "categories": {
+      "residential": "Residential",
+      "commercial": "Commercial",
+      "hospitality": "Hospitality",
+      "industrial": "Industrial",
+      "offices": "Offices",
+      "mixed-use": "Mixed Use",
+      "religios": "Religious",
+      "healthcare": "Healthcare"
+    }
   },
   "team": {
     "name": "DR. NIZAR EL|SAYED",

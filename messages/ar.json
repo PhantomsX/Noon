@@ -481,7 +481,17 @@
     "project_6_location": "الالرياض، المملكة العربية السعودية",
     "project_6_area": "25000 م²",
     "project_6_scope": "التصميم الداخلي",
-    "project_6_status": "مُعتمد"
+    "project_6_status": "مُعتمد",
+    "categories": {
+      "residential": "سكني",
+      "commercial": "تجاري",
+      "hospitality": "ضيافة",
+      "industrial": "صناعي",
+      "offices": "مكاتب",
+      "mixed-use": "متعدد الاستخدامات",
+      "religios": "ديني",
+      "healthcare": "الرعاية الصحية"
+    }
   },
   "team": {
     "name": "د. نزار | السيد",

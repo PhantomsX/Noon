@@ -90,29 +90,33 @@ const Page = () => {
   }, [modalCarouselApi]);
 
   const CATEGORY_ORDER = [
-    "development",
-    "master-planning",
     "residential",
     "commercial",
     "hospitality",
     "industrial",
     "offices",
+    "mixed-use",
     "religios",
     "healthcare",
-    "interior",
   ];
 
   const categories = useMemo(() => {
-    const unique = new Map<string, string>();
+    const labels: Record<string, string> = {
+      residential: t("projects.categories.residential"),
+      commercial: t("projects.categories.commercial"),
+      hospitality: t("projects.categories.hospitality"),
+      industrial: t("projects.categories.industrial"),
+      offices: t("projects.categories.offices"),
+      "mixed-use": t("projects.categories.mixed-use"),
+      religios: t("projects.categories.religios"),
+      healthcare: t("projects.categories.healthcare"),
+    };
 
-    for (const project of projects) {
-      if (!unique.has(project.category)) {
-        unique.set(project.category, project.categoryLabel);
-      }
-    }
+    const unique = new Set<string>();
+    for (const project of projects) unique.add(project.category);
 
-    const sorted = Array.from(unique.entries())
-      .map(([id, label]) => ({ id, label }))
+    const sorted = Array.from(unique)
+      .map((id) => ({ id, label: labels[id] ?? id }))
       .sort((a, b) => {
         const ai = CATEGORY_ORDER.indexOf(a.id);
         const bi = CATEGORY_ORDER.indexOf(b.id);
