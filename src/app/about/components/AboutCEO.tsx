@@ -307,15 +307,6 @@ const AboutCEO = () => {
             transition={{ duration: 0.8, delay: 2.0 }}
             className="text-white text-center space-y-3 flex-1"
           >
-            <motion.h3
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 2.1 }}
-              className="text-bg capitalize text-xl sm:text-2xl lg:text-3xl ltr:font-elegance  rtl:font-year-of-camel font-medium"
-            >
-              {t("common.notes_ceo")}
-            </motion.h3>
-
             <div className="space-y-3">
               <motion.p
                 initial={{ opacity: 0 }}

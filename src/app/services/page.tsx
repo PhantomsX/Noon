@@ -24,43 +24,38 @@ function Page() {
       image: "/services/URBAN_DESIGN.webp",
     },
     {
-      title: t("service-4"),
-      description: t("service-4-description"),
-      image: "/services/CONSTRUCTION_SUPERVISION_1.webp",
-    },
-    {
       title: t("service-3"),
       description: t("service-3-description"),
       image: "/services/MASTER_PLANNING_1.webp",
     },
     {
-      title: t("service-7"),
-      description: t("service-7-description"),
-      image: "/services/VALUE_ENGINEERING.png",
-    },
-    {
-      title: t("service-8"),
-      description: t("service-8-description"),
-      image: "/services/ENGINEERING_STUDIES.png",
-    },
-    {
-      title: t("service-6"),
-      description: t("service-6-description"),
-      image: "/services/ENGINEERING_REPORTS.webp",
-    },
-    {
-      title: t("service-9"),
-      description: t("service-9-description"),
-      image: "/services/LANDSCAPING.webp",
+      title: t("service-4"),
+      description: t("service-4-description"),
+      image: "/services/CONSTRUCTION_SUPERVISION_1.webp",
     },
     {
       title: t("service-5"),
       description: t("service-5-description"),
+      image: "/services/STRUCTURE_ENGINEERING.png",
+    },
+    {
+      title: t("service-6"),
+      description: t("service-6-description"),
       image: "/services/PERMITS.webp",
     },
     {
-      title: t("service-11"),
-      description: t("service-11-description"),
+      title: t("service-7"),
+      description: t("service-7-description"),
+      image: "/services/ENGINEERING_STUDIES.png",
+    },
+    {
+      title: t("service-8"),
+      description: t("service-8-description"),
+      image: "/services/LANDSCAPING.webp",
+    },
+    {
+      title: t("service-9"),
+      description: t("service-9-description"),
       image: "/services/PROJECT_MANAGEMENT.webp",
     },
     {
@@ -69,8 +64,8 @@ function Page() {
       image: "/services/INTERIOR_DESIGN.png",
     },
     {
-      title: t("service-12"),
-      description: t("service-12-description"),
+      title: t("service-11"),
+      description: t("service-11-description"),
       image: "/services/OR_ARCHITECT_OF_RECORD.png",
     },
   ];
