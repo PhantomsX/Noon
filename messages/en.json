@@ -5,8 +5,8 @@
   "Choose Architectural Design": "Choose Architectural Design",
   "Commercial": "Commercial",
   "Email": "Email",
-  "FUTURE REACH": "OUR GROWTH STRATEGY",
-  "FUTURE REACH TEXT": "By aligning strategic insight with market potential, we convert investment opportunities into profitable ventures that generate strong financial returns and contribute meaningfully to economic advancement.",
+  "FUTURE REACH": "Growth Strategy",
+  "FUTURE REACH TEXT": "Converting investment opportunities into profitable ventures that generate strong returns and meaningful economic impact.",
   "First Name": "First Name",
   "Forbidden": {
     "backToHome": "Back to Home",
@@ -23,9 +23,9 @@
   },
   "Notes From The CEO": "Notes From The CEO",
   "OUR MISSION": "OUR MISSION",
-  "OUR MISSION TEXT": "Our mission is to lead in delivering innovative architectural and sustainable solutions, driven by a visionary team committed to shaping and enriching the architectural landscape of Saudi Arabia.",
+  "OUR MISSION TEXT": "Lead in delivering innovative architectural and sustainable solutions that shape Saudi Arabia's built environment.",
   "OUR VISION": "OUR VISION",
-  "OUR VISION TEXT": "Our vision is to deliver solutions that are both innovative and practical, positioning ourselves as an engineering firm of choice, a leader in the industry, and a trusted, invaluable partner to our clients.",
+  "OUR VISION TEXT": "To be the engineering firm of choice — a trusted, invaluable partner to every client we serve.",
   "Office Use": "Office Use",
   "Offices": "Offices",
   "Residential": "Residential",
@@ -35,7 +35,8 @@
   "Warehouse": "Warehouse",
   "What Our Clients Say": "partners words about noon",
   "about": "About",
-  "aboutCeoSignature": "Dr. Nazar El Sayed",
+  "aboutCeoSignature": "Dr. Nizar El Sayed",
+  "aboutCeoTitle": "Chairman & Founder",
   "HOME": "HOME",
   "WHO WE ARE": "WHO WE ARE",
   "OUR TEAM": "OUR TEAM",
@@ -47,12 +48,22 @@
   "CONTACT US": "CONTACT US",
   "PROFILE": "PROFILE",
   "aboutNoon": "About Noon Consultants",
+  "aboutHeroEyebrow": "Who we are",
+  "aboutHeroTitleMain": "Building Saudi Arabia",
+  "aboutHeroTitleDim": "since 2011.",
+  "aboutHeroBody": "Noon Consultants is a specialized firm in urban planning, architecture, and interior design — built on a methodology that balances beauty, function, and sustainability.",
+  "aboutHeroBullet1": "Understanding the context of each project",
+  "aboutHeroBullet2": "Studying client needs deeply",
+  "aboutHeroBullet3": "Balancing beauty and function",
+  "aboutHeroBullet4": "Delivering sustainable, executable solutions",
   "aboutText1": "Noon Consultants is one of the specialized firms in urban planning, architecture, and interior design in the Kingdom of Saudi Arabia.",
   "aboutChairman": "Dr. Naser El Sayed",
   "aboutText2": "Since our establishment in 2011, we have developed a design methodology based on:\n• Understanding the context of each project\n• Studying client needs\n• Achieving balance between beauty and function\n• Delivering sustainable and executable solutions",
   "aboutText3": "Our success is built on the quality of our team and their diverse expertise, and their ability to produce high-level designs that contribute to the success of projects socially, environmentally, and economically.",
-  "aboutText4": "At Noon Consultants, we do not view projects as drawings or plans alone — we see them as a responsibility and a trust placed in our hands.",
-  "aboutText5": "We believe that successful projects begin with a deep understanding of our clients' needs and are realized through creative, practical solutions that balance quality, efficiency, and design excellence. \n Working as one team, we strive at every stage to deliver real value that exceeds expectations — with full commitment to professional standards and execution precision.\nOur ambition continues to grow, guided by a clear vision: to be a trusted partner who leaves a distinct mark on every project through expertise, professionalism, and dedication.\nAt Noon, quality is not an option — it is our standard.",
+  "aboutCeoQuote": "We do not view projects as drawings alone — we see them as a responsibility and a trust placed in our hands.",
+  "aboutText4": "Successful projects begin with a deep understanding of client needs, realized through creative solutions that balance quality, efficiency, and design excellence.",
+  "aboutText5": "At every stage, we strive to deliver real value — with full commitment to professional standards and execution precision.",
+  "aboutCeoStandout": "At Noon, quality is not an option — it is our standard.",
   "address1": "Riyadh, Saudi Arabia – Northern Ring Road, Exit 2, 12385, Al-Nakheel District – Reef Village, 1st Floor, Office No. 6",
   "address2": "Al-Madinah, Saudi Arabia Abdusalam Ibn Hafes St, Al Iskan District",
   "branchOffice": "Branch Office",
@@ -84,6 +95,10 @@
         "title": "Innovative Projects"
       }
     },
+    "heroEyebrow": "Join the team",
+    "heroTitleMain": "Build the future",
+    "heroTitleDim": "with Noon",
+    "heroSubtitle": "Great design comes from great people. We're always looking for architects, engineers, and designers who are passionate about shaping Saudi Arabia's built environment.",
     "description": "At Noon Consultants, we believe that great design comes from great people. We're always looking for talented individuals who are passionate about architecture, urban planning, and design to join our dynamic team.",
     "howToApply": "How to Apply",
     "openPositions": "Open Positions",
@@ -190,8 +205,12 @@
     "sendInquiry": "Send Inquiry"
   },
   "contactBanner": {
-    "subtitle": "If you have any engineering project or need engineering consultations",
-    "cta": "Contact Us"
+    "eyebrow": "Get in touch",
+    "titleMain": "Have a project",
+    "titleDim": "in mind?",
+    "subtitle": "Whether it's a landmark development, a corporate space, or a vision still on paper — let's talk.",
+    "cta": "Start a conversation",
+    "email": "info@noonconsultants.com"
   },
   "contactInfo": {
     "titleLine1": "Head",
@@ -201,14 +220,23 @@
     "addressPostal": "12385"
   },
   "contactPage": {
+    "eyebrow": "Get in touch",
+    "titleMain": "Let's discuss",
+    "titleDim": "your project",
+    "subtitle": "Tell us about your vision and we'll get back to you within 24 hours.",
     "title": "Let's Discuss The Upcoming Projects",
     "description": "For years we have worked with organizations around Saudi Arabia. We are proud of the work we have done, and the unique depth of knowledge it has allowed us to build. Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects.",
     "firstName": "First Name",
     "lastName": "Last Name",
-    "telephone": "Telephone",
+    "telephone": "Phone",
     "email": "Email",
-    "message": "Message",
-    "sendInquiry": "Send Inquiry"
+    "serviceNeeded": "Service Needed",
+    "selectService": "Select a service",
+    "message": "Tell us about your project",
+    "messagePlaceholder": "Brief description, location, scale...",
+    "sendInquiry": "Send inquiry",
+    "privacyNote": "Your information is private and will only be used to respond to your inquiry.",
+    "replyTime": "We reply within 24 hours"
   },
   "profile": {
     "title": "Profile",
@@ -368,18 +396,12 @@
     "founded": "FOUNDED IN 2011",
     "title": "Noon Consultants is one of the recognized Architecture in the KSA.",
     "hero": {
-      "slide1": {
-        "title": "Noon Consultants",
-        "body": "Designing the future… delivering it with confidence."
-      },
-      "slide2": {
-        "title": "We Believe Every Project Is an Opportunity to Create Real Value",
-        "body": "That is why we focus on understanding the client's needs, studying the urban context, and delivering smart, practical solutions that reflect luxury while achieving economic viability at the same time."
-      },
-      "slide3": {
-        "title": "Our Reach Extends Locally and Internationally, with Expertise Covering Various Sectors and Projects.",
-        "body": ""
-      }
+      "eyebrow": "Noon Consultants — KSA",
+      "headline": "Rooted in Saudi Arabia.",
+      "headlineDim": "Reaching for the world.",
+      "subtext": "From concept to completion — architecture, interior design, and urban planning built on 15 years of expertise.",
+      "cta1": "View our work",
+      "cta2": "Our story"
     },
     "nav": {
       "portfolio": "Portfolio\nOf Work",
@@ -408,6 +430,9 @@
   "m": "m²",
   "mainText": "Noon Consultants is one of the leading architectural firms in the Kingdom of Saudi Arabia",
   "new_branch": "New Branch",
+  "teamHeaderTitleMain": "The people",
+  "teamHeaderTitleDim": "behind the work",
+  "teamHeaderSubtitle": "A multidisciplinary team of architects, engineers, and designers — each bringing focused expertise to every project.",
   "our_team": "Our Team & Designers",
   "partners": "Our partners",
   "partners_of_success": "Partners of Success",
@@ -435,6 +460,13 @@
     "scope": "SCOPE OF WORK",
     "status": "STATUS",
     "title-1": "Our Projects",
+    "eyebrow": "Portfolio of work",
+    "titleMain": "Our projects",
+    "titleDim": "across the Kingdom",
+    "subtitle": "15 years of delivering landmark architecture, interior design, and urban planning across Saudi Arabia.",
+    "viewAll": "View all projects",
+    "counter": "500+ projects delivered",
+    "exploreCta": "Explore full portfolio",
     "urban": "urban",
     "Residdential": "Residential",
     "Commerical": "Commercial",
@@ -679,6 +711,10 @@
   "send inquiry": "send inquiry",
   "services": "Our Services",
   "servicess": {
+    "headerEyebrow": "What we do",
+    "headerTitleMain": "Our services",
+    "headerTitleDim": "across 10 disciplines",
+    "headerSubtitle": "From a single space to an entire masterplan — we deliver at every scale.",
     "allServices": " All Services",
     "learnMore": "Learn More",
     "fullServices": "FULL {title} SERVICES",

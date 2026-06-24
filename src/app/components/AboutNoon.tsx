@@ -33,25 +33,23 @@ export default function AboutNoon() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="w-full md:w-[55%] flex flex-col justify-center rtl:text-right ltr:text-left"
         >
-          {/* Body paragraphs */}
           <div className="max-w-xl">
-            <p className="rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-gray-300 leading-loose text-sm md:text-base">
-              {t("aboutText4")
-                .split("\n")
-                .map((line, index) => (
-                  <span className="block" key={index}>
-                    {line}
-                  </span>
-                ))}
+            {/* Opening quote */}
+            <p className="rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-gray-200 leading-loose text-sm md:text-base italic mb-6">
+              &ldquo;{t("aboutCeoQuote")}&rdquo;
             </p>
-            <p className="rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-gray-300 leading-loose text-sm md:text-base">
-              {t("aboutText5")
-                .split("\n")
-                .map((line, index) => (
-                  <span className="block" key={index}>
-                    {line}
-                  </span>
-                ))}
+
+            {/* Body paragraphs */}
+            <p className="rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-gray-300 leading-loose text-sm md:text-base mb-4">
+              {t("aboutText4")}
+            </p>
+            <p className="rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-gray-300 leading-loose text-sm md:text-base mb-6">
+              {t("aboutText5")}
+            </p>
+
+            {/* Standout line */}
+            <p className="rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-[#C6A87D] leading-loose text-sm md:text-base font-medium">
+              {t("aboutCeoStandout")}
             </p>
           </div>
 
@@ -60,6 +58,9 @@ export default function AboutNoon() {
             <span className="rtl:font-year-of-camel ltr:font-monalisa text-2xl md:text-3xl font-bold text-[#C6A87D]">
               {t("aboutCeoSignature")}
             </span>
+            <p className="rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-gray-400 text-xs md:text-sm mt-1 tracking-widest uppercase">
+              {t("aboutCeoTitle")}
+            </p>
           </div>
         </motion.div>
       </div>

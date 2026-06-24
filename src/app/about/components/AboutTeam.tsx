@@ -5,7 +5,6 @@ import { useTranslations } from "next-intl";
 import { motion, useInView } from "motion/react";
 import Image from "next/image";
 import { User } from "lucide-react";
-import PageTitle from "@/app/components/PageTitle";
 import CountUp from "@/components/CountUp";
 
 /* ── Animated stats strip ─────────────────────────────────────────────────── */
@@ -16,7 +15,7 @@ const TeamStats = () => {
 
   const stats = [
     { target: 15, suffix: "+", label: t("common.years_experience") },
-    { target: 400, suffix: "+", label: t("common.projects_completed") },
+    { target: 500, suffix: "+", label: t("common.projects_completed") },
     { target: 50, suffix: "+", label: t("common.team_members") },
     { target: 95, suffix: "%", label: t("common.client_satisfaction") },
   ];
@@ -27,7 +26,7 @@ const TeamStats = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={statsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.8, delay: 0.2 }}
-      className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8"
+      className="grid grid-cols-2 md:grid-cols-4 gap-6 my-8"
     >
       {stats.map((stat, i) => (
         <motion.div
@@ -179,40 +178,29 @@ const AboutTeam = () => {
       id="team"
     >
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 2.7 }}
-        className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center mb-12 sm:mb-16 lg:mb-20"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+        className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12 sm:mb-16 lg:mb-20"
       >
-        {/* Title */}
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 2.8 }}
-          className="lg:col-span-1 text-center lg:text-start"
-        >
-          <PageTitle>{t("our_team")}</PageTitle>
-        </motion.div>
+        {/* Two-tone title */}
+        <div className="rtl:text-right">
+          <h2 className="ltr:font-elegance rtl:font-year-of-camel text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight">
+            <span className="text-bg block">{t("teamHeaderTitleMain")}</span>
+            {t("teamHeaderTitleDim") && (
+              <span className="text-[#C6A87D]/30 block">{t("teamHeaderTitleDim")}</span>
+            )}
+          </h2>
+        </div>
 
-        {/* Description + Stats */}
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 3.0 }}
-          className="lg:col-span-2"
-        >
-          <motion.p
-            className="text-white text-base sm:text-lg lg:text-xl leading-relaxed text-center lg:text-left"
-            initial={{ opacity: 0.8 }}
-            whileHover={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-          >
-            {t("team_text")}
-          </motion.p>
-
-          <TeamStats />
-        </motion.div>
+        {/* Subtitle */}
+        <p className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-gray-400 text-sm md:text-base leading-relaxed max-w-sm rtl:text-right">
+          {t("teamHeaderSubtitle")}
+        </p>
       </motion.div>
+
+      <TeamStats />
 
       {/* Team Members Grid - First 3 */}
       <motion.div

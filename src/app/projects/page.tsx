@@ -5,7 +5,6 @@ import { useLocale, useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
 import { X } from "lucide-react";
-import { useIsClient, useMediaQuery } from "usehooks-ts";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Empty,
@@ -20,7 +19,6 @@ import {
   CarouselItem,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import PageTitle from "../components/PageTitle";
 
 type Project = {
   id: string;
@@ -40,8 +38,6 @@ type Project = {
 const Page = () => {
   const t = useTranslations();
   const locale = useLocale();
-  const isClient = useIsClient();
-  const isMobile = useMediaQuery("(max-width: 768px)");
   const [projects, setProjects] = useState<Project[]>([]);
   const [modalProject, setModalProject] = useState<Project | null>(null);
   const [selectedType, setSelectedType] = useState("all");
@@ -143,15 +139,33 @@ const Page = () => {
       transition={{ duration: 0.7, ease: "easeOut" }}
     >
       <motion.section
-        className="mb-10 flex flex-col md:flex-row gap-10"
+        className="mb-10 flex flex-col md:flex-row md:items-end md:justify-between gap-8"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
       >
-        <PageTitle>{t("projects.title-1")}</PageTitle>
-        <p className="text-xl mb-4 text-white text-center md:text-start flex-1">
-          {t("projects.breif")}
-        </p>
+        {/* Left — eyebrow + two-tone title + subtitle */}
+        <div className="flex flex-col rtl:items-end ltr:items-start">
+          <p className="rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-[#C6A87D]/60 text-xs tracking-[0.2em] uppercase mb-4 flex items-center gap-2">
+            <span className="inline-block w-6 h-px bg-[#C6A87D]/40" />
+            {t("projects.eyebrow")}
+          </p>
+          <h1 className="rtl:font-year-of-camel ltr:font-elegance text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight">
+            <span className="text-bg pe-2">{t("projects.titleMain")}</span>
+            <br />
+            <span className="text-[#C6A87D]/30">{t("projects.titleDim")}</span>
+          </h1>
+          <p className="rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-gray-300 text-sm md:text-base leading-relaxed mt-5 max-w-md">
+            {t("projects.subtitle")}
+          </p>
+        </div>
+
+        {/* Right — link + counter */}
+        <div className="flex flex-col rtl:items-end ltr:items-start gap-3 shrink-0">
+          <p className="rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-[#C6A87D] text-xs">
+            {t("projects.counter")}
+          </p>
+        </div>
       </motion.section>
 
       <motion.section
@@ -219,59 +233,133 @@ const Page = () => {
                   </Empty>
                 ) : (
                   <motion.div
-                    className="grid grid-cols-2 md:grid-cols-4 gap-3"
-                    initial="hidden"
-                    animate="visible"
-                    variants={{
-                      visible: { transition: { staggerChildren: 0.08 } },
-                    }}
+                    className="flex flex-col gap-3"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
                   >
-                    {filtered.map((project, index) => (
-                      <motion.button
-                        key={project.id}
-                        className="rounded-xl cursor-pointer overflow-hidden aspect-square bg-[#181818] relative group flex flex-col md:block focus:outline-none"
-                        variants={{
-                          hidden: { opacity: 0, y: 30, scale: 0.98 },
-                          visible: { opacity: 1, y: 0, scale: 1 },
-                        }}
-                        transition={{ duration: 0.5, ease: "easeOut" }}
-                        whileHover={{
-                          scale: 1.03,
-                          boxShadow: "0 4px 32px #00000033",
-                        }}
-                        whileTap={{ scale: 0.98 }}
-                        onClick={() => {
-                          setActiveModalImageIndex(0);
-                          setModalProject(project);
-                        }}
-                      >
-                        <Image
-                          src={project.image}
-                          alt={project.title}
-                          width={400}
-                          height={400}
-                          loading={index < 4 ? "eager" : "lazy"}
-                          className="w-full h-full object-cover"
-                        />
+                    {Array.from(
+                      { length: Math.ceil(filtered.length / 5) },
+                      (_, gi) => {
+                        const group = filtered.slice(gi * 5, gi * 5 + 5);
+                        const isEvenGroup = gi % 2 === 0;
+                        const featuredProject = isEvenGroup
+                          ? group[0]
+                          : group[group.length - 1];
+                        const smallProjects = isEvenGroup
+                          ? group.slice(1)
+                          : group.slice(0, -1);
 
-                        {isClient && isMobile ? (
-                          <div className="relative p-4 text-white text-center">
-                            <h3 className="font-bold text-lg mb-2">
-                              {project.title.toUpperCase()}
-                            </h3>
+                        const renderCard = (
+                          project: Project,
+                          colClass: string,
+                          cardIndex: number,
+                        ) => {
+                          const metaParts = [
+                            project.location,
+                            project.statusDate,
+                          ].filter(Boolean);
+                          return (
+                            <motion.button
+                              key={project.id}
+                              className={`relative overflow-hidden rounded-xl cursor-pointer group focus:outline-none bg-[#181818] ${colClass}`}
+                              initial={{ opacity: 0, y: 16 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              transition={{
+                                duration: 0.45,
+                                delay: (gi * 5 + cardIndex) * 0.04,
+                                ease: "easeOut",
+                              }}
+                              whileHover={{ scale: 1.02 }}
+                              whileTap={{ scale: 0.98 }}
+                              onClick={() => {
+                                setActiveModalImageIndex(0);
+                                setModalProject(project);
+                              }}
+                            >
+                              <Image
+                                src={project.image}
+                                alt={project.title}
+                                fill
+                                loading={
+                                  gi === 0 && cardIndex < 5 ? "eager" : "lazy"
+                                }
+                                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                              />
+                              <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/30 to-black/10" />
+                              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                <svg
+                                  className="w-12 h-12 md:w-16 md:h-16 text-white/8"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  strokeWidth={0.8}
+                                >
+                                  <path
+                                    d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                  />
+                                </svg>
+                              </div>
+                              <div className="absolute top-3 ltr:left-4 rtl:right-4">
+                                <p className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-[9px] md:text-[10px] tracking-[0.18em] uppercase text-white/55">
+                                  {project.categoryLabel}
+                                  {project.location && (
+                                    <span className="text-white/35">
+                                      {" "}
+                                      · {project.location.split(",")[0]}
+                                    </span>
+                                  )}
+                                </p>
+                              </div>
+                              <div className="absolute bottom-0 inset-x-0 p-3 md:p-4 ltr:text-left rtl:text-right">
+                                <h3 className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-white font-bold text-sm md:text-base lg:text-lg leading-tight mb-1">
+                                  {project.title}
+                                </h3>
+                                {metaParts.length > 0 && (
+                                  <p className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-white/45 text-[10px] md:text-xs">
+                                    {metaParts.join(" · ")}
+                                  </p>
+                                )}
+                              </div>
+                            </motion.button>
+                          );
+                        };
+
+                        return (
+                          <div
+                            key={gi}
+                            className="grid grid-cols-2 md:grid-cols-5 gap-2 md:gap-3 auto-rows-[140px] md:auto-rows-[220px]"
+                          >
+                            {isEvenGroup ? (
+                              <>
+                                {renderCard(
+                                  featuredProject,
+                                  "col-span-2 md:col-span-3 md:row-span-2",
+                                  0,
+                                )}
+                                {smallProjects.map((p, i) =>
+                                  renderCard(p, "col-span-1 row-span-1", i + 1),
+                                )}
+                              </>
+                            ) : (
+                              <>
+                                {/* Featured first in DOM with explicit right placement so small cards auto-fill cols 1–2 */}
+                                {renderCard(
+                                  featuredProject,
+                                  "col-span-2 md:[grid-column:3/6] md:[grid-row:1/3]",
+                                  4,
+                                )}
+                                {smallProjects.map((p, i) =>
+                                  renderCard(p, "col-span-1 row-span-1", i),
+                                )}
+                              </>
+                            )}
                           </div>
-                        ) : (
-                          <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center p-4 text-white text-center transition-opacity duration-300 opacity-0 group-hover:opacity-100">
-                            <h3 className="font-bold text-lg md:text-xl mb-2">
-                              {project.title.toUpperCase()}
-                            </h3>
-                            <p className="text-sm mb-2 text-gray-300">
-                              {project.categoryLabel}
-                            </p>
-                          </div>
-                        )}
-                      </motion.button>
-                    ))}
+                        );
+                      },
+                    )}
                   </motion.div>
                 )}
               </TabsContent>

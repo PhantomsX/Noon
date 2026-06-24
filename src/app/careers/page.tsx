@@ -4,7 +4,6 @@ import { useState, useRef, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { motion, useInView } from "motion/react";
 import CountUp from "@/components/CountUp";
-import PageTitle from "../components/PageTitle";
 
 // Job positions data
 const positions = [
@@ -290,65 +289,56 @@ const CareersPage = () => {
 
   return (
     <main className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic">
-      {/* Hero Section */}
-      <section className="relative px-5 md:px-[70px] pt-20 pb-16">
-        <div className="relative z-10">
+      {/* Hero + Stats */}
+      <section ref={statsRef} className="relative px-5 md:px-17.5 pt-20 pb-12">
+        <div className="flex flex-col md:flex-row md:items-center gap-10 md:gap-16">
+
+          {/* Left — eyebrow + two-tone title + subtitle */}
           <motion.div
-            className="max-w-4xl"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7 }}
+            className="flex flex-col rtl:items-end ltr:items-start flex-1"
           >
-            <PageTitle>{t("careers.title")}</PageTitle>
-            <motion.h2
-              className="text-3xl md:text-4xl font-bold text-[#f9c39d] mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              {t("careers.subtitle")}
-            </motion.h2>
-            <motion.p
-              className="text-xl text-gray-300 leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              {t("careers.description")}
-            </motion.p>
+            <p className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-[#C6A87D]/60 text-xs tracking-[0.2em] uppercase mb-4 flex items-center gap-2 rtl:flex-row-reverse">
+              <span className="inline-block w-6 h-px bg-[#C6A87D]/40" />
+              {t("careers.heroEyebrow")}
+            </p>
+            <h1 className="ltr:font-elegance rtl:font-year-of-camel text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight mb-5">
+              <span className="text-bg block pe-2">{t("careers.heroTitleMain")}</span>
+              <span className="text-[#C6A87D]/30 block">{t("careers.heroTitleDim")}</span>
+            </h1>
+            <p className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-gray-400 text-sm md:text-base leading-relaxed max-w-sm rtl:text-right">
+              {t("careers.heroSubtitle")}
+            </p>
           </motion.div>
-        </div>
-      </section>
 
-      {/* Stats Section */}
-      <section ref={statsRef} className="px-5 md:px-[70px] py-16">
-        <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
-          initial={{ opacity: 0, y: 30 }}
-          animate={statsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="text-center">
-            <AnimatedCounter target={50} suffix="+" />
-            <p className="text-gray-400 mt-2">{t("common.team_members")}</p>
-          </div>
-          <div className="text-center">
-            <AnimatedCounter target={400} suffix="+" />
-            <p className="text-gray-400 mt-2">
-              {t("common.projects_completed")}
-            </p>
-          </div>
-          <div className="text-center">
-            <AnimatedCounter target={15} suffix="+" />
-            <p className="text-gray-400 mt-2">{t("common.years_experience")}</p>
-          </div>
-          <div className="text-center">
-            <AnimatedCounter target={95} suffix="%" />
-            <p className="text-gray-400 mt-2">
-              {t("common.client_satisfaction")}
-            </p>
-          </div>
-        </motion.div>
+          {/* Right — 2×2 stat cards */}
+          <motion.div
+            className="grid grid-cols-2 gap-3 w-full md:w-1/2 shrink-0"
+            initial={{ opacity: 0, y: 30 }}
+            animate={statsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.7, delay: 0.15 }}
+          >
+            {[
+              { target: 50,  suffix: "+", label: t("common.team_members") },
+              { target: 500, suffix: "+", label: t("common.projects_completed") },
+              { target: 15,  suffix: "+", label: t("common.years_experience") },
+              { target: 95,  suffix: "%", label: t("common.client_satisfaction") },
+            ].map((stat, i) => (
+              <div
+                key={i}
+                className="flex flex-col gap-3 rounded-xl border border-white/8 bg-white/[0.03] p-5"
+              >
+                <AnimatedCounter target={stat.target} suffix={stat.suffix} />
+                <p className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-[10px] tracking-[0.18em] uppercase text-gray-500 leading-snug rtl:text-right">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </motion.div>
+
+        </div>
       </section>
 
       {/* Why Join Us Section */}

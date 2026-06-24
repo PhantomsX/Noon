@@ -2,7 +2,6 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { motion } from "motion/react";
-import PageTitle from "../components/PageTitle";
 
 type Service = {
   title: string;
@@ -73,15 +72,21 @@ function Page() {
   return (
     <main className="min-h-screen">
       {/* Header Section */}
-      <section className="flex max-sm:flex-col gap-8 lg:gap-16 px-6 md:px-9 pt-12 sm:ps-20">
-        <aside className="sm:max-w-95">
-          <PageTitle>{t("title-1")}</PageTitle>
-        </aside>
-        <div className="flex-1">
-          <p className="text-xl mb-8 text-white text-center md:text-start ltr:font-neue-montreal rtl:font-ibm-plex-arabic">
-            {t("breif")}
+      <section className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 px-6 md:px-9 pt-12 sm:px-17.5 pb-10">
+        <div className="flex flex-col rtl:items-end ltr:items-start">
+          <p className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-[#C6A87D]/60 text-xs tracking-[0.2em] uppercase mb-4 flex items-center gap-2">
+            <span className="inline-block w-6 h-px bg-[#C6A87D]/40" />
+            {t("headerEyebrow")}
           </p>
+          <h1 className="ltr:font-elegance rtl:font-year-of-camel text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight">
+            <span className="text-bg pe-2">{t("headerTitleMain")}</span>
+            <br />
+            <span className="text-[#C6A87D]/30">{t("headerTitleDim")}</span>
+          </h1>
         </div>
+        <p className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-gray-400 text-sm md:text-base leading-relaxed max-w-xs rtl:text-right">
+          {t("headerSubtitle")}
+        </p>
       </section>
 
       {/* Services Grid */}

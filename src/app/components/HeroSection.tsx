@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useCallback, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { motion } from "motion/react";
 import {
@@ -27,13 +28,11 @@ export default function HeroSection() {
   const [textVisible, setTextVisible] = useState(false);
   const locale = useLocale();
 
-  // Show text 800 ms after mount
   useEffect(() => {
     const timer = setTimeout(() => setTextVisible(true), 800);
     return () => clearTimeout(timer);
   }, []);
 
-  // Track the active slide index
   const onSelect = useCallback((emblaApi: CarouselApi) => {
     if (!emblaApi) return;
     setCurrent(emblaApi.selectedScrollSnap());
@@ -49,46 +48,15 @@ export default function HeroSection() {
     };
   }, [api, onSelect]);
 
-  const slides = [
-    {
-      title: t("home.hero.slide1.title"),
-      body: t("home.hero.slide1.body"),
-    },
-    {
-      title: null,
-      body: null,
-    },
-    {
-      title: null,
-      body: null,
-    },
-    {
-      title: null,
-      body: null,
-    },
-    {
-      title: null,
-      body: null,
-    },
-    {
-      title: null,
-      body: null,
-    },
-    {
-      title: null,
-      body: null,
-    },
-  ];
-
   return (
     <section className="relative w-full h-[calc(100vh-95px)] overflow-hidden">
+      {/* Background carousel */}
       <Carousel
         className="w-full h-full"
         opts={{
           loop: true,
           align: "start",
           direction: locale === "ar" ? "rtl" : "ltr",
-          // Higher = slower eased scroll between snaps (replaces crossfade)
           duration: 45,
         }}
         plugins={[
@@ -106,7 +74,6 @@ export default function HeroSection() {
               key={src}
               className="relative h-screen pl-0 overflow-hidden"
             >
-              {/* Background image with Ken-Burns scale */}
               <motion.div
                 className="absolute inset-0 w-full h-full"
                 animate={
@@ -124,7 +91,7 @@ export default function HeroSection() {
                 />
               </motion.div>
 
-              {/* Gradient Overlays */}
+              {/* Gradient overlays */}
               <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/60 to-transparent z-10" />
               <div className="absolute inset-0 ltr:bg-linear-to-r rtl:bg-linear-to-l from-black/80 via-black/40 to-transparent z-10" />
             </CarouselItem>
@@ -132,31 +99,75 @@ export default function HeroSection() {
         </CarouselContent>
       </Carousel>
 
-      {/* Hero Content – rendered on top of the carousel */}
-      <div className="absolute inset-0 z-20 h-full flex flex-col justify-end px-4 md:px-12 lg:px-16 pb-50 max-w-480 mx-auto pointer-events-none">
-        {current === 0 && textVisible && (
+      {/* Hero content overlay */}
+      <div className="absolute inset-0 z-20 flex flex-col justify-end px-6 md:px-12 lg:px-20 pb-20 md:pb-28 pointer-events-none">
+        {textVisible && (
           <motion.div
-            className="rtl:text-right ltr:text-left"
+            className="rtl:text-right ltr:text-left max-w-2xl"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            {/* Main Heading */}
-            <motion.h1 className="ltr:font-elegance  text-bg rtl:font-year-of-camel text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight mb-5">
-              {slides[0].title}
+            {/* Eyebrow */}
+            <motion.p
+              className="text-[#C6A87D]/60 text-xs md:text-sm tracking-[0.2em] uppercase ltr:font-neue-montreal rtl:font-ibm-plex-arabic mb-5 flex items-center gap-2"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              <span className="inline-block w-6 h-px bg-[#C6A87D]/40" />
+              {t("home.hero.eyebrow")}
+            </motion.p>
+
+            <motion.h1
+              className="text-bg text-4xl sm:text-5xl  font-semibold leading-tight ltr:font-elegance rtl:font-year-of-camel"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              {t("home.hero.headline")}
             </motion.h1>
 
-            {/* Body */}
-            {slides[0].body && (
-              <motion.p
-                className="uppercase text-base md:text-2xl lg:text-3xl leading-relaxed text-bg ltr:font-neue-montreal rtl:font-ibm-plex-arabic"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.15 }}
+            {/* Dim headline */}
+            <motion.p
+              className="text-[#C6A87D]/35 text-4xl sm:text-5xl  font-semibold leading-tight ltr:font-elegance rtl:font-year-of-camel mb-7"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              {t("home.hero.headlineDim")}
+            </motion.p>
+
+            {/* Subtext */}
+            <motion.p
+              className="text-[#C6A87D]/70 text-sm md:text-base leading-relaxed ltr:font-neue-montreal rtl:font-ibm-plex-arabic mb-9 max-w-lg"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              {t("home.hero.subtext")}
+            </motion.p>
+
+            {/* CTAs */}
+            <motion.div
+              className="flex items-center gap-5 pointer-events-auto"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.55 }}
+            >
+              <Link
+                href="/projects"
+                className="inline-flex items-center rounded-full gap-2 border border-[#C6A87D]/70 text-[#C6A87D] text-sm ltr:font-neue-montreal rtl:font-ibm-plex-arabic px-6 py-3 hover:bg-[#C6A87D]/10 transition-colors duration-300"
               >
-                {slides[0].body}
-              </motion.p>
-            )}
+                {t("home.hero.cta1")} →
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 text-[#C6A87D]/70 text-sm ltr:font-neue-montreal rtl:font-ibm-plex-arabic hover:text-[#C6A87D] transition-colors duration-300"
+              >
+                {t("home.hero.cta2")} →
+              </Link>
+            </motion.div>
           </motion.div>
         )}
       </div>
