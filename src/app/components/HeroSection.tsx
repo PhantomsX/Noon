@@ -105,7 +105,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-20 flex flex-col justify-end px-6 md:px-12 lg:px-20 pb-20 md:pb-28 pointer-events-none">
         {textVisible && (
           <motion.div
-            className="rtl:text-right ltr:text-left max-w-2xl"
+            className="rtl:text-right ltr:text-left max-w-3xl"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
@@ -122,7 +122,7 @@ export default function HeroSection() {
             </motion.p>
 
             <motion.h1
-              className="text-bg text-4xl sm:text-5xl  font-semibold leading-tight ltr:font-elegance rtl:font-year-of-camel"
+              className="text-bg text-4xl sm:text-5xl  font-semibold leading-loose ltr:font-elegance rtl:font-year-of-camel"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -132,7 +132,7 @@ export default function HeroSection() {
 
             {/* Dim headline */}
             <motion.p
-              className="text-[#C6A87D]/35 text-4xl sm:text-5xl  font-semibold leading-tight ltr:font-elegance rtl:font-year-of-camel mb-7"
+              className="text-[#C6A87D]/35 text-4xl sm:text-5xl tracking-wider font-semibold ltr:font-elegance rtl:font-year-of-camel mb-7"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
