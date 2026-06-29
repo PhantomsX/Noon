@@ -122,7 +122,7 @@ export default function HeroSection() {
             </motion.p>
 
             <motion.h1
-              className="text-bg text-4xl sm:text-5xl  font-semibold leading-loose ltr:font-elegance rtl:font-year-of-camel"
+              className="text-bg text-4xl sm:text-5xl  font-semibold ltr:font-elegance rtl:font-year-of-camel"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
