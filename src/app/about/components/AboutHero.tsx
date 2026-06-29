@@ -35,7 +35,7 @@ const AboutHero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-[#C6A87D]/60 text-xs tracking-[0.2em] uppercase flex items-center gap-2 rtl:flex-row-reverse"
+            className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-[#C6A87D]/60 text-xs tracking-[0.2em] uppercase flex items-center gap-2"
           >
             <span className="inline-block w-6 h-px bg-[#C6A87D]/40" />
             {t("aboutHeroEyebrow")}
@@ -72,7 +72,7 @@ const AboutHero = () => {
             {BULLETS.map((key) => (
               <li
                 key={key}
-                className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic flex items-start gap-3 text-sm sm:text-base text-gray-200 rtl:flex-row-reverse"
+                className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic flex items-start gap-3 text-sm sm:text-base text-gray-200"
               >
                 <span
                   className="mt-[6px] shrink-0 w-1.5 h-1.5 rounded-full bg-[#C6A87D]"

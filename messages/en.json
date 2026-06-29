@@ -548,16 +548,16 @@
         "image": "/images/ceoimage.png"
       },
       {
-        "name": "RAKAN ABUDAQQA",
-        "role": "Design & Development Director",
-        "description": "Rakan Abudaqqa is the Design & Development Director at Noon Consultants, bringing over 10 years of experience in architectural design and project development. He holds a Bachelor's degree in Architecture from Al Yamamah University and has an academic background in Mechanical Engineering, with over two and a half years of study in the field. Throughout his career, Rakan has contributed to a wide range of projects, leading design development and coordination across multidisciplinary teams. He plays a key role in aligning design vision with technical and regulatory requirements while ensuring high standards of quality and efficiency. Under his leadership, projects are driven by a clear focus on design excellence, functionality, and long-term value.",
-        "image": "/team/RAKAN-ABUDAQQA.webp"
-      },
-      {
         "name": "FARES ALSAYED",
         "role": "General Manager",
         "description": "Fares Al Sayed is the General Manager of Administration & Development, leading organizational strategy and business operations. He brings extensive experience in administrative leadership and business development, driving performance and supporting the firm's growth objectives. He holds a Bachelor's degree in Business Administration from Al Yamamah University.",
         "image": "/team/FARES-ALSAYED.webp"
+      },
+      {
+        "name": "RAKAN ABUDAQQA",
+        "role": "Design & Development Director",
+        "description": "Rakan Abudaqqa is the Design & Development Director at Noon Consultants, bringing over 10 years of experience in architectural design and project development. He holds a Bachelor's degree in Architecture from Al Yamamah University and has an academic background in Mechanical Engineering, with over two and a half years of study in the field. Throughout his career, Rakan has contributed to a wide range of projects, leading design development and coordination across multidisciplinary teams. He plays a key role in aligning design vision with technical and regulatory requirements while ensuring high standards of quality and efficiency. Under his leadership, projects are driven by a clear focus on design excellence, functionality, and long-term value.",
+        "image": "/team/RAKAN-ABUDAQQA.webp"
       },
       {
         "name": "SHAHAD ALDOWAH",
@@ -602,18 +602,6 @@
         "image": "/team/HOSSAM-ALRASHID.webp"
       },
       {
-        "name": "TASSNEM AL-ASDI",
-        "role": "Architect",
-        "description": "",
-        "image": ""
-      },
-      {
-        "name": "AYAH ALTHUNAYAN",
-        "role": "Junior Architect",
-        "description": "A Junior Architect specializing in Revit modeling and technical drafting. She holds a Bachelor's degree in Architecture from Prince Sultan University, bringing a strong academic background and solid technical capability. Skilled in developing architectural models, preparing detailed drawings, coordinating sheets, and ensuring compliance with project standards. Known for accuracy, fast learning, and effective teamwork, contributing to reliable and high-quality design deliverables.",
-        "image": "/team/AYAH-ALTHUNAYAN.webp"
-      },
-      {
         "name": "AHMED RASHWANI",
         "role": "Architect & BIM Specialist",
         "description": "Ahmed Rashwani is an Architect and BIM Specialist at Noon Consultants, holding a Bachelor's degree in Architecture from Al Yamamah University. As a junior professional, he brings strong technical capabilities in architectural design and Building Information Modeling (BIM). Throughout his work, Ahmed contributes to design development, BIM modeling, and coordination across multidisciplinary teams. He is known for his attention to detail and ability to support accurate, well-coordinated design outputs, enhancing project efficiency and ensuring alignment with technical and project requirements.",
@@ -624,12 +612,6 @@
         "role": "Mechanical Engineer",
         "description": "is a Mechanical Engineer at Noon Consultants, with experience in MEP systems design and coordination across various building projects. He holds a Bachelor's degree in Mechanical Engineering from Prince Sattam Bin Abdulaziz University. Throughout his work, Abdulbaqi has been involved in HVAC, plumbing, and firefighting systems, contributing to design development, technical coordination, and site implementation. He plays an active role in supporting project delivery by ensuring compliance with codes and standards while maintaining efficiency and quality across all stages of execution.",
         "image": "/team/ABDULBAQI-TAHER.webp"
-      },
-      {
-        "name": "MOHAMMED OBAIDAT",
-        "role": "Head of MEP Department",
-        "description": "The Head of the MEP Department, a Senior Electrical Engineer with over 30 years of extensive experience in designing, supervising, and managing electrical and MEP systems across major projects. He has led multidisciplinary engineering teams, ensuring technical excellence, compliance, and seamless coordination throughout all project stages—from conceptual design to site execution. His expertise covers power distribution, protection systems, low-current solutions, energy efficiency, and full MEP integration, making him a key figure in delivering reliable, high-quality engineering outcomes.",
-        "image": "/team/MOHAMMED-OBAIDAT.webp"
       },
       {
         "name": "ATTA ALATRASH",
@@ -656,12 +638,6 @@
         "image": "/team/MOHAMED-DARWISH.webp"
       },
       {
-        "name": "MOHAMMED ALASHQAR",
-        "role": "Site Supervision Architect",
-        "description": "Site supervision Architect with over 15 years of experience specializing in site supervision and construction oversight for residential and commercial projects. Skilled in managing day-to-day site activities, ensuring quality compliance, coordinating with contractors, reviewing drawings, and resolving technical issues efficiently. He holds a Bachelor's degree in Architectural Engineering and brings strong practical expertise in construction standards, supervision methodologies, and on-site risk management, ensuring precise and reliable project delivery.",
-        "image": "/team/MOHAMMED-ALASHQAR.webp"
-      },
-      {
         "name": "MOHAMED SHAABAN",
         "role": "Technical Officer",
         "description": "is a Technical Officer at Noon Consultants, bringing over 17 years of experience in architectural and civil drafting, as well as quantity surveying. He holds a diploma in Civil Engineering and a diploma in CAD, and completed his studies in India. Throughout his career, he has developed strong expertise in preparing detailed drawings, quantity take-offs, and supporting project teams across various stages of design and execution. He plays a key role in ensuring accuracy, coordination, and efficiency in technical documentation, contributing to the successful delivery of projects.",
@@ -672,6 +648,30 @@
         "role": "Mechanical Engineer",
         "description": "is a Mechanical Engineer at Noon Consultants, experience in MEP systems, specializing in HVAC, firefighting, and plumbing. He holds a Bachelor's degree in Mechanical Engineering from Sana'a University. Throughout his career, Basheer has been involved in both technical office and site operations, including design development, shop drawings, BOQs, and project coordination. He has worked in compliance with international and local standards such as ASHRAE, NFPA, and the Saudi Building Code, contributing to efficient and high-quality project execution.",
         "image": "/team/BASHIR-ALSABRI.webp"
+      },
+      {
+        "name": "AYAH ALTHUNAYAN",
+        "role": "Junior Architect",
+        "description": "A Junior Architect specializing in Revit modeling and technical drafting. She holds a Bachelor's degree in Architecture from Prince Sultan University, bringing a strong academic background and solid technical capability. Skilled in developing architectural models, preparing detailed drawings, coordinating sheets, and ensuring compliance with project standards. Known for accuracy, fast learning, and effective teamwork, contributing to reliable and high-quality design deliverables.",
+        "image": ""
+      },
+      {
+        "name": "MOHAMMED OBAIDAT",
+        "role": "Head of MEP Department",
+        "description": "The Head of the MEP Department, a Senior Electrical Engineer with over 30 years of extensive experience in designing, supervising, and managing electrical and MEP systems across major projects. He has led multidisciplinary engineering teams, ensuring technical excellence, compliance, and seamless coordination throughout all project stages—from conceptual design to site execution. His expertise covers power distribution, protection systems, low-current solutions, energy efficiency, and full MEP integration, making him a key figure in delivering reliable, high-quality engineering outcomes.",
+        "image": ""
+      },
+      {
+        "name": "MOHAMMED ALASHQAR",
+        "role": "Site Supervision Architect",
+        "description": "Site supervision Architect with over 15 years of experience specializing in site supervision and construction oversight for residential and commercial projects. Skilled in managing day-to-day site activities, ensuring quality compliance, coordinating with contractors, reviewing drawings, and resolving technical issues efficiently. He holds a Bachelor's degree in Architectural Engineering and brings strong practical expertise in construction standards, supervision methodologies, and on-site risk management, ensuring precise and reliable project delivery.",
+        "image": ""
+      },
+      {
+        "name": "TASSNEM AL-ASDI",
+        "role": "Architect",
+        "description": "",
+        "image": ""
       },
       {
         "name": "ADEL RAJAB",

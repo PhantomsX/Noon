@@ -189,7 +189,9 @@ const AboutTeam = () => {
           <h2 className="ltr:font-elegance rtl:font-year-of-camel text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight">
             <span className="text-bg block">{t("teamHeaderTitleMain")}</span>
             {t("teamHeaderTitleDim") && (
-              <span className="text-[#C6A87D]/30 block">{t("teamHeaderTitleDim")}</span>
+              <span className="text-[#C6A87D]/30 block">
+                {t("teamHeaderTitleDim")}
+              </span>
             )}
           </h2>
         </div>
