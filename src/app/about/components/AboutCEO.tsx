@@ -33,12 +33,12 @@ const AboutCEO = () => {
           className="flex flex-col gap-8"
         >
           {/* Circle avatar */}
-          <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden bg-white/10 shrink-0">
+          <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden bg-white/10 shrink-0">
             <Image
               src={ceo}
               alt={t("alt.ceo")}
-              width={80}
-              height={80}
+              width={160}
+              height={160}
               className="w-full h-full object-cover object-top"
             />
           </div>
@@ -51,10 +51,10 @@ const AboutCEO = () => {
 
           {/* Name + title */}
           <div className="rtl:text-right">
-            <p className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-white font-medium text-sm md:text-base">
+            <span className="rtl:font-year-of-camel ltr:font-monalisa text-2xl md:text-3xl font-bold text-[#C6A87D]">
               {t("aboutCeoSignature")}
-            </p>
-            <p className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-gray-400 text-xs tracking-widest uppercase mt-1">
+            </span>
+            <p className="rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-gray-400 text-xs md:text-sm mt-1 tracking-widest uppercase">
               {t("aboutCeoTitle")}
             </p>
           </div>
@@ -77,7 +77,7 @@ const AboutCEO = () => {
               transition={{ duration: 0.5, delay: 0.25 + i * 0.1 }}
               className="py-6 first:pt-0 last:pb-0 rtl:text-right"
             >
-              <p className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-[#C6A87D]/60 text-[10px] tracking-[0.22em] uppercase mb-3">
+              <p className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-[#C6A87D] font-bold text-xs md:text-sm tracking-[0.22em] uppercase mb-3">
                 {t(label)}
               </p>
               <p className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-gray-300 text-sm md:text-base leading-relaxed">

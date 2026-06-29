@@ -35,7 +35,7 @@
   "Warehouse": "Warehouse",
   "What Our Clients Say": "partners words about noon",
   "about": "About",
-  "aboutCeoSignature": "Dr. Nizar El Sayed",
+  "aboutCeoSignature": "Dr. Nizar Al sayed",
   "aboutCeoTitle": "Chairman & Founder",
   "HOME": "HOME",
   "WHO WE ARE": "WHO WE ARE",
@@ -210,7 +210,7 @@
     "titleDim": "in mind?",
     "subtitle": "Whether it's a landmark development, a corporate space, or a vision still on paper — let's talk.",
     "cta": "Start a conversation",
-    "email": "info@noonconsultants.com"
+    "email": ""
   },
   "contactInfo": {
     "titleLine1": "Head",
@@ -718,6 +718,7 @@
     "allServices": " All Services",
     "learnMore": "Learn More",
     "fullServices": "FULL {title} SERVICES",
+    "download": "Download",
     "breif": "Over the years, we have proudly served a wide range of clients throughout Saudi Arabia, building a reputation for technical excellence and client-centric solutions. Our services are delivered by experts with in-depth knowledge across various engineering disciplines, each committed to delivering value-driven, high-performance outcomes. We focus on innovation, sustainability, and precision to support the long-term success of our clients’ projects.",
     "service-1": "ARCHITECTURAL DESIGN",
     "service-1-description": "The art and science of creating buildings and their physical structures. It involves the careful consideration of aesthetics, functionality, and the environment.",
@@ -727,7 +728,7 @@
       "3": "Construction Documents & Workshop Drawings",
       "4": "Value Engineering and Bill of Materials"
     },
-    "service-2": "URBAN DESIGN",
+    "service-2": "URBAN DESIGN & MASTER PLANNING",
     "service-2-description": "The process of shaping the physical setting for life in cities and towns. It involves the arrangement, appearance, and functionality of urban spaces, including buildings, streets, parks, and other public areas.",
     "service-2-features": {
       "1": "Feasibility Studies",

@@ -11,6 +11,7 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import Fade from "embla-carousel-fade";
 
 const PROJECTS_IMAGES = [
   "/slider-projects/ALSHUBAILI-OFFICES.webp",
@@ -61,10 +62,11 @@ export default function HeroSection() {
         }}
         plugins={[
           Autoplay({
-            delay: 5000,
+            delay: 3500,
             stopOnInteraction: false,
             stopOnMouseEnter: false,
           }),
+          Fade(),
         ]}
         setApi={setApi}
       >

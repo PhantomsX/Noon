@@ -26,14 +26,13 @@ export default function ContactBannerSection() {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-16 md:py-24 flex flex-col md:flex-row md:items-center md:justify-between gap-10 md:gap-16">
-
         {/* Left — text */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="flex flex-col rtl:items-end ltr:items-start"
+          className="flex flex-col "
         >
           {/* Eyebrow */}
           <p className="rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-[#C6A87D]/70 text-xs tracking-[0.2em] uppercase mb-5 flex items-center gap-2">
@@ -43,9 +42,13 @@ export default function ContactBannerSection() {
 
           {/* Two-tone headline */}
           <h2 className="rtl:font-year-of-camel ltr:font-elegance text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight">
-            <span className="text-[#C6A87D]">{t("contactBanner.titleMain")}</span>
+            <span className="text-[#C6A87D]">
+              {t("contactBanner.titleMain")}
+            </span>
             <br />
-            <span className="text-[#C6A87D]/30">{t("contactBanner.titleDim")}</span>
+            <span className="text-[#C6A87D]/30">
+              {t("contactBanner.titleDim")}
+            </span>
           </h2>
 
           {/* Subtitle */}
@@ -60,7 +63,7 @@ export default function ContactBannerSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="flex flex-col rtl:items-end ltr:items-start md:items-end gap-4 shrink-0"
+          className="flex flex-col  md:items-end gap-4 shrink-0"
         >
           <Link
             href="/contact"
@@ -73,7 +76,6 @@ export default function ContactBannerSection() {
             {t("contactBanner.email")}
           </span>
         </motion.div>
-
       </div>
     </section>
   );

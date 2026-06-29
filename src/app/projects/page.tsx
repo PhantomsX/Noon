@@ -145,7 +145,7 @@ const Page = () => {
         transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
       >
         {/* Left — eyebrow + two-tone title + subtitle */}
-        <div className="flex flex-col rtl:items-end ltr:items-start">
+        <div className="flex flex-col ">
           <p className="rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-[#C6A87D]/60 text-xs tracking-[0.2em] uppercase mb-4 flex items-center gap-2">
             <span className="inline-block w-6 h-px bg-[#C6A87D]/40" />
             {t("projects.eyebrow")}
@@ -161,7 +161,7 @@ const Page = () => {
         </div>
 
         {/* Right — link + counter */}
-        <div className="flex flex-col rtl:items-end ltr:items-start gap-3 shrink-0">
+        <div className="flex flex-col  gap-3 shrink-0">
           <p className="rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-[#C6A87D] text-xs">
             {t("projects.counter")}
           </p>
@@ -314,7 +314,7 @@ const Page = () => {
                                 </p>
                               </div>
                               <div className="absolute bottom-0 inset-x-0 p-3 md:p-4 ltr:text-left rtl:text-right">
-                                <h3 className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-white font-bold text-sm md:text-base lg:text-lg leading-tight mb-1">
+                                <h3 className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-white font-bold text-sm md:text-base lg:text-lg leading-tight mb-1 uppercase">
                                   {project.title}
                                 </h3>
                                 {metaParts.length > 0 && (
@@ -397,7 +397,13 @@ const Page = () => {
               onClick={(event) => event.stopPropagation()}
             >
               <div className="relative">
-                <Carousel className="w-full" setApi={setModalCarouselApi}>
+                <Carousel
+                  opts={{
+                    direction: locale === "ar" ? "rtl" : "ltr",
+                  }}
+                  className="w-full"
+                  setApi={setModalCarouselApi}
+                >
                   <CarouselContent className="ml-0">
                     {modalProject.images.map((image) => (
                       <CarouselItem key={image} className="pl-0 relative">

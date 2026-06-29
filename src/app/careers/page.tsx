@@ -292,21 +292,24 @@ const CareersPage = () => {
       {/* Hero + Stats */}
       <section ref={statsRef} className="relative px-5 md:px-17.5 pt-20 pb-12">
         <div className="flex flex-col md:flex-row md:items-center gap-10 md:gap-16">
-
           {/* Left — eyebrow + two-tone title + subtitle */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="flex flex-col rtl:items-end ltr:items-start flex-1"
+            className="flex flex-col  flex-1"
           >
-            <p className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-[#C6A87D]/60 text-xs tracking-[0.2em] uppercase mb-4 flex items-center gap-2 rtl:flex-row-reverse">
+            <p className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-[#C6A87D]/60 text-xs tracking-[0.2em] uppercase mb-4 flex items-center gap-2">
               <span className="inline-block w-6 h-px bg-[#C6A87D]/40" />
               {t("careers.heroEyebrow")}
             </p>
             <h1 className="ltr:font-elegance rtl:font-year-of-camel text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight mb-5">
-              <span className="text-bg block pe-2">{t("careers.heroTitleMain")}</span>
-              <span className="text-[#C6A87D]/30 block">{t("careers.heroTitleDim")}</span>
+              <span className="text-bg block pe-2">
+                {t("careers.heroTitleMain")}
+              </span>
+              <span className="text-[#C6A87D]/30 block">
+                {t("careers.heroTitleDim")}
+              </span>
             </h1>
             <p className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-gray-400 text-sm md:text-base leading-relaxed max-w-sm rtl:text-right">
               {t("careers.heroSubtitle")}
@@ -321,14 +324,22 @@ const CareersPage = () => {
             transition={{ duration: 0.7, delay: 0.15 }}
           >
             {[
-              { target: 50,  suffix: "+", label: t("common.team_members") },
-              { target: 500, suffix: "+", label: t("common.projects_completed") },
-              { target: 15,  suffix: "+", label: t("common.years_experience") },
-              { target: 95,  suffix: "%", label: t("common.client_satisfaction") },
+              { target: 50, suffix: "+", label: t("common.team_members") },
+              {
+                target: 500,
+                suffix: "+",
+                label: t("common.projects_completed"),
+              },
+              { target: 15, suffix: "+", label: t("common.years_experience") },
+              {
+                target: 95,
+                suffix: "%",
+                label: t("common.client_satisfaction"),
+              },
             ].map((stat, i) => (
               <div
                 key={i}
-                className="flex flex-col gap-3 rounded-xl border border-white/8 bg-white/[0.03] p-5"
+                className="flex flex-col gap-3 rounded-xl border border-white/8 bg-white/3 p-5"
               >
                 <AnimatedCounter target={stat.target} suffix={stat.suffix} />
                 <p className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-[10px] tracking-[0.18em] uppercase text-gray-500 leading-snug rtl:text-right">
@@ -337,7 +348,6 @@ const CareersPage = () => {
               </div>
             ))}
           </motion.div>
-
         </div>
       </section>
 
