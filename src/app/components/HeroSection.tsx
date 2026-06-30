@@ -161,13 +161,13 @@ export default function HeroSection() {
                 href="/projects"
                 className="inline-flex items-center rounded-full gap-2 border border-[#C6A87D]/70 text-[#C6A87D] text-sm ltr:font-neue-montreal rtl:font-ibm-plex-arabic px-6 py-3 hover:bg-[#C6A87D]/10 transition-colors duration-300"
               >
-                {t("home.hero.cta1")} →
+                {t("home.hero.cta1")} <span className="rtl:rotate-180">→</span>
               </Link>
               <Link
                 href="/about"
                 className="inline-flex items-center gap-2 text-[#C6A87D]/70 text-sm ltr:font-neue-montreal rtl:font-ibm-plex-arabic hover:text-[#C6A87D] transition-colors duration-300"
               >
-                {t("home.hero.cta2")} →
+                {t("home.hero.cta2")} <span className="rtl:rotate-180">→</span>
               </Link>
             </motion.div>
           </motion.div>

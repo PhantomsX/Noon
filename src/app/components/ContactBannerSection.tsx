@@ -69,7 +69,10 @@ export default function ContactBannerSection() {
             href="/contact"
             className="group relative inline-flex items-center gap-3 px-10 py-4 text-sm tracking-widest uppercase font-semibold text-black bg-linear-to-r from-[#BE7B2C] via-[#F9C39D] to-[#BE7B2C] bg-size-[200%_100%] hover:bg-right transition-all duration-500 rounded-sm overflow-hidden shadow-lg hover:shadow-[#C6A87D]/30 hover:shadow-xl rtl:font-ibm-plex-arabic ltr:font-neue-montreal"
           >
-            <span className="relative z-10">{t("contactBanner.cta")} →</span>
+            <span className="relative z-10">
+              {t("contactBanner.cta")}
+              <span className="rtl:rotate-180">→</span>
+            </span>
             <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-linear-to-r from-transparent via-white/20 to-transparent" />
           </Link>
           <span className="rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-white/40 text-xs tracking-wide">

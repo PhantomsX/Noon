@@ -3,6 +3,7 @@
 
 * {
   cursor: none !important;
+  @apply rtl:font-year-of-camel;
 }
 
 @custom-variant dark (&:is(.dark *));
