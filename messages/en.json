@@ -549,7 +549,7 @@
       },
       {
         "name": "FARES ALSAYED",
-        "role": "General Manager",
+        "role": "General Manager of Administration & Development",
         "description": "Fares Al Sayed is the General Manager of Administration & Development, leading organizational strategy and business operations. He brings extensive experience in administrative leadership and business development, driving performance and supporting the firm's growth objectives. He holds a Bachelor's degree in Business Administration from Al Yamamah University.",
         "image": "/team/FARES-ALSAYED.webp"
       },
@@ -561,7 +561,7 @@
       },
       {
         "name": "SHAHAD ALDOWAH",
-        "role": "Project Management Officer",
+        "role": "Project Management Officer (PMO)",
         "description": "Project Management Officer (PMO) at Noon Consultants. Shahad has been with the firm for one year, contributing to project planning, coordination, and progress tracking. Known for her strong organizational skills and team collaboration, she holds a B.S degree in Project Management from Princess Noura University.",
         "image": "/team/SHAHAD-ALDOWAH.webp"
       },
@@ -579,15 +579,21 @@
       },
       {
         "name": "AL WALID ALBAIK",
-        "role": "Architect & AI Specialist",
-        "description": "is an Architect and AI Specialist at Noon Consultants, experience in architectural design and digital innovation. He holds a Bachelor's degree in Architecture from Al Yamamah University and has been with the firm for two years, contributing to a range of residential and commercial projects. Throughout his career, he has combined architectural expertise with advanced digital tools, focusing on design development, visualization, and integrating AI-driven solutions into the design process. He plays a key role in enhancing design efficiency and delivering innovative, high-quality outcomes aligned with project requirements.",
+        "role": "Lead Architect and AI Specialist",
+        "description": "Lead Architect and AI Specialist at Noon Consultants, with experience in architectural design and digital innovation. He holds a Bachelor's degree in Architecture from Al Yamamah University and has been with the firm for two years, contributing to a range of residential and commercial projects. Throughout his career, he has combined architectural expertise with advanced digital tools, focusing on design development, visualization, and integrating AI-driven solutions into the design process. He plays a key role in enhancing design efficiency and delivering innovative, high-quality outcomes aligned with project requirements.",
         "image": "/team/ALWALID-ALBAIK.webp"
       },
       {
         "name": "FARIS ALAZIM",
         "role": "Design Manager",
-        "description": "A Design Manager and Interior Architect with solid experience leading design workflows across residential, commercial, and exhibition projects. Skilled in guiding teams, driving concept development, producing high-fidelity visualizations, and delivering precise technical documentation. Adept at coordinating with stakeholders, contractors, and suppliers to ensure seamless execution from concept to final delivery.",
+        "description": "A Design Manager and Interior Architect with solid experience leading design workflows across residential, commercial, and exhibition projects. Skilled in guiding teams, driving concept development, producing high-fidelity visualizations, and delivering precise technical documentation. Adept at coordinating with stakeholders, contractors, and suppliers to ensure seamless execution from concept to final delivery. Has managed and designed projects across residential, commercial, and events sectors.",
         "image": "/team/فارس العظم.jpeg"
+      },
+      {
+        "name": "ZAINAB BASHA",
+        "role": "Lead Architect and BIM Coordinator",
+        "description": "A Lead Architect and BIM Coordinator with 6 years of experience spanning architecture, interior, and landscape design. She drives design workflows and BIM integration from early concept through to site execution across luxury residential, commercial, and institutional projects. Grounded in sustainability and well-versed in Saudi building regulations, she crafts sensory-rich spaces with a keen eye for materials, light, and texture. Adept at leading multidisciplinary project coordination (MEP and structural), producing high-fidelity 3D visualizations, and delivering precise construction documentation to ensure seamless execution and client satisfaction.",
+        "image": "/team/Zainab-Basha.png"
       },
       {
         "name": "SALMAN ALSAIDI",
@@ -622,7 +628,7 @@
       {
         "name": "MAHMOUD ELASSAS",
         "role": "Senior Structural Engineer",
-        "description": "is a Senior Structural Engineer at Noon Consultants, experience in structural engineering and construction supervision. He holds a Bachelor's degree in Civil/Structural Engineering from Delta University, Egypt. Throughout his career, Mahmoud has been involved in supervising reinforced concrete works, site execution, and coordination across multidisciplinary teams. He plays a key role in ensuring that structural works are delivered in compliance with approved drawings, specifications, and safety standards, contributing to efficient and high-quality project delivery.",
+        "description": "is a Senior Structural Engineer at Noon Consultants, with experience in structural engineering and construction supervision. He holds a Bachelor's degree in Civil/Structural Engineering from Delta University, Egypt. Throughout his career, Mahmoud has been involved in supervising reinforced concrete works, site execution, and coordination across multidisciplinary teams. He plays a key role in ensuring that structural works are delivered in compliance with approved drawings, specifications, and safety standards, contributing to efficient and high-quality project delivery.",
         "image": "/team/MAHMOUD-ELASSAS.webp"
       },
       {
@@ -646,8 +652,20 @@
       {
         "name": "BASHIR ALSABRI",
         "role": "Mechanical Engineer",
-        "description": "is a Mechanical Engineer at Noon Consultants, experience in MEP systems, specializing in HVAC, firefighting, and plumbing. He holds a Bachelor's degree in Mechanical Engineering from Sana'a University. Throughout his career, Basheer has been involved in both technical office and site operations, including design development, shop drawings, BOQs, and project coordination. He has worked in compliance with international and local standards such as ASHRAE, NFPA, and the Saudi Building Code, contributing to efficient and high-quality project execution.",
+        "description": "is a Mechanical Engineer at Noon Consultants, with experience in MEP systems, specializing in HVAC, firefighting, and plumbing. He holds a Bachelor's degree in Mechanical Engineering from Sana'a University. Throughout his career, Basheer has been involved in both technical office and site operations, including design development, shop drawings, BOQs, and project coordination. He has worked in compliance with international and local standards such as ASHRAE, NFPA, and the Saudi Building Code, contributing to efficient and high-quality project execution.",
         "image": "/team/BASHIR-ALSABRI.webp"
+      },
+      {
+        "name": "HUSSAM ALSAYED",
+        "role": "Project Coordinator",
+        "description": "A Project Coordinator with strong organizational and analytical skills, bringing a systematic and precise approach to task management and workflow coordination. Focuses on tracking project milestones, organizing resources, and facilitating clear communication across multidisciplinary teams to ensure smooth operations. With a keen attention to detail, high adaptability, and proactive problem-solving abilities, he provides essential administrative and technical support to drive team efficiency and successful project delivery.",
+        "image": ""
+      },
+      {
+        "name": "TASSNEM AL-ASDI",
+        "role": "Lead Architect",
+        "description": "Lead Architect with over 6 years of experience in architectural design, 3D visualization, landscape design, and BIM workflows in Riyadh. Holds a B.Sc. in Architectural Engineering from Prince Sultan University (a private university). Leads the architectural design team and oversees detailed drawings for residential and commercial projects, while heading tender processes including pricing, technical writing, cost estimation, and subcontractor management. Proficient in Revit, AutoCAD, SketchUp, Lumion, Rhino, and Grasshopper.",
+        "image": ""
       },
       {
         "name": "AYAH ALTHUNAYAN",
@@ -668,9 +686,141 @@
         "image": ""
       },
       {
-        "name": "TASSNEM AL-ASDI",
+        "name": "SALEEM SHQAIR",
+        "role": "MEP Engineering Manager and Technical Director",
+        "description": "MEP Engineering Manager and Technical Director with over 18 years of leadership experience in electrical design, BIM coordination, and the delivery of large-scale projects across Saudi Arabia and the GCC region. Possesses a proven track record in managing multidisciplinary MEP operations and facilitating seamless communication among main contractors, consultants, and stakeholders to ensure the highest quality standards. Highly skilled in overseeing complex infrastructure, healthcare, hospitality, and transit projects (such as the Riyadh Metro), ensuring all engineering deliverables strictly comply with project specifications and applicable codes while effectively driving project milestones.",
+        "image": ""
+      },
+      {
+        "name": "MOHAMED RASHED",
+        "role": "Senior Electrical Engineer",
+        "description": "A Senior Electrical Engineer with over 8 years of experience in electrical design, BIM coordination, and MEP systems across commercial, healthcare, and infrastructure projects in Saudi Arabia. Adept at leading detailed electrical designs, including lighting, power distribution, low current, and fire alarm systems. Skilled in developing 3D MEP models using Autodesk Revit, performing clash detection with Navisworks, and conducting comprehensive electrical calculations (such as voltage drop and load estimation) to ensure design compliance with applicable codes.",
+        "image": ""
+      },
+      {
+        "name": "MOHAMED AZAB",
+        "role": "Senior Mechanical Engineer",
+        "description": "A Senior Mechanical Engineer with over 8 years of extensive experience in MEP design and BIM coordination for large-scale, complex projects across Saudi Arabia and the UAE. Leads the design of HVAC, plumbing, drainage, and complete firefighting systems, including advanced hydraulic and cooling load calculations. Highly proficient in developing fully coordinated 3D BIM models and executing clash detection using Navisworks and Revizto, ensuring seamless integration of mechanical systems with architectural and structural disciplines.",
+        "image": ""
+      },
+      {
+        "name": "AHMED ABU SOUD",
+        "role": "Senior Structural Engineer",
+        "description": "Senior Structural Engineer with over 11 years of experience in structural design and analysis across commercial, residential, high-rise, and healthcare projects in Saudi Arabia, the UAE, and Iraq. Proven expertise in designing reinforced concrete and advanced structural systems for large-scale, complex building typologies. Highly proficient in utilizing industry-leading software (such as ETABS, SAFE, SAP2000, and STAAD Pro) to perform rigorous structural analysis, alongside effectively coordinating with architectural and MEP teams to ensure seamless design integration and strict code compliance.",
+        "image": ""
+      },
+      {
+        "name": "RAMI AHMAD",
+        "role": "Electrical BIM Engineer",
+        "description": "Electrical BIM Engineer with over 3 years of experience in electrical design, BIM modeling, and MEP coordination for commercial, educational, and residential projects. Skilled in preparing electrical calculations, including load estimation, lighting design, and low current systems, as well as developing coordinated 3D models and shop drawings. Proficient in using Navisworks for clash detection and resolving multidisciplinary coordination issues to ensure all deliverables comply with international design standards and client specifications.",
+        "image": ""
+      },
+      {
+        "name": "YOUSEF MAHMOUD",
+        "role": "Electrical BIM Engineer",
+        "description": "Electrical BIM Engineer with over 6 years of experience in BIM modeling and design across commercial, healthcare, and infrastructure projects in Saudi Arabia. Specialized in delivering fully coordinated 3D MEP models, comprehensive lighting calculations, and shop drawings for complex building structures and hospital projects. Experienced in performing clash detection in Navisworks and supporting detailed electrical design calculations to guarantee compliance with applicable codes and project specifications.",
+        "image": ""
+      },
+      {
+        "name": "NIDAL QASEM",
+        "role": "Electrical BIM Engineer",
+        "description": "An Electrical BIM Engineer with over 4 years of experience delivering electrical design and BIM modeling for commercial, healthcare, and hospitality projects across the GCC region. Experienced in developing fully coordinated 3D electrical models, conducting lighting calculations, and producing accurate shop drawings. Proficient in utilizing Autodesk Revit and Navisworks to perform clash detection and coordinate electrical layouts with mechanical, civil, and structural teams, ensuring strict compliance with international design standards.",
+        "image": ""
+      },
+      {
+        "name": "KAREEM SALEH",
+        "role": "Electrical BIM Engineer",
+        "description": "Electrical BIM Engineer with over 5 years of experience in electrical design and BIM modeling across commercial, healthcare, and residential projects in Jordan and Saudi Arabia. Proficient in producing coordinated 3D models, shop drawings, and executing electrical calculations in compliance with international engineering standards. Highly skilled in utilizing software such as Autodesk Revit (MEP), Navisworks, and DIALux to perform clash detection and resolve multidisciplinary MEP coordination issues effectively.",
+        "image": ""
+      },
+      {
+        "name": "AHMED KHWALDEH",
+        "role": "Mechanical BIM Engineer",
+        "description": "Mechanical BIM Engineer with over 3 years of experience in mechanical design and BIM modeling for large-scale commercial and infrastructure megaprojects in Saudi Arabia. Highly capable in designing HVAC and firefighting systems, conducting cooling load calculations, and executing precise pipe sizing. Proficient in utilizing Revit MEP and Navisworks to generate accurate shop drawings and manage clash detection, ensuring all mechanical deliverables strictly align with project specifications and applicable codes.",
+        "image": ""
+      },
+      {
+        "name": "OMER NASER",
+        "role": "Mechanical BIM Engineer",
+        "description": "Mechanical BIM Engineer with over 3 years of experience in mechanical BIM modeling and coordination across commercial, healthcare, and infrastructure projects in Saudi Arabia. Specialized in designing and modeling HVAC and firefighting systems, as well as producing precise shop drawings. Adept at cross-disciplinary coordination with structural and electrical teams using Navisworks for clash detection, ensuring the delivery of integrated, conflict-free designs that comply with industry standards.",
+        "image": ""
+      },
+      {
+        "name": "ABDULLAH FUDA",
+        "role": "Mechanical BIM Engineer",
+        "description": "Mechanical BIM Engineer with over 4 years of experience in mechanical design and BIM coordination across large-scale infrastructure, healthcare, stadium, and hospitality projects in Saudi Arabia and Qatar. Excels at delivering fully coordinated 3D models for HVAC, plumbing, drainage, and firefighting systems. Brings specialized value through preparing COBie parameters for asset handover and supporting 4D scheduling activities, alongside adept clash detection via Navisworks to guarantee seamless design integration and clash-free project delivery.",
+        "image": ""
+      },
+      {
+        "name": "RAMI BARAKAT",
+        "role": "Mechanical BIM Engineer",
+        "description": "Mechanical BIM Engineer with over 2 years of experience in mechanical design and BIM coordination for commercial and mixed-use projects in Saudi Arabia. Proficient in designing HVAC systems, executing mechanical calculations, and producing detailed shop drawings. Skilled in utilizing Revit MEP and Navisworks to perform clash detection and streamline MEP coordination, ensuring the delivery of accurate, conflict-free models that meet stringent project specifications.",
+        "image": ""
+      },
+      {
+        "name": "OMAR AL KURDI",
+        "role": "BIM Structural Engineer",
+        "description": "A BIM Structural Engineer with over 6 years of experience in structural BIM modeling and coordination across prestigious, large-scale projects in Saudi Arabia and the UAE, delivering for high-profile clients including NEOM and EMAAR. Excels in managing complex structural models and performing rigorous clash detection using Navisworks and BIM 360/ACC. Distinguished by his ability to utilize Dynamo scripting to automate repetitive modeling workflows and data extraction, thereby maximizing production efficiency and ensuring the delivery of precise, code-compliant shop drawings.",
+        "image": ""
+      },
+      {
+        "name": "TARIQ SAMARA",
+        "role": "BIM Structural Engineer",
+        "description": "A BIM Structural Engineer with over 5 years of experience in structural BIM modeling and coordination for commercial, healthcare, hospitality, and infrastructure projects across Saudi Arabia, Qatar, and the GCC region. Adept at delivering fully coordinated structural models and managing meticulous clash detection using Navisworks and BIM 360/ACC to ensure cross-disciplinary integration. Combines analytical skills in ETABS with advanced automation capabilities via Dynamo to enhance modeling efficiency, producing highly accurate shop drawings that drive the success of complex, large-scale projects.",
+        "image": ""
+      },
+      {
+        "name": "FIRAS ADEL",
+        "role": "BIM Structural Engineer",
+        "description": "A BIM Structural Engineer with over 3 years of experience in structural BIM modeling and coordination for commercial, hospitality, and infrastructure projects in Saudi Arabia and Iraq. Skilled in developing fully coordinated 3D structural models and executing clash detection using Revit, Navisworks, and BIM 360/ACC to resolve complex design conflicts. Provides comprehensive support from concept to construction by producing accurate shop drawings and ensuring all deliverables strictly adhere to project requirements and industry standards.",
+        "image": ""
+      },
+      {
+        "name": "ALAA ABDULLAH",
+        "role": "Senior Civil Engineer",
+        "description": "A Senior Civil Engineer with over 8 years of experience in civil and structural engineering, site management, and construction supervision across commercial, industrial, medical, and residential projects in Saudi Arabia. Demonstrates extensive expertise in overseeing structural works, conducting site investigations, and managing shoring systems, coupled with strong capabilities in tendering, bidding, and contract auditing. Proficient in utilizing AutoCAD, Primavera P6, MS Project, and Prokon to drive project planning and execution, ensuring all site activities strictly comply with approved drawings, specifications, and the highest standards of engineering quality.",
+        "image": ""
+      },
+      {
+        "name": "LAITH AHMED",
+        "role": "Architectural Team Leader",
+        "description": "Architectural Team Leader with extensive experience in guiding architectural vision and managing design teams to deliver exceptional projects. Oversees the project lifecycle from initial concept to execution drawings, focusing on cross-disciplinary coordination, quality assurance, and meeting client requirements to deliver designs that seamlessly blend aesthetics and functionality.",
+        "image": ""
+      },
+      {
+        "name": "AHMED RASMI",
+        "role": "Senior Architect",
+        "description": "A Senior Architect with over 9 years of experience, advanced expertise in developing innovative architectural concepts and resolving complex design details. Leads architectural coordination and the preparation of precise drawings, with a strong commitment to sustainable design standards and building codes, ensuring the accurate translation of the design vision into reality.",
+        "image": ""
+      },
+      {
+        "name": "ABDULRAHMAN DIBSE",
         "role": "Architect",
-        "description": "",
+        "description": "A creative Architect with over 5 years of experience, focused on efficiently developing architectural designs and spatial planning. Excels in producing accurate architectural drawings and 3D models, with a keen eye for detail to ensure design compliance with functional, aesthetic, and project-specific requirements.",
+        "image": ""
+      },
+      {
+        "name": "AHMED ALI",
+        "role": "BIM Manager",
+        "description": "A BIM Manager with over 10 years of experience leading digital transformation strategies and establishing BIM standards across all engineering disciplines (Architectural, Structural, and MEP). Oversees model quality, advanced clash management, and workflow development to ensure data integration and project delivery with maximum accuracy and operational efficiency.",
+        "image": ""
+      },
+      {
+        "name": "ADNAN ALOTAIBI",
+        "role": "Infrastructure Team Leader",
+        "description": "Infrastructure Team Leader with 8 years of experience who manages and directs the design and coordination of major infrastructure projects. Oversees comprehensive utility network planning and site development, ensuring strict compliance with engineering standards, adopted codes, and sustainability requirements to guarantee long-term project success.",
+        "image": ""
+      },
+      {
+        "name": "NAJEEB SHAQURI",
+        "role": "Senior Infrastructure Engineer",
+        "description": "A Senior Infrastructure Engineer with 11 years of experience, advanced expertise in designing and analyzing utility networks and complex site developments. Leads the provision of innovative engineering solutions to field challenges and oversees execution drawings to ensure highly efficient infrastructure integration with other disciplines.",
+        "image": ""
+      },
+      {
+        "name": "QOSAI ZRAQAT",
+        "role": "Infrastructure Engineer",
+        "description": "An Infrastructure Engineer specialized in the design and coordination of utility networks and site development works. Meticulously integrates systems and develops engineering drawings to deliver efficient, sustainable infrastructure solutions that support project needs and comply with industry standards.",
         "image": ""
       },
       {
