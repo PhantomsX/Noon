@@ -123,6 +123,17 @@ export async function GET() {
       }
     }
 
+    // Swap "healthcare-mayobelle-clinic" and "hospitality-al-ammariya-desert-club-resorts"
+    const idx1 = projects.findIndex((p) => p.id === "healthcare-mayobelle-clinic");
+    const idx2 = projects.findIndex(
+      (p) => p.id === "hospitality-al-ammariya-desert-club-resorts",
+    );
+    if (idx1 !== -1 && idx2 !== -1) {
+      const temp = projects[idx1];
+      projects[idx1] = projects[idx2];
+      projects[idx2] = temp;
+    }
+
     return NextResponse.json({ projects });
   } catch {
     return NextResponse.json(
