@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { readdir } from "node:fs/promises";
 import path from "node:path";
+import projectsManifest from "@/data/projects-manifest.json";
 
 export const runtime = "nodejs";
 
@@ -30,7 +31,6 @@ type ProjectPayload = {
   scope: string;
 };
 
-
 const toSlug = (value: string) =>
   value
     .trim()
@@ -47,7 +47,8 @@ const toTitle = (value: string) =>
 
 const toPublicPath = (absolutePath: string) => {
   const relative = path.relative(path.join(process.cwd(), "public"), absolutePath);
-  return `/${relative.split(path.sep).join("/")}`;
+  const segments = relative.split(path.sep).map((segment) => encodeURIComponent(segment));
+  return `/${segments.join("/")}`;
 };
 
 const isImageFile = (fileName: string) =>
@@ -77,6 +78,8 @@ export async function GET() {
       const entries = await readdir(categoryPath, { withFileTypes: true });
 
       for (const entry of entries) {
+        if (entry.name === ".DS_Store") continue;
+
         if (entry.isDirectory()) {
           const projectTitle = toTitle(entry.name);
           const projectSlug = toSlug(projectTitle);
@@ -123,6 +126,10 @@ export async function GET() {
       }
     }
 
+    if (projects.length === 0) {
+      return NextResponse.json({ projects: projectsManifest });
+    }
+
     // Swap "healthcare-mayobelle-clinic" and "hospitality-al-ammariya-desert-club-resorts"
     const idx1 = projects.findIndex((p) => p.id === "healthcare-mayobelle-clinic");
     const idx2 = projects.findIndex(
@@ -136,9 +143,6 @@ export async function GET() {
 
     return NextResponse.json({ projects });
   } catch {
-    return NextResponse.json(
-      { projects: [], error: "Failed to load projects" },
-      { status: 500 },
-    );
+    return NextResponse.json({ projects: projectsManifest });
   }
 }

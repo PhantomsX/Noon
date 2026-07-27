@@ -1,0 +1,933 @@
+[
+  {
+    "id": "hospitality-al-ammariya-desert-club-resorts",
+    "title": "Al ammariya Desert Club Resorts",
+    "category": "hospitality",
+    "categoryLabel": "Hospitality",
+    "type": "hospitality",
+    "image": "/projects/Hospitality/Al-ammariya%20Desert%20Club%20Resorts/openart-image_1776153905171_d5c47bfa_1776153905205_f237b442.webp",
+    "images": [
+      "/projects/Hospitality/Al-ammariya%20Desert%20Club%20Resorts/openart-image_1776153905171_d5c47bfa_1776153905205_f237b442.webp",
+      "/projects/Hospitality/Al-ammariya%20Desert%20Club%20Resorts/openart-image_1776153990623_58a780f7_1776153990793_54cbb231.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "healthcare-pandemic-emergency-hospital",
+    "title": "PANDEMIC EMERGENCY HOSPITAL",
+    "category": "healthcare",
+    "categoryLabel": "HealthCare",
+    "type": "healthcare",
+    "image": "/projects/HealthCare/PANDEMIC%20EMERGENCY%20HOSPITAL.webp",
+    "images": [
+      "/projects/HealthCare/PANDEMIC%20EMERGENCY%20HOSPITAL.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "hospitality-al-ammariya-beverly-hills",
+    "title": "Al Ammariya Beverly hills",
+    "category": "hospitality",
+    "categoryLabel": "Hospitality",
+    "type": "hospitality",
+    "image": "/projects/Hospitality/Al-Ammariya%20Beverly%20hills/openart-image_1775486615873_b46726ab_1775486615959_0798d435%20(1).webp",
+    "images": [
+      "/projects/Hospitality/Al-Ammariya%20Beverly%20hills/openart-image_1775486615873_b46726ab_1775486615959_0798d435%20(1).webp",
+      "/projects/Hospitality/Al-Ammariya%20Beverly%20hills/openart-image_1775486781199_3ede26be_1775486781333_3c090195.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "healthcare-mayobelle-clinic",
+    "title": "Mayobelle Clinic",
+    "category": "healthcare",
+    "categoryLabel": "HealthCare",
+    "type": "healthcare",
+    "image": "/projects/HealthCare/Mayobelle%20Clinic/74533ccd32b34ecf98aa7d10842c1508.png",
+    "images": [
+      "/projects/HealthCare/Mayobelle%20Clinic/74533ccd32b34ecf98aa7d10842c1508.png",
+      "/projects/HealthCare/Mayobelle%20Clinic/c225dbc432644d1fa3618703c2f3d11a.png"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "hospitality-dirab-resort",
+    "title": "Dirab resort",
+    "category": "hospitality",
+    "categoryLabel": "Hospitality",
+    "type": "hospitality",
+    "image": "/projects/Hospitality/Dirab%20resort.webp",
+    "images": [
+      "/projects/Hospitality/Dirab%20resort.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "hospitality-gayal-beach",
+    "title": "Gayal Beach",
+    "category": "hospitality",
+    "categoryLabel": "Hospitality",
+    "type": "hospitality",
+    "image": "/projects/Hospitality/Gayal%20Beach/openart-image_1776381099080_f25f1975_1776381099185_66157bf1.webp",
+    "images": [
+      "/projects/Hospitality/Gayal%20Beach/openart-image_1776381099080_f25f1975_1776381099185_66157bf1.webp",
+      "/projects/Hospitality/Gayal%20Beach/openart-image_1776381840686_35d70222_1776381840923_e78015b4.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "hospitality-italalat-resort",
+    "title": "Italalat Resort",
+    "category": "hospitality",
+    "categoryLabel": "Hospitality",
+    "type": "hospitality",
+    "image": "/projects/Hospitality/Italalat%20Resort.webp",
+    "images": [
+      "/projects/Hospitality/Italalat%20Resort.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "hospitality-maj-resort",
+    "title": "MAJ RESORT",
+    "category": "hospitality",
+    "categoryLabel": "Hospitality",
+    "type": "hospitality",
+    "image": "/projects/Hospitality/MAJ%20RESORT.webp",
+    "images": [
+      "/projects/Hospitality/MAJ%20RESORT.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "offices-al-shubaili-offices",
+    "title": "Al Shubaili Offices",
+    "category": "offices",
+    "categoryLabel": "Offices",
+    "type": "offices",
+    "image": "/projects/Offices/Al-Shubaili%20Offices/openart-b5841b1f609e4e23a8959a15dc81aad6_raw_1775995446242_5b9c91ac.png",
+    "images": [
+      "/projects/Offices/Al-Shubaili%20Offices/openart-b5841b1f609e4e23a8959a15dc81aad6_raw_1775995446242_5b9c91ac.png"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "offices-apex-park",
+    "title": "Apex Park",
+    "category": "offices",
+    "categoryLabel": "Offices",
+    "type": "offices",
+    "image": "/projects/Offices/Apex%20Park/openart-image_1774957167971_2e23540f_1774957168046_bcc7487f.png",
+    "images": [
+      "/projects/Offices/Apex%20Park/openart-image_1774957167971_2e23540f_1774957168046_bcc7487f.png"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "offices-bin-thnian-offices",
+    "title": "BIN THNIAN OFFICES",
+    "category": "offices",
+    "categoryLabel": "Offices",
+    "type": "offices",
+    "image": "/projects/Offices/BIN-THNIAN%20OFFICES/openart-image_1776855036155_a076e568_1776855036215_3e289009.webp",
+    "images": [
+      "/projects/Offices/BIN-THNIAN%20OFFICES/openart-image_1776855036155_a076e568_1776855036215_3e289009.webp",
+      "/projects/Offices/BIN-THNIAN%20OFFICES/openart-image_1776855130861_5e40de43_1776855131045_74922372.webp",
+      "/projects/Offices/BIN-THNIAN%20OFFICES/openart-image_1776855220427_b6c7fe32_1776855220452_80c7fa53.webp",
+      "/projects/Offices/BIN-THNIAN%20OFFICES/openart-image_1776855380334_8f69d98d_1776855380631_3a0a3752.webp",
+      "/projects/Offices/BIN-THNIAN%20OFFICES/openart-image_1776855454595_e9153f88_1776855454695_0e377f86.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "offices-bin-dayel-hq-office",
+    "title": "Bin Dayel HQ Office",
+    "category": "offices",
+    "categoryLabel": "Offices",
+    "type": "offices",
+    "image": "/projects/Offices/Bin%20Dayel%20HQ%20Office/image.png",
+    "images": [
+      "/projects/Offices/Bin%20Dayel%20HQ%20Office/image.png",
+      "/projects/Offices/Bin%20Dayel%20HQ%20Office/image1.png",
+      "/projects/Offices/Bin%20Dayel%20HQ%20Office/openart-image_1776688695681_fbc77619_1776688695718_3133c2ae.png"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "offices-bin-saedan",
+    "title": "Bin Saedan",
+    "category": "offices",
+    "categoryLabel": "Offices",
+    "type": "offices",
+    "image": "/projects/Offices/Bin%20Saedan/717973887480837%20(1).webp",
+    "images": [
+      "/projects/Offices/Bin%20Saedan/717973887480837%20(1).webp",
+      "/projects/Offices/Bin%20Saedan/717976192161221%20(1).webp",
+      "/projects/Offices/Bin%20Saedan/717982878812869.webp",
+      "/projects/Offices/Bin%20Saedan/718246672102533.webp",
+      "/projects/Offices/Bin%20Saedan/718253990958597.webp",
+      "/projects/Offices/Bin%20Saedan/718270642603781.webp",
+      "/projects/Offices/Bin%20Saedan/718271853675525.webp",
+      "/projects/Offices/Bin%20Saedan/718279864661381.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "offices-noon-hq-office",
+    "title": "Noon HQ Office",
+    "category": "offices",
+    "categoryLabel": "Offices",
+    "type": "offices",
+    "image": "/projects/Offices/Noon%20HQ%20Office/1Scene%201_1.webp",
+    "images": [
+      "/projects/Offices/Noon%20HQ%20Office/1Scene%201_1.webp",
+      "/projects/Offices/Noon%20HQ%20Office/1Scene%2012_1.webp",
+      "/projects/Offices/Noon%20HQ%20Office/1Scene%2014_1.webp",
+      "/projects/Offices/Noon%20HQ%20Office/1Scene%2015_1.webp",
+      "/projects/Offices/Noon%20HQ%20Office/1Scene%2016_1.webp",
+      "/projects/Offices/Noon%20HQ%20Office/1Scene%202_1.webp",
+      "/projects/Offices/Noon%20HQ%20Office/1Scene%203_1.webp",
+      "/projects/Offices/Noon%20HQ%20Office/1Scene%205_1.webp",
+      "/projects/Offices/Noon%20HQ%20Office/1Scene%208_1.webp",
+      "/projects/Offices/Noon%20HQ%20Office/Scene%2017.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "offices-the-bloom-offices",
+    "title": "The Bloom Offices",
+    "category": "offices",
+    "categoryLabel": "Offices",
+    "type": "offices",
+    "image": "/projects/Offices/The%20Bloom%20Offices/image-1-clean.png",
+    "images": [
+      "/projects/Offices/The%20Bloom%20Offices/image-1-clean.png",
+      "/projects/Offices/The%20Bloom%20Offices/image-2-clean.png",
+      "/projects/Offices/The%20Bloom%20Offices/openart-image_1776854131567_18e81139_1776854131629_6c363d81.png",
+      "/projects/Offices/The%20Bloom%20Offices/openart-image_1776854274752_c4ec902c_1776854275269_ea2486bf.png"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "offices-unec-office-hq",
+    "title": "UNEC OFFICE HQ",
+    "category": "offices",
+    "categoryLabel": "Offices",
+    "type": "offices",
+    "image": "/projects/Offices/UNEC%20OFFICE%20HQ/openart-image_1776856062708_6c334844_1776856062738_77e872c7.webp",
+    "images": [
+      "/projects/Offices/UNEC%20OFFICE%20HQ/openart-image_1776856062708_6c334844_1776856062738_77e872c7.webp",
+      "/projects/Offices/UNEC%20OFFICE%20HQ/openart-image_1776856127523_a93af29e_1776856127730_76a094e3.webp",
+      "/projects/Offices/UNEC%20OFFICE%20HQ/openart-image_1776856162227_344296a7_1776856162316_f5fcaafc.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "religios-al-jumaah-mosque",
+    "title": "AL JUMAAH MOSQUE",
+    "category": "religios",
+    "categoryLabel": "Religios",
+    "type": "religios",
+    "image": "/projects/Religios/AL-JUMAAH%20MOSQUE/openart-image_1776846641495_90dec918_1776846641522_f832ff71.webp",
+    "images": [
+      "/projects/Religios/AL-JUMAAH%20MOSQUE/openart-image_1776846641495_90dec918_1776846641522_f832ff71.webp",
+      "/projects/Religios/AL-JUMAAH%20MOSQUE/openart-image_1776846772417_735beda4_1776846772472_e8c5248d.webp",
+      "/projects/Religios/AL-JUMAAH%20MOSQUE/openart-image_1776848407381_e4315ada_1776848407426_9c479c8d.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "religios-alhazm-mosque",
+    "title": "ALHAZM MOSQUE",
+    "category": "religios",
+    "categoryLabel": "Religios",
+    "type": "religios",
+    "image": "/projects/Religios/ALHAZM%20MOSQUE/openart-image_1776850360846_2967de76_1776850361408_65995ea1.webp",
+    "images": [
+      "/projects/Religios/ALHAZM%20MOSQUE/openart-image_1776850360846_2967de76_1776850361408_65995ea1.webp",
+      "/projects/Religios/ALHAZM%20MOSQUE/openart-image_1776850708283_5ac5da13_1776850708764_afbe97eb.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "religios-alriyadh-mosque",
+    "title": "ALRIYADH MOSQUE",
+    "category": "religios",
+    "categoryLabel": "Religios",
+    "type": "religios",
+    "image": "/projects/Religios/ALRIYADH%20MOSQUE/openart-image_1776851358219_8a26eed3_1776851358252_ec575641.webp",
+    "images": [
+      "/projects/Religios/ALRIYADH%20MOSQUE/openart-image_1776851358219_8a26eed3_1776851358252_ec575641.webp",
+      "/projects/Religios/ALRIYADH%20MOSQUE/openart-image_1776851560696_7c3e2608_1776851560721_04fe3a50.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "religios-al-nour-mosque",
+    "title": "Al Nour Mosque",
+    "category": "religios",
+    "categoryLabel": "Religios",
+    "type": "religios",
+    "image": "/projects/Religios/Al-Nour%20Mosque/09.jpg",
+    "images": [
+      "/projects/Religios/Al-Nour%20Mosque/09.jpg",
+      "/projects/Religios/Al-Nour%20Mosque/10.jpg",
+      "/projects/Religios/Al-Nour%20Mosque/12.jpg",
+      "/projects/Religios/Al-Nour%20Mosque/14.jpg",
+      "/projects/Religios/Al-Nour%20Mosque/Copy%20of%20Value%20Engineering_.png",
+      "/projects/Religios/Al-Nour%20Mosque/openart-image_1775385477819_4106f77c_1775385477879_ec9e76cd.png"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "religios-alsharqah-mosque-3",
+    "title": "Alsharqah mosque 3",
+    "category": "religios",
+    "categoryLabel": "Religios",
+    "type": "religios",
+    "image": "/projects/Religios/Alsharqah%20mosque%203/openart-image_1776844954646_6dfe3edd_1776844954720_b386fff4.webp",
+    "images": [
+      "/projects/Religios/Alsharqah%20mosque%203/openart-image_1776844954646_6dfe3edd_1776844954720_b386fff4.webp",
+      "/projects/Religios/Alsharqah%20mosque%203/openart-image_1776845357761_9bd5c190_1776845357824_e95f91da.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "religios-asifat-alhzam-mosque",
+    "title": "Asifat alhzam mosque",
+    "category": "religios",
+    "categoryLabel": "Religios",
+    "type": "religios",
+    "image": "/projects/Religios/Asifat%20alhzam%20mosque/openart-image_1776853516486_48e03939_1776853516579_85368e93.webp",
+    "images": [
+      "/projects/Religios/Asifat%20alhzam%20mosque/openart-image_1776853516486_48e03939_1776853516579_85368e93.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "religios-borma-mosque",
+    "title": "Borma Mosque",
+    "category": "religios",
+    "categoryLabel": "Religios",
+    "type": "religios",
+    "image": "/projects/Religios/Borma%20Mosque/openart-image_1776839867195_7ab0ad69_1776839867495_08c0e9b1.webp",
+    "images": [
+      "/projects/Religios/Borma%20Mosque/openart-image_1776839867195_7ab0ad69_1776839867495_08c0e9b1.webp",
+      "/projects/Religios/Borma%20Mosque/openart-image_1776840047315_a66e475a_1776840047499_c3107a6e.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "religios-el-rayan-mosque",
+    "title": "El Rayan Mosque",
+    "category": "religios",
+    "categoryLabel": "Religios",
+    "type": "religios",
+    "image": "/projects/Religios/El-Rayan%20Mosque/openart-image_1776843837404_567cdf51_1776843837451_e1f1d977.webp",
+    "images": [
+      "/projects/Religios/El-Rayan%20Mosque/openart-image_1776843837404_567cdf51_1776843837451_e1f1d977.webp",
+      "/projects/Religios/El-Rayan%20Mosque/openart-image_1776844163041_2da8b58f_1776844163072_9a0c78e8.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "religios-hafsa-bint-omar",
+    "title": "Hafsa bint omar",
+    "category": "religios",
+    "categoryLabel": "Religios",
+    "type": "religios",
+    "image": "/projects/Religios/Hafsa%20bint%20omar/openart-image_1776841750937_7a02ebf3_1776841751082_5d15ba56.webp",
+    "images": [
+      "/projects/Religios/Hafsa%20bint%20omar/openart-image_1776841750937_7a02ebf3_1776841751082_5d15ba56.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "religios-jadeel-mosque",
+    "title": "Jadeel Mosque",
+    "category": "religios",
+    "categoryLabel": "Religios",
+    "type": "religios",
+    "image": "/projects/Religios/Jadeel%20Mosque/openart-image_1776853074733_410e6b67_1776853074825_43b08b42.webp",
+    "images": [
+      "/projects/Religios/Jadeel%20Mosque/openart-image_1776853074733_410e6b67_1776853074825_43b08b42.webp",
+      "/projects/Religios/Jadeel%20Mosque/openart-image_1776853151145_9717c740_1776853151229_644ce008.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "religios-om-elmoamnenn-mosque",
+    "title": "Om Elmoamnenn Mosque",
+    "category": "religios",
+    "categoryLabel": "Religios",
+    "type": "religios",
+    "image": "/projects/Religios/Om%20Elmoamnenn%20Mosque/openart-image_1776842251131_75496411_1776842251181_fa3d92b7.webp",
+    "images": [
+      "/projects/Religios/Om%20Elmoamnenn%20Mosque/openart-image_1776842251131_75496411_1776842251181_fa3d92b7.webp",
+      "/projects/Religios/Om%20Elmoamnenn%20Mosque/openart-image_1776842663242_9a6120a5_1776842663340_aa974302.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "religios-sadeer-mosque",
+    "title": "SADEER MOSQUE",
+    "category": "religios",
+    "categoryLabel": "Religios",
+    "type": "religios",
+    "image": "/projects/Religios/SADEER%20MOSQUE/openart-image_1776849381600_b33f7a4b_1776849381710_29b1dedc.webp",
+    "images": [
+      "/projects/Religios/SADEER%20MOSQUE/openart-image_1776849381600_b33f7a4b_1776849381710_29b1dedc.webp",
+      "/projects/Religios/SADEER%20MOSQUE/openart-image_1776849717134_2b191e96_1776849717242_7f8a8ef2.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "residential-alaarid-village",
+    "title": "ALAARID VILLAGE",
+    "category": "residential",
+    "categoryLabel": "Residential",
+    "type": "residential",
+    "image": "/projects/Residential/ALAARID%20VILLAGE/openart-image_1776770107469_a3f89381_1776770107560_9feef68d.webp",
+    "images": [
+      "/projects/Residential/ALAARID%20VILLAGE/openart-image_1776770107469_a3f89381_1776770107560_9feef68d.webp",
+      "/projects/Residential/ALAARID%20VILLAGE/openart-image_1776770660088_f5e749e9_1776770660125_a1fd0cf2.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "residential-al-ammriya-resorts-palaces",
+    "title": "Al Ammriya resorts & palaces",
+    "category": "residential",
+    "categoryLabel": "Residential",
+    "type": "residential",
+    "image": "/projects/Residential/Al-Ammriya%20resorts%20%26%20palaces/09jff.webp",
+    "images": [
+      "/projects/Residential/Al-Ammriya%20resorts%20%26%20palaces/09jff.webp",
+      "/projects/Residential/Al-Ammriya%20resorts%20%26%20palaces/2q.webp",
+      "/projects/Residential/Al-Ammriya%20resorts%20%26%20palaces/2weh.webp",
+      "/projects/Residential/Al-Ammriya%20resorts%20%26%20palaces/aa21.webp",
+      "/projects/Residential/Al-Ammriya%20resorts%20%26%20palaces/irurh.webp",
+      "/projects/Residential/Al-Ammriya%20resorts%20%26%20palaces/otjfnf.webp",
+      "/projects/Residential/Al-Ammriya%20resorts%20%26%20palaces/ryegb.webp",
+      "/projects/Residential/Al-Ammriya%20resorts%20%26%20palaces/uyvq.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "residential-boutique-apartments",
+    "title": "BOUTIQUE APARTMENTS",
+    "category": "residential",
+    "categoryLabel": "Residential",
+    "type": "residential",
+    "image": "/projects/Residential/BOUTIQUE%20APARTMENTS/%D8%A7%D8%A7.jpg",
+    "images": [
+      "/projects/Residential/BOUTIQUE%20APARTMENTS/%D8%A7%D8%A7.jpg",
+      "/projects/Residential/BOUTIQUE%20APARTMENTS/%D8%AD.jpg",
+      "/projects/Residential/BOUTIQUE%20APARTMENTS/%D8%AD%D8%AE%D8%B9.jpg",
+      "/projects/Residential/BOUTIQUE%20APARTMENTS/%D9%85%D9%88.jpg"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "residential-blossom-house-villa",
+    "title": "Blossom House Villa",
+    "category": "residential",
+    "categoryLabel": "Residential",
+    "type": "residential",
+    "image": "/projects/Residential/Blossom%20House%20Villa.png",
+    "images": [
+      "/projects/Residential/Blossom%20House%20Villa.png"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "residential-calm-palm-villa",
+    "title": "CALM PALM VILLA",
+    "category": "residential",
+    "categoryLabel": "Residential",
+    "type": "residential",
+    "image": "/projects/Residential/CALM%20PALM%20VILLA/Image(2).webp",
+    "images": [
+      "/projects/Residential/CALM%20PALM%20VILLA/Image(2).webp",
+      "/projects/Residential/CALM%20PALM%20VILLA/Image(3).webp",
+      "/projects/Residential/CALM%20PALM%20VILLA/Scene%2018(1).webp",
+      "/projects/Residential/CALM%20PALM%20VILLA/Scene%204.webp",
+      "/projects/Residential/CALM%20PALM%20VILLA/Scene%207.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "residential-casa-je",
+    "title": "Casa Je",
+    "category": "residential",
+    "categoryLabel": "Residential",
+    "type": "residential",
+    "image": "/projects/Residential/Casa%20Je/img-1.webp",
+    "images": [
+      "/projects/Residential/Casa%20Je/img-1.webp",
+      "/projects/Residential/Casa%20Je/img-2.webp",
+      "/projects/Residential/Casa%20Je/img-3.webp",
+      "/projects/Residential/Casa%20Je/img-4.webp",
+      "/projects/Residential/Casa%20Je/img-5.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "residential-harmony-villas",
+    "title": "Harmony villas",
+    "category": "residential",
+    "categoryLabel": "Residential",
+    "type": "residential",
+    "image": "/projects/Residential/Harmony%20villas/56207938-23a6-423a-818b-5018b3031705%20(1).png",
+    "images": [
+      "/projects/Residential/Harmony%20villas/56207938-23a6-423a-818b-5018b3031705%20(1).png",
+      "/projects/Residential/Harmony%20villas/6820ead2-a445-4a44-be21-a7e235004aee.png",
+      "/projects/Residential/Harmony%20villas/bf43ed5b-3b89-43b8-9ce7-11ce640e783e.png",
+      "/projects/Residential/Harmony%20villas/e881ed8d-865f-4865-b532-3f531807e68a.png",
+      "/projects/Residential/Harmony%20villas/Gemini_Generated_Image_2o03qh2o03qh2o03.png",
+      "/projects/Residential/Harmony%20villas/Gemini_Generated_Image_xcxzxzxcxzxzxcxz.png"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "residential-liven-penthouse",
+    "title": "Liven Penthouse",
+    "category": "residential",
+    "categoryLabel": "Residential",
+    "type": "residential",
+    "image": "/projects/Residential/Liven%20Penthouse/img-1.webp",
+    "images": [
+      "/projects/Residential/Liven%20Penthouse/img-1.webp",
+      "/projects/Residential/Liven%20Penthouse/img-2.webp",
+      "/projects/Residential/Liven%20Penthouse/img-3.webp",
+      "/projects/Residential/Liven%20Penthouse/img-4.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "residential-maison-villa",
+    "title": "Maison Villa",
+    "category": "residential",
+    "categoryLabel": "Residential",
+    "type": "residential",
+    "image": "/projects/Residential/Maison%20Villa/openart-image_1776375620759_0d7c86fe_1776375621019_1d8217fb.webp",
+    "images": [
+      "/projects/Residential/Maison%20Villa/openart-image_1776375620759_0d7c86fe_1776375621019_1d8217fb.webp",
+      "/projects/Residential/Maison%20Villa/openart-image_1776929965866_214f5f3e_1776929967210_b3a29662.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "residential-tangier-hills",
+    "title": "Tangier Hills",
+    "category": "residential",
+    "categoryLabel": "Residential",
+    "type": "residential",
+    "image": "/projects/Residential/Tangier%20Hills.webp",
+    "images": [
+      "/projects/Residential/Tangier%20Hills.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "residential-v-tower",
+    "title": "V TOWER",
+    "category": "residential",
+    "categoryLabel": "Residential",
+    "type": "residential",
+    "image": "/projects/Residential/V%20TOWER.webp",
+    "images": [
+      "/projects/Residential/V%20TOWER.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "commercial-al-balad-center-hotel",
+    "title": "Al Balad Center Hotel",
+    "category": "commercial",
+    "categoryLabel": "commercial",
+    "type": "commercial",
+    "image": "/projects/commercial/Al%20Balad%20Center%20Hotel/image.png",
+    "images": [
+      "/projects/commercial/Al%20Balad%20Center%20Hotel/image.png",
+      "/projects/commercial/Al%20Balad%20Center%20Hotel/openart-image_1776754949013_ca85db44_1776754949046_eae01876.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "commercial-al-nimr-downtown",
+    "title": "Al nimr downtown",
+    "category": "commercial",
+    "categoryLabel": "commercial",
+    "type": "commercial",
+    "image": "/projects/commercial/Al-nimr%20downtown/openart-6fc5bfd5866c42b2838e00508d948d3e_raw_1775975412588_3fc08047.png",
+    "images": [
+      "/projects/commercial/Al-nimr%20downtown/openart-6fc5bfd5866c42b2838e00508d948d3e_raw_1775975412588_3fc08047.png",
+      "/projects/commercial/Al-nimr%20downtown/openart-image_1775979861665_b3c5d73a_1775979861707_f9b7cb61.png"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "commercial-alnasser-stadium",
+    "title": "Alnasser Stadium",
+    "category": "commercial",
+    "categoryLabel": "commercial",
+    "type": "commercial",
+    "image": "/projects/commercial/Alnasser%20Stadium/openart-image_1776758421722_6518361f_1776758421892_df3bc303.webp",
+    "images": [
+      "/projects/commercial/Alnasser%20Stadium/openart-image_1776758421722_6518361f_1776758421892_df3bc303.webp",
+      "/projects/commercial/Alnasser%20Stadium/openart-image_1776758921296_928c93da_1776758921654_d130316f.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "commercial-althumama-strip-mall",
+    "title": "Althumama strip mall",
+    "category": "commercial",
+    "categoryLabel": "commercial",
+    "type": "commercial",
+    "image": "/projects/commercial/Althumama%20strip%20mall/kgrmelijyznvmrhs4mtx.webp",
+    "images": [
+      "/projects/commercial/Althumama%20strip%20mall/kgrmelijyznvmrhs4mtx.webp",
+      "/projects/commercial/Althumama%20strip%20mall/yourvytdxex4xqudkxah.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "commercial-boutique-hotel",
+    "title": "Boutique Hotel",
+    "category": "commercial",
+    "categoryLabel": "commercial",
+    "type": "commercial",
+    "image": "/projects/commercial/Boutique%20Hotel/hbflllesl0g8dilin0ts.webp",
+    "images": [
+      "/projects/commercial/Boutique%20Hotel/hbflllesl0g8dilin0ts.webp",
+      "/projects/commercial/Boutique%20Hotel/ng5ju9rt3qyia473jad3.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "commercial-bustan-plaza",
+    "title": "Bustan Plaza",
+    "category": "commercial",
+    "categoryLabel": "commercial",
+    "type": "commercial",
+    "image": "/projects/commercial/Bustan%20Plaza/hlh4hcvjvri0wwqh5erl.webp",
+    "images": [
+      "/projects/commercial/Bustan%20Plaza/hlh4hcvjvri0wwqh5erl.webp",
+      "/projects/commercial/Bustan%20Plaza/q4ju2ayyc20f25ctn3if.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "commercial-culture-center",
+    "title": "Culture Center",
+    "category": "commercial",
+    "categoryLabel": "commercial",
+    "type": "commercial",
+    "image": "/projects/commercial/Culture%20Center/pkov4pyswxjoa77slyok.webp",
+    "images": [
+      "/projects/commercial/Culture%20Center/pkov4pyswxjoa77slyok.webp",
+      "/projects/commercial/Culture%20Center/rfopw9zv1js2py79sjdd.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "commercial-gulf-saudi",
+    "title": "Gulf Saudi",
+    "category": "commercial",
+    "categoryLabel": "commercial",
+    "type": "commercial",
+    "image": "/projects/commercial/Gulf%20Saudi/vvcz4nmwzm9lj70mja5g.webp",
+    "images": [
+      "/projects/commercial/Gulf%20Saudi/vvcz4nmwzm9lj70mja5g.webp",
+      "/projects/commercial/Gulf%20Saudi/yuous1ek3xiauuntfrhs.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "commercial-kholud-hotel",
+    "title": "Kholud Hotel",
+    "category": "commercial",
+    "categoryLabel": "commercial",
+    "type": "commercial",
+    "image": "/projects/commercial/Kholud%20Hotel/akerzsw5eawz7uxsnqoh.webp",
+    "images": [
+      "/projects/commercial/Kholud%20Hotel/akerzsw5eawz7uxsnqoh.webp",
+      "/projects/commercial/Kholud%20Hotel/amt2cpfigwaog9rpypyk.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "mixed-use-al-olayan-axis-39",
+    "title": "Al Olayan Axis 39",
+    "category": "mixed-use",
+    "categoryLabel": "mixed use",
+    "type": "mixed-use",
+    "image": "/projects/mixed%20use/Al-Olayan%20Axis%2039/openart-image_1775462224308_4be731bf_1775462224440_0b729e80.webp",
+    "images": [
+      "/projects/mixed%20use/Al-Olayan%20Axis%2039/openart-image_1775462224308_4be731bf_1775462224440_0b729e80.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "mixed-use-banban-green-hills",
+    "title": "Banban green hills",
+    "category": "mixed-use",
+    "categoryLabel": "mixed use",
+    "type": "mixed-use",
+    "image": "/projects/mixed%20use/Banban%20green%20hills/openart-image_1775989924328_c3ed808d_1775989924427_5cbbfc56.webp",
+    "images": [
+      "/projects/mixed%20use/Banban%20green%20hills/openart-image_1775989924328_c3ed808d_1775989924427_5cbbfc56.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "mixed-use-business-pay",
+    "title": "Business pay",
+    "category": "mixed-use",
+    "categoryLabel": "mixed use",
+    "type": "mixed-use",
+    "image": "/projects/mixed%20use/Business%20pay.png",
+    "images": [
+      "/projects/mixed%20use/Business%20pay.png"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "mixed-use-jazan-gateway",
+    "title": "Jazan Gateway",
+    "category": "mixed-use",
+    "categoryLabel": "mixed use",
+    "type": "mixed-use",
+    "image": "/projects/mixed%20use/Jazan%20Gateway/openart-image_1775990439155_052000ba_1775990439209_a5b5f509.webp",
+    "images": [
+      "/projects/mixed%20use/Jazan%20Gateway/openart-image_1775990439155_052000ba_1775990439209_a5b5f509.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  },
+  {
+    "id": "mixed-use-the-grid",
+    "title": "The Grid",
+    "category": "mixed-use",
+    "categoryLabel": "mixed use",
+    "type": "mixed-use",
+    "image": "/projects/mixed%20use/The%20Grid.webp",
+    "images": [
+      "/projects/mixed%20use/The%20Grid.webp"
+    ],
+    "client": "",
+    "designedBy": "",
+    "statusDate": "",
+    "location": "",
+    "scope": ""
+  }
+]

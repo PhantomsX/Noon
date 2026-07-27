@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
   images: {
     qualities: [100, 75],
   },
+  outputFileTracingIncludes: {
+    "/api/projects": ["./public/projects/**/*"],
+  },
 };
 
 const withNextIntl = createNextIntlPlugin();
