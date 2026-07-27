@@ -398,7 +398,7 @@
     "hero": {
       "eyebrow": "Noon Consultants — KSA",
       "headline": "Rooted in Saudi Arabia.",
-      "headlineDim": "Reaching\u00a0\u00a0\u00a0for the world.",
+      "headlineDim": "Reaching   for the world.",
       "subtext": "From concept to completion — architecture, interior design, and urban planning, with experience spanning over 15 years.",
       "cta1": "View our work",
       "cta2": "Our story"
@@ -572,6 +572,12 @@
         "image": "/team/RANIA-MAHI.webp"
       },
       {
+        "name": "HUSSAM ALSAYED",
+        "role": "Project Coordinator",
+        "description": "A Project Coordinator with strong organizational and analytical skills, bringing a systematic and precise approach to task management and workflow coordination. Focuses on tracking project milestones, organizing resources, and facilitating clear communication across multidisciplinary teams to ensure smooth operations. With a keen attention to detail, high adaptability, and proactive problem-solving abilities, he provides essential administrative and technical support to drive team efficiency and successful project delivery.",
+        "image": "/team/hussam.jpg"
+      },
+      {
         "name": "MUDATHER ABUDRESS",
         "role": "Database Controller",
         "description": "is a Database Controller at Noon Consultants, bringing over 13 years of experience in data and document management. He holds a Bachelor's degree in Computer Science and joined the firm in 2015. Throughout his career, he has been responsible for managing and maintaining project data, ensuring accuracy, organization, and efficient information flow across teams. He plays a key role in supporting project operations through structured data control and coordination, contributing to the overall efficiency and reliability of project delivery.",
@@ -654,12 +660,6 @@
         "role": "Mechanical Engineer",
         "description": "is a Mechanical Engineer at Noon Consultants, with experience in MEP systems, specializing in HVAC, firefighting, and plumbing. He holds a Bachelor's degree in Mechanical Engineering from Sana'a University. Throughout his career, Basheer has been involved in both technical office and site operations, including design development, shop drawings, BOQs, and project coordination. He has worked in compliance with international and local standards such as ASHRAE, NFPA, and the Saudi Building Code, contributing to efficient and high-quality project execution.",
         "image": "/team/BASHIR-ALSABRI.webp"
-      },
-      {
-        "name": "HUSSAM ALSAYED",
-        "role": "Project Coordinator",
-        "description": "A Project Coordinator with strong organizational and analytical skills, bringing a systematic and precise approach to task management and workflow coordination. Focuses on tracking project milestones, organizing resources, and facilitating clear communication across multidisciplinary teams to ensure smooth operations. With a keen attention to detail, high adaptability, and proactive problem-solving abilities, he provides essential administrative and technical support to drive team efficiency and successful project delivery.",
-        "image": ""
       },
       {
         "name": "TASSNEM AL-ASDI",
