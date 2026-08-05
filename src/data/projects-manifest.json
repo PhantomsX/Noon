@@ -1,7 +1,7 @@
 [
   {
     "id": "hospitality-al-ammariya-desert-club-resorts",
-    "title": "Al ammariya Desert Club Resorts",
+    "title": "Al Ammariya Desert Club Resorts",
     "category": "hospitality",
     "categoryLabel": "Hospitality",
     "type": "hospitality",
@@ -20,7 +20,7 @@
     "id": "healthcare-pandemic-emergency-hospital",
     "title": "PANDEMIC EMERGENCY HOSPITAL",
     "category": "healthcare",
-    "categoryLabel": "HealthCare",
+    "categoryLabel": "Healthcare",
     "type": "healthcare",
     "image": "/projects/HealthCare/PANDEMIC%20EMERGENCY%20HOSPITAL.webp",
     "images": [
@@ -34,7 +34,7 @@
   },
   {
     "id": "hospitality-al-ammariya-beverly-hills",
-    "title": "Al Ammariya Beverly hills",
+    "title": "Al Ammariya Beverly Hills",
     "category": "hospitality",
     "categoryLabel": "Hospitality",
     "type": "hospitality",
@@ -53,7 +53,7 @@
     "id": "healthcare-mayobelle-clinic",
     "title": "Mayobelle Clinic",
     "category": "healthcare",
-    "categoryLabel": "HealthCare",
+    "categoryLabel": "Healthcare",
     "type": "healthcare",
     "image": "/projects/HealthCare/Mayobelle%20Clinic/74533ccd32b34ecf98aa7d10842c1508.png",
     "images": [
@@ -68,7 +68,7 @@
   },
   {
     "id": "hospitality-dirab-resort",
-    "title": "Dirab resort",
+    "title": "Dirab Resort",
     "category": "hospitality",
     "categoryLabel": "Hospitality",
     "type": "hospitality",
