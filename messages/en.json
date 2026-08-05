@@ -1,6 +1,6 @@
 {
   "About US": "About US",
-  "About_noon_consultants": "About noon consultants",
+  "About_noon_consultants": "About Noon Consultants",
   "CHAIRMAN": "CHAIRMAN & FOUNDER",
   "Choose Architectural Design": "Choose Architectural Design",
   "Commercial": "Commercial",
@@ -33,9 +33,9 @@
   "Total Estimated Cost": "Total Estimated Cost",
   "Total Plot Area": "Total Plot Area",
   "Warehouse": "Warehouse",
-  "What Our Clients Say": "partners words about noon",
+  "What Our Clients Say": "Partners' words about Noon",
   "about": "About",
-  "aboutCeoSignature": "Dr. Nizar Al sayed",
+  "aboutCeoSignature": "Dr. Nizar Al Sayed",
   "aboutCeoTitle": "Chairman & Founder",
   "HOME": "HOME",
   "WHO WE ARE": "WHO WE ARE",
@@ -65,7 +65,7 @@
   "aboutText5": "At every stage, we strive to deliver real value — with full commitment to professional standards and execution precision.",
   "aboutCeoStandout": "At Noon, quality is not an option — it is our standard.",
   "address1": "Riyadh, Saudi Arabia – Northern Ring Road, Exit 2, 12385, Al-Nakheel District – Reef Village, 1st Floor, Office No. 6",
-  "address2": "Al-Madinah, Saudi Arabia Abdusalam Ibn Hafes St, Al Iskan District",
+  "address2": "Al-Madinah, Saudi Arabia, Abdusalam Ibn Hafes St, Al Iskan District",
   "branchOffice": "Branch Office",
   "building": "building",
   "calculate": "calculate",
@@ -225,7 +225,7 @@
     "titleDim": "your project",
     "subtitle": "Tell us about your vision and we'll get back to you within 24 hours.",
     "title": "Let's Discuss The Upcoming Projects",
-    "description": "For years we have worked with organizations around Saudi Arabia. We are proud of the work we have done, and the unique depth of knowledge it has allowed us to build. Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects.",
+    "description": "For years we have worked with organizations across Saudi Arabia. We are proud of the work we have done and the unique depth of knowledge it has allowed us to build. Our work is delivered by seasoned professionals with extensive industry expertise, each specializing in focused functional areas. We are committed to delivering high-quality services that understand our clients' needs and contribute to the sustainable and innovative success of their projects.",
     "firstName": "First Name",
     "lastName": "Last Name",
     "telephone": "Phone",
@@ -242,7 +242,7 @@
     "title": "Profile",
     "welcome": {
       "title": "NOTES TO EMPLOYEES",
-      "description": "We're Excited To Have You On Our Employee Platform. Here, We Share Updates, Celebrate Wins, And Grow Together As One Team Shaping The Future. Thank You For Being Part Of noon'S Journey Toward Excellence. Together, We Engineer The Difference."
+      "description": "We're Excited To Have You On Our Employee Platform. Here, We Share Updates, Celebrate Wins, And Grow Together As One Team Shaping The Future. Thank You For Being Part Of Noon's Journey Toward Excellence. Together, We Engineer The Difference."
     },
     "jobResponsibilities": {
       "title": "Brand Design & Creative Direction:",
@@ -286,7 +286,7 @@
       "presentAddress": "Present Address",
       "basicSalary": "Basic Salary",
       "department": "Department",
-      "sectionDepartment": "Section:Department",
+      "sectionDepartment": "Section: Department",
       "jobTime": "Job Time",
       "jobPlace": "Job Place",
       "annualLeave": "Number of days of annual leave",
@@ -391,14 +391,14 @@
   "factory": "factory",
   "find": "find more",
   "founded in 2011": "since 2011",
-  "headquarters": "Head quarters",
+  "headquarters": "Headquarters",
   "home": {
     "founded": "FOUNDED IN 2011",
     "title": "Noon Consultants is one of the recognized Architecture in the KSA.",
     "hero": {
       "eyebrow": "Noon Consultants — KSA",
       "headline": "Rooted in Saudi Arabia.",
-      "headlineDim": "Reaching   for the world.",
+      "headlineDim": "Reaching for the world.",
       "subtext": "From concept to completion — architecture, interior design, and urban planning, with experience spanning over 15 years.",
       "cta1": "View our work",
       "cta2": "Our story"
@@ -409,13 +409,13 @@
       "aboutShort": "About",
       "noon": "Noon",
       "services": "Our Best\nOf Services",
-      "contact": "Contact\nOf Us",
+      "contact": "Contact\nUs",
       "login": "Sign In \\ Sign Up",
       "findMore": "FIND MORE"
     },
     "portfolio": {
       "title": "Portfolio Of Work",
-      "description": "For years we have worked with organizations around Saudi Arabia. We are proud of the work we have done, and the unique depth of knowledge it has allowed us to build. Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects.",
+      "description": "Over the years, we have worked with a wide range of organizations across Saudi Arabia. We are proud of the work we have done and the unique depth of knowledge it has allowed us to build. Our portfolio is delivered by seasoned professionals with extensive industry expertise, each specializing in focused functional areas. We are committed to delivering high-quality services that understand our clients' needs and contribute to the sustainable and innovative success of their projects.",
       "urban": "Urban Projects",
       "architectural": "Architectural Projects",
       "client": "PROJECT CLIENT",
@@ -452,8 +452,8 @@
     "designedBy": "DESIGNED BY",
     "statusDate": "STATUS DATE",
     "breif": "Over the years, we have partnered with a wide range of organizations across Saudi Arabia, earning a reputation for excellence and reliability. Each project has contributed to the deep, specialized knowledge we bring to every new challenge. Our portfolio is delivered by seasoned professionals with extensive industry experience, each bringing focused expertise across key functional areas. We are committed to providing high-quality, client-focused solutions that support the sustainable, innovative, and long-term success of every project we undertake.",
-    "copy rights": " all renders is back to noon copyrights.",
-    "description": " For years we have worked with organizations around Saudi Arabia. We are proud of the work we have done, and the unique depth of knowledge it has allowed us to build. Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects..",
+    "copy rights": "All renders are subject to Noon's copyrights.",
+    "description": "Over the years, we have worked with organizations across Saudi Arabia. We are proud of the work we have done and the unique depth of knowledge it has allowed us to build. Our portfolio is delivered by seasoned professionals with extensive industry expertise, each specializing in focused functional areas. We are committed to delivering high-quality services that understand our clients' needs and contribute to the sustainable and innovative success of their projects.",
     "interior design": "interior design",
     "landscape": "landscape",
     "location": "LOCATION",
@@ -526,7 +526,7 @@
     }
   },
   "team": {
-    "name": "DR. NIZAR EL|SAYED",
+    "name": "DR. NIZAR AL SAYED",
     "role": "CHAIRMAN & FOUNDER",
     "member": "Team Member",
     "architectural_designer": "Architectural Designer",
@@ -865,7 +865,7 @@
     "headerTitleMain": "Our services",
     "headerTitleDim": "across 10 disciplines",
     "headerSubtitle": "From a single space to an entire masterplan — we deliver at every scale.",
-    "allServices": " All Services",
+    "allServices": "All Services",
     "learnMore": "Learn More",
     "fullServices": "FULL {title} SERVICES",
     "download": "Download",
@@ -905,7 +905,7 @@
       "4": "Progress Reporting and Documentation",
       "5": "Coordination with Contractors and Stakeholders"
     },
-    "service-5": "STRUCTURE ENGINEERING",
+    "service-5": "STRUCTURAL ENGINEERING",
     "service-5-description": "The discipline concerned with the design and analysis of structures that support or resist loads. It ensures buildings and structures are safe, stable, and durable under all conditions.",
     "service-5-features": {
       "1": "Structural Analysis and Design",
@@ -968,7 +968,7 @@
       "4": "Code and Regulatory Compliance",
       "5": "Client Liaison and Communication"
     },
-    "service-btn": "  SERVICE PROJECTS",
+    "service-btn": "SERVICE PROJECTS",
     "title-1": "Our Services"
   },
   "slide to select the space of the services in m2": "slide to select the space of the services in m².",
