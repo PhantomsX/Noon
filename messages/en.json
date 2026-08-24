@@ -401,7 +401,14 @@
       "headlineDim": "Reaching for the world.",
       "subtext": "From concept to completion — architecture, interior design, and urban planning, with experience spanning over 15 years.",
       "cta1": "View our work",
-      "cta2": "Our story"
+      "cta2": "Our story",
+      "scroll": "Scroll",
+      "featured": {
+        "italalat": { "name": "Italalat Resort", "type": "Urban Planning" },
+        "vTower": { "name": "V Tower", "type": "Architecture" },
+        "bloom": { "name": "The Bloom Offices", "type": "Interior Design" },
+        "mosque": { "name": "Al Jumaah Mosque", "type": "Architecture" }
+      }
     },
     "nav": {
       "portfolio": "Portfolio\nOf Work",
