@@ -30,13 +30,13 @@ function Page() {
     {
       title: t("service-1"),
       description: t("service-1-description"),
-      image: "/services/ENGINEERING_AND_ARCHITECTURAL_DESIGN.webp",
+      image: "/services/ARCHITECTURAL_DESIGN.png",
       driveUrl: DRIVE_URLS[1],
     },
     {
       title: t("service-2"),
       description: t("service-2-description"),
-      image: "/services/URBAN_DESIGN.webp",
+      image: "/services/URBAN_DESIGN.png",
       driveUrl: DRIVE_URLS[2],
     },
     {
