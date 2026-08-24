@@ -30,7 +30,7 @@ const projects: Project[] = [
     statusDate: "",
     location: "",
     scope: "",
-    image: "/home-page-projects/AL-JUMAAH-MOSQUE.webp",
+    image: "/home-page-projects/AL-JUMAAH-MOSQUE.png",
   },
   {
     id: "p2",
@@ -40,7 +40,7 @@ const projects: Project[] = [
     statusDate: "",
     location: "",
     scope: "",
-    image: "/home-page-projects/Apex-Park.webp",
+    image: "/home-page-projects/Apex-Park.png",
   },
   {
     id: "p3",
@@ -60,7 +60,7 @@ const projects: Project[] = [
     statusDate: "2021 Completed",
     location: "Riyadh, Saudi Arabia - Area: 210,000 SQM",
     scope: "Urban Planning - Design",
-    image: "/home-page-projects/Italalat-Resort.webp",
+    image: "/home-page-projects/Italalat-Resort.png",
   },
   {
     id: "p5",
@@ -70,7 +70,7 @@ const projects: Project[] = [
     statusDate: "",
     location: "",
     scope: "Interior Design",
-    image: "/home-page-projects/THE-BLOOM-OFFICES.webp",
+    image: "/home-page-projects/THE-BLOOM-OFFICES.png",
   },
   {
     id: "p6",
@@ -80,7 +80,7 @@ const projects: Project[] = [
     statusDate: "",
     location: "",
     scope: "",
-    image: "/home-page-projects/The-Grid.webp",
+    image: "/home-page-projects/The-Grid.png",
   },
 ];
 
@@ -198,6 +198,12 @@ export default function ProjectsPortfolio() {
               {projects.map((project) => (
                 <CarouselItem key={project.id} className="pl-0">
                   <div className="relative w-full aspect-video md:aspect-21/9 bg-neutral-900 border border-[#C6A87D]/20 overflow-hidden group">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover blur-2xl"
+                    />
                     <motion.div
                       className="absolute inset-0 w-full h-full"
                       initial={{ scale: 1.1, x: "-2%", y: "-1%" }}
@@ -216,12 +222,12 @@ export default function ProjectsPortfolio() {
                         src={project.image}
                         alt={project.title}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                       />
                     </motion.div>
 
                     {/* Overlay with Text */}
-                    <div className="absolute inset-0 bg-linear-to-t from-black via-black/80 to-transparent flex flex-col justify-end p-4 sm:p-6 md:p-12">
+                    <div className="absolute inset-0 p-6 flex flex-col justify-end">
                       <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-8">
                         {/* Left: Project Title */}
                         <div className="max-w-md text-start">
