@@ -7,20 +7,6 @@ type Service = {
   title: string;
   description: string;
   image: string;
-  driveUrl: string;
-};
-
-const DRIVE_URLS: Record<number, string> = {
-  1: "https://drive.google.com/file/d/1_F9uODyiahPba5s6vd1Kkhu3w7O5_E1P/view?usp=drive_link",
-  2: "https://drive.google.com/file/d/19RPuGAvMMf2_PM5L25vdkhGJSUImD0gi/view?usp=drive_link",
-  3: "https://drive.google.com/file/d/1WgSi1UtPH_NNteRWjFVuRClBuILIBKoO/view?usp=drive_link",
-  4: "https://drive.google.com/file/d/1vVIbJdPQy6CwIBRG8pQacdfZ1e7Y-Yh9/view?usp=drive_link",
-  5: "https://drive.google.com/file/d/1pSzTWna4Xr2FUXzTsf7LWattr5Hgcs5y/view?usp=drive_link",
-  6: "https://drive.google.com/file/d/1Z8Uq9-BuDiRMGyw3soh3yl5oUkCtOP27/view?usp=drive_link",
-  7: "https://drive.google.com/file/d/1wPDZNxbwF5D6bO7ZRQSTRXoj1n_BBaeJ/view?usp=drive_link",
-  8: "https://drive.google.com/file/d/1fooSTm4Uf_4owlAtjzNlSdPgqmepKYot/view?usp=drive_link",
-  9: "https://drive.google.com/file/d/1xcItC8Bl4TWR_PJ2HB1WB1RQUz6cP-V4/view?usp=sharing",
-  10: "https://drive.google.com/file/d/1MjBugyi101w1238MUHGqzOfLZnr74dk6/view?usp=sharing",
 };
 
 function Page() {
@@ -31,61 +17,51 @@ function Page() {
       title: t("service-1"),
       description: t("service-1-description"),
       image: "/services/ARCHITECTURAL_DESIGN.png",
-      driveUrl: DRIVE_URLS[1],
     },
     {
       title: t("service-2"),
       description: t("service-2-description"),
       image: "/services/URBAN_DESIGN.png",
-      driveUrl: DRIVE_URLS[2],
     },
     {
       title: t("service-4"),
       description: t("service-4-description"),
       image: "/services/CONSTRUCTION_SUPERVISION_1.webp",
-      driveUrl: DRIVE_URLS[3],
     },
     {
       title: t("service-5"),
       description: t("service-5-description"),
       image: "/services/STRUCTURE_ENGINEERING.png",
-      driveUrl: DRIVE_URLS[4],
     },
     {
       title: t("service-6"),
       description: t("service-6-description"),
       image: "/services/PERMITS.webp",
-      driveUrl: DRIVE_URLS[5],
     },
     {
       title: t("service-7"),
       description: t("service-7-description"),
       image: "/services/ENGINEERING_STUDIES.png",
-      driveUrl: DRIVE_URLS[6],
     },
     {
       title: t("service-8"),
       description: t("service-8-description"),
       image: "/services/LANDSCAPING.webp",
-      driveUrl: DRIVE_URLS[7],
     },
     {
       title: t("service-9"),
       description: t("service-9-description"),
       image: "/services/PROJECT_MANAGEMENT.webp",
-      driveUrl: DRIVE_URLS[8],
     },
     {
       title: t("service-10"),
       description: t("service-10-description"),
       image: "/services/INTERIOR_DESIGN.png",
-      driveUrl: DRIVE_URLS[9],
     },
     {
       title: t("service-11"),
       description: t("service-11-description"),
       image: "/services/OR_ARCHITECT_OF_RECORD.png",
-      driveUrl: DRIVE_URLS[10],
     },
   ];
 

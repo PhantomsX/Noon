@@ -414,7 +414,7 @@
       "findMore": "Find More"
     },
     "portfolio": {
-      "title": "Portfolio Of Work",
+      "title": "Portfolio of work",
       "description": "For over 15 years we have worked with clients across Saudi Arabia — and we are proud of the depth of knowledge that work has allowed us to build. Our portfolio is delivered by seasoned professionals with extensive industry expertise, each specializing in focused functional areas. We are committed to delivering high-quality services that understand our clients' needs and contribute to the sustainable and innovative success of their projects.",
       "urban": "Urban Projects",
       "architectural": "Architectural Projects",
@@ -862,8 +862,8 @@
   "services": "Our Services",
   "servicess": {
     "headerEyebrow": "What we do",
-    "headerTitleMain": "Our services",
-    "headerTitleDim": "across 10 disciplines",
+    "headerTitleMain": "Expertise",
+    "headerTitleDim": "Across 10 Disciplines",
     "headerSubtitle": "From a single space to an entire masterplan — we deliver at every scale.",
     "allServices": "All Services",
     "learnMore": "Learn More",
