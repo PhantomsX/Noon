@@ -627,6 +627,12 @@
         "image": "/team/HOSSAM-ALRASHID.webp"
       },
       {
+        "name": "AYAH ALTHUNAYAN",
+        "role": "Junior Architect",
+        "description": "A Junior Architect specializing in Revit modeling and technical drafting. She holds a Bachelor's degree in Architecture from Prince Sultan University, bringing a strong academic background and solid technical capability. Skilled in developing architectural models, preparing detailed drawings, coordinating sheets, and ensuring compliance with project standards. Known for accuracy, fast learning, and effective teamwork, contributing to reliable and high-quality design deliverables.",
+        "image": "/team/AYA-AITHUNAYAN.webp"
+      },
+      {
         "name": "AHMED RASHWANI",
         "role": "Architect & BIM Specialist",
         "description": "Ahmed Rashwani is an Architect and BIM Specialist at Noon Consultants, holding a Bachelor's degree in Architecture from Al Yamamah University. As a junior professional, he brings strong technical capabilities in architectural design and Building Information Modeling (BIM). Throughout his work, Ahmed contributes to design development, BIM modeling, and coordination across multidisciplinary teams. He is known for his attention to detail and ability to support accurate, well-coordinated design outputs, enhancing project efficiency and ensuring alignment with technical and project requirements.",
@@ -680,12 +686,7 @@
         "description": "Lead Architect with over 6 years of experience in architectural design, 3D visualization, landscape design, and BIM workflows in Riyadh. Holds a B.Sc. in Architectural Engineering from Prince Sultan University (a private university). Leads the architectural design team and oversees detailed drawings for residential and commercial projects, while heading tender processes including pricing, technical writing, cost estimation, and subcontractor management. Proficient in Revit, AutoCAD, SketchUp, Lumion, Rhino, and Grasshopper.",
         "image": ""
       },
-      {
-        "name": "AYAH ALTHUNAYAN",
-        "role": "Junior Architect",
-        "description": "A Junior Architect specializing in Revit modeling and technical drafting. She holds a Bachelor's degree in Architecture from Prince Sultan University, bringing a strong academic background and solid technical capability. Skilled in developing architectural models, preparing detailed drawings, coordinating sheets, and ensuring compliance with project standards. Known for accuracy, fast learning, and effective teamwork, contributing to reliable and high-quality design deliverables.",
-        "image": "/team/AYA-AITHUNAYAN.webp"
-      },
+      
       {
         "name": "MOHAMMED OBAIDAT",
         "role": "Head of MEP Department",
