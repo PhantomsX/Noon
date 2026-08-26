@@ -3,14 +3,17 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  turbopack: {
-    root: process.cwd(),
-  },
   images: {
     qualities: [100, 75],
+    formats: ["image/avif", "image/webp"],
   },
   outputFileTracingIncludes: {
     "/api/projects": ["./public/projects/**/*"],
+  },
+  experimental: {
+    inlineCss: true,
+    cssChunking: true,
+    optimizeCss: true,
   },
 };
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { motion, useInView } from "motion/react";
 import CountUp from "@/components/CountUp";
@@ -95,16 +95,6 @@ const AnimatedCounter = ({
   target: number;
   suffix?: string;
 }) => {
-  const [val, setVal] = useState(0);
-  const countRef = useRef(null);
-  const isInView = useInView(countRef, { once: true, amount: 0.5 });
-
-  useEffect(() => {
-    if (isInView) {
-      setVal(target);
-    }
-  }, [isInView, target]);
-
   return (
     <div className="flex items-center justify-center gap-1">
       <CountUp

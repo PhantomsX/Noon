@@ -1,11 +1,9 @@
 "use client";
-import React from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import instagram from "@/public/instegram.svg";
 import linkedIn from "@/public/linkedIn.svg";
-import phone from "@/public/phone.svg";
 import XIcon from "@/public/X.svg";
 import snapchat from "@/public/snapchat.svg";
 import whatsapp from "@/public/whatsapp.svg";

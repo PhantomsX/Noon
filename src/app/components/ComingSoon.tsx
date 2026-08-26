@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 import { Rocket, Clock, Bell } from "lucide-react";
