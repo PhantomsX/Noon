@@ -63,6 +63,7 @@ export default function AboutNoon() {
                 src="/images/ceoimage.png"
                 alt={t("alt.ceo")}
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-contain object-top"
               />
             </div>

@@ -222,7 +222,7 @@ export default function HeroSection() {
               src={project.image}
               alt={t(project.nameKey)}
               fill
-              quality={90}
+              sizes="(max-width: 768px) 100vw, 25vw"
               className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent" />
