@@ -197,7 +197,7 @@ export default function ProjectsPortfolio() {
             <CarouselContent className="ml-0">
               {projects.map((project) => (
                 <CarouselItem key={project.id} className="pl-0">
-                  <div className="relative w-full aspect-video md:aspect-21/9 bg-neutral-900 border border-[#C6A87D]/20 overflow-hidden group">
+                  <div className="relative w-[70%] mx-auto aspect-video md:aspect-21/9 bg-neutral-900 border border-[#C6A87D]/20 overflow-hidden group">
                     <Image
                       src={project.image}
                       alt={project.title}
@@ -222,7 +222,8 @@ export default function ProjectsPortfolio() {
                         src={project.image}
                         alt={project.title}
                         fill
-                        className="object-contain"
+                    
+                        className="object-fill "
                       />
                     </motion.div>
 
