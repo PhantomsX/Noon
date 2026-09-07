@@ -8,7 +8,7 @@ import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "motion/react";
 
 const HERO_IMAGES = [
-  "/IMAGE-1.jpg", // IMAGE 1 - حطي مسار الصورة هنا
+  "/hero/IMAGE-1.jpg", // IMAGE 1 - حطي مسار الصورة هنا
   "/IMAGE-2.jpg", // IMAGE 2 - حطي مسار الصورة هنا
   "/IMAGE-3.jpg", // IMAGE 3 - حطي مسار الصورة هنا
   "/IMAGE-4.jpg", // IMAGE 4 - حطي مسار الصورة هنا
