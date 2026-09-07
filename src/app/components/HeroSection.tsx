@@ -32,7 +32,7 @@ export default function HeroSection() {
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveImage((prev) => (prev + 1) % HERO_IMAGES.length);
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(timer);
   }, []);
