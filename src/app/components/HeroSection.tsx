@@ -24,20 +24,20 @@ export default function HeroSection() {
   const [textVisible, setTextVisible] = useState(false);
   const [activeImage, setActiveImage] = useState(0);
 
-  // ظهور الكلام عند بداية الصفحة
+  
   useEffect(() => {
     const timer = setTimeout(() => setTextVisible(true), 800);
 
     return () => clearTimeout(timer);
   }, []);
 
-  // تغيير الصور وإظهار الكلام فقط مع IMAGE 1
+  
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveImage((prev) => {
         const next = (prev + 1) % HERO_IMAGES.length;
 
-        // الكلام يظهر فقط عندما تكون IMAGE 1
+        
         setTextVisible(next === 0);
 
         return next;
