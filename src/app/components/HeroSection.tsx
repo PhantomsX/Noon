@@ -16,6 +16,7 @@ const HERO_IMAGES = [
   "/hero/IMAGE-6.jpg", // IMAGE 6 - حطي مسار الصورة هنا
   "/hero/IMAGE-7.jpg", // IMAGE 7 - حطي مسار الصورة هنا
   "/hero/IMAGE-8.jpg", // IMAGE 8 - حطي مسار الصورة هنا
+  "/hero/IMAGE-9.jpg", // IMAGE 9 - حطي مسار الصورة هنا
 ];
 
 export default function HeroSection() {
