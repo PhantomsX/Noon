@@ -9,9 +9,9 @@ import { motion, AnimatePresence } from "motion/react";
 
 const HERO_IMAGES = [
   "/hero/IMAGE-1.jpg", // IMAGE 1 - حطي مسار الصورة هنا
-  "/IMAGE-2.jpg", // IMAGE 2 - حطي مسار الصورة هنا
-  "/IMAGE-3.jpg", // IMAGE 3 - حطي مسار الصورة هنا
-  "/IMAGE-4.jpg", // IMAGE 4 - حطي مسار الصورة هنا
+  "/hero/IMAGE-2.jpg", // IMAGE 2 - حطي مسار الصورة هنا
+  "/hero/IMAGE-3.jpg", // IMAGE 3 - حطي مسار الصورة هنا
+  "/hero/IMAGE-4.jpg", // IMAGE 4 - حطي مسار الصورة هنا
   "/IMAGE-5.jpg", // IMAGE 5 - حطي مسار الصورة هنا
 ];
 
@@ -70,7 +70,7 @@ export default function HeroSection() {
               fill
               priority={activeImage === 0}
               sizes="100vw"
-              className="object-cover object-center"
+              className="object-fill object-center "
             />
           </motion.div>
         </AnimatePresence>
