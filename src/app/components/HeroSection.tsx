@@ -79,7 +79,7 @@ export default function HeroSection() {
               fill
               priority={activeImage === 0}
               sizes="100vw"
-              className="object-fill object-center"
+              className="object-cover object-center"
             />
           </motion.div>
         </AnimatePresence>
