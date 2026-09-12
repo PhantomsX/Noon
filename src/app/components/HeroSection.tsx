@@ -16,7 +16,6 @@ const HERO_IMAGES = [
   "/hero/IMAGE-7.jpg",
   "/hero/IMAGE-8.jpg",
   "/hero/IMAGE-9.jpg",
-  "/hero/IMAGE-10.jpg",
 ];
 
 export default function HeroSection() {
@@ -24,33 +23,30 @@ export default function HeroSection() {
 
   const [textVisible, setTextVisible] = useState(false);
   const [activeImage, setActiveImage] = useState(0);
-  const [imagesLoaded, setImagesLoaded] = useState(false);
 
-  // ================= PRELOAD ALL HERO IMAGES =================
+  // ================= LOAD IMAGES ONE BY ONE =================
   useEffect(() => {
-    let loadedImages = 0;
+    let index = 1;
 
-    HERO_IMAGES.forEach((src) => {
+    const loadNextImage = () => {
+      if (index >= HERO_IMAGES.length) return;
+
       const img = new window.Image();
 
-      img.src = src;
-
       img.onload = () => {
-        loadedImages += 1;
-
-        if (loadedImages === HERO_IMAGES.length) {
-          setImagesLoaded(true);
-        }
+        index++;
+        loadNextImage();
       };
 
       img.onerror = () => {
-        loadedImages += 1;
-
-        if (loadedImages === HERO_IMAGES.length) {
-          setImagesLoaded(true);
-        }
+        index++;
+        loadNextImage();
       };
-    });
+
+      img.src = HERO_IMAGES[index];
+    };
+
+    loadNextImage();
   }, []);
 
   // ================= SHOW TEXT =================
@@ -64,31 +60,26 @@ export default function HeroSection() {
 
   // ================= IMAGE SLIDER =================
   useEffect(() => {
-    if (!imagesLoaded) return;
-
     const timer = setInterval(() => {
       setActiveImage((prev) => {
         const next = (prev + 1) % HERO_IMAGES.length;
 
-        // Show text again when the slider returns to image 1
+        // Show text again when slider returns to image 1
         setTextVisible(next === 0);
 
         return next;
       });
-    }, 4000);
+    }, 3000);
 
     return () => clearInterval(timer);
-  }, [imagesLoaded]);
+  }, []);
 
   return (
     <section className="relative w-full h-[calc(100vh-95px)] overflow-hidden">
-
+      
       {/* ================= BACKGROUND IMAGES ================= */}
-
       <div className="absolute inset-0 z-0 bg-black">
-
         <AnimatePresence mode="sync">
-
           <motion.div
             key={activeImage}
             className="absolute inset-0"
@@ -115,23 +106,19 @@ export default function HeroSection() {
               fill
               priority={activeImage === 0}
               sizes="100vw"
+              quality={75}
               className="object-cover object-center"
             />
           </motion.div>
-
         </AnimatePresence>
 
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/45" />
-
       </div>
 
       {/* ================= HERO CONTENT ================= */}
-
       <AnimatePresence>
-
         {textVisible && (
-
           <motion.div
             key="hero-text"
             className="absolute inset-0 z-20 flex flex-col justify-end px-6 md:px-12 lg:px-20 pb-20 md:pb-28 pointer-events-none"
@@ -152,11 +139,9 @@ export default function HeroSection() {
               ease: "easeOut",
             }}
           >
-
             <div className="rtl:text-right ltr:text-left max-w-3xl pointer-events-auto">
 
               {/* ================= EYEBROW ================= */}
-
               <motion.p
                 className="text-[#C6A87D]/80 text-xs md:text-sm tracking-[0.2em] uppercase ltr:font-neue-montreal rtl:font-ibm-plex-arabic mb-5 flex items-center gap-2"
                 initial={{
@@ -171,12 +156,10 @@ export default function HeroSection() {
                 }}
               >
                 <span className="inline-block w-6 h-px bg-[#C6A87D]/60" />
-
                 {t("home.hero.eyebrow")}
               </motion.p>
 
               {/* ================= MAIN HEADLINE ================= */}
-
               <motion.h1
                 className="text-bg text-4xl sm:text-5xl font-semibold ltr:font-elegance rtl:font-year-of-camel"
                 initial={{
@@ -196,7 +179,6 @@ export default function HeroSection() {
               </motion.h1>
 
               {/* ================= DIM HEADLINE ================= */}
-
               <motion.p
                 className="text-[#C6A87D]/50 text-4xl sm:text-5xl tracking-wider font-semibold ltr:font-elegance rtl:font-year-of-camel mb-7"
                 initial={{
@@ -216,7 +198,6 @@ export default function HeroSection() {
               </motion.p>
 
               {/* ================= SUBTEXT ================= */}
-
               <motion.p
                 className="text-white/80 text-sm md:text-base leading-relaxed ltr:font-neue-montreal rtl:font-ibm-plex-arabic mb-9 max-w-lg"
                 initial={{
@@ -234,7 +215,6 @@ export default function HeroSection() {
               </motion.p>
 
               {/* ================= CTAs ================= */}
-
               <motion.div
                 className="flex items-center gap-5"
                 initial={{
@@ -250,13 +230,11 @@ export default function HeroSection() {
                   delay: 0.55,
                 }}
               >
-
                 <Link
                   href="/projects"
                   className="inline-flex items-center rounded-full gap-2 border border-[#C6A87D]/70 text-[#C6A87D] text-sm ltr:font-neue-montreal rtl:font-ibm-plex-arabic px-6 py-3 hover:bg-[#C6A87D]/10 transition-colors duration-300"
                 >
                   {t("home.hero.cta1")}
-
                   <span className="rtl:rotate-180">
                     →
                   </span>
@@ -267,26 +245,18 @@ export default function HeroSection() {
                   className="inline-flex items-center gap-2 text-[#C6A87D]/80 text-sm ltr:font-neue-montreal rtl:font-ibm-plex-arabic hover:text-[#C6A87D] transition-colors duration-300"
                 >
                   {t("home.hero.cta2")}
-
                   <span className="rtl:rotate-180">
                     →
                   </span>
                 </Link>
-
               </motion.div>
-
             </div>
-
           </motion.div>
-
         )}
-
       </AnimatePresence>
 
       {/* ================= SCROLL HINT ================= */}
-
       <div className="absolute bottom-6 ltr:right-8 rtl:left-8 z-30 flex items-center gap-2">
-
         <div className="relative w-px h-8 bg-white/20 overflow-hidden">
           <span className="absolute inset-x-0 top-0 h-2/5 bg-white/60 animate-scroll-hint" />
         </div>
@@ -299,9 +269,7 @@ export default function HeroSection() {
         >
           {t("home.hero.scroll")}
         </span>
-
       </div>
-
     </section>
   );
 }
