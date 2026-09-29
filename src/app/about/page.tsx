@@ -6,7 +6,7 @@ import AboutTeam from "./components/AboutTeam";
 import AboutContact from "./components/AboutContact";
 
 const AboutPage = () => (
-  <main className="container mx-auto px-4 sm:px-6 lg:px-8 ltr:font-neue-montreal rtl:font-noto-kufi-arabic">
+  <main className="container mx-auto px-4 sm:px-6 lg:px-8 ltr:font-neue-montreal rtl:font-ibm-plex-arabic">
     <AboutHero />
     <AboutCEO />
     <AboutTeam />

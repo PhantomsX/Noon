@@ -38,7 +38,6 @@ const Navbar = () => {
   const AnimatedLogo = motion.create(Image);
 
   const navLinks = [
-    { title: "HOME", href: "/" },
     { title: "OUR SERVICES", href: "/services" },
     {
       title: "WHO WE ARE",
@@ -91,7 +90,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation Links - Center */}
-          <div className="hidden lg:flex items-center gap-x-4 absolute left-1/2 -translate-x-1/2">
+          <div className="hidden lg:flex items-center gap-x-3">
             {navLinks.map((link, index) => (
               <motion.div
                 key={link.href}
@@ -105,7 +104,7 @@ const Navbar = () => {
                     <DropdownMenuTrigger asChild>
                       <button
                         className={cn(
-                          "relative cursor-pointer text-xs lg:text-sm font-medium tracking-[0.15em] uppercase transition-all duration-300 group py-2 flex items-center gap-1 outline-none",
+                          "relative cursor-pointer ltr:text-xs ltr:lg:text-sm font-medium tracking-[0.15em] uppercase transition-all duration-300 group py-2 flex items-center gap-1 outline-none",
                           isActive(link.href) ||
                             (link.dropdownItems &&
                               link.dropdownItems.some((item) =>
@@ -170,7 +169,7 @@ const Navbar = () => {
                   <Link
                     href={link.href}
                     className={cn(
-                      "relative text-xs lg:text-sm font-medium tracking-[0.15em] uppercase transition-all duration-300 group py-2",
+                      "relative ltr:text-xs ltr:lg:text-sm font-medium tracking-[0.15em] uppercase transition-all duration-300 group py-2",
                       isActive(link.href)
                         ? "text-transparent bg-clip-text bg-linear-to-r from-[#BE7B2C] to-[#F9C39D]"
                         : "text-white/70 hover:text-[#F9C39D]",

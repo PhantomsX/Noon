@@ -1,9 +1,10 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion, useInView } from "motion/react";
-import PageTitle from "@/app/components/PageTitle";
+import Image from "next/image";
+import { User } from "lucide-react";
 import CountUp from "@/components/CountUp";
 
 /* ── Animated stats strip ─────────────────────────────────────────────────── */
@@ -14,8 +15,8 @@ const TeamStats = () => {
 
   const stats = [
     { target: 15, suffix: "+", label: t("common.years_experience") },
-    { target: 400, suffix: "+", label: t("common.projects_completed") },
-    { target: 20, suffix: "+", label: t("common.team_members") },
+    { target: 500, suffix: "+", label: t("common.projects_completed") },
+    { target: 50, suffix: "+", label: t("common.team_members") },
     { target: 95, suffix: "%", label: t("common.client_satisfaction") },
   ];
 
@@ -25,7 +26,7 @@ const TeamStats = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={statsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.8, delay: 0.2 }}
-      className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8"
+      className="grid grid-cols-2 md:grid-cols-4 gap-6 my-8"
     >
       {stats.map((stat, i) => (
         <motion.div
@@ -55,53 +56,186 @@ const TeamStats = () => {
   );
 };
 
+/* ── Team Member Card ─────────────────────────────────────────────────────── */
+const TeamMemberCard = ({
+  member,
+  index,
+  compact,
+}: {
+  member: any;
+  index: number;
+  compact?: boolean;
+}) => {
+  const [imageError, setImageError] = useState(false);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.6, delay: index * 0.05 }}
+      whileHover={{
+        y: -8,
+        rotateX: 5,
+        rotateY: 5,
+        scale: 1.02,
+      }}
+      style={{ perspective: 1000 }}
+      className={`group relative bg-white/5 border border-[#C6A87D]/20 hover:border-[#BE7B2C]/50 hover:bg-white/10 transition-all duration-300 transform-style-3d overflow-hidden ${compact ? "rounded-xl" : "rounded-2xl"}`}
+    >
+      <div className="flex flex-col h-full relative">
+        {member.image && !imageError ? (
+          <div
+            className={`aspect-square w-full rounded-lg overflow-hidden relative ${compact ? "mb-2" : "mb-4"}`}
+          >
+            <Image
+              src={member.image}
+              alt={member.name}
+              width={400}
+              height={400}
+              className="w-full h-full object-cover"
+              onError={() => setImageError(true)}
+            />
+            <div
+              className={`absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end ${compact ? "p-2" : "p-4"}`}
+            >
+              <h3
+                className={`font-bold text-white group-hover:text-[#F9C39D] transition-colors ${compact ? "text-sm" : "text-lg"}`}
+              >
+                {member.name}
+              </h3>
+              <p
+                className={`text-[#C6A87D] font-medium ${compact ? "text-xs" : "text-sm"}`}
+              >
+                {member.role}
+              </p>
+            </div>
+          </div>
+        ) : (
+          <div
+            className={`aspect-square w-full rounded-lg bg-linear-to-br from-[#BE7B2C] to-[#F9C39D] flex items-center justify-center text-white relative ${compact ? "mb-2" : "mb-4"}`}
+          >
+            <User
+              className={`${compact ? "w-16 h-16" : "w-24 h-24"} text-white/80`}
+            />
+            <div
+              className={`absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end ${compact ? "p-2" : "p-4"}`}
+            >
+              <h3
+                className={`font-bold text-white group-hover:text-[#F9C39D] transition-colors ${compact ? "text-sm" : "text-lg"}`}
+              >
+                {member.name}
+              </h3>
+              <p
+                className={`text-[#C6A87D] font-medium ${compact ? "text-xs" : "text-sm"}`}
+              >
+                {member.role}
+              </p>
+            </div>
+          </div>
+        )}
+        {/* Full overlay - appears on hover with name, role & full description */}
+        <div
+          className={`absolute inset-0 bg-black/60 backdrop-blur-md flex flex-col justify-center items-center text-center transition-all duration-300 ease-out opacity-0 group-hover:opacity-100 ${compact ? "p-4" : "p-6"}`}
+        >
+          <h3
+            className={`font-bold text-white mb-1 ${compact ? "text-base" : "text-xl"}`}
+          >
+            {member.name}
+          </h3>
+          <p
+            className={`text-[#F9C39D] font-medium mb-3 ${compact ? "text-xs" : "text-sm"}`}
+          >
+            {member.role}
+          </p>
+          <p
+            className={`text-gray-200 leading-relaxed overflow-y-auto max-h-full ${compact ? "text-xs" : "text-sm"}`}
+          >
+            {member.description}
+          </p>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
 /* ── Main component ───────────────────────────────────────────────────────── */
 const AboutTeam = () => {
   const t = useTranslations();
+  const teamMembers = t.raw("team.members") as Array<{
+    name: string;
+    role: string;
+    description: string;
+    image: string;
+  }>;
 
   return (
     <motion.section
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: 2.5 }}
+      transition={{ duration: 0.8 }}
       className="my-16 sm:my-20 lg:my-24"
       id="team"
     >
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 2.7 }}
-        className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center mb-12 sm:mb-16 lg:mb-20"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+        className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12 sm:mb-16 lg:mb-20"
       >
-        {/* Title */}
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 2.8 }}
-          className="lg:col-span-1 text-center lg:text-start"
-        >
-          <PageTitle>{t("our_team")}</PageTitle>
-        </motion.div>
+        {/* Two-tone title */}
+        <div className="rtl:text-right">
+          <h2 className="ltr:font-elegance rtl:font-year-of-camel text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight">
+            <span className="text-bg block">{t("teamHeaderTitleMain")}</span>
+            {t("teamHeaderTitleDim") && (
+              <span className="text-[#C6A87D]/30 block">
+                {t("teamHeaderTitleDim")}
+              </span>
+            )}
+          </h2>
+        </div>
 
-        {/* Description + Stats */}
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 3.0 }}
-          className="lg:col-span-2"
-        >
-          <motion.p
-            className="text-white text-base sm:text-lg lg:text-xl leading-relaxed text-center lg:text-left"
-            initial={{ opacity: 0.8 }}
-            whileHover={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-          >
-            {t("team_text")}
-          </motion.p>
-
-          <TeamStats />
-        </motion.div>
+        {/* Subtitle */}
+        <p className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-gray-400 text-sm md:text-base leading-relaxed max-w-sm rtl:text-right">
+          {t("teamHeaderSubtitle")}
+        </p>
       </motion.div>
+
+      <TeamStats />
+
+      {/* Team Members Grid - First 3 */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.8 }}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+        {teamMembers.slice(0, 3).map((member, index) => (
+          <TeamMemberCard key={index} member={member} index={index} />
+        ))}
+      </motion.div>
+
+      {/* Team Members Grid - Rest (smaller) */}
+      {teamMembers.length > 3 && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.8 }}
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6"
+        >
+          {teamMembers.slice(3).map((member, index) => (
+            <TeamMemberCard
+              key={index + 3}
+              member={member}
+              index={index + 3}
+              compact
+            />
+          ))}
+        </motion.div>
+      )}
     </motion.section>
   );
 };

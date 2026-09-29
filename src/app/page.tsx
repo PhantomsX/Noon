@@ -2,7 +2,6 @@
 import HeroSection from "./components/HeroSection";
 import AboutNoon from "./components/AboutNoon";
 import ProjectsPortfolio from "./components/ProjectsPortfolio";
-import Testimonials from "./components/Testimonials";
 import PartnersLogos from "./components/PartnersLogos";
 import ContactInfoSection from "./components/ContactInfoSection";
 import ContactBannerSection from "./components/ContactBannerSection";

@@ -1,18 +1,18 @@
 {
-  "About US": "About US",
-  "About_noon_consultants": "About noon consultants",
-  "CHAIRMAN": "CHAIRMAN & FOUNDER",
+  "About US": "About Us",
+  "About_noon_consultants": "About Noon Consultants",
+  "CHAIRMAN": "Chairman & Founder",
   "Choose Architectural Design": "Choose Architectural Design",
   "Commercial": "Commercial",
   "Email": "Email",
-  "FUTURE REACH": "FUTURE REACH",
-  "FUTURE REACH TEXT": "By aligning strategic insight with market potential, we convert investment opportunities into profitable ventures that generate strong financial returns and contribute meaningfully to economic advancement.",
+  "FUTURE REACH": "Growth Strategy",
+  "FUTURE REACH TEXT": "Converting investment opportunities into profitable ventures that generate strong returns and meaningful economic impact.",
   "First Name": "First Name",
   "Forbidden": {
     "backToHome": "Back to Home",
     "message": "You do not have permission to access this page."
   },
-  "Health Care": "Health Care",
+  "Health Care": "Healthcare",
   "Hospitality": "Hospitality",
   "Last Name": "Last Name",
   "Message": "Message",
@@ -23,9 +23,9 @@
   },
   "Notes From The CEO": "Notes From The CEO",
   "OUR MISSION": "OUR MISSION",
-  "OUR MISSION TEXT": "Our mission is to lead in delivering innovative architectural and sustainable solutions, driven by a visionary team committed to shaping and enriching the architectural landscape of Saudi Arabia.",
+  "OUR MISSION TEXT": "Lead in delivering innovative architectural and sustainable solutions that shape Saudi Arabia's built environment.",
   "OUR VISION": "OUR VISION",
-  "OUR VISION TEXT": "Our vision is to deliver solutions that are both innovative and practical, positioning ourselves as an engineering firm of choice, a leader in the industry, and a trusted, invaluable partner to our clients.",
+  "OUR VISION TEXT": "To be the engineering firm of choice — a trusted, invaluable partner to every client we serve.",
   "Office Use": "Office Use",
   "Offices": "Offices",
   "Residential": "Residential",
@@ -33,35 +33,45 @@
   "Total Estimated Cost": "Total Estimated Cost",
   "Total Plot Area": "Total Plot Area",
   "Warehouse": "Warehouse",
-  "What Our Clients Say": "partners words about noon",
+  "What Our Clients Say": "Partners' Words About Noon",
   "about": "About",
-  "aboutCeoNoteTitle": "CEO's Note",
-  "aboutCeoSignature": "Dr. Nazar El Sayed",
+  "aboutCeoSignature": "Dr. Nizar Al Sayed",
+  "aboutCeoTitle": "Chairman & Founder",
   "HOME": "HOME",
   "WHO WE ARE": "WHO WE ARE",
   "OUR TEAM": "OUR TEAM",
   "ABOUT US": "ABOUT US",
   "OUR PROJECTS": "OUR PROJECTS",
   "OUR SERVICES": "OUR SERVICES",
-  "NEWS": "NEWS",
+  "NEWS": "NEWS & INSIGHTS",
   "CAREERS": "CAREERS",
   "CONTACT US": "CONTACT US",
   "PROFILE": "PROFILE",
   "aboutNoon": "About Noon Consultants",
-  "aboutText1": "Noon Consultants is one of the recognized Urban, Architecture and Interior Design practice in the KSA. Founded in 2011, we adapt and respond to the context of each project to create intelligent and enduring Urban Planning & Design.",
+  "aboutHeroEyebrow": "Who we are",
+  "aboutHeroTitleMain": "Building Saudi Arabia",
+  "aboutHeroTitleDim": "since 2011.",
+  "aboutHeroBody": "Noon Consultants is a specialized firm in urban planning, architecture, and interior design — built on a methodology that balances beauty, function, and sustainability.",
+  "aboutHeroBullet1": "Understanding the context of each project",
+  "aboutHeroBullet2": "Studying client needs deeply",
+  "aboutHeroBullet3": "Balancing beauty and function",
+  "aboutHeroBullet4": "Delivering sustainable, executable solutions",
+  "aboutText1": "Noon Consultants is one of the specialized firms in urban planning, architecture, and interior design in the Kingdom of Saudi Arabia.",
   "aboutChairman": "Dr. Naser El Sayed",
-  "aboutText2": "Our success is primarily attributed to the exceptional caliber of our team and their ability to deliver high-quality designs that thoughtfully integrate social, environmental, and economic considerations, ensuring holistic and sustainable outcomes.",
-  "aboutText3": "Our objective is to continuously evolve as a design practice, consistently seeking innovative solutions to conventional challenges while delivering the highest standard of service to our clients and the wider community",
-  "aboutText4": "At Noon Engineering Consultants, we do not view projects as drawings or plans alone — we see them as a responsibility and a trust placed in our hands.",
-  "aboutText5": "We believe that successful projects begin with a deep understanding of our clients' needs and are realized through creative, practical solutions that balance quality, efficiency, and design excellence. \n Working as one team, we strive at every stage to deliver real value that exceeds expectations — with full commitment to professional standards and execution precision.\nOur ambition continues to grow, guided by a clear vision: to be a trusted partner who leaves a distinct mark on every project through expertise, professionalism, and dedication.\nAt Noon, quality is not an option — it is our standard.",
-  "address1": "Riyadh, Saudi Arabia Olaya St, Al Wurud District",
-  "address2": "Al-Madinah, Saudi Arabia Abdusalam Ibn Hafes St, Al Iskan District",
+  "aboutText2": "Since our establishment in 2011, we have developed a design methodology based on:\n• Understanding the context of each project\n• Studying client needs\n• Achieving balance between beauty and function\n• Delivering sustainable and executable solutions",
+  "aboutText3": "Our success is built on the quality of our team and their diverse expertise, and their ability to produce high-level designs that contribute to the success of projects socially, environmentally, and economically.",
+  "aboutCeoQuote": "We do not view projects as drawings alone — we see them as a responsibility and a trust placed in our hands.",
+  "aboutText4": "Successful projects begin with a deep understanding of client needs, realized through creative solutions that balance quality, efficiency, and design excellence.",
+  "aboutText5": "At every stage, we strive to deliver real value — with full commitment to professional standards and execution precision.",
+  "aboutCeoStandout": "At Noon, quality is not an option — it is our standard.",
+  "address1": "Riyadh, Saudi Arabia – Northern Ring Road, Exit 2, Al-Nakheel District – Reef Village, 1st Floor, Office No. 6",
+  "address2": "Al-Madinah, Saudi Arabia, Abdusalam Ibn Hafes St, Al Iskan District",
   "branchOffice": "Branch Office",
-  "building": "building",
-  "calculate": "calculate",
+  "building": "Building",
+  "calculate": "Calculate",
   "calculateTitle": "Architectural Design Calculator",
   "certificates": "Certificates",
-  "view": "view",
+  "view": "View",
   "careers": {
     "applicationProcess": "Application Process",
     "applyNow": "Apply Now",
@@ -85,6 +95,10 @@
         "title": "Innovative Projects"
       }
     },
+    "heroEyebrow": "Join the team",
+    "heroTitleMain": "Build the future",
+    "heroTitleDim": "with Noon",
+    "heroSubtitle": "Great design comes from great people. We're always looking for architects, engineers, and designers who are passionate about shaping Saudi Arabia's built environment.",
     "description": "At Noon Consultants, we believe that great design comes from great people. We're always looking for talented individuals who are passionate about architecture, urban planning, and design to join our dynamic team.",
     "howToApply": "How to Apply",
     "openPositions": "Open Positions",
@@ -169,9 +183,9 @@
     "viewPosition": "View Position",
     "whyJoinUs": "Why Join Us?"
   },
-  "clientText1": "The architectural drawings provided by the team were exceptionally detailed and innovative. Their expertise transformed our vision into reality",
-  "clients": "clients",
-  "clientsSubtitle": "Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects.",
+  "clientText1": "The architectural drawings provided by the team were exceptionally detailed and innovative. Their expertise transformed our vision into reality.",
+  "clients": "Clients",
+  "clientsSubtitle": "Delivered by seasoned professionals with extensive industry expertise, each specializing in focused functional areas. Committed to delivering high-quality services that understand our clients' needs and contribute to the sustainable and innovative success of their projects.",
   "coming_soon": "Coming Soon",
   "comingSoon": "Coming Soon",
   "comingSoonPage": {
@@ -180,7 +194,7 @@
     "underDevelopment": "Under Development",
     "notifyMe": "Notify Me"
   },
-  "contact": "contact us",
+  "contact": "Contact Us",
   "contactForm": {
     "title": "Contact Us",
     "firstName": "First Name",
@@ -191,32 +205,52 @@
     "sendInquiry": "Send Inquiry"
   },
   "contactBanner": {
-    "subtitle": "If you have any engineering project or need engineering consultations",
-    "cta": "Contact Us"
+    "eyebrow": "Get in touch",
+    "titleMain": "Have a project",
+    "titleDim": "in mind?",
+    "subtitle": "Whether it's a landmark development, a corporate space, or a vision still on paper — let's talk.",
+    "cta": "Start a conversation",
+    "email": ""
+  },
+  "contactInfo": {
+    "titleLine1": "Head",
+    "titleLine2": "Quarters",
+    "addressCity": "Riyadh, Saudi Arabia",
+    "addressStreet": "Northern Ring Road, Exit 2, Al-Nakheel District – Reef Village, 1st Floor, Office No. 6",
+    "addressPostal": "12385"
   },
   "contactPage": {
+    "eyebrow": "Get in touch",
+    "titleMain": "Let's discuss",
+    "titleDim": "your project",
+    "subtitle": "Tell us about your vision and we'll get back to you within 24 hours.",
     "title": "Let's Discuss The Upcoming Projects",
-    "description": "For years we have worked with organizations around Saudi Arabia. We are proud of the work we have done, and the unique depth of knowledge it has allowed us to build. Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects.",
+    "description": "For over 15 years we have worked with clients across Saudi Arabia — and we are proud of the depth of knowledge that work has allowed us to build. Our work is delivered by seasoned professionals with extensive industry expertise, each specializing in focused functional areas. We are committed to delivering high-quality services that understand our clients' needs and contribute to the sustainable and innovative success of their projects.",
     "firstName": "First Name",
     "lastName": "Last Name",
-    "telephone": "Telephone",
+    "telephone": "Phone",
     "email": "Email",
-    "message": "Message",
-    "sendInquiry": "Send Inquiry"
+    "serviceNeeded": "Service Needed",
+    "selectService": "Select a service",
+    "message": "Tell us about your project",
+    "messagePlaceholder": "Brief description, location, scale...",
+    "sendInquiry": "Send inquiry",
+    "privacyNote": "Your information is private and will only be used to respond to your inquiry.",
+    "replyTime": "We reply within 24 hours"
   },
   "profile": {
     "title": "Profile",
     "welcome": {
-      "title": "NOTES TO EMPLOYEES",
-      "description": "We're Excited To Have You On Our Employee Platform. Here, We Share Updates, Celebrate Wins, And Grow Together As One Team Shaping The Future. Thank You For Being Part Of noon'S Journey Toward Excellence. Together, We Engineer The Difference."
+      "title": "Notes to Employees",
+      "description": "We're excited to have you on our employee platform. Here, we share updates, celebrate wins, and grow together as one team shaping the future. Thank you for being part of Noon's journey toward excellence. Together, we engineer the difference."
     },
     "jobResponsibilities": {
       "title": "Brand Design & Creative Direction:",
-      "responsibility1": "Develop And Lead Brand Identity Systems, Including Logos, Typography, Color Palettes, And Visual Languages.",
-      "responsibility2": "Translate Brand Strategy Into Compelling Visual Narratives Across Digital And Print.",
-      "responsibility3": "Create Mood Boards, Concept Presentations, And Brand Guidelines Tailored To Client Needs.",
-      "responsibility4": "Collaborate With Cross-Functional Teams (Marketing, Development, Production) To Ensure Brand Consistency.",
-      "responsibility5": "Supervise Junior Designers And Provide Mentorship, Feedback, And Creative Direction."
+      "responsibility1": "Develop and lead brand identity systems, including logos, typography, color palettes, and visual languages.",
+      "responsibility2": "Translate brand strategy into compelling visual narratives across digital and print.",
+      "responsibility3": "Create mood boards, concept presentations, and brand guidelines tailored to client needs.",
+      "responsibility4": "Collaborate with cross-functional teams (marketing, development, production) to ensure brand consistency.",
+      "responsibility5": "Supervise junior designers and provide mentorship, feedback, and creative direction."
     },
     "tabs": {
       "general": "GENERAL INFORMATION",
@@ -245,14 +279,14 @@
     "fields": {
       "fullNameArabic": "Full Name (Arabic)",
       "fullNameEnglish": "Full Name (English)",
-      "identityNo": "Identity NO",
+      "identityNo": "Identity No.",
       "identityEnd": "Identity End",
       "maritalStatus": "Marital Status",
       "educationalQualification": "Educational Qualification",
       "presentAddress": "Present Address",
       "basicSalary": "Basic Salary",
       "department": "Department",
-      "sectionDepartment": "Section:Department",
+      "sectionDepartment": "Section: Department",
       "jobTime": "Job Time",
       "jobPlace": "Job Place",
       "annualLeave": "Number of days of annual leave",
@@ -270,8 +304,8 @@
       "egyptian": "Egyptian",
       "kafrAlsheikhEgypt": "Kafr Alsheikh, Egypt",
       "dateOfBirth": "Date Of Birth",
-      "insuranceNo": "Insurance NO",
-      "relativeRelation": "relative relation",
+      "insuranceNo": "Insurance No.",
+      "relativeRelation": "Relationship",
       "marketingCommunication": "Marketing & Communication",
       "fullTime": "Full Time",
       "onlineRemotely": "Online & Remotely",
@@ -357,22 +391,23 @@
   "factory": "factory",
   "find": "find more",
   "founded in 2011": "since 2011",
-  "headquarters": "Head quarters",
+  "headquarters": "Headquarters",
   "home": {
     "founded": "FOUNDED IN 2011",
-    "title": "Noon Consultants is one of the recognized Architecture in the KSA.",
+    "title": "Noon Consultants is one of the leading architectural firms in KSA.",
     "hero": {
-      "slide1": {
-        "title": "Noon Engineering Consultants",
-        "body": "Designing the future… delivering it with confidence."
-      },
-      "slide2": {
-        "title": "We Believe Every Project Is an Opportunity to Create Real Value",
-        "body": "That is why we focus on understanding the client's needs, studying the urban context, and delivering smart, practical solutions that reflect luxury while achieving economic viability at the same time."
-      },
-      "slide3": {
-        "title": "Our Reach Extends Locally and Internationally, with Expertise Covering Various Sectors and Projects.",
-        "body": ""
+      "eyebrow": "Noon Consultants — KSA",
+      "headline": "Rooted in Saudi Arabia.",
+      "headlineDim": "Reaching for the world.",
+      "subtext": "From concept to completion — architecture, interior design, and urban planning, with experience spanning over 15 years.",
+      "cta1": "View our work",
+      "cta2": "Our story",
+      "scroll": "Scroll",
+      "featured": {
+        "italalat": { "name": "Italalat Resort", "type": "Urban Planning" },
+        "vTower": { "name": "V Tower", "type": "Architecture" },
+        "bloom": { "name": "The Bloom Offices", "type": "Interior Design" },
+        "mosque": { "name": "Al Jumaah Mosque", "type": "Architecture" }
       }
     },
     "nav": {
@@ -381,13 +416,13 @@
       "aboutShort": "About",
       "noon": "Noon",
       "services": "Our Best\nOf Services",
-      "contact": "Contact\nOf Us",
-      "login": "Sign In \\ Sign Up",
-      "findMore": "FIND MORE"
+      "contact": "Contact\nUs",
+      "login": "Sign In / Sign Up",
+      "findMore": "Find More"
     },
     "portfolio": {
-      "title": "Portfolio Of Work",
-      "description": "For years we have worked with organizations around Saudi Arabia. We are proud of the work we have done, and the unique depth of knowledge it has allowed us to build. Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects.",
+      "title": "Portfolio of work",
+      "description": "For over 15 years we have worked with clients across Saudi Arabia — and we are proud of the depth of knowledge that work has allowed us to build. Our portfolio is delivered by seasoned professionals with extensive industry expertise, each specializing in focused functional areas. We are committed to delivering high-quality services that understand our clients' needs and contribute to the sustainable and innovative success of their projects.",
       "urban": "Urban Projects",
       "architectural": "Architectural Projects",
       "client": "PROJECT CLIENT",
@@ -402,33 +437,43 @@
   "m": "m²",
   "mainText": "Noon Consultants is one of the leading architectural firms in the Kingdom of Saudi Arabia",
   "new_branch": "New Branch",
+  "teamHeaderTitleMain": "The people",
+  "teamHeaderTitleDim": "behind the work",
+  "teamHeaderSubtitle": "A multidisciplinary team of architects, engineers, and designers — each bringing focused expertise to every project.",
   "our_team": "Our Team & Designers",
-  "partners": "Our partners",
+  "partners": "Our Partners",
   "partners_of_success": "Partners of Success",
-  "partners_words_about_noon": "partners words about noon",
+  "partners_words_about_noon": "Partners' Words About Noon",
   "pr": "Portfolio",
-  "pricing for all services is in saudi riyals": "pricing for all services is in saudi riyals.",
+  "pricing for all services is in saudi riyals": "Pricing for all services is in Saudi Riyals.",
   "projects": {
     "Details": "Details",
     "Next": "Next",
     "Prev": "Prev",
     "Project Management": "Project Management",
     "Workshop Drawings": "Workshop Drawings",
-    "all": "all",
-    "architecture": "architecture",
+    "all": "All",
+    "architecture": "Architecture",
     "area": "AREA",
     "client": "CLIENT",
     "designedBy": "DESIGNED BY",
     "statusDate": "STATUS DATE",
     "breif": "Over the years, we have partnered with a wide range of organizations across Saudi Arabia, earning a reputation for excellence and reliability. Each project has contributed to the deep, specialized knowledge we bring to every new challenge. Our portfolio is delivered by seasoned professionals with extensive industry experience, each bringing focused expertise across key functional areas. We are committed to providing high-quality, client-focused solutions that support the sustainable, innovative, and long-term success of every project we undertake.",
-    "copy rights": " all renders is back to noon copyrights.",
-    "description": " For years we have worked with organizations around Saudi Arabia. We are proud of the work we have done, and the unique depth of knowledge it has allowed us to build. Are Delivered By Seasoned Professionals With Extensive Industry Expertise, Each Specializing In Focused Functional Areas. Committed To Delivering High-Quality Services That Understand Our Clients' Needs, Contribute To The Sustainable And Innovative Success Of Their Projects..",
-    "interior design": "interior design",
-    "landscape": "landscape",
+    "copy rights": "All renders are subject to Noon's copyright.",
+    "description": "For over 15 years we have worked with clients across Saudi Arabia — and we are proud of the depth of knowledge that work has allowed us to build. Our portfolio is delivered by seasoned professionals with extensive industry expertise, each specializing in focused functional areas. We are committed to delivering high-quality services that understand our clients' needs and contribute to the sustainable and innovative success of their projects.",
+    "interior design": "Interior Design",
+    "landscape": "Landscape",
     "location": "LOCATION",
     "scope": "SCOPE OF WORK",
     "status": "STATUS",
     "title-1": "Our Projects",
+    "eyebrow": "Portfolio of work",
+    "titleMain": "Our projects",
+    "titleDim": "across the Kingdom",
+    "subtitle": "15 years of delivering landmark architecture, interior design, and urban planning across Saudi Arabia.",
+    "viewAll": "View all projects",
+    "counter": "500+ projects delivered",
+    "exploreCta": "Explore full portfolio",
     "urban": "urban",
     "Residdential": "Residential",
     "Commerical": "Commercial",
@@ -475,10 +520,20 @@
     "project_6_location": "Riyadh, KSA",
     "project_6_area": "25000 SQM",
     "project_6_scope": "Interior Design",
-    "project_6_status": "Approved"
+    "project_6_status": "Approved",
+    "categories": {
+      "residential": "Residential",
+      "commercial": "Commercial",
+      "hospitality": "Hospitality",
+      "industrial": "Industrial",
+      "offices": "Offices",
+      "mixed-use": "Mixed Use",
+      "religios": "Religious",
+      "healthcare": "Healthcare"
+    }
   },
   "team": {
-    "name": "DR. NIZAR EL|SAYED",
+    "name": "DR. NIZAR AL SAYED",
     "role": "CHAIRMAN & FOUNDER",
     "member": "Team Member",
     "architectural_designer": "Architectural Designer",
@@ -491,62 +546,363 @@
     "consulting": "Consulting",
     "on_site": "On Site",
     "profile": "Profile",
-    "connect": "Connect"
+    "connect": "Connect",
+    "members": [
+      {
+        "name": "DR. NIZAR ALSAYED",
+        "role": "Founder",
+        "description": "Dr. Nizar Al Sayed is the Founder of Noon Engineering Consultants, bringing over 30 years of experience in architecture and urban planning. He holds a Bachelor's degree in Architecture and a Master's degree in Urban Planning from King Saud University, in addition to a PhD obtained internationally. Throughout his career, Dr. Nizar has led and contributed to a wide range of major projects, shaping urban environments and delivering high-impact developments. His expertise spans architectural design, urban planning, and strategic development, with a strong focus on quality, sustainability, and long-term value. Under his leadership, the firm continues to grow with a clear vision rooted in excellence, innovation, and professional integrity.",
+        "image": "/images/ceoimage.png"
+      },
+      {
+        "name": "FARES ALSAYED",
+        "role": "General Manager of Administration & Development",
+        "description": "Fares Al Sayed is the General Manager of Administration & Development, leading organizational strategy and business operations. He brings extensive experience in administrative leadership and business development, driving performance and supporting the firm's growth objectives. He holds a Bachelor's degree in Business Administration from Al Yamamah University.",
+        "image": "/team/FARES-ALSAYED.webp"
+      },
+      {
+        "name": "RAKAN ABUDAQQA",
+        "role": "Design & Development Director",
+        "description": "Rakan Abudaqqa is the Design & Development Director at Noon Consultants, bringing over 10 years of experience in architectural design and project development. He holds a Bachelor's degree in Architecture from Al Yamamah University and has an academic background in Mechanical Engineering, with over two and a half years of study in the field. Throughout his career, Rakan has contributed to a wide range of projects, leading design development and coordination across multidisciplinary teams. He plays a key role in aligning design vision with technical and regulatory requirements while ensuring high standards of quality and efficiency. Under his leadership, projects are driven by a clear focus on design excellence, functionality, and long-term value.",
+        "image": "/team/RAKAN-ABUDAQQA.webp"
+      },
+      {
+        "name": "TAGHREED ALRASHIDI",
+        "role" :"Procurement Officer",
+        "description": "Taghreed brings strong expertise in managing government tenders, supplier contracts, and procurement workflows via Etimad and SAP ARIBA platforms. Known for her stakeholder management, opportunity analysis, and organizational skills, she holds a B.A. degree in English Language from Shaqra University. She supports end-to-end bidding, vendor contracts, and technical reporting to drive operational efficiency",
+        "image": "/team/TAGHREED-ALRASHIDI.webp"
+      },
+      {
+        "name": "SHAHAD ALDOWAH",
+        "role": "Project Management Officer (PMO)",
+        "description": "Project Management Officer (PMO) at Noon Consultants. Shahad has been with the firm for one year, contributing to project planning, coordination, and progress tracking. Known for her strong organizational skills and team collaboration, she holds a B.S degree in Project Management from Princess Noura University.",
+        "image": "/team/SHAHAD-ALDOWAH (2).webp"
+      },
+      {
+        "name": "RANIA MAHI",
+        "role": "Executive Assistant",
+        "description": "Executive Assistant at Noon Consultants. Rania has been with the firm for one year, supporting administrative coordination and executive operations. Known for her strong organizational and communication skills, she holds a degree in Public Administration from King Faisal University.",
+        "image": "/team/RANIA-MAHI.webp"
+      },
+      {
+        "name": "HUSSAM ALSAYED",
+        "role": "Project Coordinator",
+        "description": "A Project Coordinator with strong organizational and analytical skills, bringing a systematic and precise approach to task management and workflow coordination. Focuses on tracking project milestones, organizing resources, and facilitating clear communication across multidisciplinary teams to ensure smooth operations. With a keen attention to detail, high adaptability, and proactive problem-solving abilities, he provides essential administrative and technical support to drive team efficiency and successful project delivery.",
+        "image": "/team/hussam.jpg"
+      },
+      {
+        "name": "MUDATHER ABUDRESS",
+        "role": "Database Controller",
+        "description": "Mudather Abudress is a Database Controller at Noon Consultants, bringing over 13 years of experience in data and document management. He holds a Bachelor's degree in Computer Science and joined the firm in 2015. Throughout his career, he has been responsible for managing and maintaining project data, ensuring accuracy, organization, and efficient information flow across teams. He plays a key role in supporting project operations through structured data control and coordination, contributing to the overall efficiency and reliability of project delivery.",
+        "image": "/team/MUDATHER-ABUDRESS.webp"
+      },
+      {
+        "name": "AL WALID ALBAIK",
+        "role": "Lead Architect and AI Specialist",
+        "description": "Lead Architect and AI Specialist at Noon Consultants, with experience in architectural design and digital innovation. He holds a Bachelor's degree in Architecture from Al Yamamah University and has been with the firm for two years, contributing to a range of residential and commercial projects. Throughout his career, he has combined architectural expertise with advanced digital tools, focusing on design development, visualization, and integrating AI-driven solutions into the design process. He plays a key role in enhancing design efficiency and delivering innovative, high-quality outcomes aligned with project requirements.",
+        "image": "/team/ALWALID-ALBAIK.webp"
+      },
+      {
+        "name": "FARIS ALAZIM",
+        "role": "Design Manager",
+        "description": "A Design Manager and Interior Architect with solid experience leading design workflows across residential, commercial, and exhibition projects. Skilled in guiding teams, driving concept development, producing high-fidelity visualizations, and delivering precise technical documentation. Adept at coordinating with stakeholders, contractors, and suppliers to ensure seamless execution from concept to final delivery. Has managed and designed projects across residential, commercial, and events sectors.",
+        "image": "/team/فارس العظم.jpeg"
+      },
+      {
+        "name": "ZAINAB BASHA",
+        "role": "Lead Architect and BIM Coordinator",
+        "description": "A Lead Architect and BIM Coordinator with 6 years of experience spanning architecture, interior, and landscape design. She drives design workflows and BIM integration from early concept through to site execution across luxury residential, commercial, and institutional projects. Grounded in sustainability and well-versed in Saudi building regulations, she crafts sensory-rich spaces with a keen eye for materials, light, and texture. Adept at leading multidisciplinary project coordination (MEP and structural), producing high-fidelity 3D visualizations, and delivering precise construction documentation to ensure seamless execution and client satisfaction.",
+        "image": "/team/Zainab-Basha.png"
+      },
+      {
+        "name": "SALMAN ALSAIDI",
+        "role": "Architect Engineer",
+        "description": "Salman Sultan Alsaidi is an Architect Engineer at Noon Consultants, with experience in architectural design and project coordination. He holds a Bachelor's degree in Architecture from the University of Hail and has contributed to a range of residential and development projects. Throughout his work, Salman has been involved in design development, BIM modeling, and preparation of working drawings, ensuring alignment with project requirements and regulatory standards. He plays an active role in supporting project delivery through coordination and technical development, contributing to efficient and high-quality design outcomes.",
+        "image": "/team/SALMAN-ALSAIDI.webp"
+      },
+      {
+        "name": "HOSSAM ALRASHID",
+        "role": "Junior Architect & Interior Designer",
+        "description": "Hossam Alrashid is a Junior Architect and Interior Designer at Noon Consultants, holding a Bachelor's degree in Architecture from King Saud University. As a junior professional, he brings a fresh and creative approach to design, with a strong passion for innovation and detail. Throughout his work, Hussam contributes to concept development, architectural and interior design, and visual presentations. He is known for his creative thinking and ability to generate unique design ideas, supporting the team in delivering visually engaging and functional design solutions aligned with project requirements.",
+        "image": "/team/HOSSAM-ALRASHID.webp"
+      },
+      {
+        "name": "AYAH ALTHUNAYAN",
+        "role": "Junior Architect",
+        "description": "A Junior Architect specializing in Revit modeling and technical drafting. She holds a Bachelor's degree in Architecture from Prince Sultan University, bringing a strong academic background and solid technical capability. Skilled in developing architectural models, preparing detailed drawings, coordinating sheets, and ensuring compliance with project standards. Known for accuracy, fast learning, and effective teamwork, contributing to reliable and high-quality design deliverables.",
+        "image": "/team/AYA-AITHUNAYAN.webp"
+      },
+      {
+        "name": "AHMED RASHWANI",
+        "role": "Architect & BIM Specialist",
+        "description": "Ahmed Rashwani is an Architect and BIM Specialist at Noon Consultants, holding a Bachelor's degree in Architecture from Al Yamamah University. As a junior professional, he brings strong technical capabilities in architectural design and Building Information Modeling (BIM). Throughout his work, Ahmed contributes to design development, BIM modeling, and coordination across multidisciplinary teams. He is known for his attention to detail and ability to support accurate, well-coordinated design outputs, enhancing project efficiency and ensuring alignment with technical and project requirements.",
+        "image": "/team/AHMED-RASHWANI.webp"
+      },
+      {
+        "name": "ABDULBAQI TAHER",
+        "role": "Mechanical Engineer",
+        "description": "Abdulbaqi Taher is a Mechanical Engineer at Noon Consultants, with experience in MEP systems design and coordination across various building projects. He holds a Bachelor's degree in Mechanical Engineering from Prince Sattam Bin Abdulaziz University. Throughout his work, Abdulbaqi has been involved in HVAC, plumbing, and firefighting systems, contributing to design development, technical coordination, and site implementation. He plays an active role in supporting project delivery by ensuring compliance with codes and standards while maintaining efficiency and quality across all stages of execution.",
+        "image": "/team/ABDULBAQI-TAHER.webp"
+      },
+      {
+        "name": "ATTA ALATRASH",
+        "role": "Senior Planning Engineer",
+        "description": "Ata Al Atrash is a Senior Planning Engineer at Noon Consultants, bringing over 10 years of experience in project planning, scheduling, and performance management across engineering projects. He holds a Bachelor's degree in Engineering from Al Hussein Bin Talal University, Jordan. Throughout his career, Ata has specialized in developing and managing project schedules using Primavera P6 and Microsoft Project, along with preparing advanced reports and dashboards to support data-driven decision-making. He plays a key role in monitoring project progress, optimizing performance, and ensuring alignment with project objectives and industry best practices.",
+        "image": "/team/ATTA-ALATRASH.webp"
+      },
+      {
+        "name": "MAHMOUD ELASSAS",
+        "role": "Senior Structural Engineer",
+        "description": "Mahmoud Elassas is a Senior Structural Engineer at Noon Consultants, with experience in structural engineering and construction supervision. He holds a Bachelor's degree in Civil/Structural Engineering from Delta University, Egypt. Throughout his career, Mahmoud has been involved in supervising reinforced concrete works, site execution, and coordination across multidisciplinary teams. He plays a key role in ensuring that structural works are delivered in compliance with approved drawings, specifications, and safety standards, contributing to efficient and high-quality project delivery.",
+        "image": "/team/MAHMOUD-ELASSAS.webp"
+      },
+      {
+        "name": "MOHAMED JAMAL",
+        "role": "Electrical Engineer",
+        "description": "Mohamed Jamal is an Electrical Engineer at Noon Consultants, with experience in electrical design and coordination for residential and commercial projects. He holds a Bachelor's degree in Electrical Engineering from the American University of Sharjah and is currently pursuing a Master's degree in Engineering and Systems Management at Alfaisal University. Throughout his work, Mohamed has been involved in electrical layouts, load calculations, and single line diagrams, as well as reviewing technical submittals and coordinating with multidisciplinary teams. He plays an active role in ensuring integrated MEP design and compliance with project requirements, contributing to efficient and high-quality project delivery.",
+        "image": "/team/MOHAMED-JAMAL.webp"
+      },
+      {
+        "name": "MOHAMED DARWISH",
+        "role": "Electrical Engineer",
+        "description": "Mohamed Darwish is an Electrical Engineer at Noon Consultants, with strong experience in electrical systems design, installation, and supervision across residential, commercial, and industrial projects. He holds a Bachelor's degree in Electrical Power Engineering from the University of Damascus. Throughout his career, Mohamed has specialized in power distribution, low-voltage systems, and panel engineering, contributing to design development, site execution, and technical coordination. He plays a key role in ensuring compliance with international and local standards, including IEC and NFPA, while delivering safe, efficient, and high-quality electrical solutions.",
+        "image": "/team/MOHAMED-DARWISH.webp"
+      },
+      {
+        "name": "MOHAMED SHAABAN",
+        "role": "Technical Officer",
+        "description": "Mohamed Shaaban is a Technical Officer at Noon Consultants, bringing over 17 years of experience in architectural and civil drafting, as well as quantity surveying. He holds a diploma in Civil Engineering and a diploma in CAD, and completed his studies in India. Throughout his career, he has developed strong expertise in preparing detailed drawings, quantity take-offs, and supporting project teams across various stages of design and execution. He plays a key role in ensuring accuracy, coordination, and efficiency in technical documentation, contributing to the successful delivery of projects.",
+        "image": "/team/MOHAMED-SHAABAN.webp"
+      },
+      {
+        "name": "BASHIR ALSABRI",
+        "role": "Mechanical Engineer",
+        "description": "Bashir Alsabri is a Mechanical Engineer at Noon Consultants, with experience in MEP systems, specializing in HVAC, firefighting, and plumbing. He holds a Bachelor's degree in Mechanical Engineering from Sana'a University. Throughout his career, Bashir has been involved in both technical office and site operations, including design development, shop drawings, BOQs, and project coordination. He has worked in compliance with international and local standards such as ASHRAE, NFPA, and the Saudi Building Code, contributing to efficient and high-quality project execution.",
+        "image": "/team/BASHIR-ALSABRI.webp"
+      },
+      {
+        "name": "TASSNEM AL-ASDI",
+        "role": "Lead Architect",
+        "description": "Lead Architect with over 6 years of experience in architectural design, 3D visualization, landscape design, and BIM workflows in Riyadh. Holds a B.Sc. in Architectural Engineering from Prince Sultan University (a private university). Leads the architectural design team and oversees detailed drawings for residential and commercial projects, while heading tender processes including pricing, technical writing, cost estimation, and subcontractor management. Proficient in Revit, AutoCAD, SketchUp, Lumion, Rhino, and Grasshopper.",
+        "image": ""
+      },
+      
+      {
+        "name": "MOHAMMED OBAIDAT",
+        "role": "Head of MEP Department",
+        "description": "The Head of the MEP Department, a Senior Electrical Engineer with over 30 years of extensive experience in designing, supervising, and managing electrical and MEP systems across major projects. He has led multidisciplinary engineering teams, ensuring technical excellence, compliance, and seamless coordination throughout all project stages—from conceptual design to site execution. His expertise covers power distribution, protection systems, low-current solutions, energy efficiency, and full MEP integration, making him a key figure in delivering reliable, high-quality engineering outcomes.",
+        "image": ""
+      },
+      {
+        "name": "MOHAMMED ALASHQAR",
+        "role": "Site Supervision Architect",
+        "description": "Site supervision Architect with over 15 years of experience specializing in site supervision and construction oversight for residential and commercial projects. Skilled in managing day-to-day site activities, ensuring quality compliance, coordinating with contractors, reviewing drawings, and resolving technical issues efficiently. He holds a Bachelor's degree in Architectural Engineering and brings strong practical expertise in construction standards, supervision methodologies, and on-site risk management, ensuring precise and reliable project delivery.",
+        "image": ""
+      },
+      {
+        "name": "SALEEM SHQAIR",
+        "role": "MEP Engineering Manager and Technical Director",
+        "description": "MEP Engineering Manager and Technical Director with over 18 years of leadership experience in electrical design, BIM coordination, and the delivery of large-scale projects across Saudi Arabia and the GCC region. Possesses a proven track record in managing multidisciplinary MEP operations and facilitating seamless communication among main contractors, consultants, and stakeholders to ensure the highest quality standards. Highly skilled in overseeing complex infrastructure, healthcare, hospitality, and transit projects (such as the Riyadh Metro), ensuring all engineering deliverables strictly comply with project specifications and applicable codes while effectively driving project milestones.",
+        "image": ""
+      },
+      {
+        "name": "MOHAMED RASHED",
+        "role": "Senior Electrical Engineer",
+        "description": "A Senior Electrical Engineer with over 8 years of experience in electrical design, BIM coordination, and MEP systems across commercial, healthcare, and infrastructure projects in Saudi Arabia. Adept at leading detailed electrical designs, including lighting, power distribution, low current, and fire alarm systems. Skilled in developing 3D MEP models using Autodesk Revit, performing clash detection with Navisworks, and conducting comprehensive electrical calculations (such as voltage drop and load estimation) to ensure design compliance with applicable codes.",
+        "image": ""
+      },
+      {
+        "name": "MOHAMED AZAB",
+        "role": "Senior Mechanical Engineer",
+        "description": "A Senior Mechanical Engineer with over 8 years of extensive experience in MEP design and BIM coordination for large-scale, complex projects across Saudi Arabia and the UAE. Leads the design of HVAC, plumbing, drainage, and complete firefighting systems, including advanced hydraulic and cooling load calculations. Highly proficient in developing fully coordinated 3D BIM models and executing clash detection using Navisworks and Revizto, ensuring seamless integration of mechanical systems with architectural and structural disciplines.",
+        "image": ""
+      },
+      {
+        "name": "AHMED ABU SOUD",
+        "role": "Senior Structural Engineer",
+        "description": "Senior Structural Engineer with over 11 years of experience in structural design and analysis across commercial, residential, high-rise, and healthcare projects in Saudi Arabia, the UAE, and Iraq. Proven expertise in designing reinforced concrete and advanced structural systems for large-scale, complex building typologies. Highly proficient in utilizing industry-leading software (such as ETABS, SAFE, SAP2000, and STAAD Pro) to perform rigorous structural analysis, alongside effectively coordinating with architectural and MEP teams to ensure seamless design integration and strict code compliance.",
+        "image": ""
+      },
+      {
+        "name": "RAMI AHMAD",
+        "role": "Electrical BIM Engineer",
+        "description": "Electrical BIM Engineer with over 3 years of experience in electrical design, BIM modeling, and MEP coordination for commercial, educational, and residential projects. Skilled in preparing electrical calculations, including load estimation, lighting design, and low current systems, as well as developing coordinated 3D models and shop drawings. Proficient in using Navisworks for clash detection and resolving multidisciplinary coordination issues to ensure all deliverables comply with international design standards and client specifications.",
+        "image": ""
+      },
+      {
+        "name": "YOUSEF MAHMOUD",
+        "role": "Electrical BIM Engineer",
+        "description": "Electrical BIM Engineer with over 6 years of experience in BIM modeling and design across commercial, healthcare, and infrastructure projects in Saudi Arabia. Specialized in delivering fully coordinated 3D MEP models, comprehensive lighting calculations, and shop drawings for complex building structures and hospital projects. Experienced in performing clash detection in Navisworks and supporting detailed electrical design calculations to guarantee compliance with applicable codes and project specifications.",
+        "image": ""
+      },
+      {
+        "name": "NIDAL QASEM",
+        "role": "Electrical BIM Engineer",
+        "description": "An Electrical BIM Engineer with over 4 years of experience delivering electrical design and BIM modeling for commercial, healthcare, and hospitality projects across the GCC region. Experienced in developing fully coordinated 3D electrical models, conducting lighting calculations, and producing accurate shop drawings. Proficient in utilizing Autodesk Revit and Navisworks to perform clash detection and coordinate electrical layouts with mechanical, civil, and structural teams, ensuring strict compliance with international design standards.",
+        "image": ""
+      },
+      {
+        "name": "KAREEM SALEH",
+        "role": "Electrical BIM Engineer",
+        "description": "Electrical BIM Engineer with over 5 years of experience in electrical design and BIM modeling across commercial, healthcare, and residential projects in Jordan and Saudi Arabia. Proficient in producing coordinated 3D models, shop drawings, and executing electrical calculations in compliance with international engineering standards. Highly skilled in utilizing software such as Autodesk Revit (MEP), Navisworks, and DIALux to perform clash detection and resolve multidisciplinary MEP coordination issues effectively.",
+        "image": ""
+      },
+      {
+        "name": "AHMED KHWALDEH",
+        "role": "Mechanical BIM Engineer",
+        "description": "Mechanical BIM Engineer with over 3 years of experience in mechanical design and BIM modeling for large-scale commercial and infrastructure megaprojects in Saudi Arabia. Highly capable in designing HVAC and firefighting systems, conducting cooling load calculations, and executing precise pipe sizing. Proficient in utilizing Revit MEP and Navisworks to generate accurate shop drawings and manage clash detection, ensuring all mechanical deliverables strictly align with project specifications and applicable codes.",
+        "image": ""
+      },
+      {
+        "name": "OMER NASER",
+        "role": "Mechanical BIM Engineer",
+        "description": "Mechanical BIM Engineer with over 3 years of experience in mechanical BIM modeling and coordination across commercial, healthcare, and infrastructure projects in Saudi Arabia. Specialized in designing and modeling HVAC and firefighting systems, as well as producing precise shop drawings. Adept at cross-disciplinary coordination with structural and electrical teams using Navisworks for clash detection, ensuring the delivery of integrated, conflict-free designs that comply with industry standards.",
+        "image": ""
+      },
+      {
+        "name": "ABDULLAH FUDA",
+        "role": "Mechanical BIM Engineer",
+        "description": "Mechanical BIM Engineer with over 4 years of experience in mechanical design and BIM coordination across large-scale infrastructure, healthcare, stadium, and hospitality projects in Saudi Arabia and Qatar. Excels at delivering fully coordinated 3D models for HVAC, plumbing, drainage, and firefighting systems. Brings specialized value through preparing COBie parameters for asset handover and supporting 4D scheduling activities, alongside adept clash detection via Navisworks to guarantee seamless design integration and clash-free project delivery.",
+        "image": ""
+      },
+      {
+        "name": "RAMI BARAKAT",
+        "role": "Mechanical BIM Engineer",
+        "description": "Mechanical BIM Engineer with over 2 years of experience in mechanical design and BIM coordination for commercial and mixed-use projects in Saudi Arabia. Proficient in designing HVAC systems, executing mechanical calculations, and producing detailed shop drawings. Skilled in utilizing Revit MEP and Navisworks to perform clash detection and streamline MEP coordination, ensuring the delivery of accurate, conflict-free models that meet stringent project specifications.",
+        "image": ""
+      },
+      {
+        "name": "OMAR AL KURDI",
+        "role": "BIM Structural Engineer",
+        "description": "A BIM Structural Engineer with over 6 years of experience in structural BIM modeling and coordination across prestigious, large-scale projects in Saudi Arabia and the UAE, delivering for high-profile clients including NEOM and EMAAR. Excels in managing complex structural models and performing rigorous clash detection using Navisworks and BIM 360/ACC. Distinguished by his ability to utilize Dynamo scripting to automate repetitive modeling workflows and data extraction, thereby maximizing production efficiency and ensuring the delivery of precise, code-compliant shop drawings.",
+        "image": ""
+      },
+      {
+        "name": "TARIQ SAMARA",
+        "role": "BIM Structural Engineer",
+        "description": "A BIM Structural Engineer with over 5 years of experience in structural BIM modeling and coordination for commercial, healthcare, hospitality, and infrastructure projects across Saudi Arabia, Qatar, and the GCC region. Adept at delivering fully coordinated structural models and managing meticulous clash detection using Navisworks and BIM 360/ACC to ensure cross-disciplinary integration. Combines analytical skills in ETABS with advanced automation capabilities via Dynamo to enhance modeling efficiency, producing highly accurate shop drawings that drive the success of complex, large-scale projects.",
+        "image": ""
+      },
+      {
+        "name": "FIRAS ADEL",
+        "role": "BIM Structural Engineer",
+        "description": "A BIM Structural Engineer with over 3 years of experience in structural BIM modeling and coordination for commercial, hospitality, and infrastructure projects in Saudi Arabia and Iraq. Skilled in developing fully coordinated 3D structural models and executing clash detection using Revit, Navisworks, and BIM 360/ACC to resolve complex design conflicts. Provides comprehensive support from concept to construction by producing accurate shop drawings and ensuring all deliverables strictly adhere to project requirements and industry standards.",
+        "image": ""
+      },
+      {
+        "name": "ALAA ABDULLAH",
+        "role": "Senior Civil Engineer",
+        "description": "A Senior Civil Engineer with over 8 years of experience in civil and structural engineering, site management, and construction supervision across commercial, industrial, medical, and residential projects in Saudi Arabia. Demonstrates extensive expertise in overseeing structural works, conducting site investigations, and managing shoring systems, coupled with strong capabilities in tendering, bidding, and contract auditing. Proficient in utilizing AutoCAD, Primavera P6, MS Project, and Prokon to drive project planning and execution, ensuring all site activities strictly comply with approved drawings, specifications, and the highest standards of engineering quality.",
+        "image": ""
+      },
+      {
+        "name": "LAITH AHMED",
+        "role": "Architectural Team Leader",
+        "description": "Architectural Team Leader with extensive experience in guiding architectural vision and managing design teams to deliver exceptional projects. Oversees the project lifecycle from initial concept to execution drawings, focusing on cross-disciplinary coordination, quality assurance, and meeting client requirements to deliver designs that seamlessly blend aesthetics and functionality.",
+        "image": ""
+      },
+      {
+        "name": "AHMED RASMI",
+        "role": "Senior Architect",
+        "description": "A Senior Architect with over 9 years of experience, advanced expertise in developing innovative architectural concepts and resolving complex design details. Leads architectural coordination and the preparation of precise drawings, with a strong commitment to sustainable design standards and building codes, ensuring the accurate translation of the design vision into reality.",
+        "image": ""
+      },
+      {
+        "name": "ABDULRAHMAN DIBSE",
+        "role": "Architect",
+        "description": "A creative Architect with over 5 years of experience, focused on efficiently developing architectural designs and spatial planning. Excels in producing accurate architectural drawings and 3D models, with a keen eye for detail to ensure design compliance with functional, aesthetic, and project-specific requirements.",
+        "image": ""
+      },
+      {
+        "name": "AHMED ALI",
+        "role": "BIM Manager",
+        "description": "A BIM Manager with over 10 years of experience leading digital transformation strategies and establishing BIM standards across all engineering disciplines (Architectural, Structural, and MEP). Oversees model quality, advanced clash management, and workflow development to ensure data integration and project delivery with maximum accuracy and operational efficiency.",
+        "image": ""
+      },
+      {
+        "name": "ADNAN ALOTAIBI",
+        "role": "Infrastructure Team Leader",
+        "description": "Infrastructure Team Leader with 8 years of experience who manages and directs the design and coordination of major infrastructure projects. Oversees comprehensive utility network planning and site development, ensuring strict compliance with engineering standards, adopted codes, and sustainability requirements to guarantee long-term project success.",
+        "image": ""
+      },
+      {
+        "name": "NAJEEB SHAQURI",
+        "role": "Senior Infrastructure Engineer",
+        "description": "A Senior Infrastructure Engineer with 11 years of experience, advanced expertise in designing and analyzing utility networks and complex site developments. Leads the provision of innovative engineering solutions to field challenges and oversees execution drawings to ensure highly efficient infrastructure integration with other disciplines.",
+        "image": ""
+      },
+      {
+        "name": "QOSAI ZRAQAT",
+        "role": "Infrastructure Engineer",
+        "description": "An Infrastructure Engineer specialized in the design and coordination of utility networks and site development works. Meticulously integrates systems and develops engineering drawings to deliver efficient, sustainable infrastructure solutions that support project needs and comply with industry standards.",
+        "image": ""
+      },
+      {
+        "name": "ADEL RAJAB",
+        "role": "Operation Control Director",
+        "description": "Adel Rajab serves as the Operation Control Director at Noon Consultants, overseeing the company's operational workflows and ensuring the seamless execution of projects across all departments. With a strong background in organizational management and process optimization, he plays a pivotal role in aligning operational strategies with the firm's overall objectives. His leadership ensures efficiency, accountability, and continuous improvement within the organization.",
+        "image": ""
+      },
+      {
+        "name": "WALEED ABDULLAH",
+        "role": "Structural Engineer",
+        "description": "Waleed Abdullah is a Structural Engineer at Noon Consultants, responsible for analyzing, designing, and supervising structural systems across a wide range of projects. He brings technical precision and engineering expertise to ensure that all structures meet the highest standards of safety, durability, and compliance. His contributions are integral to the successful delivery of complex construction and development projects undertaken by the firm.",
+        "image": ""
+      },
+      {
+        "name": "OMAR HASSOUN",
+        "role": "Assistant Engineer",
+        "description": "Omar Hassoun works as an Assistant Engineer at Noon Consultants, supporting the engineering team in the planning, coordination, and execution of various project phases. He assists senior engineers in technical assessments, site supervision, and documentation, contributing to the smooth progress of ongoing projects. His commitment to accuracy and teamwork makes him a valuable asset in delivering quality engineering outcomes.",
+        "image": ""
+      },
+      {
+        "name": "MOHAMED JOMAA",
+        "role": "AOR Senior Architect",
+        "description": "Mohamed Jomaa is a Senior Architect (AOR) at Noon Consultants, leading architectural design efforts with a focus on innovation, functionality, and compliance with local and international building standards. As an Architect of Record, he takes full professional responsibility for the design integrity of projects, coordinating with multidisciplinary teams to deliver visionary spaces that reflect both client aspirations and regulatory requirements.",
+        "image": ""
+      },
+      {
+        "name": "ALI ABOZAMIL",
+        "role": "Graphic Designer",
+        "description": "Ali Abozamil serves as the Graphic Designer at Noon Consultants, crafting compelling visual identities, presentations, and design materials that reflect the firm's professional brand. With a keen eye for detail and a strong sense of visual communication, he supports the team by producing high-quality graphics that enhance project deliverables, marketing materials, and client-facing content across all platforms.",
+        "image": ""
+      }
+    ]
   },
   "projectsTitle": "Our Projects",
   "register": "Register",
-  "rights": "All Right Reserved To Noon Consultants 2025. ®",
-  "send inquiry": "send inquiry",
+  "rights": "All Rights Reserved by Noon Consultants 2026. ®",
+  "send inquiry": "Send Inquiry",
   "services": "Our Services",
   "servicess": {
-    "allServices": " All Services",
-    "breif": "Over the years, we have proudly served a wide range of clients throughout Saudi Arabia, building a reputation for technical excellence and client-centric solutions. Our services are delivered by experts with in-depth knowledge across various engineering disciplines, each committed to delivering value-driven, high-performance outcomes. We focus on innovation, sustainability, and precision to support the long-term success of our clients’ projects.",
-    "service-1": "ENGINEERING & ARCHITECTURAL DESIGN",
-    "service-1-description": "The art and science of creating buildings and ther physical structures. It involves the careful consideration of aesthetics, functionality, and the environment.",
+    "headerEyebrow": "What we do",
+    "headerTitleMain": "Expertise",
+    "headerTitleDim": "Across 10 Disciplines",
+    "headerSubtitle": "From a single space to an entire masterplan — we deliver at every scale.",
+    "allServices": "All Services",
+    "learnMore": "Learn More",
+    "fullServices": "FULL {title} SERVICES",
+    "download": "Download",
+    "breif": "Over the years, we have proudly served a wide range of clients throughout Saudi Arabia, building a reputation for technical excellence and client-centric solutions. Our services are delivered by experts with in-depth knowledge across various engineering disciplines, each committed to delivering value-driven, high-performance outcomes. We focus on innovation, sustainability, and precision to support the long-term success of our clients' projects.",
+    "service-1": "ARCHITECTURAL DESIGN",
+    "service-1-description": "The art and science of creating buildings and their physical structures. It involves the careful consideration of aesthetics, functionality, and the environment.",
     "service-1-features": {
       "1": "Concept and Preliminary Design",
-      "2": "Interior Design",
+      "2": "Schematic and Detailed Design",
       "3": "Construction Documents & Workshop Drawings",
       "4": "Value Engineering and Bill of Materials"
     },
-    "service-10": "INTERIOR DESIGN",
-    "service-10-description": "The art and science of enhancing the interior of a space to create a more aesthetically pleasing and functional environment. It involves designing the layout, selecting furnishings and finishes, coordinating color schemes ,lighting",
-    "service-10-features": {
-      "1": "Space Planning",
-      "2": "Aesthetic and Functional Design",
-      "3": "Material and Finish Selection",
-      "4": "Lighting and Color Schemes",
-      "5": "Furniture and Fixture Arrangement"
-    },
-    "service-11": "PROJECT MANAGEMENT",
-    "service-11-description": "The discipline of planning, organizing, and overseeing the completion of a project to achieve specific goals and meet specific success criteria. It involves managing resources, time, and scope to deliver the project on time, within budget, required quality standards.",
-    "service-11-features": {
-      "1": "Planning and Scheduling",
-      "2": "Resource Allocation",
-      "3": "Risk Management",
-      "4": "Team Coordination",
-      "5": "Progress Tracking and Reporting"
-    },
-    "service-12": "OR | ARCHITECT OF RECORD",
-    "service-12-description": "The licensed architect responsible for the legal and professional aspects of a project. This role involves overseeing the design and documentation to ensure that the project complies with local building codes, regulations, and standards.",
-    "service-12-features": {
-      "1": "Project Oversight",
-      "2": "Compliance with Codes and Standards",
-      "3": "Coordination with Design Team",
-      "4": "Documentation and Certification",
-      "5": "Client Liaison and Communication"
-    },
-    "service-2": "URBAN DESIGN",
-    "service-2-description": "Urban design is the process of shaping the physical setting for life in cities, towns, and villages. It involves the arrangement, appearance, and functionality of urban spaces, including the design of buildings, streets, parks, and other public spaces.",
+    "service-2": "URBAN DESIGN & MASTER PLANNING",
+    "service-2-description": "The process of shaping the physical setting for life in cities and towns. It involves the arrangement, appearance, and functionality of urban spaces, including buildings, streets, parks, and other public areas.",
     "service-2-features": {
       "1": "Feasibility Studies",
       "2": "Site Appraisals",
-      "3": "Asset Appraisals",
-      "4": "Environmental Impact Assessment",
-      "5": "Social Impact Assessment"
+      "3": "Environmental Impact Assessment",
+      "4": "Social Impact Assessment",
+      "5": "Urban Space and Public Realm Design"
     },
     "service-3": "MASTER PLANNING",
-    "service-3-description": "Is a comprehensive, long-term planning process that provides a blueprint for the physical, economic, and social development of a particular area, such as a city, neighborhood, or large-scale development project.",
+    "service-3-description": "A comprehensive, long-term planning process that provides a blueprint for the physical, economic, and social development of a particular area, such as a city, neighborhood, or large-scale development project.",
     "service-3-features": {
       "1": "Site Analysis and Feasibility Studies",
       "2": "Land Use and Zoning Planning",
@@ -555,7 +911,7 @@
       "5": "Community Engagement and Stakeholder Consultation"
     },
     "service-4": "CONSTRUCTION SUPERVISION",
-    "service-4-description": "the process of overseeing the construction phase of a project to ensure that it is completed on time, within budget, and according to the specified standards and plans. It involves managing various aspects of the construction process.",
+    "service-4-description": "The process of overseeing the construction phase of a project to ensure that it is completed on time, within budget, and according to the specified standards and plans.",
     "service-4-features": {
       "1": "On-Site Monitoring and Inspection",
       "2": "Quality Control and Assurance",
@@ -563,59 +919,77 @@
       "4": "Progress Reporting and Documentation",
       "5": "Coordination with Contractors and Stakeholders"
     },
-    "service-5": "PERMITS",
-    "service-5-description": "The process of obtaining official permission or certification to practice as a professional in these fields. It ensures that individuals meet specific educational, professional, ethical standards to safeguard public health, safety, and welfare.",
+    "service-5": "STRUCTURAL ENGINEERING",
+    "service-5-description": "The discipline concerned with the design and analysis of structures that support or resist loads. It ensures buildings and structures are safe, stable, and durable under all conditions.",
     "service-5-features": {
-      "1": "Regulatory Compliance",
+      "1": "Structural Analysis and Design",
+      "2": "Foundation Engineering",
+      "3": "Structural Calculations and Reports",
+      "4": "Retrofit and Rehabilitation Design",
+      "5": "Coordination with Architectural and MEP Teams"
+    },
+    "service-6": "PERMITS & AUTHORITY SUBMISSION",
+    "service-6-description": "The process of obtaining official approvals and permits from regulatory authorities to ensure full compliance with local building codes, regulations, and standards.",
+    "service-6-features": {
+      "1": "Regulatory Compliance Assessment",
       "2": "Application Preparation and Submission",
-      "3": "Review and Approval by Authorities",
+      "3": "Authority Review and Approval Follow-up",
       "4": "Issuance of Permits and Licenses",
       "5": "Ongoing Compliance and Renewals"
     },
-    "service-6": "ENGINEERING REPORTS",
-    "service-6-description": "Detailed documents that present technical information, findings, analysis, and recommendations related to engineering projects. These reports are essential for communicating complex information clearly and effectively.",
-    "service-6-features": {
-      "1": "Data Collection and Analysis",
-      "2": "Problem Identification and Assessment",
-      "3": "Design Solutions and Recommendations",
-      "4": "Technical Specifications and Calculations",
-      "5": "Conclusion and Future Considerations"
-    },
-    "service-7": "VALUE ENGINEERING",
-    "service-7-description": "To improve the value of a project by analyzing its functions. The goal is to enhance the project's performance, quality, and reliability while minimizing costs. It involves identifying and eliminating unnecessary expenditures,",
+    "service-7": "MEP ENGINEERING",
+    "service-7-description": "Mechanical, Electrical, and Plumbing engineering encompasses the design and coordination of building systems to ensure functionality, efficiency, and occupant comfort.",
     "service-7-features": {
-      "1": "Function Analysis",
-      "2": "Cost Reduction",
-      "3": "Alternative Solutions",
-      "4": "Efficiency Optimization",
-      "5": "Quality Maintenance"
+      "1": "HVAC System Design",
+      "2": "Electrical Systems and Lighting Design",
+      "3": "Plumbing and Drainage Systems",
+      "4": "Fire Protection Systems",
+      "5": "Energy Efficiency and Sustainability"
     },
-    "service-8": "ENGINEERING STUDIES",
-    "service-8-description": "Comprehensive analyses conducted to evaluate various aspects of engineering projects. These studies aim to provide detailed insights, inform decision-making, and ensure the feasibility, safety, and efficiency of a project.",
+    "service-8": "LANDSCAPE ARCHITECTURE",
+    "service-8-description": "The art and practice of designing and arranging outdoor spaces to enhance their aesthetic appeal, functionality, and environmental value.",
     "service-8-features": {
-      "1": "Gather & review all necessary engineering documents",
-      "2": "Site survey",
-      "3": "Check the performance of building and equipment",
-      "4": "Inspection, casting, and risk assessment",
-      "5": "Rectify identified issues"
-    },
-    "service-9": "LANDSCAPING",
-    "service-9-description": "Refers to the art and practice of designing and arranging outdoor spaces, including gardens, parks, and other natural environments, to enhance their aesthetic appeal, functionality, and environmental value. plants, hardscapes, and structures to create pleasing and functional outdoor areas.",
-    "service-9-features": {
-      "1": "Site Analysis and Design",
+      "1": "Site Analysis and Landscape Design",
       "2": "Plant Selection and Placement",
-      "3": "Hardscape Installation (e.g., pathways, walls)",
+      "3": "Hardscape Design (pathways, walls, plazas)",
       "4": "Irrigation Systems Design",
-      "5": "Maintenance and Seasonal Care"
+      "5": "Maintenance and Seasonal Care Planning"
     },
-    "service-btn": "  SERVICE PROJECTS",
+    "service-9": "DEVELOPMENT MANAGEMENT",
+    "service-9-description": "The discipline of planning, organizing, and overseeing development projects from inception to completion, ensuring delivery on time, within budget, and to the required quality standards.",
+    "service-9-features": {
+      "1": "Project Planning and Scheduling",
+      "2": "Budget and Resource Management",
+      "3": "Risk Identification and Mitigation",
+      "4": "Stakeholder Coordination",
+      "5": "Progress Tracking and Reporting"
+    },
+    "service-10": "INTERIOR DESIGN",
+    "service-10-description": "The art and science of enhancing interior spaces to create aesthetically pleasing and functional environments through deliberate design of layout, materials, lighting, and finishes.",
+    "service-10-features": {
+      "1": "Space Planning",
+      "2": "Aesthetic and Functional Design",
+      "3": "Material and Finish Selection",
+      "4": "Lighting and Color Schemes",
+      "5": "Furniture and Fixture Arrangement"
+    },
+    "service-11": "AOR | ARCHITECT OF RECORD",
+    "service-11-description": "The licensed architect responsible for the legal and professional aspects of a project, overseeing design and documentation to ensure compliance with local building codes, regulations, and standards.",
+    "service-11-features": {
+      "1": "Project Oversight and Compliance",
+      "2": "Coordination with Design Team",
+      "3": "Documentation and Certification",
+      "4": "Code and Regulatory Compliance",
+      "5": "Client Liaison and Communication"
+    },
+    "service-btn": "SERVICE PROJECTS",
     "title-1": "Our Services"
   },
-  "slide to select the space of the services in m2": "slide to select the space of the services in m².",
-  "team_text": "With years of experience collaborating with organizations across Saudi Arabia, our team has cultivated a deep, industry-specific knowledge base. Our projects are delivered by seasoned professionals with specialized expertise across key functional areas. Each team member is dedicated to providing high-quality, tailored services that align with our clients' goals contributing to the sustainable, innovative, and enduring success of every project.",
-  "viewProjects": "explore projects",
+  "slide to select the space of the services in m2": "Slide to select the service area in m².",
+  "team_text": "With years of experience collaborating with organizations across Saudi Arabia, our team has cultivated a deep, industry-specific knowledge base. Our projects are delivered by seasoned professionals with specialized expertise across key functional areas. Each team member is dedicated to providing high-quality, tailored services that align with our clients' goals, contributing to the sustainable, innovative, and enduring success of every project.",
+  "viewProjects": "Explore Projects",
   "common": {
-    "back": "back",
+    "back": "Back",
     "next": "Next",
     "requirements": "Requirements",
     "years_experience": "Years Experience",
@@ -633,7 +1007,7 @@
     "notes_ceo": "NOTES FROM THE CEO",
     "project_image": "Project Image",
     "redirect_to_about": "Redirecting to About page...",
-    "founder": "founder"
+    "founder": "Founder"
   },
   "aria": {
     "open_menu": "Open menu",
@@ -651,7 +1025,7 @@
     "certificate_full": "Certificate Full View",
     "hero": "Noon Consultants Architecture",
     "ceo": "Dr. Naser Al Sayed",
-    "social": "social",
+    "social": "Social Media",
     "logo": "Noon Consultants Logo",
     "modern_architecture": "About Noon Consultants - Modern Architecture",
     "saudi_map": "Saudi Arabia Map",

@@ -1,13 +1,21 @@
 "use client";
 
 import Image from "next/image";
-import aboutBg from "@/public/images/background-about.png";
+import aboutBg from "@/public/images/openart-image_1776868356275_671e7903_1776868356294_a7b7914c.webp";
 import { motion } from "motion/react";
-import { useTranslations } from "next-intl";
-import PageTitle from "@/app/components/PageTitle";
+import { useLocale, useTranslations } from "next-intl";
+
+const BULLETS = [
+  "aboutHeroBullet1",
+  "aboutHeroBullet2",
+  "aboutHeroBullet3",
+  "aboutHeroBullet4",
+] as const;
 
 const AboutHero = () => {
   const t = useTranslations();
+  const locale = useLocale();
+  const isRtl = locale === "ar";
 
   return (
     <motion.section
@@ -17,59 +25,70 @@ const AboutHero = () => {
       className="mt-20 mb-16 sm:mb-20 lg:mb-24"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center min-h-[600px] lg:min-h-[700px]">
-        {/* Left Content */}
+        {/* Left — text */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: isRtl ? 50 : -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex flex-col justify-center text-white space-y-6 lg:space-y-8 lg:pr-8"
+          className="flex flex-col justify-center text-white space-y-6 lg:space-y-8 ltr:lg:pr-8 rtl:lg:pl-8 rtl:text-right ltr:text-left"
         >
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="mb-6 lg:mb-8"
-          >
-            <PageTitle>{t("about")}</PageTitle>
-          </motion.div>
-
+          {/* Eyebrow */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className="text-base sm:text-lg lg:text-xl leading-relaxed mb-8 lg:mb-10"
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-[#C6A87D]/60 text-xs tracking-[0.2em] uppercase flex items-center gap-2 "
           >
-            {t("aboutText1")}
+            <span className="inline-block w-6 h-px bg-[#C6A87D]/40" />
+            {t("aboutHeroEyebrow")}
           </motion.p>
 
-          <motion.div
+          {/* Two-tone title */}
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
-            className="space-y-4 lg:space-y-5"
+            transition={{ duration: 0.7, delay: 0.4 }}
+            className="ltr:font-elegance rtl:font-year-of-camel text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight"
           >
-            <div className="flex items-center gap-4 sm:gap-6 before:content-['/01'] before:text-bg before:text-3xl sm:before:text-4xl lg:before:text-5xl before:font-bold after:w-full after:block after:h-0.5 after:bg-linearGradient after:content-['']" />
-            <p className="text-base sm:text-lg leading-relaxed pl-12 sm:pl-16 lg:pl-20">
-              {t("aboutText2")}
-            </p>
-          </motion.div>
+            <span className="text-bg block">{t("aboutHeroTitleMain")}</span>
+            <span className="text-[#C6A87D]/30 block">{t("aboutHeroTitleDim")}</span>
+          </motion.h1>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.1 }}
-            className="space-y-4 lg:space-y-5"
+          {/* Body */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.7, delay: 0.5 }}
+            className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-gray-300 text-base sm:text-lg leading-relaxed"
           >
-            <div className="flex items-center gap-4 sm:gap-6 before:content-['/02'] before:text-bg before:text-3xl sm:before:text-4xl lg:before:text-5xl before:font-bold after:w-full after:block after:h-0.5 after:bg-linearGradient after:content-['']" />
-            <p className="text-base sm:text-lg leading-relaxed pl-12 sm:pl-16 lg:pl-20">
-              {t("aboutText3")}
-            </p>
-          </motion.div>
+            {t("aboutHeroBody")}
+          </motion.p>
+
+          {/* Bullets */}
+          <motion.ul
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.6 }}
+            className="space-y-3"
+          >
+            {BULLETS.map((key) => (
+              <li
+                key={key}
+                className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic flex items-start gap-3 text-sm sm:text-base text-gray-200 "
+              >
+                <span
+                  className="mt-[6px] shrink-0 w-1.5 h-1.5 rounded-full bg-[#C6A87D]"
+                  aria-hidden="true"
+                />
+                {t(key)}
+              </li>
+            ))}
+          </motion.ul>
         </motion.div>
 
-        {/* Right Image */}
+        {/* Right — image */}
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: isRtl ? -50 : 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="relative"
@@ -80,23 +99,14 @@ const AboutHero = () => {
             transition={{ duration: 1.2, delay: 0.6 }}
             className="relative group"
           >
-            {/* Background decoration */}
             <div className="absolute -inset-4 bg-linear-to-br from-[#BE7B2C]/20 to-[#F9C39D]/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
-
-            {/* Main image container */}
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl group-hover:shadow-3xl transition-all duration-500">
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <Image
                 src={aboutBg}
                 alt={t("alt.modern_architecture")}
-                className="h-[400px] sm:h-[500px] lg:h-[600px] xl:h-[650px] w-full object-cover group-hover:scale-105 transition-transform duration-700"
+                className="h-[400px] sm:h-[500px] lg:h-[600px] xl:h-[650px] w-full object-cover duration-700 group-hover:scale-105 transition-transform"
               />
-
-              {/* Overlay gradient */}
               <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
-
-              {/* Decorative elements */}
-              <div className="absolute top-6 right-6 w-16 h-16 border-2 border-[#F9C39D]/60 rounded-full group-hover:scale-110 group-hover:border-[#F9C39D]/80 transition-all duration-500" />
-              <div className="absolute bottom-6 left-6 w-20 h-20 border-2 border-[#BE7B2C]/60 rounded-full group-hover:scale-110 group-hover:border-[#BE7B2C]/80 transition-all duration-500" />
             </div>
           </motion.div>
         </motion.div>

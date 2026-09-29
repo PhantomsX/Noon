@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { Menu } from "./icons";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
@@ -25,9 +25,9 @@ const NavbarDropdown = () => {
   useOnClickOutside(menuRef, closeMenu);
 
   const menuItems = [
+    { title: "OUR SERVICES", href: "/services" },
     { title: "ABOUT US", href: "/about" },
     { title: "OUR PROJECTS", href: "/projects" },
-    { title: "OUR SERVICES", href: "/services" },
     { title: "NEWS", href: "/news" },
     { title: "CAREERS", href: "/careers" },
     { title: "CONTACT US", href: "/contact" },

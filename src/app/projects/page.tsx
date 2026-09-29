@@ -1,8 +1,10 @@
 "use client";
+
+import { useEffect, useMemo, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import React, { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
+import { X } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Empty,
@@ -11,369 +13,161 @@ import {
   EmptyTitle,
   EmptyDescription,
 } from "@/components/ui/empty";
-import { useIsClient, useMediaQuery } from "usehooks-ts";
-import PageTitle from "../components/PageTitle";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 
-/* ── shared project data ─────────────────────────────────────────────────── */
-const ALL_PROJECTS = [
-  {
-    id: "u5",
-    title: "BUSINESS PAY",
-    client: "Tangier Hills Company",
-    designedBy: "Noon Consultants",
-    statusDate: "07-2016 Completed",
-    location: "Morocco - Tangier 32,868 SQM",
-    scope: "Urban Planning & Master Plan",
-    image: "/projects/Urban Projects/business-pay.png",
-    category: "urban",
-    type: "urban",
-  },
-  {
-    id: "u1",
-    title: "AL DHUHAYAN BLOCK 39",
-    client: "Olayan Co",
-    designedBy: "Noon Consultants",
-    statusDate: "05-2023 Under Construction",
-    location: "Riyadh, Saudi Arabia",
-    scope: "Development, Full Design Package",
-    image: "/projects/Urban Projects/al-dhuhayan.jpg",
-    category: "urban",
-    type: "urban",
-  },
-  {
-    id: "u2",
-    title: "ALNIMR DOWNTOWN",
-    client: "Olayan Co.",
-    designedBy: "Noon Consultants",
-    statusDate: "05-2023 Under Construction",
-    location: "Riyadh, Saudi Arabia",
-    scope: "Development, Full Design Package",
-    image: "/projects/Urban Projects/alnimr.jpg",
-    category: "urban",
-    type: "urban",
-  },
-  {
-    id: "u3",
-    title: "LIVEN RESIDENTIAL COMPUND",
-    client: "Yaqeen capital",
-    designedBy: "Noon Consultants",
-    statusDate: "07-2025 in Progress",
-    location: "AL KHOBAR City, Saudi Arabia",
-    scope: "Development, Full Design Package",
-    image: "/projects/Urban Projects/liven-residential-compund.jpg",
-    category: "urban",
-    type: "urban",
-  },
-  {
-    id: "u4",
-    title: "TANGIER HILLS",
-    client: "Tangier Hills Company",
-    designedBy: "Noon Consultants",
-    statusDate: "07-2016 Completed",
-    location: "Morocco - Tangier 32,868 SQM",
-    scope: "Urban Planning & Master Plan",
-    image: "/projects/Urban Projects/tangier-hills.png",
-    category: "urban",
-    type: "urban",
-  },
-  {
-    id: "a1",
-    title: "AL WOMEN EQUESTRIAN CLUB",
-    client: "Investment Company",
-    designedBy: "Noon Consultants",
-    statusDate: "2021 Completed",
-    location: "Riyadh, Saudi Arabia",
-    scope: "Full Design Package",
-    image: "/projects/Architectural Projects/al-women-equestrian-club.png",
-    category: "architectural",
-    type: "architecture",
-  },
-  {
-    id: "a2",
-    title: "AL-QAHTANI COMPLEX",
-    client: "Faisal Alqahtani",
-    designedBy: "Noon Consultants",
-    statusDate: "2025 in progress",
-    location: "Riyadh, Saudi Arabia",
-    scope: "Full Design Package",
-    image: "/projects/Architectural Projects/al-qahtani-complex.png",
-    category: "architectural",
-    type: "architecture",
-  },
-  {
-    id: "a3",
-    title: "DR. MOHAMMED ALMALIK RESIDENCE",
-    client: "Dr. Mohammed Almalik",
-    designedBy: "Noon Consultants",
-    statusDate: "2021 Completed",
-    location: "Riyadh, Saudi Arabia",
-    scope: "Full Design Package",
-    image: "/projects/Architectural Projects/dr-mohammed-almalik-residence.png",
-    category: "architectural",
-    type: "architecture",
-  },
-  {
-    id: "a4",
-    title: "MR. WAEL ALRAIS PRIVATE VILLA",
-    client: "Private villa",
-    designedBy: "Noon Consultants",
-    statusDate: "2024 Under Construction",
-    location: "Riyadh, Saudi Arabia",
-    scope: "Full Design Package",
-    image: "/projects/Architectural Projects/mr-waelalrais-private-villa.png",
-    category: "architectural",
-    type: "architecture",
-  },
-  {
-    id: "a5",
-    title: "V TOWER",
-    client: "Alei Al-Qimma Real Estate Development Company",
-    designedBy: "Noon Consultants",
-    statusDate: "2024 Under Construction",
-    location: "Riyadh City, Saudi Arabia 1,500 SQM",
-    scope: "Full Design Package",
-    image: "/projects/Architectural Projects/v-tower.jpg",
-    category: "architectural",
-    type: "architecture",
-  },
-  {
-    id: "i1",
-    title: "VIP RESIDENCE",
-    client: "Bin Saedan Group",
-    designedBy: "Noon Consultants",
-    statusDate: "2020 Completed",
-    location: "Riyadh City, Saudi Arabia 1,500 SQM",
-    scope: "Full Design Package",
-    image: "/projects/Interior projects/vip-residence.png",
-    category: "interior design",
-    type: "interior design",
-  },
-  {
-    id: "i2",
-    title: "KINDERGARTEN DESIGN",
-    client: "KFMC PROJECT",
-    designedBy: "Noon Consultants",
-    statusDate: "2020 Completed",
-    location: "Riyadh City, Saudi Arabia 1,500 SQM",
-    scope: "Design Concept",
-    image: "/projects/Interior projects/kindergarten-design.png",
-    category: "interior design",
-    type: "interior design",
-  },
-  {
-    id: "i3",
-    title: "AL-WALLAN HEAD QUARTER OFFICES",
-    client: "Al-Wallan Holding Company",
-    designedBy: "Noon Consultants",
-    statusDate: "2024 Completed",
-    location: "Riyadh City, Saudi Arabia 1,500 SQM",
-    scope: "Interior Design",
-    image: "/projects/Interior projects/al-wallan-hq-offices.png",
-    category: "interior design",
-    type: "interior design",
-  },
-  {
-    id: "i4",
-    title: "AL-WALLAN HEAD QUARTER OFFICES 2",
-    client: "Al-Wallan Holding Company",
-    designedBy: "Noon Consultants",
-    statusDate: "2024 Completed",
-    location: "Riyadh City, Saudi Arabia 1,500 SQM",
-    scope: "Interior Design",
-    image: "/projects/Interior projects/al-wallan-hq-offices-2.png",
-    category: "interior design",
-    type: "interior design",
-  },
-];
+type Project = {
+  id: string;
+  title: string;
+  client: string;
+  designedBy: string;
+  statusDate: string;
+  location: string;
+  scope: string;
+  image: string;
+  images: string[];
+  category: string;
+  categoryLabel: string;
+  type: string;
+};
 
-/* ── detail row used in the hero ─────────────────────────────────────────── */
-const DetailRow = ({ label, value }: { label: string; value: string }) => (
-  <div className="flex justify-between gap-4 border-b border-white/20 pb-2 last:border-b-0 last:pb-0">
-    <span className="text-[#C6A87D] font-medium text-start shrink-0">
-      {label}:
-    </span>
-    <span className="text-end text-white/90 truncate max-w-[60%]">{value}</span>
-  </div>
-);
-
-/* ── page ─────────────────────────────────────────────────────────────────── */
 const Page = () => {
   const t = useTranslations();
   const locale = useLocale();
-  const isClient = useIsClient();
-  const isMobile = useMediaQuery("(max-width: 768px)");
-
-  const projects = ALL_PROJECTS;
-
-  /* selected project — defaults to first */
-  const [selectedId, setSelectedId] = useState<string>(projects[0].id);
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [modalProject, setModalProject] = useState<Project | null>(null);
   const [selectedType, setSelectedType] = useState("all");
+  const [modalCarouselApi, setModalCarouselApi] = useState<CarouselApi>();
+  const [activeModalImageIndex, setActiveModalImageIndex] = useState(0);
 
-  const selectedProject = useMemo(
-    () => projects.find((p) => p.id === selectedId) ?? projects[0],
-    [selectedId, projects],
-  );
+  useEffect(() => {
+    let isMounted = true;
 
-  const services = useMemo(
-    () => [
-      {
-        type: "architecture",
-        title: t("servicess.service-1"),
-        description: t("servicess.service-1-description"),
-        image: "/services/ENGINEERING_AND_ARCHITECTURAL_DESIGN.jpg",
-        features: [
-          t("servicess.service-1-features.1"),
-          t("servicess.service-1-features.2"),
-          t("servicess.service-1-features.3"),
-          t("servicess.service-1-features.4"),
-        ],
-      },
-      {
-        type: "urban",
-        title: t("servicess.service-2"),
-        description: t("servicess.service-2-description"),
-        image: "/services/URBAN_DESIGN.jpg",
-        features: [
-          t("servicess.service-2-features.1"),
-          t("servicess.service-2-features.2"),
-          t("servicess.service-2-features.3"),
-          t("servicess.service-2-features.4"),
-          t("servicess.service-2-features.5"),
-        ],
-      },
-      {
-        type: "interior design",
-        title: t("servicess.service-10"),
-        description: t("servicess.service-10-description"),
-        image: "/services/INTERIOR_DESIGN.jpg",
-        features: [
-          t("servicess.service-10-features.1"),
-          t("servicess.service-10-features.2"),
-          t("servicess.service-10-features.3"),
-          t("servicess.service-10-features.4"),
-          t("servicess.service-10-features.5"),
-        ],
-      },
-    ],
-    [t],
-  );
+    const loadProjects = async () => {
+      try {
+        const response = await fetch("/api/projects");
+        if (!response.ok) return;
+
+        const payload = (await response.json()) as { projects?: Project[] };
+        if (!isMounted) return;
+
+        setProjects(payload.projects ?? []);
+      } catch {
+        if (isMounted) setProjects([]);
+      }
+    };
+
+    void loadProjects();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!modalCarouselApi) return;
+
+    const onSelect = () => {
+      setActiveModalImageIndex(modalCarouselApi.selectedScrollSnap());
+    };
+
+    onSelect();
+    modalCarouselApi.on("select", onSelect);
+    modalCarouselApi.on("reInit", onSelect);
+
+    return () => {
+      modalCarouselApi.off("select", onSelect);
+      modalCarouselApi.off("reInit", onSelect);
+    };
+  }, [modalCarouselApi]);
+
+  const CATEGORY_ORDER = [
+    "residential",
+    "commercial",
+    "hospitality",
+    "industrial",
+    "offices",
+    "mixed-use",
+    "religios",
+    "healthcare",
+  ];
 
   const categories = useMemo(() => {
-    return [
-      "all",
-      "Residdential",
-      "Commerical",
-      "Industrial",
-      "Hospitality",
-      "offices",
-      "Master plananing",
-      "Healthcare",
-      "Development",
-    ];
-  }, [projects]);
+    const labels: Record<string, string> = {
+      residential: t("projects.categories.residential"),
+      commercial: t("projects.categories.commercial"),
+      hospitality: t("projects.categories.hospitality"),
+      industrial: t("projects.categories.industrial"),
+      offices: t("projects.categories.offices"),
+      "mixed-use": t("projects.categories.mixed-use"),
+      religios: t("projects.categories.religios"),
+      healthcare: t("projects.categories.healthcare"),
+    };
+
+    const unique = new Set<string>();
+    for (const project of projects) unique.add(project.category);
+
+    const sorted = Array.from(unique)
+      .map((id) => ({ id, label: labels[id] ?? id }))
+      .sort((a, b) => {
+        const ai = CATEGORY_ORDER.indexOf(a.id);
+        const bi = CATEGORY_ORDER.indexOf(b.id);
+        const aOrder = ai === -1 ? CATEGORY_ORDER.length : ai;
+        const bOrder = bi === -1 ? CATEGORY_ORDER.length : bi;
+        return aOrder - bOrder;
+      });
+
+    return [{ id: "all", label: t("common.show_all") }, ...sorted];
+  }, [projects, t]);
+
+  useEffect(() => {
+    const categoryExists = categories.some(
+      (category) => category.id === selectedType,
+    );
+    if (!categoryExists) setSelectedType("all");
+  }, [categories, selectedType]);
 
   return (
     <motion.main
-      className="px-5 md:px-[70px] ltr:font-neue-montreal rtl:font-noto-kufi-arabic pt-20 flex flex-col justify-between"
+      className="px-5 md:px-17.5 ltr:font-neue-montreal rtl:font-ibm-plex-arabic pt-20 flex flex-col justify-between"
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
     >
-      {/* ── Page header ──────────────────────────────────────────────────── */}
       <motion.section
-        className="mb-10 flex flex-col md:flex-row gap-10"
+        className="mb-10 flex flex-col md:flex-row md:items-end md:justify-between gap-8"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
       >
-        <PageTitle>{t("projects.title-1")}</PageTitle>
-        <p className="text-xl mb-4 text-white text-center md:text-start flex-1">
-          {t("projects.breif")}
-        </p>
+        {/* Left — eyebrow + two-tone title + subtitle */}
+        <div className="flex flex-col ">
+          <p className="rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-[#C6A87D]/60 text-xs tracking-[0.2em] uppercase mb-4 flex items-center gap-2">
+            <span className="inline-block w-6 h-px bg-[#C6A87D]/40" />
+            {t("projects.eyebrow")}
+          </p>
+          <h1 className="rtl:font-year-of-camel ltr:font-elegance text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight">
+            <span className="text-bg pe-2">{t("projects.titleMain")}</span>
+            <br />
+            <span className="text-[#C6A87D]/30">{t("projects.titleDim")}</span>
+          </h1>
+          <p className="rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-gray-300 text-sm md:text-base leading-relaxed mt-5 max-w-md">
+            {t("projects.subtitle")}
+          </p>
+        </div>
+
+        {/* Right — link + counter */}
+        <div className="flex flex-col  gap-3 shrink-0">
+          <p className="rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-[#C6A87D] text-xs">
+            {t("projects.counter")}
+          </p>
+        </div>
       </motion.section>
 
-      {/* ── Dynamic Hero ─────────────────────────────────────────────────── */}
-      <motion.section
-        className="relative rounded-2xl overflow-hidden z-1"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
-        style={{ minHeight: isMobile ? 420 : 720 }}
-      >
-        {/* Background image — cross-fades on project change */}
-        <AnimatePresence mode="sync">
-          <motion.div
-            key={selectedProject.id}
-            className="absolute inset-0"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
-          >
-            <Image
-              src={selectedProject.image}
-              alt={selectedProject.title}
-              fill
-              priority
-              className="object-cover"
-            />
-          </motion.div>
-        </AnimatePresence>
-
-        {/* Dark gradient overlay */}
-        <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-black/20" />
-
-        {/* Project details panel */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={selectedProject.id + "-info"}
-            className="absolute inset-0 flex flex-col justify-end p-6 md:p-12"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.45, ease: "easeOut" }}
-          >
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-8">
-              {/* Title */}
-              <div className="max-w-md">
-                <p className="text-[#C6A87D] text-xs uppercase tracking-widest mb-2 font-medium">
-                  {t(`projects.${selectedProject.type}`) ??
-                    selectedProject.type}
-                </p>
-                <h2 className="text-white text-2xl md:text-4xl lg:text-5xl font-bold uppercase tracking-wider leading-tight">
-                  {selectedProject.title}
-                </h2>
-              </div>
-
-              {/* Detail table */}
-              <div className="w-full md:w-auto md:min-w-[340px] space-y-2 text-xs md:text-sm bg-black/40 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-                <DetailRow
-                  label={t("home.portfolio.client")}
-                  value={selectedProject.client}
-                />
-                <DetailRow
-                  label={t("home.portfolio.designedBy")}
-                  value={selectedProject.designedBy}
-                />
-                <DetailRow
-                  label={t("home.portfolio.statusDate")}
-                  value={selectedProject.statusDate}
-                />
-                <DetailRow
-                  label={t("home.portfolio.location")}
-                  value={selectedProject.location}
-                />
-                <DetailRow
-                  label={t("home.portfolio.scope")}
-                  value={selectedProject.scope}
-                />
-              </div>
-            </div>
-          </motion.div>
-        </AnimatePresence>
-      </motion.section>
-
-      {/* ── Project grid with tabs ────────────────────────────────────────── */}
       <motion.section
         className="mt-10"
         initial={{ opacity: 0, y: 40 }}
@@ -383,41 +177,32 @@ const Page = () => {
         <Tabs
           dir={locale === "ar" ? "rtl" : "ltr"}
           value={selectedType}
-          onValueChange={(type) => {
-            setSelectedType(type);
-            // Auto-select first project of the new tab
-            const first =
-              type === "all"
-                ? projects[0]
-                : projects.find((p) => p.type === type);
-            if (first) setSelectedId(first.id);
-          }}
+          onValueChange={setSelectedType}
         >
           <TabsList className="w-full justify-between flex-wrap">
             {categories.map((cat) => (
               <TabsTrigger
-                key={cat}
-                value={cat}
-                className="uppercase cursor-pointer text-[10px] sm:text-xs md:text-base px-2 sm:px-3 py-2 flex-1 sm:flex-none min-w-[80px] sm:min-w-[100px] whitespace-normal text-center h-auto min-h-[40px] leading-tight flex items-center justify-center shrink-0"
+                key={cat.id}
+                value={cat.id}
+                className="uppercase cursor-pointer text-[10px] sm:text-xs md:text-base px-2 sm:px-3 py-2 flex-1 sm:flex-none min-w-20 sm:min-w-25 whitespace-normal text-center h-auto min-h-10 leading-tight flex items-center justify-center shrink-0"
               >
-                {cat === "all"
-                  ? t("common.show_all")
-                  : t(`projects.${cat}`).toUpperCase()}
+                {cat.label}
               </TabsTrigger>
             ))}
           </TabsList>
 
           {categories.map((cat) => {
             const filtered =
-              cat === "all" ? projects : projects.filter((p) => p.type === cat);
+              cat.id === "all"
+                ? projects
+                : projects.filter((project) => project.category === cat.id);
 
             return (
-              <TabsContent key={cat} value={cat} className="pt-8">
+              <TabsContent key={cat.id} value={cat.id} className="pt-8">
                 {filtered.length === 0 ? (
-                  <Empty className="border border-[#C6A87D]/20 bg-black/20 min-h-[320px]">
+                  <Empty className="border border-[#C6A87D]/20 bg-black/20 min-h-80">
                     <EmptyHeader>
                       <EmptyMedia>
-                        {/* Architectural compass / blueprint icon */}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className="w-16 h-16 text-[#C6A87D]/40"
@@ -438,132 +223,143 @@ const Page = () => {
                           />
                         </svg>
                       </EmptyMedia>
-                      <EmptyTitle className="text-[#C6A87D] rtl:font-noto-kufi-arabic ltr:font-neue-montreal text-xl">
+                      <EmptyTitle className="text-[#C6A87D] rtl:font-ibm-plex-arabic ltr:font-neue-montreal text-xl">
                         {t("projects.emptyTitle")}
                       </EmptyTitle>
-                      <EmptyDescription className="text-white/40 rtl:font-noto-kufi-arabic ltr:font-neue-montreal">
+                      <EmptyDescription className="text-white/40 rtl:font-ibm-plex-arabic ltr:font-neue-montreal">
                         {t("projects.emptyDescription")}
                       </EmptyDescription>
                     </EmptyHeader>
                   </Empty>
                 ) : (
                   <motion.div
-                    className="grid grid-cols-2 md:grid-cols-4 gap-6"
-                    initial="hidden"
-                    animate="visible"
-                    variants={{
-                      visible: { transition: { staggerChildren: 0.08 } },
-                    }}
+                    className="flex flex-col gap-3"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
                   >
-                    {filtered.map((project) => {
-                      const isSelected = project.id === selectedId;
-                      const serviceDetails = services.find(
-                        (s) => s.type === project.type,
-                      );
+                    {Array.from(
+                      { length: Math.ceil(filtered.length / 5) },
+                      (_, gi) => {
+                        const group = filtered.slice(gi * 5, gi * 5 + 5);
+                        const isEvenGroup = gi % 2 === 0;
+                        const featuredProject = isEvenGroup
+                          ? group[0]
+                          : group[group.length - 1];
+                        const smallProjects = isEvenGroup
+                          ? group.slice(1)
+                          : group.slice(0, -1);
 
-                      return (
-                        <motion.button
-                          key={project.id}
-                          className="rounded-xl cursor-pointer overflow-hidden bg-[#181818] relative group flex flex-col md:block focus:outline-none"
-                          variants={{
-                            hidden: { opacity: 0, y: 30, scale: 0.98 },
-                            visible: { opacity: 1, y: 0, scale: 1 },
-                          }}
-                          transition={{ duration: 0.5, ease: "easeOut" }}
-                          whileHover={{
-                            scale: 1.03,
-                            boxShadow: "0 4px 32px #00000033",
-                          }}
-                          whileTap={{ scale: 0.98 }}
-                          onClick={() => setSelectedId(project.id)}
-                        >
-                          <Image
-                            src={project.image}
-                            alt={project.title}
-                            width={400}
-                            height={300}
-                            className="w-full h-48 object-cover"
-                          />
-
-                          {/* Info overlay — always visible when selected, hover-only otherwise */}
-                          {isClient && isMobile ? (
-                            <div className="relative p-4 text-white text-center">
-                              <h3 className="font-bold text-lg mb-2">
-                                {project.title}
-                              </h3>
-                              <p className="text-sm text-gray-300">
-                                {project.location}
-                              </p>
-                            </div>
-                          ) : (
-                            <div
-                              className={[
-                                "absolute inset-0 bg-black/40 flex flex-col justify-center items-center p-4 text-white text-center transition-opacity duration-300",
-                                isSelected
-                                  ? "opacity-100"
-                                  : "opacity-0 group-hover:opacity-100",
-                              ].join(" ")}
+                        const renderCard = (
+                          project: Project,
+                          colClass: string,
+                          cardIndex: number,
+                        ) => {
+                          const metaParts = [
+                            project.location,
+                            project.statusDate,
+                          ].filter(Boolean);
+                          return (
+                            <motion.button
+                              key={project.id}
+                              className={`relative overflow-hidden rounded-xl cursor-pointer group focus:outline-none bg-[#181818] ${colClass}`}
+                              initial={{ opacity: 0, y: 16 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              transition={{
+                                duration: 0.45,
+                                delay: (gi * 5 + cardIndex) * 0.04,
+                                ease: "easeOut",
+                              }}
+                              whileHover={{ scale: 1.02 }}
+                              whileTap={{ scale: 0.98 }}
+                              onClick={() => {
+                                setActiveModalImageIndex(0);
+                                setModalProject(project);
+                              }}
                             >
-                              <h3 className="font-bold text-lg md:text-xl mb-2">
-                                {project.title}
-                              </h3>
-                              <p className="text-sm mb-2 text-gray-300">
-                                {project.location}
-                              </p>
-                              {serviceDetails?.features && (
-                                <ul className="text-start text-xs list-disc list-outside ps-5 text-gray-300 inline-block">
-                                  {serviceDetails.features.map((f, fi) => (
-                                    <li key={fi}>{f}</li>
-                                  ))}
-                                </ul>
-                              )}
-                            </div>
-                          )}
-
-                          {/* Gold border + check badge — rendered ABOVE the overlay */}
-                          <AnimatePresence>
-                            {isSelected && (
-                              <motion.div
-                                className="absolute inset-0 border-2 border-[#C6A87D] rounded-xl pointer-events-none"
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                                transition={{ duration: 0.25 }}
-                              >
-                                {/* Gold corner accents */}
-                                <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-[#C6A87D] rounded-tl" />
-                                <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-[#C6A87D] rounded-br" />
-
-                                {/* Check badge */}
-                                <motion.div
-                                  className="absolute top-2 right-2 w-7 h-7 rounded-full bg-[#C6A87D] flex items-center justify-center shadow-lg"
-                                  initial={{ scale: 0 }}
-                                  animate={{ scale: 1 }}
-                                  exit={{ scale: 0 }}
-                                  transition={{
-                                    type: "spring",
-                                    stiffness: 300,
-                                    damping: 20,
-                                  }}
+                              <Image
+                                src={project.image}
+                                alt={project.title}
+                                fill
+                                loading={
+                                  gi === 0 && cardIndex < 5 ? "eager" : "lazy"
+                                }
+                                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                              />
+                              <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/30 to-black/10" />
+                              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                <svg
+                                  className="w-12 h-12 md:w-16 md:h-16 text-white/8"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  strokeWidth={0.8}
                                 >
-                                  <svg
-                                    className="w-4 h-4 text-black"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth={3}
+                                  <path
+                                    d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
-                                  >
-                                    <polyline points="20 6 9 17 4 12" />
-                                  </svg>
-                                </motion.div>
-                              </motion.div>
+                                  />
+                                </svg>
+                              </div>
+                              <div className="absolute top-3 ltr:left-4 rtl:right-4">
+                                <p className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-[9px] md:text-[10px] tracking-[0.18em] uppercase text-white/55">
+                                  {project.categoryLabel}
+                                  {project.location && (
+                                    <span className="text-white/35">
+                                      {" "}
+                                      · {project.location.split(",")[0]}
+                                    </span>
+                                  )}
+                                </p>
+                              </div>
+                              <div className="absolute bottom-0 inset-x-0 p-3 md:p-4 ltr:text-left rtl:text-right">
+                                <h3 className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-white font-bold text-sm md:text-base lg:text-lg leading-tight mb-1 uppercase">
+                                  {project.title}
+                                </h3>
+                                {metaParts.length > 0 && (
+                                  <p className="ltr:font-neue-montreal rtl:font-ibm-plex-arabic text-white/45 text-[10px] md:text-xs">
+                                    {metaParts.join(" · ")}
+                                  </p>
+                                )}
+                              </div>
+                            </motion.button>
+                          );
+                        };
+
+                        return (
+                          <div
+                            key={gi}
+                            className="grid grid-cols-2 md:grid-cols-5 gap-2 md:gap-3 auto-rows-[140px] md:auto-rows-[220px]"
+                          >
+                            {isEvenGroup ? (
+                              <>
+                                {renderCard(
+                                  featuredProject,
+                                  "col-span-2 md:col-span-3 md:row-span-2",
+                                  0,
+                                )}
+                                {smallProjects.map((p, i) =>
+                                  renderCard(p, "col-span-1 row-span-1", i + 1),
+                                )}
+                              </>
+                            ) : (
+                              <>
+                                {/* Featured first in DOM with explicit right placement so small cards auto-fill cols 1–2 */}
+                                {renderCard(
+                                  featuredProject,
+                                  "col-span-2 md:[grid-column:3/6] md:[grid-row:1/3]",
+                                  4,
+                                )}
+                                {smallProjects.map((p, i) =>
+                                  renderCard(p, "col-span-1 row-span-1", i),
+                                )}
+                              </>
                             )}
-                          </AnimatePresence>
-                        </motion.button>
-                      );
-                    })}
+                          </div>
+                        );
+                      },
+                    )}
                   </motion.div>
                 )}
               </TabsContent>
@@ -571,6 +367,95 @@ const Page = () => {
           })}
         </Tabs>
       </motion.section>
+
+      <AnimatePresence>
+        {modalProject && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
+            onClick={() => setModalProject(null)}
+          >
+            <motion.button
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ delay: 0.1 }}
+              onClick={() => setModalProject(null)}
+              className="absolute top-4 right-4 md:top-8 md:right-8 z-10 size-12 rounded-full bg-[#BE7B2C] hover:bg-[#F9C39D] transition-colors duration-300 flex items-center justify-center text-white"
+              aria-label="Close"
+            >
+              <X className="size-6" />
+            </motion.button>
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="relative w-full max-w-4xl rounded-2xl bg-[#181818] border border-[#C6A87D]/20 overflow-hidden"
+              onClick={(event) => event.stopPropagation()}
+            >
+              <div className="relative">
+                <Carousel
+                  opts={{
+                    direction: locale === "ar" ? "rtl" : "ltr",
+                  }}
+                  className="w-full"
+                  setApi={setModalCarouselApi}
+                >
+                  <CarouselContent className="ml-0">
+                    {modalProject.images.map((image) => (
+                      <CarouselItem key={image} className="pl-0 relative">
+                        <div className="relative z-1 w-full aspect-square max-w-175 mx-auto">
+                          <Image
+                            src={image}
+                            alt={modalProject.title}
+                            fill
+                            sizes="(max-width: 768px) 90vw, 700px"
+                            className="object-cover"
+                          />
+                        </div>
+                        <Image
+                          src={image}
+                          alt={modalProject.title}
+                          fill
+                          className="object-cover blur-md!"
+                        />
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                </Carousel>
+                <div className="absolute inset-0 pointer-events-none bg-linear-to-t from-black/45 via-black/10 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-5 md:p-7 z-10 pointer-events-none">
+                  <p className="text-[#E8C08D] text-xs md:text-sm uppercase tracking-[0.2em] mb-2">
+                    {modalProject.categoryLabel}
+                  </p>
+                  <h2 className="text-white text-2xl md:text-4xl font-bold uppercase tracking-wider leading-tight">
+                    {modalProject.title}
+                  </h2>
+                </div>
+                {modalProject.images.length > 1 && (
+                  <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20">
+                    {modalProject.images.map((_, index) => (
+                      <button
+                        key={`${modalProject.id}-dot-${index}`}
+                        className={`size-2 rounded-full transition-colors pointer-events-auto ${
+                          activeModalImageIndex === index
+                            ? "bg-[#C6A87D]"
+                            : "bg-white/40 hover:bg-white/60"
+                        }`}
+                        onClick={() => modalCarouselApi?.scrollTo(index)}
+                        aria-label={`Show image ${index + 1}`}
+                      />
+                    ))}
+                  </div>
+                )}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.main>
   );
 };

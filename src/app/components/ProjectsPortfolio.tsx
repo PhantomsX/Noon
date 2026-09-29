@@ -24,93 +24,63 @@ interface Project {
 const projects: Project[] = [
   {
     id: "p1",
-    title: "AL BUSTAN PLAZA",
-    client: "MEMAR Development and Investment",
-    designedBy: "Noon Consultants",
-    statusDate: "2019 Completed",
-    location: "Riyadh City, Saudi Arabia 350,000 SQM",
-    scope: "Architecture Design",
-    image: "/projects/home-page-projects/AL-BUSTAN_PLAZA.jpg",
+    title: "AL JUMAAH MOSQUE",
+    client: "",
+    designedBy: "",
+    statusDate: "2018",
+    location: "DOHA , QATAR",
+    scope: "Full Design Services",
+    image: "/home-page-projects/AL-JUMAAH-MOSQUE.png",
   },
   {
     id: "p2",
-    title: "JOE VILLA",
-    client: "Private Villa",
-    designedBy: "Noon Consultants",
-    statusDate: "2025 Completed",
-    location: "Riyadh City, Saudi Arabia",
-    scope: "Design Concept",
-    image: "/projects/home-page-projects/JOE_VILLA.jpg",
+    title: "APEX PARK",
+    client: "",
+    designedBy: "",
+    statusDate: "2022",
+    location: "RIYADH ,KSA",
+    scope: "Full Design Services",
+    image: "/home-page-projects/Apex-Park.png",
   },
   {
     id: "p3",
-    title: "LIVEN PENTHOUSE",
-    client: "Yaqeen capital",
-    designedBy: "Noon Consultants",
-    statusDate: "07-2025 in Progress",
-    location: "AL KHOBAR City, Saudi Arabia 55,545.42 SQM",
-    scope: "Development, Full Design Package",
-    image: "/projects/home-page-projects/LIVEN_PENTHOUSE.jpg",
+    title: "CALM PALM VILLA",
+    client: "",
+    designedBy: "",
+    statusDate: "2025 ",
+    location: "MADINAH , KSA",
+    scope: "Full Design Services",
+    image: "/home-page-projects/CALM-PALM-VILLA.webp",
   },
   {
     id: "p4",
-    title: "AL-AMMARIYA DESERT CLUB RESORTS",
-    client: "Bin Saedan Group",
-    designedBy: "Noon Consultants",
-    statusDate: "2021 Completed",
-    location: "Riyadh City, Saudi Arabia 13,500 SQM",
-    scope: "Full design package",
-    image: "/projects/home-page-projects/AL-AMMARIYA_DESERT_CLUB_RESORTS.jpg",
+    title: "ITALALAT RESORT",
+    client: "",
+    designedBy: "",
+    statusDate: "2021 ",
+    location: "RIYADH , KSA",
+    scope: "Full Design Services",
+    image: "/home-page-projects/Italalat-Resort.png",
   },
   {
     id: "p5",
-    title: "AL-WASEEL RESORT",
-    client: "Naif Al Rajhi Investment Company",
-    designedBy: "Noon Consultants",
-    statusDate: "2024 Under Construction",
-    location: "Riyadh City, Saudi Arabia 13,500 SQM",
-    scope: "Full Design",
-    image: "/projects/home-page-projects/AL- WASEEL_RESORT.jpg",
+    title: "THE BLOOM OFFICES",
+    client: "",
+    designedBy: "",
+    statusDate: "2025",
+    location: "RIYADH ,KSA",
+    scope: "Full Design Services",
+    image: "/home-page-projects/THE-BLOOM-OFFICES.png",
   },
   {
     id: "p6",
-    title: "V TOWER",
-    client: "Alei Al-Qimma Real Estate Development Compnay",
-    designedBy: "Noon Consultants",
-    statusDate: "2024 Under Construction",
-    location: "Riyadh City, Saudi Arabia 1,500 SQM",
-    scope: "Full Design Package",
-    image: "/projects/home-page-projects/v_tower.jpg",
-  },
-  {
-    id: "p7",
-    title: "ALNOUR MOSQUE",
-    client: "Non Profit",
-    designedBy: "Noon Consultants",
-    statusDate: "2023 Under Construction",
-    location: "Riyadh City, Saudi Arabia 859671.06 SQM",
-    scope: "Urban Planning & Master Plan",
-    image: "/projects/home-page-projects/Alnour_Mosque.jpg",
-  },
-  {
-    id: "p8",
-    title: "EAST BUSTAN V47",
-    client: "Alrajhi company",
-    designedBy: "Noon Consultants",
-    statusDate: "07-2023 Completed",
-    location: "Riyadh City, Saudi Arabia 10,000 SQM",
-    scope: "Full Design Package",
-    image: "/projects/home-page-projects/EAST_BUSTAN_V47.jpg",
-  },
-  {
-    id: "p9",
-    title: "ABDULRAHMAN AL-SUBAILY",
-    client: "ABDULRAHMAN AL-SUBAILY",
-    designedBy: "Noon Consultants",
-    statusDate: "2022 Completed",
-    location: "Riyadh City, Saudi Arabia 5,040 SQM",
-    scope: "Full Design Package & AOR",
-    image: "/projects/home-page-projects/ABDULRAHMAN_AL-SUBAILY.jpg",
+    title: "THE GRID",
+    client: "",
+    designedBy: "",
+    statusDate: "2018",
+    location: "RIYADH ,KSA",
+    scope: "Master planning Services",
+    image: "/home-page-projects/The-Grid.png",
   },
 ];
 
@@ -179,7 +149,7 @@ export default function ProjectsPortfolio() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="font-elegance text-3xl md:text-5xl text-[#C6A87D] mb-6"
+            className="ltr:font-elegance rtl:font-year-of-camel text-3xl md:text-5xl text-[#C6A87D] mb-6"
           >
             {t("home.portfolio.title")}
           </motion.h2>
@@ -227,7 +197,13 @@ export default function ProjectsPortfolio() {
             <CarouselContent className="ml-0">
               {projects.map((project) => (
                 <CarouselItem key={project.id} className="pl-0">
-                  <div className="relative w-full aspect-video md:aspect-21/9 bg-neutral-900 border border-[#C6A87D]/20 overflow-hidden group">
+                  <div className="relative w-[70%] mx-auto aspect-video md:aspect-21/9 bg-neutral-900 border border-[#C6A87D]/20 overflow-hidden group">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover blur-2xl"
+                    />
                     <motion.div
                       className="absolute inset-0 w-full h-full"
                       initial={{ scale: 1.1, x: "-2%", y: "-1%" }}
@@ -246,12 +222,13 @@ export default function ProjectsPortfolio() {
                         src={project.image}
                         alt={project.title}
                         fill
-                        className="object-cover"
+                    
+                        className="object-fill "
                       />
                     </motion.div>
 
                     {/* Overlay with Text */}
-                    <div className="absolute inset-0 bg-linear-to-t from-black via-black/80 to-transparent flex flex-col justify-end p-4 sm:p-6 md:p-12">
+                    <div className="absolute inset-0 p-6 flex flex-col justify-end">
                       <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-8">
                         {/* Left: Project Title */}
                         <div className="max-w-md text-start">
@@ -262,46 +239,56 @@ export default function ProjectsPortfolio() {
 
                         {/* Right: Project Details Table (matching the image) */}
                         <div className="w-full md:w-auto md:min-w-[350px] space-y-2 text-xs md:text-sm text-white/90">
-                          <div className="flex justify-between gap-4 border-b border-white/20 pb-2">
-                            <span className="text-[#C6A87D] font-medium text-start">
-                              {t("home.portfolio.client")}:
-                            </span>
-                            <span className="text-end truncate max-w-[60%]">
-                              {project.client}
-                            </span>
-                          </div>
-                          <div className="flex justify-between gap-4 border-b border-white/20 pb-2">
-                            <span className="text-[#C6A87D] font-medium text-start">
-                              {t("home.portfolio.designedBy")}:
-                            </span>
-                            <span className="text-end truncate max-w-[60%]">
-                              {project.designedBy}
-                            </span>
-                          </div>
-                          <div className="flex justify-between gap-4 border-b border-white/20 pb-2">
-                            <span className="text-[#C6A87D] font-medium text-start">
-                              {t("home.portfolio.statusDate")}:
-                            </span>
-                            <span className="text-end truncate max-w-[60%]">
-                              {project.statusDate}
-                            </span>
-                          </div>
-                          <div className="flex justify-between gap-4 border-b border-white/20 pb-2">
-                            <span className="text-[#C6A87D] font-medium text-start">
-                              {t("home.portfolio.location")}:
-                            </span>
-                            <span className="text-end truncate max-w-[60%]">
-                              {project.location}
-                            </span>
-                          </div>
-                          <div className="flex justify-between gap-4 pb-2">
-                            <span className="text-[#C6A87D] font-medium text-start">
-                              {t("home.portfolio.scope")}:
-                            </span>
-                            <span className="text-end truncate max-w-[60%]">
-                              {project.scope}
-                            </span>
-                          </div>
+                          {project.client && (
+                            <div className="flex justify-between gap-4 border-b border-white/20 pb-2">
+                              <span className="text-[#C6A87D] font-medium text-start">
+                                {t("home.portfolio.client")}:
+                              </span>
+                              <span className="text-end truncate max-w-[60%]">
+                                {project.client}
+                              </span>
+                            </div>
+                          )}
+                          {project.designedBy && (
+                            <div className="flex justify-between gap-4 border-b border-white/20 pb-2">
+                              <span className="text-[#C6A87D] font-medium text-start">
+                                {t("home.portfolio.designedBy")}:
+                              </span>
+                              <span className="text-end truncate max-w-[60%]">
+                                {project.designedBy}
+                              </span>
+                            </div>
+                          )}
+                          {project.statusDate && (
+                            <div className="flex justify-between gap-4 border-b border-white/20 pb-2">
+                              <span className="text-[#C6A87D] font-medium text-start">
+                                {t("home.portfolio.statusDate")}:
+                              </span>
+                              <span className="text-end truncate max-w-[60%]">
+                                {project.statusDate}
+                              </span>
+                            </div>
+                          )}
+                          {project.location && (
+                            <div className="flex justify-between gap-4 border-b border-white/20 pb-2">
+                              <span className="text-[#C6A87D] font-medium text-start">
+                                {t("home.portfolio.location")}:
+                              </span>
+                              <span className="text-end truncate max-w-[60%]">
+                                {project.location}
+                              </span>
+                            </div>
+                          )}
+                          {project.scope && (
+                            <div className="flex justify-between gap-4 pb-2">
+                              <span className="text-[#C6A87D] font-medium text-start">
+                                {t("home.portfolio.scope")}:
+                              </span>
+                              <span className="text-end truncate max-w-[60%]">
+                                {project.scope}
+                              </span>
+                            </div>
+                          )}
                         </div>
                       </div>
                     </div>
