@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
-import ContactInfoSection from "../components/ContactInfoSection";
+import ContactInfoSection from "@/app/components/ContactInfoSection";
 
 const SERVICES = [
   "Architectural Design",

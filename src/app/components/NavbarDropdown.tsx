@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { Menu } from "./icons";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";

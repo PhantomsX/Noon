@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 import aboutBg from "@/public/images/background-about.png";

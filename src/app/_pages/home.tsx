@@ -1,11 +1,11 @@
 "use client";
-import HeroSection from "./components/HeroSection";
-import AboutNoon from "./components/AboutNoon";
-import ProjectsPortfolio from "./components/ProjectsPortfolio";
-import PartnersLogos from "./components/PartnersLogos";
-import ContactInfoSection from "./components/ContactInfoSection";
-import ContactBannerSection from "./components/ContactBannerSection";
-import Certificates from "./components/Certificates";
+import HeroSection from "@/app/components/HeroSection";
+import AboutNoon from "@/app/components/AboutNoon";
+import ProjectsPortfolio from "@/app/components/ProjectsPortfolio";
+import PartnersLogos from "@/app/components/PartnersLogos";
+import ContactInfoSection from "@/app/components/ContactInfoSection";
+import ContactBannerSection from "@/app/components/ContactBannerSection";
+import Certificates from "@/app/components/Certificates";
 
 export default function Home() {
   return (

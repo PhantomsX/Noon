@@ -1,13 +1,12 @@
 import { getRequestConfig } from "next-intl/server";
-import { getUserLocale } from "./locale";
 
+// The dual-tree layouts pass `locale` + `messages` to NextIntlClientProvider
+// directly, so no request-time locale detection happens. next-intl still
+// requires a config file to exist; this returns a static default and never
+// reads cookies()/headers().
 export default getRequestConfig(async () => {
-  // Provide a static locale, fetch a user setting,
-  // read from `cookies()`, `headers()`, etc.
-  const locale = await getUserLocale();
-
   return {
-    locale,
-    messages: (await import(`../../messages/${locale}.json`)).default,
+    locale: "en",
+    messages: (await import("../../messages/en.json")).default,
   };
 });

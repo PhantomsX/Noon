@@ -3,14 +3,12 @@ import React, { startTransition } from "react";
 import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import logoEn from "@/public/icons/big-logo-en.svg";
 import logoAr from "@/public/icons/big-logo-ar.svg";
-import Link from "next/link";
-import { setUserLocale } from "@/i18n/locale";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import NavbarDropdown from "./NavbarDropdown";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { Globe, ChevronDown } from "lucide-react";
-import { usePathname } from "next/navigation";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -22,6 +20,7 @@ const Navbar = () => {
   const locale = useLocale();
   const t = useTranslations();
   const pathname = usePathname();
+  const router = useRouter();
   const [isScrolled, setIsScrolled] = React.useState(false);
   const { scrollY } = useScroll();
 
@@ -30,8 +29,9 @@ const Navbar = () => {
   });
 
   const handleChangeLang = () => {
+    // Navigate to the same page in the other locale (URL-driven, no server action).
     startTransition(() => {
-      setUserLocale(locale === "en" ? "ar" : "en");
+      router.replace(pathname, { locale: locale === "en" ? "ar" : "en" });
     });
   };
 
