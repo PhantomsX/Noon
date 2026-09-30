@@ -3,9 +3,14 @@
 import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion, useInView } from "motion/react";
-import Image from "next/image";
 import { User } from "lucide-react";
 import CountUp from "@/components/CountUp";
+import CloudflareResponsiveImage from "@/app/components/CloudflareResponsiveImage";
+
+// Team cards render at most ~1/3 viewport (featured) or ~1/4 (compact); a
+// compact retina-aware ladder keeps them sharp without huge transforms.
+const TEAM_WIDTHS = [320, 480, 640, 828, 1080];
+const TEAM_SIZES = "(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 90vw";
 
 /* ── Animated stats strip ─────────────────────────────────────────────────── */
 const TeamStats = () => {
@@ -88,13 +93,14 @@ const TeamMemberCard = ({
           <div
             className={`aspect-square w-full rounded-lg overflow-hidden relative ${compact ? "mb-2" : "mb-4"}`}
           >
-            <Image
+            <CloudflareResponsiveImage
               src={member.image}
               alt={member.name}
-              width={400}
-              height={400}
+              widths={TEAM_WIDTHS}
+              sizes={TEAM_SIZES}
+              quality={90}
               className="w-full h-full object-cover"
-              onError={() => setImageError(true)}
+              onFallbackError={() => setImageError(true)}
             />
             <div
               className={`absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end ${compact ? "p-2" : "p-4"}`}

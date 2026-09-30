@@ -22,6 +22,8 @@ type Props = {
   className?: string;
   style?: CSSProperties;
   priority?: boolean;
+  /** Fires only if the original-image fallback also fails (e.g. missing file). */
+  onFallbackError?: () => void;
 };
 
 // Shared URL builder so preload logic and rendering stay on one strategy.
@@ -31,7 +33,12 @@ export function buildCloudflareImageUrl(
   width: number,
   quality = 90,
 ): string {
-  const normalized = src.startsWith("/") ? src : `/${src}`;
+  const withSlash = src.startsWith("/") ? src : `/${src}`;
+  // Encode each path segment so spaces / non-ASCII filenames stay valid.
+  const normalized = withSlash
+    .split("/")
+    .map((seg) => encodeURIComponent(seg))
+    .join("/");
   // onerror=redirect lets Cloudflare fall back to the original on transform failure.
   return `/cdn-cgi/image/width=${width},quality=${quality},format=auto,onerror=redirect${normalized}`;
 }
@@ -45,13 +52,18 @@ export default function CloudflareResponsiveImage({
   className,
   style,
   priority = false,
+  onFallbackError,
 }: Props) {
   const [failed, setFailed] = useState(false);
 
-  // If a transform fails at the browser, fall back to the untouched original
-  // (never the Worker). Guarded so the fallback can't loop.
+  // First error: fall back to the untouched original (never the Worker).
+  // Second error (original also broken): notify the caller so it can render its
+  // own placeholder. Guarded so the fallback can't loop.
   const handleError = (event: SyntheticEvent<HTMLImageElement>) => {
-    if (failed) return;
+    if (failed) {
+      onFallbackError?.();
+      return;
+    }
     setFailed(true);
     event.currentTarget.srcset = "";
     event.currentTarget.src = src;
