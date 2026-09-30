@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "motion/react";
+import CloudflareResponsiveImage, {
+  buildCloudflareImageUrl,
+} from "./CloudflareResponsiveImage";
 
 const HERO_IMAGES = [
   "/hero/IMAGE-1.jpg",
@@ -18,6 +20,17 @@ const HERO_IMAGES = [
   "/hero/IMAGE-9.jpg",
 ];
 
+// Full-bleed hero (100vw). Compact retina-aware width ladder covering phone →
+// true 4K so high-density displays stay sharp without over-generating transforms.
+const HERO_WIDTHS = [640, 828, 1080, 1440, 1920, 2560, 3840];
+
+// Smallest configured width >= the device's effective pixel demand (capped at 4K).
+function pickHeroWidth(): number {
+  if (typeof window === "undefined") return HERO_WIDTHS[HERO_WIDTHS.length - 1];
+  const target = window.innerWidth * (window.devicePixelRatio || 1);
+  return HERO_WIDTHS.find((w) => w >= target) ?? HERO_WIDTHS[HERO_WIDTHS.length - 1];
+}
+
 export default function HeroSection() {
   const t = useTranslations();
 
@@ -25,7 +38,10 @@ export default function HeroSection() {
   const [activeImage, setActiveImage] = useState(0);
 
   // ================= LOAD IMAGES ONE BY ONE =================
+  // Warm the same Cloudflare-transformed variant the component renders, so no
+  // raw /hero originals are fetched alongside the transformed ones.
   useEffect(() => {
+    const width = pickHeroWidth();
     let index = 1;
 
     const loadNextImage = () => {
@@ -43,7 +59,7 @@ export default function HeroSection() {
         loadNextImage();
       };
 
-      img.src = HERO_IMAGES[index];
+      img.src = buildCloudflareImageUrl(HERO_IMAGES[index], width, 90);
     };
 
     loadNextImage();
@@ -100,14 +116,14 @@ export default function HeroSection() {
               ease: "easeInOut",
             }}
           >
-            <Image
+            <CloudflareResponsiveImage
               src={HERO_IMAGES[activeImage]}
               alt={`Hero image ${activeImage + 1}`}
-              fill
-              priority={activeImage === 0}
+              widths={HERO_WIDTHS}
               sizes="100vw"
-              quality={75}
-              className="object-cover object-center"
+              quality={90}
+              priority={activeImage === 0}
+              className="absolute inset-0 w-full h-full object-cover object-center"
             />
           </motion.div>
         </AnimatePresence>
